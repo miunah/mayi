@@ -1467,6 +1467,13 @@ img {
   text-align: center;
   transition: var(--transition);
   min-width: 140px;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+a.platform-item {
+  cursor: pointer;
 }
 
 .platform-item:hover {
