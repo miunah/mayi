@@ -1,0 +1,87 @@
+/* ═══════════════════════════════════════════════════════════════
+   404 – Standalone page styles
+═══════════════════════════════════════════════════════════════ */
+:root {
+  --matcha-50: #f0f7f0;
+  --matcha-100: #dceedd;
+  --matcha-300: #8DB48E;
+  --matcha-500: #6B9A6C;
+  --matcha-700: #4a7a4b;
+  --text-primary: #3d5a3e;
+  --text-secondary: #6B8A6C;
+  --bg-primary: #FEFCF6;
+  --bg-card: #ffffff;
+  --shadow-medium: 0 4px 24px rgba(109,154,108,.12);
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --transition: .3s cubic-bezier(.4,0,.2,1);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px;
+}
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  padding: 48px 32px;
+  border: 1.5px solid var(--matcha-50);
+}
+.emoji { font-size: 4rem; margin-bottom: 16px; }
+h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  background: linear-gradient(135deg, #7aa87b, var(--matcha-500));
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(107,154,108,.35);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(107,154,108,.45);
+  color: #fff;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.brand img { width: 24px; height: 24px; border-radius: 6px; }

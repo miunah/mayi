@@ -1,0 +1,44 @@
+/* ═══════════════════════════════════════════════════════════════
+   Email Confirmed – Standalone page styles
+═══════════════════════════════════════════════════════════════ */
+:root {
+  --matcha-50: #f0f7f0;
+  --matcha-300: #8DB48E;
+  --matcha-500: #6B9A6C;
+  --matcha-700: #4a7a4b;
+  --text-primary: #3d5a3e;
+  --text-secondary: #6B8A6C;
+  --bg-primary: #FEFCF6;
+  --bg-card: #ffffff;
+  --shadow-medium: 0 4px 24px rgba(109,154,108,.12);
+  --radius-lg: 24px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  padding: 48px 32px;
+  border: 1.5px solid var(--matcha-50);
+}
+.icon { font-size: 4rem; margin-bottom: 16px; }
+h1 { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; color: var(--matcha-500); }
+p { font-size: 1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 6px; }
+p strong { color: var(--text-primary); }
+.subtle { font-size: .85rem; color: var(--text-secondary); margin-top: 24px; }
+a { color: var(--matcha-500); text-decoration: none; font-weight: 600; }
+a:hover { color: var(--matcha-700); }
