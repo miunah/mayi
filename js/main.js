@@ -701,7 +701,7 @@ document.querySelectorAll('.reveal').forEach(el => {
 });
 
 // ── Smooth scroll for anchor links ───────────────────────────
-document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
     const hash = href.includes('#') ? '#' + href.split('#')[1] : href;
