@@ -181,6 +181,12 @@ const translations = {
     'platforms.available': 'Available',
     'platforms.coming': 'Coming Soon',
 
+    'notify.title': 'Notify me when it launches!',
+    'notify.subtitle': 'Be the first to know when Mayinab arrives on mobile.',
+    'notify.btn': '🔔 Notify Me',
+    'notify.success': 'You\'re on the list! We\'ll email you when it\'s ready.',
+    'notify.privacy': 'We\'ll only use your email to notify you about the launch. No spam, ever.',
+
     'langs.label': 'Languages',
     'langs.title': 'Study in your language',
     'langs.subtitle': 'Mayinab\'s interface is fully translated. More languages coming soon.',
@@ -470,6 +476,12 @@ const translations = {
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Disponível',
     'platforms.coming': 'Em Breve',
+
+    'notify.title': 'Me avise quando lançar!',
+    'notify.subtitle': 'Seja o primeiro a saber quando o Mayinab chegar no mobile.',
+    'notify.btn': '🔔 Quero ser avisado',
+    'notify.success': 'Você está na lista! Avisaremos por email quando estiver pronto.',
+    'notify.privacy': 'Usaremos seu email apenas para avisar sobre o lançamento. Sem spam, nunca.',
 
     'langs.label': 'Idiomas',
     'langs.title': 'Estude no seu idioma',
@@ -766,4 +778,38 @@ if (tableWrapper) {
   checkScroll();
   tableWrapper.addEventListener('scroll', checkScroll, { passive: true });
   window.addEventListener('resize', checkScroll, { passive: true });
+}
+
+// ── Notify Me form (AJAX submit) ─────────────────────────────
+const notifyForm = document.getElementById('notifyForm');
+const notifySuccess = document.getElementById('notifySuccess');
+
+if (notifyForm) {
+  notifyForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = notifyForm.querySelector('.notify-btn');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    try {
+      const data = new FormData(notifyForm);
+      const res = await fetch(notifyForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        notifyForm.classList.add('submitted');
+        notifySuccess.hidden = false;
+      } else {
+        btn.textContent = '❌';
+        setTimeout(() => { btn.textContent = originalText; btn.disabled = false; }, 2000);
+      }
+    } catch {
+      btn.textContent = '❌';
+      setTimeout(() => { btn.textContent = originalText; btn.disabled = false; }, 2000);
+    }
+  });
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io">
   <meta name="description" content="Mayinab: Study notes reimagined as chat. Flashcards with spaced repetition, Markdown + LaTeX, 100% offline, no ads. Free for Android, iOS, Linux, macOS & Windows.">
   <meta name="keywords" content="study app, flashcards, spaced repetition, chat notes, SRS, Anki alternative, offline study, markdown notes, LaTeX, student app, free study tool">
   <meta name="author" content="Mayinab">
@@ -893,6 +893,39 @@
                 <div class="platform-icon">📱</div>
                 <div class="platform-name">iOS</div>
                 <div class="platform-status" data-i18n="platforms.coming">Coming Soon</div>
+              </div>
+            </div>
+
+            <!-- Notify Me Form -->
+            <div class="notify-form-wrapper reveal">
+              <div class="notify-form-card">
+                <div class="notify-form-header">
+                  <span class="notify-bell">🔔</span>
+                  <h3 data-i18n="notify.title">Notify me when it launches!</h3>
+                  <p data-i18n="notify.subtitle">Be the first to know when Mayinab arrives on mobile.</p>
+                </div>
+                <form id="notifyForm" action="https://formspree.io/f/mjgeyrqp" method="POST" class="notify-form">
+                  <div class="notify-input-row">
+                    <input type="email" name="email" required placeholder="you@email.com" class="notify-input" aria-label="Email">
+                    <button type="submit" class="btn btn-primary notify-btn" data-i18n="notify.btn">🔔 Notify Me</button>
+                  </div>
+                  <div class="notify-platforms-check">
+                    <label class="notify-check">
+                      <input type="checkbox" name="platform" value="Android" checked>
+                      <span>🤖 Android</span>
+                    </label>
+                    <label class="notify-check">
+                      <input type="checkbox" name="platform" value="iOS" checked>
+                      <span>📱 iOS</span>
+                    </label>
+                  </div>
+                  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                </form>
+                <div id="notifySuccess" class="notify-success" hidden>
+                  <span class="notify-success-icon">✅</span>
+                  <p data-i18n="notify.success">You're on the list! We'll email you when it's ready.</p>
+                </div>
+                <p class="notify-privacy" data-i18n="notify.privacy">We'll only use your email to notify you about the launch. No spam, ever.</p>
               </div>
             </div>
           </div>
