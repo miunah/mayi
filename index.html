@@ -846,32 +846,43 @@
           </p>
         </div>
 
-        <div class="platforms-grid">
-          <a href="#" class="platform-item reveal" aria-label="Download for Android">
-            <div class="platform-icon">🤖</div>
-            <div class="platform-name">Android</div>
-            <div class="platform-status" data-i18n="platforms.available">Available</div>
-          </a>
-          <a href="#" class="platform-item reveal" aria-label="Download for Linux">
-            <div class="platform-icon">🐧</div>
-            <div class="platform-name">Linux</div>
-            <div class="platform-status" data-i18n="platforms.available">Available</div>
-          </a>
-          <a href="#" class="platform-item reveal" aria-label="Download for Windows">
-            <div class="platform-icon">🪟</div>
-            <div class="platform-name">Windows</div>
-            <div class="platform-status" data-i18n="platforms.available">Available</div>
-          </a>
-          <a href="#" class="platform-item reveal" aria-label="Download for macOS">
-            <div class="platform-icon">🍎</div>
-            <div class="platform-name">macOS</div>
-            <div class="platform-status" data-i18n="platforms.coming">Coming Soon</div>
-          </a>
-          <a href="#" class="platform-item reveal" aria-label="Download for iOS">
-            <div class="platform-icon">📱</div>
-            <div class="platform-name">iOS</div>
-            <div class="platform-status" data-i18n="platforms.coming">Coming Soon</div>
-          </a>
+        <div class="platforms-groups">
+          <div class="platform-group reveal">
+            <div class="platform-group-label">💻 <span data-i18n="platforms.desktop">Desktop</span></div>
+            <div class="platforms-grid">
+              <a href="#" class="platform-item" aria-label="Download for Linux">
+                <div class="platform-icon">🐧</div>
+                <div class="platform-name">Linux</div>
+                <div class="platform-status" data-i18n="platforms.available">Available</div>
+              </a>
+              <a href="#" class="platform-item" aria-label="Download for Windows">
+                <div class="platform-icon">🪟</div>
+                <div class="platform-name">Windows</div>
+                <div class="platform-status" data-i18n="platforms.available">Available</div>
+              </a>
+              <a href="#" class="platform-item" style="opacity:0.65" aria-label="macOS">
+                <div class="platform-icon">🍎</div>
+                <div class="platform-name">macOS</div>
+                <div class="platform-status" data-i18n="platforms.coming">Coming Soon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="platform-group reveal">
+            <div class="platform-group-label">📱 <span data-i18n="platforms.mobile">Mobile</span></div>
+            <div class="platforms-grid">
+              <a href="#" class="platform-item" style="opacity:0.65" aria-label="Android">
+                <div class="platform-icon">🤖</div>
+                <div class="platform-name">Android</div>
+                <div class="platform-status" data-i18n="platforms.coming">Coming Soon</div>
+              </a>
+              <a href="#" class="platform-item" style="opacity:0.65" aria-label="iOS">
+                <div class="platform-icon">📱</div>
+                <div class="platform-name">iOS</div>
+                <div class="platform-status" data-i18n="platforms.coming">Coming Soon</div>
+              </a>
+            </div>
+          </div>
         </div>
 
         <!-- Languages -->
@@ -1249,6 +1260,8 @@
         'platforms.label': 'Platforms',
         'platforms.title': 'Study anywhere, on any device',
         'platforms.subtitle': 'Native performance on every platform. Desktop features like split-view and keyboard shortcuts. Mobile with touch-optimized gestures.',
+        'platforms.desktop': 'Desktop',
+        'platforms.mobile': 'Mobile',
         'platforms.available': 'Available',
         'platforms.coming': 'Coming Soon',
 
@@ -1536,6 +1549,8 @@
         'platforms.label': 'Plataformas',
         'platforms.title': 'Estude em qualquer lugar, em qualquer dispositivo',
         'platforms.subtitle': 'Performance nativa em toda plataforma. Desktop com split-view e atalhos de teclado. Mobile com gestos otimizados para toque.',
+        'platforms.desktop': 'Desktop',
+        'platforms.mobile': 'Mobile',
         'platforms.available': 'Disponível',
         'platforms.coming': 'Em Breve',
 
