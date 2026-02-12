@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato – Mayinab</title>
+  <meta name="description" content="Entre em contato com a equipe do Mayinab. Suporte, feedback, parcerias e imprensa.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="app_icon.png">
+  <link rel="canonical" href="https://mayinab.com/contact.html">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --matcha-50: #f0f7f0;
+      --matcha-100: #dceedd;
+      --matcha-200: #b5d4b6;
+      --matcha-300: #8DB48E;
+      --matcha-500: #6B9A6C;
+      --matcha-600: #5a8a5b;
+      --matcha-700: #4a7a4b;
+      --cream-100: #FFF8E7;
+      --cream-200: #F5E6C8;
+      --peach-100: #FFF0E0;
+      --lavender-100: #F0E8FF;
+      --text-primary: #3d5a3e;
+      --text-secondary: #6B8A6C;
+      --text-light: #8aaa8b;
+      --bg-primary: #FEFCF6;
+      --bg-card: #ffffff;
+      --shadow-soft: 0 2px 16px rgba(109,154,108,.08);
+      --shadow-medium: 0 4px 24px rgba(109,154,108,.12);
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.8;-webkit-font-smoothing:antialiased}
+    a{color:var(--matcha-500);text-decoration:none;transition:var(--transition)}
+    a:hover{color:var(--matcha-700)}
+
+    /* NAV */
+    .top-bar{position:sticky;top:0;z-index:100;background:rgba(254,252,246,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--matcha-100);padding:14px 0}
+    .top-bar .container{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .top-bar .brand{display:flex;align-items:center;gap:8px;font-size:1.1rem;font-weight:700;color:var(--text-primary)}
+    .top-bar .brand img{width:28px;height:28px;border-radius:8px}
+    .top-bar .nav-right{display:flex;align-items:center;gap:12px}
+    .top-bar .back-link{font-size:.9rem;font-weight:600}
+
+    /* LANG SWITCHER */
+    .lang-switcher{display:flex;align-items:center;gap:4px;background:var(--matcha-50);border-radius:999px;padding:3px}
+    .lang-btn{font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:700;padding:4px 12px;border:none;border-radius:999px;cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-secondary)}
+    .lang-btn.active{background:var(--bg-card);color:var(--matcha-500);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+
+    /* CONTENT */
+    .container{max-width:900px;margin:0 auto;padding:0 24px}
+    .page-hero{padding:60px 0 32px;text-align:center}
+    .page-hero h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:8px}
+    .page-hero .subtitle{font-size:.95rem;color:var(--text-secondary);max-width:500px;margin:0 auto}
+
+    /* CONTACT CARDS */
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:60px}
+    .contact-card{background:var(--bg-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-medium);padding:32px 28px;text-align:center;transition:var(--transition);border:1.5px solid var(--matcha-50)}
+    .contact-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-medium);border-color:var(--matcha-200)}
+    .contact-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 16px}
+    .contact-icon.green{background:var(--matcha-50)}
+    .contact-icon.peach{background:var(--peach-100)}
+    .contact-icon.lavender{background:var(--lavender-100)}
+    .contact-icon.cream{background:var(--cream-100)}
+    .contact-card h3{font-size:1.05rem;font-weight:700;margin-bottom:6px;color:var(--text-primary)}
+    .contact-card p{font-size:.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:16px}
+    .contact-link{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:700;color:var(--matcha-500);padding:8px 20px;border-radius:var(--radius-full);border:1.5px solid var(--matcha-100);transition:var(--transition)}
+    .contact-link:hover{background:var(--matcha-50);border-color:var(--matcha-300);color:var(--matcha-700)}
+
+    /* INFO NOTE */
+    .info-note{background:var(--bg-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);padding:28px 32px;margin-bottom:60px;border:1.5px solid var(--matcha-50);text-align:center}
+    .info-note h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text-primary)}
+    .info-note p{font-size:.9rem;color:var(--text-secondary);line-height:1.7;max-width:540px;margin:0 auto}
+
+    .footer-mini{text-align:center;padding:24px;font-size:.82rem;color:var(--text-secondary);border-top:1px solid var(--matcha-100)}
+    .footer-mini a{font-weight:600}
+
+    [data-lang]{display:none}
+    [data-lang].active{display:block}
+
+    @media(max-width:600px){
+      .contact-grid{grid-template-columns:1fr}
+      .top-bar .container{flex-wrap:wrap;gap:8px}
+      .contact-card{padding:24px 20px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="top-bar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="app_icon.png" alt="Mayinab">Mayinab
+      </a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
+          <button class="lang-btn active" onclick="setLang('pt')" aria-label="Português">PT</button>
+        </div>
+        <a href="index.html" class="back-link" id="backLink">← Voltar ao site</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
+  <div data-lang="pt" class="active">
+    <div class="page-hero">
+      <div class="container">
+        <h1>💬 Contato</h1>
+        <p class="subtitle">Tem dúvidas, sugestões ou quer dizer oi? Escolha o melhor canal abaixo.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <div class="contact-icon green">📧</div>
+          <h3>Suporte & Feedback</h3>
+          <p>Bugs, dúvidas, sugestões de funcionalidades ou qualquer questão sobre o app.</p>
+          <a href="mailto:suporte@mayinab.com" class="contact-link">suporte@mayinab.com</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon peach">🤝</div>
+          <h3>Parcerias & Imprensa</h3>
+          <p>Propostas comerciais, cobertura de imprensa ou colaborações.</p>
+          <a href="mailto:contato@mayinab.com" class="contact-link">contato@mayinab.com</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon lavender">🐛</div>
+          <h3>Reportar Bug</h3>
+          <p>Encontrou um problema? Abra uma issue no GitHub ou envie um e-mail detalhado.</p>
+          <a href="mailto:suporte@mayinab.com" class="contact-link">Enviar Relatório</a>
+        </div>
+
+      </div>
+
+      <div class="info-note">
+        <h3>⏱ Tempo de Resposta</h3>
+        <p>O Mayinab é um projeto indie mantido por uma pessoa. Respondemos o mais rápido possível — normalmente em até 48 horas. Obrigado pela paciência! 💚</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div data-lang="en">
+    <div class="page-hero">
+      <div class="container">
+        <h1>💬 Contact</h1>
+        <p class="subtitle">Have questions, suggestions, or just want to say hi? Pick the best channel below.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <div class="contact-icon green">📧</div>
+          <h3>Support & Feedback</h3>
+          <p>Bugs, questions, feature suggestions, or anything about the app.</p>
+          <a href="mailto:suporte@mayinab.com" class="contact-link">suporte@mayinab.com</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon peach">🤝</div>
+          <h3>Partnerships & Press</h3>
+          <p>Business proposals, press coverage, or collaborations.</p>
+          <a href="mailto:contato@mayinab.com" class="contact-link">contato@mayinab.com</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon lavender">🐛</div>
+          <h3>Report a Bug</h3>
+          <p>Found an issue? Open a GitHub issue or send a detailed email.</p>
+          <a href="mailto:suporte@mayinab.com" class="contact-link">Send Report</a>
+        </div>
+
+      </div>
+
+      <div class="info-note">
+        <h3>⏱ Response Time</h3>
+        <p>Mayinab is an indie project maintained by one person. We reply as fast as possible — usually within 48 hours. Thank you for your patience! 💚</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-mini">
+    <p>© 2026 Mayinab · <a href="index.html" id="footerHome">Voltar ao site</a></p>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+      });
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      document.getElementById('backLink').textContent = lang === 'pt' ? '← Voltar ao site' : '← Back to site';
+      document.getElementById('footerHome').textContent = lang === 'pt' ? 'Voltar ao site' : 'Back to site';
+    }
+
+    // Auto-detect language
+    const userLang = navigator.language || navigator.userLanguage || 'en';
+    if (userLang.startsWith('pt')) {
+      setLang('pt');
+    } else {
+      setLang('en');
+    }
+  </script>
+</body>
+</html>

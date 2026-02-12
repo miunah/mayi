@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog – Mayinab</title>
+  <meta name="description" content="Changelog do Mayinab. Veja todas as novidades, melhorias e correções em cada versão do app.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="app_icon.png">
+  <link rel="canonical" href="https://mayinab.com/changelog.html">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --matcha-50: #f0f7f0;
+      --matcha-100: #dceedd;
+      --matcha-200: #b5d4b6;
+      --matcha-300: #8DB48E;
+      --matcha-500: #6B9A6C;
+      --matcha-700: #4a7a4b;
+      --text-primary: #3d5a3e;
+      --text-secondary: #6B8A6C;
+      --bg-primary: #FEFCF6;
+      --bg-card: #ffffff;
+      --shadow-soft: 0 2px 16px rgba(109,154,108,.08);
+      --shadow-medium: 0 4px 24px rgba(109,154,108,.12);
+      --radius-lg: 24px;
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.8;-webkit-font-smoothing:antialiased}
+    a{color:var(--matcha-500);text-decoration:none;transition:var(--transition)}
+    a:hover{color:var(--matcha-700)}
+
+    /* NAV */
+    .top-bar{position:sticky;top:0;z-index:100;background:rgba(254,252,246,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--matcha-100);padding:14px 0}
+    .top-bar .container{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .top-bar .brand{display:flex;align-items:center;gap:8px;font-size:1.1rem;font-weight:700;color:var(--text-primary)}
+    .top-bar .brand img{width:28px;height:28px;border-radius:8px}
+    .top-bar .nav-right{display:flex;align-items:center;gap:12px}
+    .top-bar .back-link{font-size:.9rem;font-weight:600}
+
+    /* LANG SWITCHER */
+    .lang-switcher{display:flex;align-items:center;gap:4px;background:var(--matcha-50);border-radius:999px;padding:3px}
+    .lang-btn{font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:700;padding:4px 12px;border:none;border-radius:999px;cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-secondary)}
+    .lang-btn.active{background:var(--bg-card);color:var(--matcha-500);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+
+    /* CONTENT */
+    .container{max-width:900px;margin:0 auto;padding:0 24px}
+    .page-hero{padding:60px 0 32px;text-align:center}
+    .page-hero h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:8px}
+    .page-hero .subtitle{font-size:.95rem;color:var(--text-secondary)}
+    .page-content{background:var(--bg-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-medium);padding:clamp(24px,5vw,48px);margin-bottom:60px}
+
+    /* VERSION ENTRIES */
+    .version-entry{margin-bottom:36px;padding-bottom:36px;border-bottom:1.5px solid var(--matcha-50)}
+    .version-entry:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+    .version-header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .version-tag{background:linear-gradient(135deg,var(--matcha-300),var(--matcha-500));color:#fff;font-size:.85rem;font-weight:800;padding:4px 14px;border-radius:999px}
+    .version-date{font-size:.85rem;color:var(--text-secondary);font-weight:600}
+    .version-badge{font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.5px}
+    .badge-new{background:#e8f5e9;color:#2e7d32}
+    .badge-improved{background:#e3f2fd;color:#1565c0}
+    .badge-fixed{background:#fff3e0;color:#e65100}
+    .change-category{font-size:.9rem;font-weight:700;color:var(--matcha-700);margin:14px 0 8px;display:flex;align-items:center;gap:6px}
+    .page-content ul{margin:4px 0 12px 20px;list-style:none}
+    .page-content li{font-size:.92rem;color:#555;line-height:1.8;position:relative;padding-left:16px}
+    .page-content li::before{content:'•';position:absolute;left:0;color:var(--matcha-300);font-weight:800}
+
+    .empty-state{text-align:center;padding:48px 24px;color:var(--text-secondary)}
+    .empty-state .emoji{font-size:2.5rem;margin-bottom:12px}
+    .empty-state p{font-size:1rem}
+
+    .footer-mini{text-align:center;padding:24px;font-size:.82rem;color:var(--text-secondary);border-top:1px solid var(--matcha-100)}
+    .footer-mini a{font-weight:600}
+
+    [data-lang]{display:none}
+    [data-lang].active{display:block}
+
+    @media(max-width:600px){
+      .page-content{border-radius:16px;padding:20px}
+      .top-bar .container{flex-wrap:wrap;gap:8px}
+      .version-header{flex-direction:column;align-items:flex-start;gap:6px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="top-bar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="app_icon.png" alt="Mayinab">Mayinab
+      </a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
+          <button class="lang-btn active" onclick="setLang('pt')" aria-label="Português">PT</button>
+        </div>
+        <a href="index.html" class="back-link" id="backLink">← Voltar ao site</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
+  <div data-lang="pt" class="active">
+    <div class="page-hero">
+      <div class="container">
+        <h1>📋 Changelog</h1>
+        <p class="subtitle">Todas as novidades, melhorias e correções do Mayinab</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-content">
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.0</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+            <span class="version-badge badge-new">Lançamento</span>
+          </div>
+          <p class="change-category">🎉 Lançamento Inicial</p>
+          <ul>
+            <li>7 tipos de nota: texto, flashcard, imagem, vídeo, áudio, arquivo e checklist</li>
+            <li>Interface de chat para anotações rápidas e naturais</li>
+            <li>Repetição espaçada (SRS) com algoritmo SM-2</li>
+            <li>Markdown completo + LaTeX + syntax highlighting</li>
+            <li>Wiki-links [[assim]] e #tags com autocomplete</li>
+            <li>Slash commands para criação rápida</li>
+            <li>Busca full-text com SQLite FTS5</li>
+            <li>Split-view redimensionável no desktop</li>
+            <li>Sidebar com árvore de tópicos estilo Discord</li>
+            <li>Command palette (Ctrl+K)</li>
+            <li>Upload de arquivos com drag & drop</li>
+            <li>Gravador de áudio e player de vídeo integrados</li>
+            <li>YouTube embutido com timestamps</li>
+            <li>Pad de desenho e editor de imagem</li>
+            <li>Import CSV/TSV compatível com Anki</li>
+            <li>Timer Pomodoro integrado</li>
+            <li>Temas Claro, Escuro e Sistema</li>
+            <li>Cores, emojis e banners personalizáveis por matéria</li>
+            <li>Backup local (.zip) e export/import de matérias (.mayinab)</li>
+            <li>Vault: backup na nuvem com criptografia AES-256-GCM</li>
+            <li>100% offline, sem anúncios, sem rastreamento</li>
+            <li>Disponível para Android, iOS, Linux, macOS e Windows</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div data-lang="en">
+    <div class="page-hero">
+      <div class="container">
+        <h1>📋 Changelog</h1>
+        <p class="subtitle">All the news, improvements and fixes in Mayinab</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-content">
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.0</span>
+            <span class="version-date">February 12, 2026</span>
+            <span class="version-badge badge-new">Launch</span>
+          </div>
+          <p class="change-category">🎉 Initial Release</p>
+          <ul>
+            <li>7 note types: text, flashcard, image, video, audio, file and checklist</li>
+            <li>Chat-style interface for quick, natural note-taking</li>
+            <li>Spaced repetition (SRS) with SM-2 algorithm</li>
+            <li>Full Markdown + LaTeX + syntax highlighting</li>
+            <li>Wiki-links [[like this]] and #tags with autocomplete</li>
+            <li>Slash commands for quick creation</li>
+            <li>Full-text search with SQLite FTS5</li>
+            <li>Resizable split-view on desktop</li>
+            <li>Discord-style topic tree sidebar</li>
+            <li>Command palette (Ctrl+K)</li>
+            <li>File upload with drag & drop</li>
+            <li>Built-in audio recorder and video player</li>
+            <li>Embedded YouTube with timestamps</li>
+            <li>Drawing pad and image editor</li>
+            <li>CSV/TSV import compatible with Anki</li>
+            <li>Built-in Pomodoro timer</li>
+            <li>Light, Dark and System themes</li>
+            <li>Custom colors, emojis and banners per subject</li>
+            <li>Local backup (.zip) and subject export/import (.mayinab)</li>
+            <li>Vault: cloud backup with AES-256-GCM encryption</li>
+            <li>100% offline, no ads, no tracking</li>
+            <li>Available for Android, iOS, Linux, macOS and Windows</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-mini">
+    <p>© 2026 Mayinab · <a href="index.html" id="footerHome">Voltar ao site</a></p>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+      });
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      document.getElementById('backLink').textContent = lang === 'pt' ? '← Voltar ao site' : '← Back to site';
+      document.getElementById('footerHome').textContent = lang === 'pt' ? 'Voltar ao site' : 'Back to site';
+    }
+
+    // Auto-detect language
+    const userLang = navigator.language || navigator.userLanguage || 'en';
+    if (userLang.startsWith('pt')) {
+      setLang('pt');
+    } else {
+      setLang('en');
+    }
+  </script>
+</body>
+</html>
