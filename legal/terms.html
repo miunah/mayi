@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
   <title>Termos de Uso – Mayinab</title>
   <meta name="description" content="Termos de Uso do aplicativo Mayinab. Condições de uso do serviço em conformidade com a legislação brasileira e LGPD.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="../app_icon.png">
   <link rel="canonical" href="https://mayinab.com/legal/terms.html">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/pages.css">
 </head>
 <body>
@@ -432,27 +436,12 @@
     <p>© 2026 Mayinab · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of Use</a> · <a href="../index.html">Home</a></p>
   </div>
 
+  <script src="../js/lang.js"></script>
   <script>
-    function setLang(lang) {
-      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
-      });
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
-      });
-      document.getElementById('backLink').textContent = lang === 'pt' ? '← Voltar ao site' : '← Back to site';
-      if (lang === 'pt') {
-        document.title = 'Termos de Uso – Mayinab';
-        document.querySelector('meta[name="description"]').setAttribute('content', 'Termos de Uso do aplicativo Mayinab. Condições de uso do serviço em conformidade com a legislação brasileira e LGPD.');
-      } else {
-        document.title = 'Terms of Use – Mayinab';
-        document.querySelector('meta[name="description"]').setAttribute('content', 'Mayinab Terms of Use. Service conditions in compliance with Brazilian legislation and LGPD.');
-      }
-      localStorage.setItem('mayinab-lang', lang);
-    }
-    const saved = localStorage.getItem('mayinab-lang');
-    if (saved) { setLang(saved); } else { setLang(navigator.language.slice(0,2) === 'pt' ? 'pt' : 'en'); }
+    initLang({
+      pt: { title: 'Termos de Uso – Mayinab', description: 'Termos de Uso do aplicativo Mayinab. Condições de uso do serviço em conformidade com a legislação brasileira e LGPD.' },
+      en: { title: 'Terms of Use – Mayinab', description: 'Mayinab Terms of Use. Service conditions in compliance with Brazilian legislation and LGPD.' }
+    });
   </script>
 </body>
 </html>

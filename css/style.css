@@ -26,61 +26,8 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   CSS VARIABLES - Matcha Green & Cream Palette
+   CSS VARIABLES — see css/variables.css
 ═══════════════════════════════════════════════════════════════ */
-:root {
-  --matcha-50: #f0f7f0;
-  --matcha-100: #dceedd;
-  --matcha-200: #b5d4b6;
-  --matcha-300: #8DB48E;
-  --matcha-400: #7aa87b;
-  --matcha-500: #6B9A6C;
-  --matcha-600: #5a8a5b;
-  --matcha-700: #4a7a4b;
-  --matcha-800: #3d6a3e;
-  --matcha-900: #2d5a2e;
-
-  --cream-50: #FFFDF7;
-  --cream-100: #FFF8E7;
-  --cream-200: #F5E6C8;
-  --cream-300: #E8D4A8;
-  --cream-400: #D4BC88;
-
-  --peach-100: #FFF0E0;
-  --peach-200: #FFE0C0;
-  --peach-300: #F5C4A0;
-
-  --pink-100: #FFE8EE;
-  --pink-200: #FFD0DD;
-  --pink-300: #F5A0B8;
-
-  --lavender-100: #F0E8FF;
-  --lavender-200: #E0D0FF;
-
-  --sky-100: #E0F4FF;
-  --sky-200: #C0E8FF;
-
-  --text-primary: #3d5a3e;
-  --text-secondary: #6B8A6C;
-  --text-light: #8aaa8b;
-  --text-on-matcha: #ffffff;
-
-  --bg-primary: #FEFCF6;
-  --bg-secondary: #FFF8E7;
-  --bg-card: #ffffff;
-
-  --shadow-soft: 0 2px 16px rgba(109, 154, 108, 0.08);
-  --shadow-medium: 0 4px 24px rgba(109, 154, 108, 0.12);
-  --shadow-glow: 0 0 40px rgba(141, 180, 142, 0.15);
-
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-  --radius-full: 9999px;
-
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* ═══════════════════════════════════════════════════════════════
    RESET & BASE
@@ -113,6 +60,34 @@ a {
 
 a:hover {
   color: var(--matcha-700);
+}
+
+/* ── Focus-visible (keyboard navigation) ──────────────────── */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--matcha-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--matcha-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}
+
+.nav-cta:focus-visible {
+  outline: 2px solid var(--matcha-700);
+  outline-offset: 2px;
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid var(--matcha-500);
+  outline-offset: 1px;
 }
 
 img {
@@ -174,6 +149,14 @@ img {
   margin-right: auto;
 }
 
+.bg-secondary {
+  background: var(--bg-secondary);
+}
+
+.unavailable {
+  opacity: 0.65;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    ANIMATED BACKGROUND SHAPES
 ═══════════════════════════════════════════════════════════════ */
@@ -193,6 +176,8 @@ img {
   border-radius: 50%;
   opacity: 0.3;
   filter: blur(80px);
+  will-change: transform;
+  contain: layout paint;
   animation: float 20s ease-in-out infinite;
 }
 
@@ -1318,8 +1303,7 @@ img {
   box-shadow: var(--shadow-glow);
 }
 
-.pricing-card.featured::before {
-  content: '✨ Most Popular';
+.featured-badge {
   position: absolute;
   top: -14px;
   left: 50%;
@@ -1331,6 +1315,7 @@ img {
   padding: 4px 16px;
   border-radius: var(--radius-full);
   white-space: nowrap;
+  z-index: 1;
 }
 
 .pricing-card-icon {
@@ -1779,6 +1764,26 @@ img {
   letter-spacing: 0.5px;
 }
 
+/* ── Screenshot skeleton shimmer ──────────────────────────── */
+.screenshot-item picture {
+  position: relative;
+  display: block;
+  min-height: 180px;
+  background: linear-gradient(110deg, var(--matcha-50) 8%, var(--cream-100) 18%, var(--matcha-50) 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.screenshot-item picture.loaded {
+  background: none;
+  animation: none;
+  min-height: auto;
+}
+
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
 @media (max-width: 968px) {
   .screenshots-gallery {
     grid-template-columns: 1fr;
@@ -1843,6 +1848,47 @@ img {
   background: var(--bg-card);
   color: var(--matcha-600);
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BACK TO TOP BUTTON
+═══════════════════════════════════════════════════════════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 900;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--matcha-400), var(--matcha-600));
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(107, 154, 108, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  box-shadow: 0 6px 24px rgba(107, 154, 108, 0.5);
+  transform: translateY(-2px);
+}
+
+.back-to-top:active {
+  transform: translateY(0);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1917,7 +1963,7 @@ img {
   }
 
   .nav-links {
-    display: none;
+    display: flex;
     position: absolute;
     top: 68px;
     left: 0;
@@ -1929,10 +1975,18 @@ img {
     gap: 16px;
     border-bottom: 1px solid var(--matcha-100);
     box-shadow: var(--shadow-medium);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
   }
 
   .nav-links.open {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .nav-mobile-toggle {

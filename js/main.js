@@ -1,0 +1,734 @@
+// ── i18n Translations ────────────────────────────────────────
+const translations = {
+  en: {
+    'nav.features': 'Features',
+    'nav.howItWorks': 'How It Works',
+    'nav.comparison': 'Comparison',
+    'nav.pricing': 'Pricing',
+    'nav.faq': 'FAQ',
+    'nav.download': 'Download Free',
+
+    'hero.badge': 'Free & Open for Everyone',
+    'hero.title1': 'Study notes,',
+    'hero.title2': 'reimagined as chat.',
+    'hero.description': 'Take notes like you\'re texting a friend. Flashcards with spaced repetition, Markdown + LaTeX, 7 note types, file upload, drawing pad, resizable split-view. All offline, all free, no ads ever.',
+    'hero.cta1': '⬇ Download Free',
+    'hero.cta2': '✨ See Features',
+    'hero.stat1': 'Note types',
+    'hero.stat2': 'Platforms',
+    'hero.stat3': 'Offline use',
+    'hero.stat4': 'Ads, ever',
+    'hero.float1': 'SRS Review',
+    'hero.float2': 'LaTeX Ready',
+    'hero.float3': 'AES-256',
+
+    'features.label': 'Features',
+    'features.title': 'Everything you need to study smarter',
+    'features.subtitle': 'Seven types of notes, spaced repetition, file upload, drawing pad, resizable panels, slash commands, and much more. All in a chat interface that feels natural.',
+    'features.chat.title': 'Chat-Based Notes',
+    'features.chat.desc': 'Take notes like you\'re texting. Text, flashcards, images, audio, video, files, and checklists, all in one timeline. Pin, reply, edit, reorder by drag, multi-select, and filter by type.',
+    'features.srs.title': 'Spaced Repetition (SRS)',
+    'features.srs.desc': 'SM-2 algorithm with configurable parameters. Flip cards, typing mode, undo reviews, session summary, daily reminders, streak tracking. Never forget what you learned.',
+    'features.markdown.title': 'Markdown + LaTeX',
+    'features.markdown.desc': 'Rich text with full Markdown support, LaTeX math formulas, syntax highlighting for code, wiki-links [[like this]], #tags, and slash commands.',
+    'features.org.title': 'Deep Organization',
+    'features.org.desc': 'Subjects → Topics with unlimited nesting depth. Folders on the home screen. Sidebar topic tree on desktop. Breadcrumbs on mobile. Command palette (Ctrl+K) for instant navigation.',
+    'features.security.title': 'Private & Encrypted',
+    'features.security.desc': '100% offline by default. Your data never leaves your device. Optional cloud backup uses AES-256-GCM encryption with zero-knowledge design.',
+    'features.tools.title': 'Rich Media & Tools',
+    'features.tools.desc': 'File upload with drag & drop, clipboard paste, audio recorder, video player, YouTube embed, scribble pad, image editor, link previews, syntax highlighting, Anki CSV import, and Pomodoro timer.',
+    'features.files.title': 'File Upload & Drag-Drop',
+    'features.files.desc': 'Attach any file from your device, drag & drop from your OS file manager, or paste images from clipboard. Auto compression and content-addressable storage for zero duplicates.',
+    'features.scribble.title': 'Scribble & Image Editor',
+    'features.scribble.desc': 'Built-in freehand drawing pad with color picker and adjustable stroke width. Draw sketches, diagrams, or handwritten notes. Annotate on top of any image. Originals always preserved.',
+    'features.desktop.title': 'Desktop Power Mode',
+    'features.desktop.desc': 'Resizable split-view with draggable dividers. Discord-style sidebar topic tree. Keyboard shortcuts: Ctrl+K (command palette), Ctrl+F (search), Ctrl+Shift+E (sidebar). Panels remember their size.',
+    'features.input.title': 'Smart Input Bar',
+    'features.input.desc': 'Type / for slash commands to create flashcards, checklists, and more. Full markdown toolbar with bold, italic, code, links, LaTeX. Wiki-links [[autocomplete]] and #tag suggestions as you type.',
+    'features.stats.title': 'Stats & Streaks',
+    'features.stats.desc': 'Study streak with fire counter. Weekly activity chart, total notes created, reviews completed, next review countdown. Daily notification reminders and streak protection alerts.',
+    'features.themes.title': 'Themes & Customization',
+    'features.themes.desc': 'Light, Dark, or System theme. Custom colors for primary, secondary, background, and surface. Custom wallpapers per screen. Each subject gets its own accent color, emoji, and banner.',
+    'features.seeAll': '📋 See All 60+ Capabilities',
+
+    'screenshots.label': 'Screenshots',
+    'screenshots.title': 'See it in action',
+    'screenshots.subtitle': 'Real screenshots from the app. Clean interface, powerful features, beautiful on every theme.',
+    'screenshots.main.title': 'Chat-style notes in action',
+    'screenshots.main.desc': 'Subjects, topics, and notes organized as a natural conversation. Split-view with sidebar on desktop.',
+    'screenshots.flashcard1.title': 'Spaced repetition review',
+    'screenshots.flashcard1.desc': 'Flip cards with SM-2 algorithm. Rate as Again, Hard, Good, or Easy.',
+    'screenshots.dark.title': 'Beautiful dark mode',
+    'screenshots.dark.desc': 'Easy on the eyes for late-night study sessions. Every element adapts perfectly.',
+    'screenshots.features.title': 'Rich flashcard answers',
+    'screenshots.features.desc': 'Reveal answers with images, formatted text, LaTeX, and multimedia. Study with style.',
+    'screenshots.badge.features': 'SRS',
+
+    'how.label': 'How It Works',
+    'how.title': 'Start studying in seconds',
+    'how.subtitle': 'No account required. No complicated setup. Open the app, create a subject, and start taking notes.',
+    'how.step1.title': 'Create a Subject',
+    'how.step1.desc': 'Name your subject or pick a ready-made template (Math, English, Programming, Japanese…). Add topics to organize.',
+    'how.step2.title': 'Chat Your Notes',
+    'how.step2.desc': 'Type notes like messages. Use /flashcard to create cards, attach images, record audio, paste links. It\'s as easy as texting.',
+    'how.step3.title': 'Review & Remember',
+    'how.step3.desc': 'The SRS engine schedules your flashcard reviews automatically. Flip, rate, repeat. Build long-term memory effortlessly.',
+
+    'comp.label': 'Why Mayinab?',
+    'comp.title': 'Study tools shouldn\'t be complicated',
+    'comp.subtitle': 'Students hack together notes in chat apps or struggle with complex tools. Mayinab gives you the simplicity of chat with the power of a study app.',
+    'comp.vs': 'vs Mayinab',
+    'comp.withMayinab': 'With Mayinab',
+    'comp.discord.issue1': 'Messages get buried in server noise and channels',
+    'comp.discord.issue2': 'No real organization, just endless scrolling',
+    'comp.discord.issue3': 'No flashcards, no spaced repetition, no study tools',
+    'comp.discord.issue4': 'Requires internet. Your notes live on someone else\'s server',
+    'comp.discord.solution': 'Same chat feel, but purpose-built for studying. Organized by subject & topic, with SRS built in. 100% offline.',
+    'comp.whatsapp.issue1': 'Mixed with personal chats, impossible to find notes',
+    'comp.whatsapp.issue2': '"Send to self" trick loses context fast',
+    'comp.whatsapp.issue3': 'No Markdown, no LaTeX, no code blocks',
+    'comp.whatsapp.issue4': 'No offline search, no export, no backup control',
+    'comp.whatsapp.solution': 'A dedicated space for studying with rich formatting, full-text search, tags, and local backups you control.',
+    'comp.notion.issue1': 'Complex onboarding, overwhelming for just taking notes',
+    'comp.notion.issue2': 'Slow, heavy, requires internet to work properly',
+    'comp.notion.issue3': 'No built-in flashcards or spaced repetition',
+    'comp.notion.issue4': 'Your data lives on their servers, no true privacy',
+    'comp.notion.solution': 'Open → type → done. No pages-inside-databases-inside-pages. Just subjects, topics, and notes as chat.',
+    'comp.anki.issue1': 'Steep learning curve: card types, note types, decks, add-ons',
+    'comp.anki.issue2': 'Outdated UI from the 2000s, not designed for mobile',
+    'comp.anki.issue3': 'Only flashcards, no general notes, checklists, or media',
+    'comp.anki.issue4': 'AnkiMobile (iOS) costs $24.99. Sync is fragile',
+    'comp.anki.solution': 'Same SM-2 algorithm, beautiful modern UI. Plus notes, checklists, audio, video, all in one. Anki CSV import included.',
+
+    'comp.table.feature': 'Feature',
+    'comp.table.chatNotes': 'Chat-style notes',
+    'comp.table.srs': 'Spaced Repetition',
+    'comp.table.markdown': 'Markdown + LaTeX',
+    'comp.table.offline': 'Works offline',
+    'comp.table.noAds': 'No ads',
+    'comp.table.encrypted': 'Encrypted backup',
+    'comp.table.multimedia': '7 note types',
+    'comp.table.hierarchy': 'Subject → Topic tree',
+    'comp.table.setup': 'Setup time',
+    'comp.table.price': 'Price',
+    'comp.table.fileUpload': 'File upload & drag-drop',
+    'comp.table.drawing': 'Drawing / scribble pad',
+    'comp.table.splitView': 'Resizable split-view',
+    'comp.table.slashCmd': 'Slash commands',
+    'comp.table.shortcuts': 'Keyboard shortcuts',
+    'comp.table.stats': 'Study statistics & streaks',
+    'comp.table.val.never': '✓ Never',
+    'comp.table.val.nitroAds': 'Nitro ads',
+    'comp.table.val.statusAds': 'Status ads',
+    'comp.table.val.e2e': 'E2E chat',
+    'comp.table.val.textOnly': 'Text only',
+    'comp.table.val.limited': 'Limited',
+    'comp.table.val.blocks': '✓ Blocks',
+    'comp.table.val.cardsOnly': 'Cards only',
+    'comp.table.val.infDepth': '✓ ∞ depth',
+    'comp.table.val.channels': 'Channels',
+    'comp.table.val.pages': '✓ Pages',
+    'comp.table.val.decks': 'Decks',
+    'comp.table.val.free': 'Free',
+    'comp.table.val.notionPrice': '$10/mo',
+
+    'noads.title': 'Zero ads. Not now. Not ever.',
+    'noads.desc': 'Study apps should help you focus, not distract you. Mayinab will never show ads, sell your data, or interrupt your learning. That\'s a promise.',
+
+    'pricing.label': 'Pricing',
+    'pricing.title': 'Free forever. Cloud when you need it.',
+    'pricing.subtitle': 'Every feature works offline for free. The Vault adds optional encrypted cloud backup when you want to sync across devices.',
+    'pricing.free.name': 'Free',
+    'pricing.free.price': '$0 <span>forever</span>',
+    'pricing.free.note': 'No card required',
+    'pricing.free.f1': 'All 7 note types',
+    'pricing.free.f2': 'Unlimited flashcards + SRS',
+    'pricing.free.f3': 'Markdown + LaTeX + Code',
+    'pricing.free.f4': 'Wiki-links + Tags',
+    'pricing.free.f5': 'Full-text search (FTS5)',
+    'pricing.free.f6': 'Local backup (.zip)',
+    'pricing.free.f7': 'Google Drive manual backup',
+    'pricing.free.f8': 'Pomodoro timer',
+    'pricing.free.f9': 'Export/Import subjects',
+    'pricing.free.f10': 'No ads, no limits',
+    'pricing.free.cta': 'Get Started Free',
+    'pricing.popular': '✨ Most Popular',
+    'pricing.basic.name': 'Vault Basic',
+    'pricing.basic.period': '/month',
+    'pricing.basic.note': '~$18/year',
+    'pricing.basic.f1': 'Everything in Free',
+    'pricing.basic.f2': '2 GB encrypted cloud storage',
+    'pricing.basic.f3': 'Cloud sync across devices',
+    'pricing.basic.f4': 'AES-256-GCM encryption',
+    'pricing.basic.f5': '50 MB max per file',
+    'pricing.basic.f6': 'One-click restore',
+    'pricing.basic.cta': 'Start with Basic',
+    'pricing.pro.name': 'Vault Pro',
+    'pricing.pro.period': '/month',
+    'pricing.pro.note': '~$35/year',
+    'pricing.pro.f1': 'Everything in Basic',
+    'pricing.pro.f2': '50 GB encrypted cloud storage',
+    'pricing.pro.f3': '200 MB max per file',
+    'pricing.pro.f4': 'Priority cloud processing',
+    'pricing.pro.f5': 'Support indie development',
+    'pricing.pro.cta': 'Go Pro',
+
+    'platforms.label': 'Platforms',
+    'platforms.title': 'Study anywhere, on any device',
+    'platforms.subtitle': 'Native performance on every platform. Desktop features like split-view and keyboard shortcuts. Mobile with touch-optimized gestures.',
+    'platforms.desktop': 'Desktop',
+    'platforms.mobile': 'Mobile',
+    'platforms.available': 'Available',
+    'platforms.coming': 'Coming Soon',
+
+    'langs.label': 'Languages',
+    'langs.title': 'Study in your language',
+    'langs.subtitle': 'Mayinab\'s interface is fully translated. More languages coming soon.',
+
+    'capabilities.label': 'All Capabilities',
+    'capabilities.title': 'Everything you can do with Mayinab',
+    'capabilities.subtitle': 'A complete toolkit for studying. No feature hidden behind paywalls.',
+    'capabilities.notes.title': 'Note Taking',
+    'capabilities.notes.1': '7 note types: text, flashcard, image, video, audio, file, checklist',
+    'capabilities.notes.2': 'Pin important notes to the top strip',
+    'capabilities.notes.3': 'Reply and quote other notes',
+    'capabilities.notes.4': 'Edit any note permanently, saved instantly',
+    'capabilities.notes.5': 'Soft delete with 3-second undo',
+    'capabilities.notes.6': 'Multi-select notes for bulk forward/delete',
+    'capabilities.notes.7': 'Drag-and-drop to reorder notes',
+    'capabilities.notes.8': 'Filter by note type with count badges',
+    'capabilities.notes.9': 'In-chat search with match counter and prev/next',
+    'capabilities.notes.10': 'Date separators between note groups',
+    'capabilities.input.title': 'Input & Creation',
+    'capabilities.input.1': 'Slash commands (/flashcard, /checklist...)',
+    'capabilities.input.2': 'Markdown toolbar: bold, italic, code, link, math, headings, lists',
+    'capabilities.input.3': 'Paste images directly from clipboard',
+    'capabilities.input.4': 'Drag & drop files from your file manager',
+    'capabilities.input.5': 'File picker for any document type',
+    'capabilities.input.6': 'Camera capture on mobile',
+    'capabilities.input.7': 'Built-in audio recorder',
+    'capabilities.input.8': 'Scribble drawing pad with color picker',
+    'capabilities.input.9': 'Flashcard dialog with Q/A + multimedia',
+    'capabilities.input.10': 'Video flashcards with YouTube timestamps',
+    'capabilities.nav.title': 'Navigation & Organization',
+    'capabilities.nav.1': 'Discord-style sidebar topic tree (desktop)',
+    'capabilities.nav.2': 'Unlimited-depth topic nesting',
+    'capabilities.nav.3': 'Subject folders on home screen',
+    'capabilities.nav.4': 'Command palette (Ctrl+K): search anything',
+    'capabilities.nav.5': 'Wiki-links [[Topic]] with autocomplete',
+    'capabilities.nav.6': 'Breadcrumb navigation on mobile',
+    'capabilities.nav.7': 'Full-text search powered by SQLite FTS5',
+    'capabilities.nav.8': '#tag autocomplete and Tags Explorer',
+    'capabilities.nav.9': 'Drag-and-drop reorderable subjects',
+    'capabilities.nav.10': 'Topic siblings sheet for quick switching',
+    'capabilities.study.title': 'Study & Review',
+    'capabilities.study.1': 'SM-2 spaced repetition algorithm',
+    'capabilities.study.2': 'Flip card mode with animated reveal',
+    'capabilities.study.3': 'Typing mode: type and compare answers',
+    'capabilities.study.4': '4 ratings: Again, Hard, Good, Easy',
+    'capabilities.study.5': 'Undo last review during session',
+    'capabilities.study.6': 'Session summary with rating chart',
+    'capabilities.study.7': 'Keyboard shortcuts: Space to flip, 1-4 to rate',
+    'capabilities.study.8': 'Configurable SRS parameters',
+    'capabilities.study.9': 'Multimedia flashcards (image/video/audio per side)',
+    'capabilities.study.10': 'Pomodoro focus timer with auto phase switch',
+    'capabilities.media.title': 'Media & Attachments',
+    'capabilities.media.1': 'Upload any file type from device',
+    'capabilities.media.2': 'Automatic image compression',
+    'capabilities.media.3': 'Video player with full controls',
+    'capabilities.media.4': 'YouTube embed with Shorts and timestamps',
+    'capabilities.media.5': 'Audio recorder and full-featured player',
+    'capabilities.media.6': 'Scribble pad for freehand drawings',
+    'capabilities.media.7': 'Image editor: draw annotations on photos',
+    'capabilities.media.8': 'Rich link previews with LRU cache',
+    'capabilities.media.9': 'Syntax highlighting for code blocks',
+    'capabilities.media.10': 'Anki CSV/TSV bulk import with auto-detect',
+    'capabilities.platform.title': 'Desktop & Mobile',
+    'capabilities.platform.1': 'Resizable split-view with draggable dividers',
+    'capabilities.platform.2': 'Resizable sidebar, topic strip, home panel',
+    'capabilities.platform.3': '10+ keyboard shortcuts',
+    'capabilities.platform.4': 'Share/receive content from other apps',
+    'capabilities.platform.5': 'Light, Dark, and System themes',
+    'capabilities.platform.6': 'Custom color picker for UI elements',
+    'capabilities.platform.7': 'Custom wallpapers per screen type',
+    'capabilities.platform.8': 'Subject colors, emojis, and banners',
+    'capabilities.platform.9': 'Storage management with per-category cleanup',
+    'capabilities.platform.10': 'Daily notification reminders and streak protection',
+
+    'faq.label': 'FAQ',
+    'faq.title': 'Frequently asked questions',
+    'faq.q1': 'Is my data really private?',
+    'faq.a1': 'Yes! Mayinab is offline-first: your notes are stored locally on your device. Nothing is sent anywhere unless you opt in to Vault cloud backup, which uses AES-256-GCM encryption with PBKDF2 key derivation. We can\'t read your data even if we wanted to (zero-knowledge design).',
+    'faq.q2': 'Can I use it without internet?',
+    'faq.a2': 'Absolutely. 100% of the app works offline. Create notes, study flashcards, record audio, take photos, search your notes, all without internet. The only feature that needs connectivity is cloud backup (optional).',
+    'faq.q3': 'How do I move data between devices?',
+    'faq.a3': 'Free users can export/import subjects as .mayinab files, or create full local backups as .zip. You can also use Google Drive for manual backup. Vault subscribers get one-click cloud sync across all devices.',
+    'faq.q4': 'Can I import my Anki decks?',
+    'faq.a4': 'Yes! Mayinab supports CSV/TSV import compatible with Anki exports. You can import thousands of flashcards at once, including YouTube video URLs. The SRS algorithm is SM-2, same as Anki.',
+    'faq.q5': 'Will there ever be ads?',
+    'faq.a5': 'Never. That\'s a core promise. Study apps should help you focus, not distract you. Mayinab is funded by optional Vault subscriptions. If you use the free version forever, that\'s totally fine: you get the full app, no compromises.',
+    'faq.q6': 'What makes this different from just using Notion?',
+    'faq.a6': 'Notion is a powerful general-purpose tool, but it\'s complex and requires internet. Mayinab is purpose-built for studying: the chat interface makes note-taking instant, SRS is built-in (Notion has none), it works fully offline, and there\'s zero onboarding friction. Open → type → done.',
+    'faq.q7': 'Is it really made by one person?',
+    'faq.a7': 'Yes! Mayinab is an indie project built with love by Celso Takeshi Hamasaki. That means fast updates, direct feedback, and a product shaped by real student needs, not corporate roadmaps. Your support through Vault keeps this project alive. 💚',
+
+    'cta.title': 'Ready to study smarter? 🍵',
+    'cta.desc': 'Join students who already discovered a better way to take notes and remember what they learn.',
+    'cta.btn1': '⬇ Download for Free',
+    'cta.btn2': 'Learn More',
+
+    'footer.desc': 'Study notes reimagined as chat. Free forever, no ads ever.',
+    'footer.product': 'Product',
+    'footer.download': 'Download',
+    'footer.resources': 'Resources',
+    'footer.changelog': 'Changelog',
+    'footer.contact': 'Contact',
+    'footer.legal': 'Legal',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Service',
+    'footer.rights': 'All rights reserved.',
+    'footer.madeWith': 'Made with',
+    'footer.andFlutter': '& Flutter',
+  },
+  pt: {
+    'nav.features': 'Recursos',
+    'nav.howItWorks': 'Como Funciona',
+    'nav.comparison': 'Comparação',
+    'nav.pricing': 'Preços',
+    'nav.faq': 'FAQ',
+    'nav.download': 'Baixar Grátis',
+
+    'hero.badge': 'Grátis & Aberto para Todos',
+    'hero.title1': 'Anotações de estudo,',
+    'hero.title2': 'reinventadas como chat.',
+    'hero.description': 'Anote como se estivesse mandando mensagem. Flashcards com repetição espaçada, Markdown + LaTeX, 7 tipos de nota, upload de arquivos, pad de desenho, split-view redimensionável. Tudo offline, tudo grátis, sem anúncios.',
+    'hero.cta1': '⬇ Baixar Grátis',
+    'hero.cta2': '✨ Ver Recursos',
+    'hero.stat1': 'Tipos de nota',
+    'hero.stat2': 'Plataformas',
+    'hero.stat3': 'Uso offline',
+    'hero.stat4': 'Anúncios',
+    'hero.float1': 'Revisão SRS',
+    'hero.float2': 'LaTeX Pronto',
+    'hero.float3': 'AES-256',
+
+    'features.label': 'Recursos',
+    'features.title': 'Tudo que você precisa para estudar melhor',
+    'features.subtitle': 'Sete tipos de notas, repetição espaçada, upload de arquivos, pad de desenho, painéis redimensionáveis, slash commands e muito mais. Tudo em uma interface de chat natural.',
+    'features.chat.title': 'Notas Estilo Chat',
+    'features.chat.desc': 'Anote como se estivesse conversando. Texto, flashcards, imagens, áudio, vídeo, arquivos e checklists, tudo em uma timeline. Fixe, responda, edite, reordene arrastando, multi-selecione e filtre por tipo.',
+    'features.srs.title': 'Repetição Espaçada (SRS)',
+    'features.srs.desc': 'Algoritmo SM-2 com parâmetros configuráveis. Flip cards, modo digitação, desfazer revisão, resumo de sessão, lembretes diários, streak. Nunca esqueça o que aprendeu.',
+    'features.markdown.title': 'Markdown + LaTeX',
+    'features.markdown.desc': 'Texto rico com Markdown completo, fórmulas LaTeX, syntax highlighting para código, wiki-links [[assim]], #tags e slash commands.',
+    'features.org.title': 'Organização Profunda',
+    'features.org.desc': 'Matérias → Tópicos com profundidade ilimitada. Pastas na tela inicial. Sidebar com árvore de tópicos no desktop. Breadcrumbs no mobile. Command palette (Ctrl+K) para navegação instantânea.',
+    'features.security.title': 'Privado & Criptografado',
+    'features.security.desc': '100% offline por padrão. Seus dados nunca saem do dispositivo. Backup na nuvem opcional usa criptografia AES-256-GCM com design zero-knowledge.',
+    'features.tools.title': 'Mídia Rica & Ferramentas',
+    'features.tools.desc': 'Upload de arquivos com drag & drop, colagem da área de transferência, gravador de áudio, player de vídeo, YouTube embutido, scribble pad, editor de imagem, previews de link, syntax highlighting, import CSV do Anki e timer Pomodoro.',
+    'features.files.title': 'Upload de Arquivos & Drag-Drop',
+    'features.files.desc': 'Anexe qualquer arquivo do seu dispositivo, arraste e solte do gerenciador de arquivos, ou cole imagens da área de transferência. Compressão automática e armazenamento por hash para zero duplicatas.',
+    'features.scribble.title': 'Scribble & Editor de Imagem',
+    'features.scribble.desc': 'Pad de desenho à mão livre com seletor de cor e largura de traço ajustável. Desenhe sketches, diagramas ou notas manuscritas. Anote por cima de qualquer imagem. Originais sempre preservados.',
+    'features.desktop.title': 'Modo Desktop Poderoso',
+    'features.desktop.desc': 'Split-view redimensionável com divisores arrastáveis. Sidebar com árvore de tópicos estilo Discord. Atalhos: Ctrl+K (command palette), Ctrl+F (busca), Ctrl+Shift+E (sidebar). Painéis lembram seu tamanho.',
+    'features.input.title': 'Barra de Entrada Inteligente',
+    'features.input.desc': 'Digite / para slash commands e crie flashcards, checklists e mais. Toolbar completa de markdown com negrito, itálico, código, links, LaTeX. Wiki-links [[autocomplete]] e sugestões de #tags enquanto digita.',
+    'features.stats.title': 'Estatísticas & Sequências',
+    'features.stats.desc': 'Sequência de estudo com contador de fogo. Gráfico de atividade semanal, total de notas criadas, revisões completadas, contagem regressiva. Lembretes diários e alertas de proteção de streak.',
+    'features.themes.title': 'Temas & Personalização',
+    'features.themes.desc': 'Tema Claro, Escuro ou Sistema. Cores personalizadas para primária, secundária, fundo e superfície. Wallpapers personalizados por tela. Cada matéria tem sua cor, emoji e banner.',
+    'features.seeAll': '📋 Ver Todas as 60+ Funcionalidades',
+
+    'screenshots.label': 'Capturas de Tela',
+    'screenshots.title': 'Veja em ação',
+    'screenshots.subtitle': 'Capturas de tela reais do app desktop. Interface limpa, recursos poderosos.',
+    'screenshots.main.title': 'Notas estilo chat em ação',
+    'screenshots.main.desc': 'Matérias, tópicos e notas organizados como uma conversa natural. Split-view com sidebar no desktop.',
+    'screenshots.flashcard1.title': 'Revisão com repetição espaçada',
+    'screenshots.flashcard1.desc': 'Vire os cards com algoritmo SM-2. Avalie como De Novo, Difícil, Bom ou Fácil.',
+    'screenshots.dark.title': 'Lindo modo escuro',
+    'screenshots.dark.desc': 'Confortável para sessões de estudo noturnas. Cada elemento se adapta perfeitamente.',
+    'screenshots.features.title': 'Organize por pastas',
+    'screenshots.features.desc': 'Agrupe suas matérias em pastas para manter tudo organizado na tela inicial.',
+    'screenshots.badge.features': 'Recursos',
+
+    'how.label': 'Como Funciona',
+    'how.title': 'Comece a estudar em segundos',
+    'how.subtitle': 'Sem conta necessária. Sem setup complicado. Abra o app, crie uma matéria e comece a anotar.',
+    'how.step1.title': 'Crie uma Matéria',
+    'how.step1.desc': 'Nomeie sua matéria ou escolha um template pronto (Matemática, Inglês, Programação, Japonês…). Adicione tópicos para organizar.',
+    'how.step2.title': 'Anote no Chat',
+    'how.step2.desc': 'Digite notas como mensagens. Use /flashcard para criar cards, anexe imagens, grave áudio, cole links. Fácil como mandar mensagem.',
+    'how.step3.title': 'Revise & Memorize',
+    'how.step3.desc': 'O motor SRS agenda suas revisões automaticamente. Vire o card, avalie, repita. Construa memória de longo prazo sem esforço.',
+
+    'comp.label': 'Por que o Mayinab?',
+    'comp.title': 'Ferramentas de estudo não precisam ser complicadas',
+    'comp.subtitle': 'Estudantes improvisam notas em apps de chat ou lutam com ferramentas complexas. O Mayinab dá a simplicidade do chat com o poder de um app de estudo.',
+    'comp.vs': 'vs Mayinab',
+    'comp.withMayinab': 'Com Mayinab',
+    'comp.discord.issue1': 'Mensagens se perdem no barulho de servidores e canais',
+    'comp.discord.issue2': 'Sem organização real, só scroll infinito',
+    'comp.discord.issue3': 'Sem flashcards, sem repetição espaçada, sem ferramentas de estudo',
+    'comp.discord.issue4': 'Precisa de internet. Suas notas ficam no servidor dos outros',
+    'comp.discord.solution': 'Mesmo feeling de chat, mas feito para estudar. Organizado por matéria e tópico, com SRS integrado. 100% offline.',
+    'comp.whatsapp.issue1': 'Misturado com conversas pessoais, impossível achar notas',
+    'comp.whatsapp.issue2': 'Truque de "enviar pra si mesmo" perde contexto rápido',
+    'comp.whatsapp.issue3': 'Sem Markdown, sem LaTeX, sem blocos de código',
+    'comp.whatsapp.issue4': 'Sem busca offline, sem export, sem controle de backup',
+    'comp.whatsapp.solution': 'Um espaço dedicado para estudo com formatação rica, busca full-text, tags e backups locais que você controla.',
+    'comp.notion.issue1': 'Onboarding complexo, esmagador para simplesmente anotar',
+    'comp.notion.issue2': 'Lento, pesado, precisa de internet para funcionar direito',
+    'comp.notion.issue3': 'Sem flashcards ou repetição espaçada integrados',
+    'comp.notion.issue4': 'Seus dados vivem nos servidores deles, sem privacidade real',
+    'comp.notion.solution': 'Abrir → digitar → pronto. Sem páginas-dentro-de-databases-dentro-de-páginas. Só matérias, tópicos e notas como chat.',
+    'comp.anki.issue1': 'Curva de aprendizado íngreme: tipos de card, note types, decks, add-ons',
+    'comp.anki.issue2': 'UI ultrapassada dos anos 2000, não feita para mobile',
+    'comp.anki.issue3': 'Só flashcards, sem notas gerais, checklists ou mídia',
+    'comp.anki.issue4': 'AnkiMobile (iOS) custa $24.99. Sync é frágil',
+    'comp.anki.solution': 'Mesmo algoritmo SM-2, UI moderna e bonita. Mais notas, checklists, áudio, vídeo, tudo em um. Import CSV do Anki incluso.',
+
+    'comp.table.feature': 'Recurso',
+    'comp.table.chatNotes': 'Notas estilo chat',
+    'comp.table.srs': 'Repetição Espaçada',
+    'comp.table.markdown': 'Markdown + LaTeX',
+    'comp.table.offline': 'Funciona offline',
+    'comp.table.noAds': 'Sem anúncios',
+    'comp.table.encrypted': 'Backup criptografado',
+    'comp.table.multimedia': '7 tipos de nota',
+    'comp.table.hierarchy': 'Matéria → Árvore de tópicos',
+    'comp.table.setup': 'Tempo de setup',
+    'comp.table.price': 'Preço',
+    'comp.table.fileUpload': 'Upload de arquivos & drag-drop',
+    'comp.table.drawing': 'Desenho / scribble pad',
+    'comp.table.splitView': 'Split-view redimensionável',
+    'comp.table.slashCmd': 'Slash commands',
+    'comp.table.shortcuts': 'Atalhos de teclado',
+    'comp.table.stats': 'Estatísticas de estudo & streaks',
+    'comp.table.val.never': '✓ Nunca',
+    'comp.table.val.nitroAds': 'Anúncios Nitro',
+    'comp.table.val.statusAds': 'Anúncios Status',
+    'comp.table.val.e2e': 'E2E chat',
+    'comp.table.val.textOnly': 'Só texto',
+    'comp.table.val.limited': 'Limitado',
+    'comp.table.val.blocks': '✓ Blocos',
+    'comp.table.val.cardsOnly': 'Só cards',
+    'comp.table.val.infDepth': '✓ ∞ profundidade',
+    'comp.table.val.channels': 'Canais',
+    'comp.table.val.pages': '✓ Páginas',
+    'comp.table.val.decks': 'Decks',
+    'comp.table.val.free': 'Grátis',
+    'comp.table.val.notionPrice': '$10/mês',
+
+    'noads.title': 'Zero anúncios. Nem agora. Nem nunca.',
+    'noads.desc': 'Apps de estudo devem ajudar você a focar, não distrair. O Mayinab nunca vai mostrar anúncios, vender seus dados ou interromper seu estudo. Isso é uma promessa.',
+
+    'pricing.label': 'Preços',
+    'pricing.title': 'Grátis para sempre. Nuvem quando precisar.',
+    'pricing.subtitle': 'Todos os recursos funcionam offline de graça. O Vault adiciona backup criptografado na nuvem quando você quiser sincronizar entre dispositivos.',
+    'pricing.free.name': 'Grátis',
+    'pricing.free.price': 'R$0 <span>para sempre</span>',
+    'pricing.free.note': 'Sem cartão necessário',
+    'pricing.free.f1': 'Todos os 7 tipos de nota',
+    'pricing.free.f2': 'Flashcards + SRS ilimitados',
+    'pricing.free.f3': 'Markdown + LaTeX + Código',
+    'pricing.free.f4': 'Wiki-links + Tags',
+    'pricing.free.f5': 'Busca full-text (FTS5)',
+    'pricing.free.f6': 'Backup local (.zip)',
+    'pricing.free.f7': 'Backup manual Google Drive',
+    'pricing.free.f8': 'Timer Pomodoro',
+    'pricing.free.f9': 'Export/Import de matérias',
+    'pricing.free.f10': 'Sem anúncios, sem limites',
+    'pricing.free.cta': 'Começar Grátis',
+    'pricing.popular': '✨ Mais Popular',
+    'pricing.basic.name': 'Vault Basic',
+    'pricing.basic.period': '/mês',
+    'pricing.basic.note': '~R$ 7,90/mês',
+    'pricing.basic.f1': 'Tudo do Grátis',
+    'pricing.basic.f2': '2 GB de nuvem criptografada',
+    'pricing.basic.f3': 'Sync na nuvem entre dispositivos',
+    'pricing.basic.f4': 'Criptografia AES-256-GCM',
+    'pricing.basic.f5': 'Máx 50 MB por arquivo',
+    'pricing.basic.f6': 'Restauração com 1 clique',
+    'pricing.basic.cta': 'Começar com Basic',
+    'pricing.pro.name': 'Vault Pro',
+    'pricing.pro.period': '/mês',
+    'pricing.pro.note': '~R$ 14,90/mês',
+    'pricing.pro.f1': 'Tudo do Basic',
+    'pricing.pro.f2': '50 GB de nuvem criptografada',
+    'pricing.pro.f3': 'Máx 200 MB por arquivo',
+    'pricing.pro.f4': 'Processamento prioritário',
+    'pricing.pro.f5': 'Apoie o desenvolvimento indie',
+    'pricing.pro.cta': 'Ir Pro',
+
+    'platforms.label': 'Plataformas',
+    'platforms.title': 'Estude em qualquer lugar, em qualquer dispositivo',
+    'platforms.subtitle': 'Performance nativa em toda plataforma. Desktop com split-view e atalhos de teclado. Mobile com gestos otimizados para toque.',
+    'platforms.desktop': 'Desktop',
+    'platforms.mobile': 'Mobile',
+    'platforms.available': 'Disponível',
+    'platforms.coming': 'Em Breve',
+
+    'langs.label': 'Idiomas',
+    'langs.title': 'Estude no seu idioma',
+    'langs.subtitle': 'A interface do Mayinab é totalmente traduzida. Mais idiomas em breve.',
+
+    'capabilities.label': 'Todas as Funcionalidades',
+    'capabilities.title': 'Tudo o que você pode fazer com o Mayinab',
+    'capabilities.subtitle': 'Um toolkit completo para estudar. Nenhuma funcionalidade escondida atrás de paywall.',
+    'capabilities.notes.title': 'Anotações',
+    'capabilities.notes.1': '7 tipos de nota: texto, flashcard, imagem, vídeo, áudio, arquivo, checklist',
+    'capabilities.notes.2': 'Fixe notas importantes no topo',
+    'capabilities.notes.3': 'Responda e cite outras notas',
+    'capabilities.notes.4': 'Edite qualquer nota permanentemente, salvo instantaneamente',
+    'capabilities.notes.5': 'Exclusão suave com desfazer em 3 segundos',
+    'capabilities.notes.6': 'Multi-selecione notas para encaminhar/excluir em lote',
+    'capabilities.notes.7': 'Arraste e solte para reordenar notas',
+    'capabilities.notes.8': 'Filtre por tipo de nota com badges de contagem',
+    'capabilities.notes.9': 'Busca no chat com contador de matches e anterior/próximo',
+    'capabilities.notes.10': 'Separadores de data entre grupos de notas',
+    'capabilities.input.title': 'Entrada & Criação',
+    'capabilities.input.1': 'Slash commands (/flashcard, /checklist...)',
+    'capabilities.input.2': 'Toolbar de markdown: negrito, itálico, código, link, math, títulos, listas',
+    'capabilities.input.3': 'Cole imagens direto da área de transferência',
+    'capabilities.input.4': 'Arraste e solte arquivos do gerenciador de arquivos',
+    'capabilities.input.5': 'File picker para qualquer tipo de documento',
+    'capabilities.input.6': 'Captura de câmera no mobile',
+    'capabilities.input.7': 'Gravador de áudio integrado',
+    'capabilities.input.8': 'Pad de desenho com seletor de cor',
+    'capabilities.input.9': 'Diálogo de flashcard com P/R + multimídia',
+    'capabilities.input.10': 'Video flashcards com timestamps do YouTube',
+    'capabilities.nav.title': 'Navegação & Organização',
+    'capabilities.nav.1': 'Sidebar com árvore de tópicos estilo Discord (desktop)',
+    'capabilities.nav.2': 'Aninhamento ilimitado de tópicos',
+    'capabilities.nav.3': 'Pastas de matérias na tela inicial',
+    'capabilities.nav.4': 'Command palette (Ctrl+K): busque qualquer coisa',
+    'capabilities.nav.5': 'Wiki-links [[Tópico]] com autocomplete',
+    'capabilities.nav.6': 'Navegação por breadcrumbs no mobile',
+    'capabilities.nav.7': 'Busca full-text powered by SQLite FTS5',
+    'capabilities.nav.8': 'Autocomplete de #tags e Explorador de Tags',
+    'capabilities.nav.9': 'Matérias reordenáveis com drag-and-drop',
+    'capabilities.nav.10': 'Sheet de tópicos irmãos para troca rápida',
+    'capabilities.study.title': 'Estudo & Revisão',
+    'capabilities.study.1': 'Algoritmo de repetição espaçada SM-2',
+    'capabilities.study.2': 'Modo flip card com revelação animada',
+    'capabilities.study.3': 'Modo digitação: digite e compare respostas',
+    'capabilities.study.4': '4 avaliações: De Novo, Difícil, Bom, Fácil',
+    'capabilities.study.5': 'Desfazer última revisão durante a sessão',
+    'capabilities.study.6': 'Resumo da sessão com gráfico de avaliações',
+    'capabilities.study.7': 'Atalhos de teclado: Espaço para virar, 1-4 para avaliar',
+    'capabilities.study.8': 'Parâmetros SRS configuráveis',
+    'capabilities.study.9': 'Flashcards multimídia (imagem/vídeo/áudio por lado)',
+    'capabilities.study.10': 'Timer Pomodoro com troca automática de fase',
+    'capabilities.media.title': 'Mídia & Anexos',
+    'capabilities.media.1': 'Upload de qualquer tipo de arquivo',
+    'capabilities.media.2': 'Compressão automática de imagem',
+    'capabilities.media.3': 'Player de vídeo com controles completos',
+    'capabilities.media.4': 'YouTube embutido com Shorts e timestamps',
+    'capabilities.media.5': 'Gravador de áudio e player completo',
+    'capabilities.media.6': 'Pad de desenho para sketches à mão livre',
+    'capabilities.media.7': 'Editor de imagem: desenhe anotações nas fotos',
+    'capabilities.media.8': 'Previews de link ricos com cache LRU',
+    'capabilities.media.9': 'Syntax highlighting para blocos de código',
+    'capabilities.media.10': 'Import em lote CSV/TSV do Anki com auto-detecção',
+    'capabilities.platform.title': 'Desktop & Mobile',
+    'capabilities.platform.1': 'Split-view redimensionável com divisores arrastáveis',
+    'capabilities.platform.2': 'Sidebar, strip de tópicos e painel home redimensionáveis',
+    'capabilities.platform.3': '10+ atalhos de teclado',
+    'capabilities.platform.4': 'Compartilhe/receba conteúdo de outros apps',
+    'capabilities.platform.5': 'Temas Claro, Escuro e Sistema',
+    'capabilities.platform.6': 'Seletor de cores personalizado para UI',
+    'capabilities.platform.7': 'Wallpapers personalizados por tipo de tela',
+    'capabilities.platform.8': 'Cores, emojis e banners por matéria',
+    'capabilities.platform.9': 'Gerenciamento de armazenamento com limpeza por categoria',
+    'capabilities.platform.10': 'Lembretes diários e proteção de streak',
+
+    'faq.label': 'FAQ',
+    'faq.title': 'Perguntas frequentes',
+    'faq.q1': 'Meus dados são realmente privados?',
+    'faq.a1': 'Sim! O Mayinab é offline-first: suas notas ficam armazenadas localmente no seu dispositivo. Nada é enviado a lugar nenhum, a menos que você opte pelo backup Vault na nuvem, que usa criptografia AES-256-GCM com derivação de chave PBKDF2. Não conseguimos ler seus dados mesmo que quiséssemos (design zero-knowledge).',
+    'faq.q2': 'Posso usar sem internet?',
+    'faq.a2': 'Com certeza. 100% do app funciona offline. Criar notas, estudar flashcards, gravar áudio, tirar fotos, buscar nas notas, tudo sem internet. O único recurso que precisa de conexão é o backup na nuvem (opcional).',
+    'faq.q3': 'Como transfiro dados entre dispositivos?',
+    'faq.a3': 'Usuários grátis podem exportar/importar matérias como arquivos .mayinab, ou criar backups locais completos em .zip. Também é possível usar o Google Drive para backup manual. Assinantes Vault têm sync na nuvem com 1 clique em todos os dispositivos.',
+    'faq.q4': 'Posso importar meus decks do Anki?',
+    'faq.a4': 'Sim! O Mayinab suporta import CSV/TSV compatível com exports do Anki. Você pode importar milhares de flashcards de uma vez, incluindo URLs de vídeo do YouTube. O algoritmo SRS é SM-2, o mesmo do Anki.',
+    'faq.q5': 'Vai ter anúncios algum dia?',
+    'faq.a5': 'Nunca. É uma promessa central. Apps de estudo devem ajudar a focar, não distrair. O Mayinab é mantido por assinaturas opcionais do Vault. Se você usar a versão grátis para sempre, tudo bem: você tem o app completo, sem compromissos.',
+    'faq.q6': 'O que torna isso diferente de usar o Notion?',
+    'faq.a6': 'O Notion é uma ferramenta poderosa de uso geral, mas é complexa e precisa de internet. O Mayinab é feito especificamente para estudo: a interface de chat torna as anotações instantâneas, o SRS é integrado (Notion não tem), funciona 100% offline, e não tem fricção de onboarding. Abrir → digitar → pronto.',
+    'faq.q7': 'É feito por uma pessoa só?',
+    'faq.a7': 'Sim! O Mayinab é um projeto indie feito com amor por Celso Takeshi Hamasaki. Isso significa atualizações rápidas, feedback direto, e um produto moldado por necessidades reais de estudantes, não roadmaps corporativos. Seu apoio pelo Vault mantém esse projeto vivo. 💚',
+
+    'cta.title': 'Pronto para estudar melhor? 🍵',
+    'cta.desc': 'Junte-se a estudantes que já descobriram uma forma melhor de anotar e lembrar o que aprendem.',
+    'cta.btn1': '⬇ Baixar Grátis',
+    'cta.btn2': 'Saiba Mais',
+
+    'footer.desc': 'Anotações de estudo reinventadas como chat. Grátis para sempre, sem anúncios.',
+    'footer.product': 'Produto',
+    'footer.download': 'Download',
+    'footer.resources': 'Recursos',
+    'footer.changelog': 'Changelog',
+    'footer.contact': 'Contato',
+    'footer.legal': 'Legal',
+    'footer.privacy': 'Política de Privacidade',
+    'footer.terms': 'Termos de Uso',
+    'footer.rights': 'Todos os direitos reservados.',
+    'footer.madeWith': 'Feito com',
+    'footer.andFlutter': '& Flutter',
+  }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  // Update lang buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+  });
+
+  // Update all translatable elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const t = translations[lang];
+    if (t && t[key]) {
+      if (key.includes('.price') && key.includes('free')) {
+        el.innerHTML = t[key];
+      } else {
+        el.textContent = t[key];
+      }
+    }
+  });
+
+  // Update language-specific images (PNG fallback inside <picture>)
+  document.querySelectorAll('.lang-img').forEach(img => {
+    const src = img.getAttribute('data-img-' + lang);
+    if (src) img.setAttribute('src', src);
+  });
+
+  // Update language-specific WebP sources inside <picture>
+  document.querySelectorAll('.lang-source').forEach(source => {
+    const srcset = source.getAttribute('data-srcset-' + lang);
+    if (srcset) source.setAttribute('srcset', srcset);
+  });
+
+  // Update meta description
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (lang === 'pt') {
+    metaDesc.setAttribute('content', 'Mayinab: Anotações de estudo reinventadas como chat. Flashcards com repetição espaçada, Markdown + LaTeX, 100% offline, sem anúncios. Grátis para Android, iOS, Linux, macOS e Windows.');
+  } else {
+    metaDesc.setAttribute('content', 'Mayinab: Study notes reimagined as chat. Flashcards with spaced repetition, Markdown + LaTeX, 100% offline, no ads. Free for Android, iOS, Linux, macOS & Windows.');
+  }
+
+  localStorage.setItem('mayinab-lang', lang);
+}
+
+// ── Navigation scroll effect ─────────────────────────────────
+const nav = document.querySelector('.nav');
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 600);
+});
+
+// ── Back to top button ───────────────────────────────────────────
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ── Mobile navigation toggle ─────────────────────────────────
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+// Close mobile nav on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ── FAQ accordion ────────────────────────────────────────────
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+    // Open clicked (if it was closed)
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ── Scroll reveal animations ─────────────────────────────────
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
+});
+
+// ── Smooth scroll for anchor links ───────────────────────────
+document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    const hash = href.includes('#') ? '#' + href.split('#')[1] : href;
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// ── Screenshot skeleton loading ─────────────────────────────────
+document.querySelectorAll('.screenshot-item picture').forEach(pic => {
+  const img = pic.querySelector('img');
+  if (img && img.complete && img.naturalWidth > 0) {
+    pic.classList.add('loaded');
+  } else if (img) {
+    img.addEventListener('load', () => pic.classList.add('loaded'));
+  }
+});
+
+// ── Initialize language from storage ─────────────────────────
+const savedLang = localStorage.getItem('mayinab-lang');
+if (savedLang && translations[savedLang]) {
+  setLang(savedLang);
+} else {
+  // Auto-detect browser language
+  const browserLang = navigator.language.slice(0, 2);
+  if (browserLang === 'pt') {
+    setLang('pt');
+  }
+}

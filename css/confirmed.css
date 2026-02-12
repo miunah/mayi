@@ -1,18 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    Email Confirmed – Standalone page styles
+   Variables: see css/variables.css
 ═══════════════════════════════════════════════════════════════ */
-:root {
-  --matcha-50: #f0f7f0;
-  --matcha-300: #8DB48E;
-  --matcha-500: #6B9A6C;
-  --matcha-700: #4a7a4b;
-  --text-primary: #3d5a3e;
-  --text-secondary: #6B8A6C;
-  --bg-primary: #FEFCF6;
-  --bg-card: #ffffff;
-  --shadow-medium: 0 4px 24px rgba(109,154,108,.12);
-  --radius-lg: 24px;
-}
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   min-height: 100vh;

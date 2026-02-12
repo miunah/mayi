@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
   <title>Changelog – Mayinab</title>
   <meta name="description" content="Changelog do Mayinab. Veja todas as novidades, melhorias e correções em cada versão do app.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="app_icon.png">
   <link rel="canonical" href="https://mayinab.com/changelog.html">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
@@ -130,26 +134,7 @@
     <p>© 2026 Mayinab · <a href="index.html" id="footerHome">Voltar ao site</a></p>
   </div>
 
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
-      });
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
-      });
-      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-      document.getElementById('backLink').textContent = lang === 'pt' ? '← Voltar ao site' : '← Back to site';
-      document.getElementById('footerHome').textContent = lang === 'pt' ? 'Voltar ao site' : 'Back to site';
-    }
-
-    // Auto-detect language
-    const userLang = navigator.language || navigator.userLanguage || 'en';
-    if (userLang.startsWith('pt')) {
-      setLang('pt');
-    } else {
-      setLang('en');
-    }
-  </script>
+  <script src="js/lang.js"></script>
+  <script>initLang();</script>
 </body>
 </html>
