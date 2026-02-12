@@ -270,7 +270,7 @@ const translations = {
     'faq.q6': 'What makes this different from just using Notion?',
     'faq.a6': 'Notion is a powerful general-purpose tool, but it\'s complex and requires internet. Mayinab is purpose-built for studying: the chat interface makes note-taking instant, SRS is built-in (Notion has none), it works fully offline, and there\'s zero onboarding friction. Open → type → done.',
     'faq.q7': 'Is it really made by one person?',
-    'faq.a7': 'Yes! Mayinab is an indie project built with love by Celso Takeshi Hamasaki. That means fast updates, direct feedback, and a product shaped by real student needs, not corporate roadmaps. Your support through Vault keeps this project alive. 💚',
+    'faq.a7': 'Yes! Mayinab is an indie project built with love by <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Celso Takeshi Hamasaki</a>. That means fast updates, direct feedback, and a product shaped by real student needs, not corporate roadmaps. Your support through Vault keeps this project alive. 💚',
 
     'cta.title': 'Ready to study smarter? 🍵',
     'cta.desc': 'Join students who already discovered a better way to take notes and remember what they learn.',
@@ -560,7 +560,7 @@ const translations = {
     'faq.q6': 'O que torna isso diferente de usar o Notion?',
     'faq.a6': 'O Notion é uma ferramenta poderosa de uso geral, mas é complexa e precisa de internet. O Mayinab é feito especificamente para estudo: a interface de chat torna as anotações instantâneas, o SRS é integrado (Notion não tem), funciona 100% offline, e não tem fricção de onboarding. Abrir → digitar → pronto.',
     'faq.q7': 'É feito por uma pessoa só?',
-    'faq.a7': 'Sim! O Mayinab é um projeto indie feito com amor por Celso Takeshi Hamasaki. Isso significa atualizações rápidas, feedback direto, e um produto moldado por necessidades reais de estudantes, não roadmaps corporativos. Seu apoio pelo Vault mantém esse projeto vivo. 💚',
+    'faq.a7': 'Sim! O Mayinab é um projeto indie feito com amor por <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Celso Takeshi Hamasaki</a>. Isso significa atualizações rápidas, feedback direto, e um produto moldado por necessidades reais de estudantes, não roadmaps corporativos. Seu apoio pelo Vault mantém esse projeto vivo. 💚',
 
     'cta.title': 'Pronto para estudar melhor? 🍵',
     'cta.desc': 'Junte-se a estudantes que já descobriram uma forma melhor de anotar e lembrar o que aprendem.',
@@ -598,7 +598,7 @@ function setLang(lang) {
     const key = el.getAttribute('data-i18n');
     const t = translations[lang];
     if (t && t[key]) {
-      if (key.includes('.price') && key.includes('free')) {
+      if ((key.includes('.price') && key.includes('free')) || t[key].includes('<a ')) {
         el.innerHTML = t[key];
       } else {
         el.textContent = t[key];
