@@ -650,6 +650,7 @@ const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', isOpen);
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
@@ -657,6 +658,7 @@ navToggle.addEventListener('click', () => {
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
   });
 });
@@ -731,4 +733,37 @@ if (savedLang && translations[savedLang]) {
   if (browserLang === 'pt') {
     setLang('pt');
   }
+}
+
+// ── Scroll spy — highlight active nav link ───────────────────
+const navSections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+if (navSections.length && navAnchors.length) {
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navAnchors.forEach(a => {
+          const href = a.getAttribute('href');
+          a.classList.toggle('active', href === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '-80px 0px -50% 0px' });
+
+  navSections.forEach(sec => spyObserver.observe(sec));
+}
+
+// ── Table scroll hint ────────────────────────────────────────
+const tableWrapper = document.querySelector('.comparison-table-wrapper');
+if (tableWrapper) {
+  const checkScroll = () => {
+    const canScroll = tableWrapper.scrollWidth > tableWrapper.clientWidth;
+    const scrolledToEnd = tableWrapper.scrollLeft + tableWrapper.clientWidth >= tableWrapper.scrollWidth - 2;
+    tableWrapper.classList.toggle('can-scroll', canScroll && !scrolledToEnd);
+  };
+  checkScroll();
+  tableWrapper.addEventListener('scroll', checkScroll, { passive: true });
+  window.addEventListener('resize', checkScroll, { passive: true });
 }

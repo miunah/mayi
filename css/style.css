@@ -157,6 +157,37 @@ img {
   opacity: 0.65;
 }
 
+/* ── Inline-extracted utility classes ─────────────────────── */
+.table-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  vertical-align: middle;
+  display: inline;
+}
+
+.pricing-app-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.footer-app-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.languages-section {
+  margin-top: 72px;
+}
+
+.languages-grid {
+  margin-top: 32px;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    ANIMATED BACKGROUND SHAPES
 ═══════════════════════════════════════════════════════════════ */
@@ -941,6 +972,13 @@ img {
   flex-shrink: 0;
 }
 
+.capability-group-icon.green { background: var(--matcha-50); }
+.capability-group-icon.peach { background: var(--peach-100); }
+.capability-group-icon.lavender { background: var(--lavender-100); }
+.capability-group-icon.pink { background: var(--pink-100); }
+.capability-group-icon.sky { background: var(--sky-100); }
+.capability-group-icon.cream { background: var(--cream-100); }
+
 .capability-group-title {
   font-size: 1rem;
   font-weight: 700;
@@ -1168,6 +1206,7 @@ img {
   border: 1.5px solid var(--matcha-100);
   background: var(--bg-card);
   box-shadow: var(--shadow-soft);
+  -webkit-overflow-scrolling: touch;
 }
 
 .comparison-table {
@@ -1675,6 +1714,11 @@ img {
   gap: 4px;
 }
 
+.footer-author {
+  color: var(--matcha-500);
+  font-weight: 600;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    SCREENSHOT GALLERY
 ═══════════════════════════════════════════════════════════════ */
@@ -2035,5 +2079,141 @@ img {
   .comparison-table th,
   .comparison-table td {
     padding: 10px 12px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TEXT SELECTION
+═══════════════════════════════════════════════════════════════ */
+::selection {
+  background: var(--matcha-200);
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UNAVAILABLE ITEMS — no interactive feedback
+═══════════════════════════════════════════════════════════════ */
+.platform-item.unavailable {
+  cursor: default;
+}
+
+.platform-item.unavailable:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--matcha-50);
+}
+
+.platform-item.unavailable .platform-status {
+  color: var(--text-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TABLE SCROLL HINT (mobile)
+═══════════════════════════════════════════════════════════════ */
+.comparison-table-wrapper {
+  position: relative;
+}
+
+.comparison-table-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to left, var(--bg-card), transparent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.comparison-table-wrapper.can-scroll::after {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACTIVE NAV LINK
+═══════════════════════════════════════════════════════════════ */
+.nav-links a.active {
+  color: var(--matcha-600);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HAMBURGER → X ANIMATION
+═══════════════════════════════════════════════════════════════ */
+.nav-mobile-toggle svg line {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-mobile-toggle.open svg line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-mobile-toggle.open svg line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-mobile-toggle.open svg line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PREFERS REDUCED MOTION
+═══════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-badge,
+  .hero-title,
+  .hero-description,
+  .hero-buttons,
+  .hero-stats,
+  .hero-visual {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .phone-msg {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .feature-card:hover,
+  .comp-card:hover,
+  .pricing-card:hover,
+  .platform-item:hover,
+  .screenshot-item:hover,
+  .contact-card:hover {
+    transform: none;
+  }
+
+  .screenshot-item:hover img {
+    transform: none;
+  }
+
+  .bg-shapes {
+    display: none;
   }
 }

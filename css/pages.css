@@ -121,3 +121,13 @@ a:focus-visible,button:focus-visible,[role="button"]:focus-visible,input:focus-v
   .step{padding-left:48px}
   .version-header{flex-direction:column;align-items:flex-start;gap:6px}
 }
+
+/* ── Text Selection ───────────────────────────────────────── */
+::selection{background:var(--matcha-200);color:var(--text-primary)}
+
+/* ── Reduced Motion ───────────────────────────────────────── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+  html{scroll-behavior:auto}
+  .contact-card:hover{transform:none}
+}
