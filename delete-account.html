@@ -32,14 +32,17 @@
     a{color:var(--matcha-500);text-decoration:none;transition:var(--transition)}
     a:hover{color:var(--matcha-700)}
 
-    /* NAV */
     .top-bar{position:sticky;top:0;z-index:100;background:rgba(254,252,246,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--matcha-100);padding:14px 0}
     .top-bar .container{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
     .top-bar .brand{display:flex;align-items:center;gap:8px;font-size:1.1rem;font-weight:700;color:var(--text-primary)}
     .top-bar .brand img{width:28px;height:28px;border-radius:8px}
+    .top-bar .nav-right{display:flex;align-items:center;gap:12px}
     .top-bar .back-link{font-size:.9rem;font-weight:600}
 
-    /* CONTENT */
+    .lang-switcher{display:flex;align-items:center;gap:4px;background:var(--matcha-50);border-radius:999px;padding:3px}
+    .lang-btn{font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:700;padding:4px 12px;border:none;border-radius:999px;cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-secondary)}
+    .lang-btn.active{background:var(--bg-card);color:var(--matcha-500);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+
     .container{max-width:900px;margin:0 auto;padding:0 24px}
     .legal-hero{padding:60px 0 32px;text-align:center}
     .legal-hero h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:8px}
@@ -47,9 +50,8 @@
     .legal-content{background:var(--bg-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-medium);padding:clamp(24px,5vw,48px);margin-bottom:60px}
     .legal-content h2{font-size:1.3rem;font-weight:800;margin:32px 0 12px;color:var(--matcha-700);border-left:4px solid var(--matcha-300);padding-left:12px}
     .legal-content h2:first-of-type{margin-top:0}
-    .legal-content h3{font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--text-primary)}
     .legal-content p,.legal-content li{font-size:.95rem;color:#555;line-height:1.85}
-    .legal-content ul,.legal-content ol{margin:8px 0 16px 20px}
+    .legal-content ul{margin:8px 0 16px 20px}
     .legal-content li{margin-bottom:4px}
     .legal-content strong{color:var(--text-primary)}
     .legal-content .highlight{background:var(--matcha-50);border:1px solid var(--matcha-100);border-radius:12px;padding:16px 20px;margin:16px 0;font-size:.92rem;color:var(--text-primary)}
@@ -67,120 +69,181 @@
     .footer-mini{text-align:center;padding:24px;font-size:.82rem;color:var(--text-secondary);border-top:1px solid var(--matcha-100)}
     .footer-mini a{font-weight:600}
 
+    [data-lang]{display:none}
+    [data-lang].active{display:block}
+
     @media(max-width:600px){
       .legal-content{border-radius:16px;padding:20px}
       .legal-content h2{font-size:1.15rem}
       .step{padding-left:48px}
+      .top-bar .container{flex-wrap:wrap;gap:8px}
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <nav class="top-bar">
     <div class="container">
       <a href="index.html" class="brand">
         <img src="app_icon.png" alt="Mayinab">Mayinab
       </a>
-      <a href="index.html" class="back-link">← Voltar ao site</a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
+          <button class="lang-btn active" onclick="setLang('pt')" aria-label="Português">PT</button>
+        </div>
+        <a href="index.html" class="back-link" id="backLink">← Voltar ao site</a>
+      </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <div class="legal-hero">
+  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
+  <div data-lang="pt" class="active">
+    <div class="legal-hero">
+      <div class="container">
+        <h1>🗑️ Excluir Conta e Dados</h1>
+        <p class="updated">Aplicativo Mayinab — Desenvolvido por Celso Hamasaki</p>
+      </div>
+    </div>
     <div class="container">
-      <h1>🗑️ Excluir Conta e Dados</h1>
-      <p class="updated">Aplicativo Mayinab — Desenvolvido por Celso Hamasaki</p>
+      <div class="legal-content">
+
+        <div class="highlight">
+          Você pode solicitar a exclusão da sua conta e de todos os dados associados a qualquer momento. O processo é simples e pode ser feito diretamente pelo aplicativo ou por e-mail.
+        </div>
+
+        <h2>Como excluir sua conta pelo aplicativo</h2>
+        <p>Siga os passos abaixo dentro do app Mayinab:</p>
+        <div class="steps">
+          <div class="step"><p>Abra o aplicativo <strong>Mayinab</strong></p></div>
+          <div class="step"><p>Acesse <strong>Configurações</strong> (ícone de engrenagem)</p></div>
+          <div class="step"><p>Toque em <strong>Conta</strong></p></div>
+          <div class="step"><p>Toque em <strong>Excluir conta</strong></p></div>
+          <div class="step"><p>Confirme a exclusão quando solicitado</p></div>
+        </div>
+
+        <h2>Como excluir sua conta por e-mail</h2>
+        <p>Se preferir, ou caso não consiga acessar o app, envie um e-mail para:</p>
+        <div class="highlight">
+          📧 <a href="mailto:suporte@maynab.com"><strong>suporte@maynab.com</strong></a><br>
+          Assunto: <strong>Solicitação de exclusão de conta</strong><br><br>
+          Inclua o endereço de e-mail associado à sua conta. Responderemos e processaremos a solicitação em até <strong>15 dias úteis</strong>.
+        </div>
+
+        <h2>Dados que são excluídos</h2>
+        <p>Ao excluir sua conta, os seguintes dados são <strong>removidos permanentemente</strong> dos nossos servidores:</p>
+        <table>
+          <tr><th>Tipo de dado</th><th>Ação</th><th>Prazo</th></tr>
+          <tr><td>Dados de autenticação (e-mail, senha hash, UID)</td><td>Excluído permanentemente</td><td>Até 30 dias</td></tr>
+          <tr><td>Backups em nuvem (Vault)</td><td>Excluído permanentemente</td><td>Até 30 dias</td></tr>
+          <tr><td>Registros de acesso (logs)</td><td>Excluído após período legal</td><td>6 meses (Marco Civil da Internet)</td></tr>
+          <tr><td>Dados locais no dispositivo (notas, flashcards)</td><td>Mantidos no dispositivo — você controla a exclusão local</td><td>N/A</td></tr>
+        </table>
+
+        <h2>Informações importantes</h2>
+        <ul>
+          <li>A exclusão da conta é <strong>irreversível</strong>. Todos os backups em nuvem serão perdidos permanentemente.</li>
+          <li>Os dados locais no seu dispositivo (notas, flashcards, arquivos) <strong>não são afetados</strong> — eles permanecem no dispositivo e você pode excluí-los desinstalando o app.</li>
+          <li>Se você possui uma assinatura ativa do Vault, <strong>cancele a assinatura</strong> pela Google Play Store ou Apple App Store antes de excluir a conta, para evitar cobranças futuras.</li>
+          <li>Registros de acesso (logs) são mantidos por <strong>6 meses</strong> após a exclusão, conforme exigência do Marco Civil da Internet (Lei nº 12.965/2014, Art. 15).</li>
+        </ul>
+
+        <h2>Dúvidas?</h2>
+        <p>Se tiver qualquer dúvida sobre a exclusão de conta ou tratamento de dados, entre em contato:</p>
+        <p><strong>E-mail:</strong> <a href="mailto:suporte@maynab.com">suporte@maynab.com</a></p>
+        <p>Para mais detalhes, consulte nossa <a href="legal/privacy.html">Política de Privacidade</a> e os <a href="legal/terms.html">Termos de Uso</a>.</p>
+      </div>
     </div>
   </div>
 
-  <!-- CONTENT -->
-  <div class="container">
-    <div class="legal-content">
-
-      <div class="highlight">
-        Você pode solicitar a exclusão da sua conta e de todos os dados associados a qualquer momento. O processo é simples e pode ser feito diretamente pelo aplicativo ou por e-mail.
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div data-lang="en">
+    <div class="legal-hero">
+      <div class="container">
+        <h1>🗑️ Delete Account and Data</h1>
+        <p class="updated">Mayinab App — Developed by Celso Hamasaki</p>
       </div>
+    </div>
+    <div class="container">
+      <div class="legal-content">
 
-      <h2>Como excluir sua conta pelo aplicativo</h2>
-      <p>Siga os passos abaixo dentro do app Mayinab:</p>
+        <div class="highlight">
+          You can request the deletion of your account and all associated data at any time. The process is simple and can be done directly through the app or by email.
+        </div>
 
-      <div class="steps">
-        <div class="step">
-          <p>Abra o aplicativo <strong>Mayinab</strong></p>
+        <h2>How to delete your account from the app</h2>
+        <p>Follow the steps below inside the Mayinab app:</p>
+        <div class="steps">
+          <div class="step"><p>Open the <strong>Mayinab</strong> app</p></div>
+          <div class="step"><p>Go to <strong>Settings</strong> (gear icon)</p></div>
+          <div class="step"><p>Tap <strong>Account</strong></p></div>
+          <div class="step"><p>Tap <strong>Delete account</strong></p></div>
+          <div class="step"><p>Confirm the deletion when prompted</p></div>
         </div>
-        <div class="step">
-          <p>Acesse <strong>Configurações</strong> (ícone de engrenagem)</p>
+
+        <h2>How to delete your account by email</h2>
+        <p>If you prefer, or if you cannot access the app, send an email to:</p>
+        <div class="highlight">
+          📧 <a href="mailto:suporte@maynab.com"><strong>suporte@maynab.com</strong></a><br>
+          Subject: <strong>Account deletion request</strong><br><br>
+          Include the email address associated with your account. We will respond and process the request within <strong>15 business days</strong>.
         </div>
-        <div class="step">
-          <p>Toque em <strong>Conta</strong></p>
-        </div>
-        <div class="step">
-          <p>Toque em <strong>Excluir conta</strong></p>
-        </div>
-        <div class="step">
-          <p>Confirme a exclusão quando solicitado</p>
-        </div>
+
+        <h2>Data that is deleted</h2>
+        <p>When you delete your account, the following data is <strong>permanently removed</strong> from our servers:</p>
+        <table>
+          <tr><th>Data type</th><th>Action</th><th>Timeframe</th></tr>
+          <tr><td>Authentication data (email, password hash, UID)</td><td>Permanently deleted</td><td>Up to 30 days</td></tr>
+          <tr><td>Cloud backups (Vault)</td><td>Permanently deleted</td><td>Up to 30 days</td></tr>
+          <tr><td>Access logs</td><td>Deleted after legal period</td><td>6 months (Marco Civil da Internet)</td></tr>
+          <tr><td>Local data on device (notes, flashcards)</td><td>Kept on device — you control local deletion</td><td>N/A</td></tr>
+        </table>
+
+        <h2>Important information</h2>
+        <ul>
+          <li>Account deletion is <strong>irreversible</strong>. All cloud backups will be permanently lost.</li>
+          <li>Local data on your device (notes, flashcards, files) is <strong>not affected</strong> — it remains on your device and you can delete it by uninstalling the app.</li>
+          <li>If you have an active Vault subscription, <strong>cancel the subscription</strong> through Google Play Store or Apple App Store before deleting your account to avoid future charges.</li>
+          <li>Access logs are kept for <strong>6 months</strong> after deletion, as required by the Marco Civil da Internet (Law No. 12,965/2014, Art. 15).</li>
+        </ul>
+
+        <h2>Questions?</h2>
+        <p>If you have any questions about account deletion or data processing, contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:suporte@maynab.com">suporte@maynab.com</a></p>
+        <p>For more details, see our <a href="legal/privacy.html">Privacy Policy</a> and <a href="legal/terms.html">Terms of Use</a>.</p>
       </div>
-
-      <h2>Como excluir sua conta por e-mail</h2>
-      <p>Se preferir, ou caso não consiga acessar o app, envie um e-mail para:</p>
-      <div class="highlight">
-        📧 <a href="mailto:suporte@maynab.com"><strong>suporte@maynab.com</strong></a><br>
-        Assunto: <strong>Solicitação de exclusão de conta</strong><br><br>
-        Inclua o endereço de e-mail associado à sua conta. Responderemos e processaremos a solicitação em até <strong>15 dias úteis</strong>.
-      </div>
-
-      <h2>Dados que são excluídos</h2>
-      <p>Ao excluir sua conta, os seguintes dados são <strong>removidos permanentemente</strong> dos nossos servidores:</p>
-      <table>
-        <tr>
-          <th>Tipo de dado</th>
-          <th>Ação</th>
-          <th>Prazo</th>
-        </tr>
-        <tr>
-          <td>Dados de autenticação (e-mail, senha hash, UID)</td>
-          <td>Excluído permanentemente</td>
-          <td>Até 30 dias</td>
-        </tr>
-        <tr>
-          <td>Backups em nuvem (Vault)</td>
-          <td>Excluído permanentemente</td>
-          <td>Até 30 dias</td>
-        </tr>
-        <tr>
-          <td>Registros de acesso (logs)</td>
-          <td>Excluído após período legal</td>
-          <td>6 meses (Marco Civil da Internet)</td>
-        </tr>
-        <tr>
-          <td>Dados locais no dispositivo (notas, flashcards)</td>
-          <td>Mantidos no dispositivo — você controla a exclusão local</td>
-          <td>N/A</td>
-        </tr>
-      </table>
-
-      <h2>Informações importantes</h2>
-      <ul>
-        <li>A exclusão da conta é <strong>irreversível</strong>. Todos os backups em nuvem serão perdidos permanentemente.</li>
-        <li>Os dados locais no seu dispositivo (notas, flashcards, arquivos) <strong>não são afetados</strong> — eles permanecem no dispositivo e você pode excluí-los desinstalando o app.</li>
-        <li>Se você possui uma assinatura ativa do Vault, <strong>cancele a assinatura</strong> pela Google Play Store ou Apple App Store antes de excluir a conta, para evitar cobranças futuras.</li>
-        <li>Registros de acesso (logs) são mantidos por <strong>6 meses</strong> após a exclusão, conforme exigência do Marco Civil da Internet (Lei nº 12.965/2014, Art. 15).</li>
-      </ul>
-
-      <h2>Dúvidas?</h2>
-      <p>Se tiver qualquer dúvida sobre a exclusão de conta ou tratamento de dados, entre em contato:</p>
-      <p><strong>E-mail:</strong> <a href="mailto:suporte@maynab.com">suporte@maynab.com</a></p>
-      <p>Para mais detalhes, consulte nossa <a href="legal/privacy.html">Política de Privacidade</a> e os <a href="legal/terms.html">Termos de Uso</a>.</p>
-
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer-mini">
+  <!-- FOOTERS -->
+  <div class="footer-mini" data-lang="pt" class="active">
     <p>© 2026 Mayinab · <a href="legal/privacy.html">Privacidade</a> · <a href="legal/terms.html">Termos de Uso</a> · <a href="index.html">Início</a></p>
   </div>
+  <div class="footer-mini" data-lang="en">
+    <p>© 2026 Mayinab · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms of Use</a> · <a href="index.html">Home</a></p>
+  </div>
 
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+      });
+      document.getElementById('backLink').textContent = lang === 'pt' ? '← Voltar ao site' : '← Back to site';
+      if (lang === 'pt') {
+        document.title = 'Excluir Conta – Mayinab';
+        document.querySelector('meta[name="description"]').setAttribute('content', 'Solicite a exclusão da sua conta e dados do aplicativo Mayinab.');
+      } else {
+        document.title = 'Delete Account – Mayinab';
+        document.querySelector('meta[name="description"]').setAttribute('content', 'Request the deletion of your Mayinab account and data.');
+      }
+      localStorage.setItem('mayinab-lang', lang);
+    }
+    const saved = localStorage.getItem('mayinab-lang');
+    if (saved) { setLang(saved); } else { setLang(navigator.language.slice(0,2) === 'pt' ? 'pt' : 'en'); }
+  </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
   <meta name="description" content="Termos de Uso do aplicativo Mayinab. Condições de uso do serviço em conformidade com a legislação brasileira e LGPD.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="canonical" href="https://mayinab.app/legal/terms.html">
+  <link rel="canonical" href="https://mayinab.com/legal/terms.html">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -32,14 +32,17 @@
     a{color:var(--matcha-500);text-decoration:none;transition:var(--transition)}
     a:hover{color:var(--matcha-700)}
 
-    /* NAV */
     .top-bar{position:sticky;top:0;z-index:100;background:rgba(254,252,246,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--matcha-100);padding:14px 0}
     .top-bar .container{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
     .top-bar .brand{display:flex;align-items:center;gap:8px;font-size:1.1rem;font-weight:700;color:var(--text-primary)}
     .top-bar .brand img{width:28px;height:28px;border-radius:8px}
+    .top-bar .nav-right{display:flex;align-items:center;gap:12px}
     .top-bar .back-link{font-size:.9rem;font-weight:600}
 
-    /* CONTENT */
+    .lang-switcher{display:flex;align-items:center;gap:4px;background:var(--matcha-50);border-radius:999px;padding:3px}
+    .lang-btn{font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:700;padding:4px 12px;border:none;border-radius:999px;cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-secondary)}
+    .lang-btn.active{background:var(--bg-card);color:var(--matcha-500);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+
     .container{max-width:900px;margin:0 auto;padding:0 24px}
     .legal-hero{padding:60px 0 32px;text-align:center}
     .legal-hero h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-bottom:8px}
@@ -53,243 +56,462 @@
     .legal-content li{margin-bottom:4px}
     .legal-content strong{color:var(--text-primary)}
     .legal-content .highlight{background:var(--matcha-50);border:1px solid var(--matcha-100);border-radius:12px;padding:16px 20px;margin:16px 0;font-size:.92rem;color:var(--text-primary)}
-    .legal-content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.9rem}
-    .legal-content th,.legal-content td{border:1px solid var(--matcha-100);padding:10px 14px;text-align:left}
-    .legal-content th{background:var(--matcha-50);font-weight:700;color:var(--text-primary)}
-    .legal-content td{color:#555}
 
     .footer-mini{text-align:center;padding:24px;font-size:.82rem;color:var(--text-secondary);border-top:1px solid var(--matcha-100)}
     .footer-mini a{font-weight:600}
 
+    [data-lang]{display:none}
+    [data-lang].active{display:block}
+
     @media(max-width:600px){
       .legal-content{border-radius:16px;padding:20px}
       .legal-content h2{font-size:1.15rem}
+      .top-bar .container{flex-wrap:wrap;gap:8px}
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <nav class="top-bar">
     <div class="container">
       <a href="../index.html" class="brand">
         <img src="../app_icon.png" alt="Mayinab">Mayinab
       </a>
-      <a href="../index.html" class="back-link">← Voltar ao site</a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
+          <button class="lang-btn active" onclick="setLang('pt')" aria-label="Português">PT</button>
+        </div>
+        <a href="../index.html" class="back-link" id="backLink">← Voltar ao site</a>
+      </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <div class="legal-hero">
-    <div class="container">
-      <h1>📋 Termos de Uso</h1>
-      <p class="updated">Última atualização: 12 de fevereiro de 2026</p>
-    </div>
-  </div>
-
-  <!-- CONTENT -->
-  <div class="container">
-    <div class="legal-content">
-
-      <div class="highlight">
-        <strong>Resumo:</strong> O Mayinab é gratuito e offline. Você é dono dos seus dados. O Vault (backup em nuvem) é pago e opcional. Não vendemos dados. Não exibimos anúncios. Use o app de forma responsável.
+  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
+  <div data-lang="pt" class="active">
+    <div class="legal-hero">
+      <div class="container">
+        <h1>📋 Termos de Uso</h1>
+        <p class="updated">Última atualização: 12 de fevereiro de 2026</p>
       </div>
+    </div>
+    <div class="container">
+      <div class="legal-content">
 
-      <h2>1. Aceitação dos Termos</h2>
-      <p>Ao baixar, instalar ou utilizar o aplicativo <strong>Mayinab</strong> ("Aplicativo", "App" ou "Serviço"), você concorda com estes Termos de Uso ("Termos"). Se não concordar, por favor não utilize o Aplicativo.</p>
-      <p>Estes Termos constituem um contrato vinculante entre você ("Usuário") e <strong>Celso Hamasaki</strong> ("Desenvolvedor", "nós", "nosso"), desenvolvedor individual responsável pelo Mayinab.</p>
+        <div class="highlight">
+          <strong>Resumo:</strong> O Mayinab é gratuito e offline. Você é dono dos seus dados. O Vault (backup em nuvem) é pago e opcional. Não vendemos dados. Não exibimos anúncios. Use o app de forma responsável.
+        </div>
 
-      <h2>2. Descrição do Serviço</h2>
-      <p>O Mayinab é um aplicativo educacional multiplataforma (Android, iOS, Linux, macOS, Windows) que permite:</p>
-      <ul>
-        <li>Criar notas de estudo em formato de chat</li>
-        <li>Utilizar flashcards com sistema de repetição espaçada (SRS)</li>
-        <li>Formatar conteúdo com Markdown e LaTeX</li>
-        <li>Importar e exportar dados</li>
-        <li>Fazer upload de arquivos, gravar áudio, desenhar e anotar sobre imagens</li>
-        <li>Opcionalmente, fazer backup criptografado em nuvem (Vault)</li>
-      </ul>
+        <h2>1. Aceitação dos Termos</h2>
+        <p>Ao baixar, instalar ou utilizar o aplicativo <strong>Mayinab</strong> ("Aplicativo", "App" ou "Serviço"), você concorda com estes Termos de Uso ("Termos"). Se não concordar, por favor não utilize o Aplicativo.</p>
+        <p>Estes Termos constituem um contrato vinculante entre você ("Usuário") e <strong>Celso Hamasaki</strong> ("Desenvolvedor", "nós", "nosso"), desenvolvedor individual responsável pelo Mayinab.</p>
 
-      <h2>3. Modalidades de Uso</h2>
-      <h3>3.1 Plano Gratuito</h3>
-      <ul>
-        <li>Todas as funcionalidades do aplicativo, sem limitações</li>
-        <li>100% offline — nenhum dado é transmitido</li>
-        <li>Sem anúncios, sem rastreamento, sem restrições de uso</li>
-        <li>Gratuito para sempre</li>
-      </ul>
+        <h2>2. Descrição do Serviço</h2>
+        <p>O Mayinab é um aplicativo educacional multiplataforma (Android, iOS, Linux, macOS, Windows) que permite:</p>
+        <ul>
+          <li>Criar notas de estudo em formato de chat</li>
+          <li>Utilizar flashcards com sistema de repetição espaçada (SRS)</li>
+          <li>Formatar conteúdo com Markdown e LaTeX</li>
+          <li>Importar e exportar dados</li>
+          <li>Fazer upload de arquivos, gravar áudio, desenhar e anotar sobre imagens</li>
+          <li>Opcionalmente, fazer backup criptografado em nuvem (Vault)</li>
+        </ul>
 
-      <h3>3.2 Vault Basic (pago — opcional)</h3>
-      <ul>
-        <li>Backup criptografado em nuvem com 2 GB de armazenamento</li>
-        <li>Criptografia AES-256-GCM de ponta a ponta</li>
-        <li>Sincronização entre dispositivos</li>
-      </ul>
+        <h2>3. Modalidades de Uso</h2>
+        <h3>3.1 Plano Gratuito</h3>
+        <ul>
+          <li>Todas as funcionalidades do aplicativo, sem limitações</li>
+          <li>100% offline — nenhum dado é transmitido</li>
+          <li>Sem anúncios, sem rastreamento, sem restrições de uso</li>
+          <li>Gratuito para sempre</li>
+        </ul>
+        <h3>3.2 Vault Basic (pago — opcional)</h3>
+        <ul>
+          <li>Backup criptografado em nuvem com 2 GB de armazenamento</li>
+          <li>Criptografia AES-256-GCM de ponta a ponta</li>
+          <li>Sincronização entre dispositivos</li>
+        </ul>
+        <h3>3.3 Vault Pro (pago — opcional)</h3>
+        <ul>
+          <li>Backup criptografado em nuvem com 50 GB de armazenamento</li>
+          <li>Todos os recursos do Vault Basic</li>
+        </ul>
 
-      <h3>3.3 Vault Pro (pago — opcional)</h3>
-      <ul>
-        <li>Backup criptografado em nuvem com 50 GB de armazenamento</li>
-        <li>Todos os recursos do Vault Basic</li>
-      </ul>
+        <h2>4. Conta de Usuário</h2>
+        <h3>4.1 Criação de conta</h3>
+        <p>O uso offline do Mayinab não exige criação de conta. A criação de conta é necessária apenas para utilizar o serviço Vault. Ao criar uma conta, você declara:</p>
+        <ul>
+          <li>Ter pelo menos <strong>16 anos de idade</strong>, ou possuir consentimento de um responsável legal (12–16 anos, conforme Art. 14 da LGPD)</li>
+          <li>Fornecer informações verdadeiras e atualizadas</li>
+          <li>Ser responsável pela segurança da sua senha e acesso à conta</li>
+        </ul>
+        <h3>4.2 Responsabilidades do usuário</h3>
+        <p>Você é responsável por:</p>
+        <ul>
+          <li>Manter a confidencialidade de suas credenciais de acesso</li>
+          <li>Todas as atividades realizadas com sua conta</li>
+          <li>Notificar-nos imediatamente sobre qualquer uso não autorizado</li>
+        </ul>
 
-      <h2>4. Conta de Usuário</h2>
-      <h3>4.1 Criação de conta</h3>
-      <p>O uso offline do Mayinab não exige criação de conta. A criação de conta é necessária apenas para utilizar o serviço Vault. Ao criar uma conta, você declara:</p>
-      <ul>
-        <li>Ter pelo menos <strong>16 anos de idade</strong>, ou possuir consentimento de um responsável legal (12–16 anos, conforme Art. 14 da LGPD)</li>
-        <li>Fornecer informações verdadeiras e atualizadas</li>
-        <li>Ser responsável pela segurança da sua senha e acesso à conta</li>
-      </ul>
+        <h2>5. Propriedade do Conteúdo</h2>
+        <h3>5.1 Seu conteúdo</h3>
+        <p><strong>Você é e permanece o titular de todo o conteúdo criado, inserido ou armazenado no Mayinab</strong> (notas, flashcards, imagens, áudios, vídeos, arquivos, desenhos). Não reivindicamos qualquer direito de propriedade sobre o seu conteúdo.</p>
+        <p>Ao utilizar o Vault, você nos concede uma licença limitada e revogável exclusivamente para armazenar e transmitir seus dados criptografados com a finalidade de fornecer o serviço de backup. Como os dados são criptografados de ponta a ponta, não temos acesso ao conteúdo.</p>
+        <h3>5.2 Nosso conteúdo</h3>
+        <p>O aplicativo Mayinab, incluindo seu código-fonte, design, marca, logotipo, interface, textos promocionais e todos os elementos visuais, é de propriedade exclusiva do Desenvolvedor e protegido por leis de propriedade intelectual.</p>
 
-      <h3>4.2 Responsabilidades do usuário</h3>
-      <p>Você é responsável por:</p>
-      <ul>
-        <li>Manter a confidencialidade de suas credenciais de acesso</li>
-        <li>Todas as atividades realizadas com sua conta</li>
-        <li>Notificar-nos imediatamente sobre qualquer uso não autorizado</li>
-      </ul>
+        <h2>6. Uso Aceitável</h2>
+        <p>Ao utilizar o Mayinab, você concorda em <strong>não</strong>:</p>
+        <ul>
+          <li>Utilizar o serviço para fins ilegais ou não autorizados</li>
+          <li>Tentar acessar, modificar ou interferir em sistemas, servidores ou redes do Mayinab sem autorização</li>
+          <li>Fazer engenharia reversa, descompilar ou desmontar o aplicativo, exceto quando permitido por lei</li>
+          <li>Distribuir, revender ou sublicenciar o aplicativo ou parte dele</li>
+          <li>Armazenar, transmitir ou compartilhar conteúdo ilegal, abusivo, difamatório, obsceno ou que viole direitos de terceiros</li>
+          <li>Utilizar o serviço de forma a sobrecarregar a infraestrutura ou prejudicar outros usuários</li>
+          <li>Criar contas falsas ou utilizar informações de identidade de terceiros</li>
+          <li>Remover, alterar ou obscurecer avisos de direitos autorais ou propriedade</li>
+        </ul>
 
-      <h2>5. Propriedade do Conteúdo</h2>
-      <h3>5.1 Seu conteúdo</h3>
-      <p><strong>Você é e permanece o titular de todo o conteúdo criado, inserido ou armazenado no Mayinab</strong> (notas, flashcards, imagens, áudios, vídeos, arquivos, desenhos). Não reivindicamos qualquer direito de propriedade sobre o seu conteúdo.</p>
-      <p>Ao utilizar o Vault, você nos concede uma licença limitada e revogável exclusivamente para armazenar e transmitir seus dados criptografados com a finalidade de fornecer o serviço de backup. Como os dados são criptografados de ponta a ponta, não temos acesso ao conteúdo.</p>
+        <h2>7. Pagamentos e Assinaturas</h2>
+        <h3>7.1 Processamento</h3>
+        <p>Todos os pagamentos são processados por <strong>Google Play</strong> ou <strong>Apple App Store</strong>, conforme a plataforma. Ao adquirir uma assinatura, você concorda com os termos de pagamento da respectiva loja.</p>
+        <h3>7.2 Renovação automática</h3>
+        <p>As assinaturas do Vault são renovadas automaticamente ao final de cada período de faturamento (mensal ou anual), a menos que sejam canceladas antes do término do período vigente.</p>
+        <h3>7.3 Cancelamento</h3>
+        <ul>
+          <li>Você pode cancelar sua assinatura a qualquer momento através da Google Play ou Apple App Store</li>
+          <li>O cancelamento entra em vigor ao final do período já pago</li>
+          <li>Após o cancelamento, o acesso ao Vault permanece ativo até o fim do período faturado</li>
+          <li>Os dados locais no dispositivo não são afetados pelo cancelamento</li>
+        </ul>
+        <h3>7.4 Reembolso</h3>
+        <p>As políticas de reembolso são regidas pelas regras da <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play</a> e da <a href="https://support.apple.com/pt-br/HT204084" target="_blank" rel="noopener">Apple App Store</a>. Reembolsos devem ser solicitados diretamente à loja correspondente.</p>
 
-      <h3>5.2 Nosso conteúdo</h3>
-      <p>O aplicativo Mayinab, incluindo seu código-fonte, design, marca, logotipo, interface, textos promocionais e todos os elementos visuais, é de propriedade exclusiva do Desenvolvedor e protegido por leis de propriedade intelectual.</p>
+        <h2>8. Disponibilidade do Serviço</h2>
+        <p>O uso offline do Mayinab está disponível a todo momento, independentemente de conexão à internet. Para o serviço Vault:</p>
+        <ul>
+          <li>Nos esforçamos para manter o serviço disponível 24/7, mas não garantimos disponibilidade ininterrupta</li>
+          <li>Podemos realizar manutenções programadas, com aviso prévio quando possível</li>
+          <li>Não nos responsabilizamos por indisponibilidades causadas por eventos de força maior, falhas de infraestrutura de terceiros ou problemas de conectividade do usuário</li>
+        </ul>
 
-      <h2>6. Uso Aceitável</h2>
-      <p>Ao utilizar o Mayinab, você concorda em <strong>não</strong>:</p>
-      <ul>
-        <li>Utilizar o serviço para fins ilegais ou não autorizados</li>
-        <li>Tentar acessar, modificar ou interferir em sistemas, servidores ou redes do Mayinab sem autorização</li>
-        <li>Fazer engenharia reversa, descompilar ou desmontar o aplicativo, exceto quando permitido por lei</li>
-        <li>Distribuir, revender ou sublicenciar o aplicativo ou parte dele</li>
-        <li>Armazenar, transmitir ou compartilhar conteúdo ilegal, abusivo, difamatório, obsceno ou que viole direitos de terceiros</li>
-        <li>Utilizar o serviço de forma a sobrecarregar a infraestrutura ou prejudicar outros usuários</li>
-        <li>Criar contas falsas ou utilizar informações de identidade de terceiros</li>
-        <li>Remover, alterar ou obscurecer avisos de direitos autorais ou propriedade</li>
-      </ul>
+        <h2>9. Isenção de Garantias</h2>
+        <p>O Mayinab é fornecido "como está" (<em>"as is"</em>) e "conforme disponível" (<em>"as available"</em>). Na máxima extensão permitida pela legislação aplicável:</p>
+        <ul>
+          <li>Não oferecemos garantias expressas ou implícitas de adequação a um fim específico, comerciabilidade ou não violação</li>
+          <li>Não garantimos que o aplicativo seja livre de erros, bugs ou interrupções</li>
+          <li>Não garantimos a integridade ou preservação dos dados armazenados localmente (o usuário é responsável por seus próprios backups)</li>
+        </ul>
+        <p>Nenhuma disposição destes Termos limita direitos que não possam ser limitados por lei, incluindo os direitos previstos no Código de Defesa do Consumidor (Lei nº 8.078/1990).</p>
 
-      <h2>7. Pagamentos e Assinaturas</h2>
-      <h3>7.1 Processamento</h3>
-      <p>Todos os pagamentos são processados por <strong>Google Play</strong> ou <strong>Apple App Store</strong>, conforme a plataforma. Ao adquirir uma assinatura, você concorda com os termos de pagamento da respectiva loja.</p>
+        <h2>10. Limitação de Responsabilidade</h2>
+        <p>Na máxima extensão permitida pela lei, o Desenvolvedor não será responsável por:</p>
+        <ul>
+          <li>Danos indiretos, incidentais, especiais, consequenciais ou punitivos</li>
+          <li>Perda de dados, lucros cessantes ou interrupção de atividades</li>
+          <li>Danos decorrentes do uso ou incapacidade de uso do aplicativo</li>
+          <li>Ações de terceiros em relação ao seu conteúdo</li>
+        </ul>
+        <p>A responsabilidade total do Desenvolvedor, quando aplicável, será limitada ao valor pago pelo usuário nos últimos 12 meses anteriores ao evento que deu causa ao dano.</p>
 
-      <h3>7.2 Renovação automática</h3>
-      <p>As assinaturas do Vault são renovadas automaticamente ao final de cada período de faturamento (mensal ou anual), a menos que sejam canceladas antes do término do período vigente.</p>
+        <h2>11. Proteção de Dados Pessoais</h2>
+        <p>O tratamento de dados pessoais é regido pela nossa <a href="privacy.html"><strong>Política de Privacidade</strong></a>, que é parte integrante destes Termos. Ao utilizar o Mayinab, você declara ter lido e compreendido a Política de Privacidade.</p>
 
-      <h3>7.3 Cancelamento</h3>
-      <ul>
-        <li>Você pode cancelar sua assinatura a qualquer momento através da Google Play ou Apple App Store</li>
-        <li>O cancelamento entra em vigor ao final do período já pago</li>
-        <li>Após o cancelamento, o acesso ao Vault permanece ativo até o fim do período faturado</li>
-        <li>Os dados locais no dispositivo não são afetados pelo cancelamento</li>
-      </ul>
+        <h2>12. Propriedade Intelectual</h2>
+        <ul>
+          <li>O nome "Mayinab", logotipo, ícones e identidade visual são marcas do Desenvolvedor</li>
+          <li>O uso não autorizado da marca, logotipo ou elementos de identidade visual constitui violação de direitos de propriedade intelectual</li>
+          <li>O aplicativo pode incluir componentes de código aberto, sujeitos às suas respectivas licenças, que são listados no próprio app</li>
+        </ul>
 
-      <h3>7.4 Reembolso</h3>
-      <p>As políticas de reembolso são regidas pelas regras da <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play</a> e da <a href="https://support.apple.com/pt-br/HT204084" target="_blank" rel="noopener">Apple App Store</a>. Reembolsos devem ser solicitados diretamente à loja correspondente.</p>
+        <h2>13. Rescisão</h2>
+        <h3>13.1 Pelo usuário</h3>
+        <p>Você pode encerrar o uso do aplicativo a qualquer momento desinstalando-o. Para encerrar uma conta Vault, utilize a opção de exclusão de conta nas configurações do app ou entre em contato por e-mail.</p>
+        <h3>13.2 Pelo desenvolvedor</h3>
+        <p>Podemos suspender ou encerrar seu acesso ao serviço Vault, mediante aviso prévio, se:</p>
+        <ul>
+          <li>Houver violação destes Termos de Uso</li>
+          <li>Houver uso abusivo da infraestrutura</li>
+          <li>Formos obrigados por lei ou ordem judicial</li>
+        </ul>
+        <p>Em caso de rescisão, será concedido um prazo razoável (mínimo de 30 dias) para que o usuário exporte seus dados, exceto em situações de violação grave ou obrigação legal.</p>
 
-      <h2>8. Disponibilidade do Serviço</h2>
-      <p>O uso offline do Mayinab está disponível a todo momento, independentemente de conexão à internet. Para o serviço Vault:</p>
-      <ul>
-        <li>Nos esforçamos para manter o serviço disponível 24/7, mas não garantimos disponibilidade ininterrupta</li>
-        <li>Podemos realizar manutenções programadas, com aviso prévio quando possível</li>
-        <li>Não nos responsabilizamos por indisponibilidades causadas por eventos de força maior, falhas de infraestrutura de terceiros ou problemas de conectividade do usuário</li>
-      </ul>
+        <h2>14. Alterações nos Termos</h2>
+        <p>Podemos atualizar estes Termos periodicamente. Em caso de alterações significativas:</p>
+        <ul>
+          <li>Notificaremos usuários com conta ativa por e-mail com no mínimo <strong>30 dias de antecedência</strong></li>
+          <li>Atualizaremos a data de "Última atualização" no topo desta página</li>
+          <li>Manteremos a versão anterior disponível para consulta</li>
+        </ul>
+        <p>O uso continuado do aplicativo após a notificação constitui aceitação dos termos revisados. Caso não concorde com as alterações, você deverá descontinuar o uso do serviço.</p>
 
-      <h2>9. Isenção de Garantias</h2>
-      <p>O Mayinab é fornecido "como está" (<em>"as is"</em>) e "conforme disponível" (<em>"as available"</em>). Na máxima extensão permitida pela legislação aplicável:</p>
-      <ul>
-        <li>Não oferecemos garantias expressas ou implícitas de adequação a um fim específico, comerciabilidade ou não violação</li>
-        <li>Não garantimos que o aplicativo seja livre de erros, bugs ou interrupções</li>
-        <li>Não garantimos a integridade ou preservação dos dados armazenados localmente (o usuário é responsável por seus próprios backups)</li>
-      </ul>
-      <p>Nenhuma disposição destes Termos limita direitos que não possam ser limitados por lei, incluindo os direitos previstos no Código de Defesa do Consumidor (Lei nº 8.078/1990).</p>
+        <h2>15. Legislação Aplicável e Foro</h2>
+        <p>Estes Termos são regidos e interpretados de acordo com as leis da República Federativa do Brasil, incluindo:</p>
+        <ul>
+          <li><strong>Código Civil</strong> — Lei nº 10.406/2002</li>
+          <li><strong>Código de Defesa do Consumidor</strong> — Lei nº 8.078/1990</li>
+          <li><strong>Marco Civil da Internet</strong> — Lei nº 12.965/2014</li>
+          <li><strong>Lei Geral de Proteção de Dados (LGPD)</strong> — Lei nº 13.709/2018</li>
+        </ul>
+        <p>Fica eleito o foro do domicílio do consumidor para dirimir quaisquer litígios decorrentes destes Termos, conforme Art. 101, I do Código de Defesa do Consumidor.</p>
 
-      <h2>10. Limitação de Responsabilidade</h2>
-      <p>Na máxima extensão permitida pela lei, o Desenvolvedor não será responsável por:</p>
-      <ul>
-        <li>Danos indiretos, incidentais, especiais, consequenciais ou punitivos</li>
-        <li>Perda de dados, lucros cessantes ou interrupção de atividades</li>
-        <li>Danos decorrentes do uso ou incapacidade de uso do aplicativo</li>
-        <li>Ações de terceiros em relação ao seu conteúdo</li>
-      </ul>
-      <p>A responsabilidade total do Desenvolvedor, quando aplicável, será limitada ao valor pago pelo usuário nos últimos 12 meses anteriores ao evento que deu causa ao dano.</p>
+        <h2>16. Conformidade com Lojas de Aplicativos</h2>
+        <h3>Google Play</h3>
+        <ul>
+          <li>Estes Termos complementam, mas não substituem, os <a href="https://play.google.com/intl/pt-BR/about/play-terms/" target="_blank" rel="noopener">Termos de Serviço do Google Play</a></li>
+          <li>O aplicativo cumpre as <em>Google Play Developer Program Policies</em>, incluindo políticas de assinaturas, conteúdo e dados do usuário</li>
+        </ul>
+        <h3>Apple App Store</h3>
+        <ul>
+          <li>Estes Termos complementam, mas não substituem, os <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Licensed Application End User License Agreement (EULA)</a> da Apple</li>
+          <li>O aplicativo cumpre as <em>App Store Review Guidelines</em></li>
+          <li>Em caso de conflito entre estes Termos e o EULA da Apple, prevalecerão os termos da Apple para usuários iOS</li>
+        </ul>
 
-      <h2>11. Proteção de Dados Pessoais</h2>
-      <p>O tratamento de dados pessoais é regido pela nossa <a href="privacy.html"><strong>Política de Privacidade</strong></a>, que é parte integrante destes Termos. Ao utilizar o Mayinab, você declara ter lido e compreendido a Política de Privacidade.</p>
+        <h2>17. Disposições Gerais</h2>
+        <ul>
+          <li><strong>Acordo integral:</strong> Estes Termos, juntamente com a Política de Privacidade, constituem o acordo integral entre você e o Desenvolvedor</li>
+          <li><strong>Independência das cláusulas:</strong> Se qualquer cláusula for considerada inválida ou inexequível, as demais permanecem em pleno vigor</li>
+          <li><strong>Renúncia:</strong> O não exercício de qualquer direito previsto nestes Termos não constitui renúncia do mesmo</li>
+          <li><strong>Cessão:</strong> Você não pode ceder ou transferir seus direitos sob estes Termos sem consentimento prévio</li>
+        </ul>
 
-      <h2>12. Propriedade Intelectual</h2>
-      <ul>
-        <li>O nome "Mayinab", logotipo, ícones e identidade visual são marcas do Desenvolvedor</li>
-        <li>O uso não autorizado da marca, logotipo ou elementos de identidade visual constitui violação de direitos de propriedade intelectual</li>
-        <li>O aplicativo pode incluir componentes de código aberto, sujeitos às suas respectivas licenças, que são listados no próprio app</li>
-      </ul>
-
-      <h2>13. Rescisão</h2>
-      <h3>13.1 Pelo usuário</h3>
-      <p>Você pode encerrar o uso do aplicativo a qualquer momento desinstalando-o. Para encerrar uma conta Vault, utilize a opção de exclusão de conta nas configurações do app ou entre em contato por e-mail.</p>
-
-      <h3>13.2 Pelo desenvolvedor</h3>
-      <p>Podemos suspender ou encerrar seu acesso ao serviço Vault, mediante aviso prévio, se:</p>
-      <ul>
-        <li>Houver violação destes Termos de Uso</li>
-        <li>Houver uso abusivo da infraestrutura</li>
-        <li>Formos obrigados por lei ou ordem judicial</li>
-      </ul>
-      <p>Em caso de rescisão, será concedido um prazo razoável (mínimo de 30 dias) para que o usuário exporte seus dados, exceto em situações de violação grave ou obrigação legal.</p>
-
-      <h2>14. Alterações nos Termos</h2>
-      <p>Podemos atualizar estes Termos periodicamente. Em caso de alterações significativas:</p>
-      <ul>
-        <li>Notificaremos usuários com conta ativa por e-mail com no mínimo <strong>30 dias de antecedência</strong></li>
-        <li>Atualizaremos a data de "Última atualização" no topo desta página</li>
-        <li>Manteremos a versão anterior disponível para consulta</li>
-      </ul>
-      <p>O uso continuado do aplicativo após a notificação constitui aceitação dos termos revisados. Caso não concorde com as alterações, você deverá descontinuar o uso do serviço.</p>
-
-      <h2>15. Legislação Aplicável e Foro</h2>
-      <p>Estes Termos são regidos e interpretados de acordo com as leis da República Federativa do Brasil, incluindo:</p>
-      <ul>
-        <li><strong>Código Civil</strong> — Lei nº 10.406/2002</li>
-        <li><strong>Código de Defesa do Consumidor</strong> — Lei nº 8.078/1990</li>
-        <li><strong>Marco Civil da Internet</strong> — Lei nº 12.965/2014</li>
-        <li><strong>Lei Geral de Proteção de Dados (LGPD)</strong> — Lei nº 13.709/2018</li>
-      </ul>
-      <p>Fica eleito o foro do domicílio do consumidor para dirimir quaisquer litígios decorrentes destes Termos, conforme Art. 101, I do Código de Defesa do Consumidor.</p>
-
-      <h2>16. Conformidade com Lojas de Aplicativos</h2>
-      <h3>Google Play</h3>
-      <ul>
-        <li>Estes Termos complementam, mas não substituem, os <a href="https://play.google.com/intl/pt-BR/about/play-terms/" target="_blank" rel="noopener">Termos de Serviço do Google Play</a></li>
-        <li>O aplicativo cumpre as <em>Google Play Developer Program Policies</em>, incluindo políticas de assinaturas, conteúdo e dados do usuário</li>
-      </ul>
-      <h3>Apple App Store</h3>
-      <ul>
-        <li>Estes Termos complementam, mas não substituem, os <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Licensed Application End User License Agreement (EULA)</a> da Apple</li>
-        <li>O aplicativo cumpre as <em>App Store Review Guidelines</em></li>
-        <li>Em caso de conflito entre estes Termos e o EULA da Apple, prevalecerão os termos da Apple para usuários iOS</li>
-      </ul>
-
-      <h2>17. Disposições Gerais</h2>
-      <ul>
-        <li><strong>Acordo integral:</strong> Estes Termos, juntamente com a Política de Privacidade, constituem o acordo integral entre você e o Desenvolvedor</li>
-        <li><strong>Independência das cláusulas:</strong> Se qualquer cláusula for considerada inválida ou inexequível, as demais permanecem em pleno vigor</li>
-        <li><strong>Renúncia:</strong> O não exercício de qualquer direito previsto nestes Termos não constitui renúncia do mesmo</li>
-        <li><strong>Cessão:</strong> Você não pode ceder ou transferir seus direitos sob estes Termos sem consentimento prévio</li>
-      </ul>
-
-      <h2>18. Contato</h2>
-      <p>Para dúvidas, suporte ou reclamações relacionadas a estes Termos:</p>
-      <p><strong>E-mail:</strong> <a href="mailto:suporte@maynab.com">suporte@maynab.com</a><br>
-      <strong>Site:</strong> <a href="https://mayinab.app">https://mayinab.app</a></p>
-
+        <h2>18. Contato</h2>
+        <p>Para dúvidas, suporte ou reclamações relacionadas a estes Termos:</p>
+        <p><strong>E-mail:</strong> <a href="mailto:suporte@maynab.com">suporte@maynab.com</a><br>
+        <strong>Site:</strong> <a href="https://mayinab.com">https://mayinab.com</a></p>
+      </div>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer-mini">
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div data-lang="en">
+    <div class="legal-hero">
+      <div class="container">
+        <h1>📋 Terms of Use</h1>
+        <p class="updated">Last updated: February 12, 2026</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="legal-content">
+
+        <div class="highlight">
+          <strong>Summary:</strong> Mayinab is free and offline. You own your data. Vault (cloud backup) is paid and optional. We don't sell data. We don't show ads. Use the app responsibly.
+        </div>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By downloading, installing, or using the <strong>Mayinab</strong> application ("Application", "App", or "Service"), you agree to these Terms of Use ("Terms"). If you do not agree, please do not use the Application.</p>
+        <p>These Terms constitute a binding agreement between you ("User") and <strong>Celso Hamasaki</strong> ("Developer", "we", "our"), the independent developer responsible for Mayinab.</p>
+
+        <h2>2. Description of the Service</h2>
+        <p>Mayinab is a cross-platform educational application (Android, iOS, Linux, macOS, Windows) that allows you to:</p>
+        <ul>
+          <li>Create study notes in chat format</li>
+          <li>Use flashcards with a spaced repetition system (SRS)</li>
+          <li>Format content with Markdown and LaTeX</li>
+          <li>Import and export data</li>
+          <li>Upload files, record audio, draw } and annotate on images</li>
+          <li>Optionally, make encrypted cloud backups (Vault)</li>
+        </ul>
+
+        <h2>3. Usage Plans</h2>
+        <h3>3.1 Free Plan</h3>
+        <ul>
+          <li>All app features, with no limitations</li>
+          <li>100% offline — no data is transmitted</li>
+          <li>No ads, no tracking, no usage restrictions</li>
+          <li>Free forever</li>
+        </ul>
+        <h3>3.2 Vault Basic (paid — optional)</h3>
+        <ul>
+          <li>Encrypted cloud backup with 2 GB of storage</li>
+          <li>AES-256-GCM end-to-end encryption</li>
+          <li>Cross-device synchronization</li>
+        </ul>
+        <h3>3.3 Vault Pro (paid — optional)</h3>
+        <ul>
+          <li>Encrypted cloud backup with 50 GB of storage</li>
+          <li>All Vault Basic features</li>
+        </ul>
+
+        <h2>4. User Account</h2>
+        <h3>4.1 Account creation</h3>
+        <p>Offline use of Mayinab does not require account creation. An account is only required to use the Vault service. By creating an account, you declare that:</p>
+        <ul>
+          <li>You are at least <strong>16 years old</strong>, or have consent from a legal guardian (ages 12–16, as per Art. 14 of the LGPD)</li>
+          <li>You provide truthful and up-to-date information</li>
+          <li>You are responsible for the security of your password and account access</li>
+        </ul>
+        <h3>4.2 User responsibilities</h3>
+        <p>You are responsible for:</p>
+        <ul>
+          <li>Maintaining the confidentiality of your access credentials</li>
+          <li>All activities performed with your account</li>
+          <li>Notifying us immediately of any unauthorized use</li>
+        </ul>
+
+        <h2>5. Content Ownership</h2>
+        <h3>5.1 Your content</h3>
+        <p><strong>You are and remain the owner of all content created, entered, or stored in Mayinab</strong> (notes, flashcards, images, audio, videos, files, drawings). We do not claim any ownership rights over your content.</p>
+        <p>By using the Vault, you grant us a limited and revocable license exclusively to store and transmit your encrypted data for the purpose of providing the backup service. Since the data is end-to-end encrypted, we have no access to the content.</p>
+        <h3>5.2 Our content</h3>
+        <p>The Mayinab application, including its source code, design, brand, logo, interface, promotional texts, and all visual elements, is the exclusive property of the Developer and protected by intellectual property laws.</p>
+
+        <h2>6. Acceptable Use</h2>
+        <p>By using Mayinab, you agree <strong>not to</strong>:</p>
+        <ul>
+          <li>Use the service for illegal or unauthorized purposes</li>
+          <li>Attempt to access, modify, or interfere with Mayinab's systems, servers, or networks without authorization</li>
+          <li>Reverse engineer, decompile, or disassemble the application, except when permitted by law</li>
+          <li>Distribute, resell, or sublicense the application or any part thereof</li>
+          <li>Store, transmit, or share illegal, abusive, defamatory, obscene content, or content that violates third-party rights</li>
+          <li>Use the service in a way that overloads the infrastructure or harms other users</li>
+          <li>Create fake accounts or use third-party identity information</li>
+          <li>Remove, alter, or obscure copyright or proprietary notices</li>
+        </ul>
+
+        <h2>7. Payments and Subscriptions</h2>
+        <h3>7.1 Processing</h3>
+        <p>All payments are processed by <strong>Google Play</strong> or <strong>Apple App Store</strong>, depending on the platform. By purchasing a subscription, you agree to the payment terms of the respective store.</p>
+        <h3>7.2 Automatic renewal</h3>
+        <p>Vault subscriptions are automatically renewed at the end of each billing period (monthly or annual), unless cancelled before the end of the current period.</p>
+        <h3>7.3 Cancellation</h3>
+        <ul>
+          <li>You can cancel your subscription at any time through Google Play or Apple App Store</li>
+          <li>Cancellation takes effect at the end of the already-paid period</li>
+          <li>After cancellation, Vault access remains active until the end of the billed period</li>
+          <li>Local data on your device is not affected by cancellation</li>
+        </ul>
+        <h3>7.4 Refunds</h3>
+        <p>Refund policies are governed by the rules of <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play</a> and the <a href="https://support.apple.com/en-us/HT204084" target="_blank" rel="noopener">Apple App Store</a>. Refunds must be requested directly from the corresponding store.</p>
+
+        <h2>8. Service Availability</h2>
+        <p>Offline use of Mayinab is available at all times, regardless of internet connection. For the Vault service:</p>
+        <ul>
+          <li>We strive to keep the service available 24/7, but we do not guarantee uninterrupted availability</li>
+          <li>We may perform scheduled maintenance, with prior notice when possible</li>
+          <li>We are not responsible for unavailability caused by force majeure events, third-party infrastructure failures, or user connectivity issues</li>
+        </ul>
+
+        <h2>9. Disclaimer of Warranties</h2>
+        <p>Mayinab is provided "as is" and "as available". To the maximum extent permitted by applicable law:</p>
+        <ul>
+          <li>We make no express or implied warranties of fitness for a particular purpose, merchantability, or non-infringement</li>
+          <li>We do not guarantee that the application will be free of errors, bugs, or interruptions</li>
+          <li>We do not guarantee the integrity or preservation of locally stored data (the user is responsible for their own backups)</li>
+        </ul>
+        <p>Nothing in these Terms limits rights that cannot be limited by law, including the rights provided by the Consumer Defense Code (Law No. 8,078/1990).</p>
+
+        <h2>10. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, the Developer shall not be liable for:</p>
+        <ul>
+          <li>Indirect, incidental, special, consequential, or punitive damages</li>
+          <li>Data loss, lost profits, or business interruption</li>
+          <li>Damages arising from the use or inability to use the application</li>
+          <li>Third-party actions related to your content</li>
+        </ul>
+        <p>The Developer's total liability, when applicable, shall be limited to the amount paid by the user in the 12 months preceding the event that gave rise to the claim.</p>
+
+        <h2>11. Personal Data Protection</h2>
+        <p>The processing of personal data is governed by our <a href="privacy.html"><strong>Privacy Policy</strong></a>, which is an integral part of these Terms. By using Mayinab, you acknowledge having read and understood the Privacy Policy.</p>
+
+        <h2>12. Intellectual Property</h2>
+        <ul>
+          <li>The name "Mayinab", logo, icons, and visual identity are trademarks of the Developer</li>
+          <li>Unauthorized use of the brand, logo, or visual identity elements constitutes intellectual property infringement</li>
+          <li>The application may include open-source components, subject to their respective licenses, which are listed within the app</li>
+        </ul>
+
+        <h2>13. Termination</h2>
+        <h3>13.1 By the user</h3>
+        <p>You can stop using the application at any time by uninstalling it. To terminate a Vault account, use the account deletion option in the app settings or contact us by email.</p>
+        <h3>13.2 By the developer</h3>
+        <p>We may suspend or terminate your access to the Vault service, with prior notice, if:</p>
+        <ul>
+          <li>There is a violation of these Terms of Use</li>
+          <li>There is abusive use of the infrastructure</li>
+          <li>We are required to do so by law or court order</li>
+        </ul>
+        <p>In case of termination, a reasonable period (minimum 30 days) will be granted for the user to export their data, except in cases of serious violation or legal obligation.</p>
+
+        <h2>14. Changes to the Terms</h2>
+        <p>We may update these Terms periodically. In case of significant changes:</p>
+        <ul>
+          <li>We will notify users with active accounts by email with at least <strong>30 days' notice</strong></li>
+          <li>We will update the "Last updated" date at the top of this page</li>
+          <li>We will keep the previous version available for reference</li>
+        </ul>
+        <p>Continued use of the application after notification constitutes acceptance of the revised terms. If you do not agree with the changes, you should discontinue use of the service.</p>
+
+        <h2>15. Governing Law and Jurisdiction</h2>
+        <p>These Terms are governed by and interpreted in accordance with the laws of the Federative Republic of Brazil, including:</p>
+        <ul>
+          <li><strong>Civil Code</strong> — Law No. 10,406/2002</li>
+          <li><strong>Consumer Defense Code</strong> — Law No. 8,078/1990</li>
+          <li><strong>Marco Civil da Internet</strong> — Law No. 12,965/2014</li>
+          <li><strong>Lei Geral de Proteção de Dados (LGPD)</strong> — Law No. 13,709/2018</li>
+        </ul>
+        <p>The jurisdiction of the consumer's domicile is elected to resolve any disputes arising from these Terms, as per Art. 101, I of the Consumer Defense Code.</p>
+
+        <h2>16. App Store Compliance</h2>
+        <h3>Google Play</h3>
+        <ul>
+          <li>These Terms supplement, but do not replace, the <a href="https://play.google.com/intl/en/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a></li>
+          <li>The application complies with the <em>Google Play Developer Program Policies</em>, including subscription, content, and user data policies</li>
+        </ul>
+        <h3>Apple App Store</h3>
+        <ul>
+          <li>These Terms supplement, but do not replace, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Licensed Application End User License Agreement (EULA)</a></li>
+          <li>The application complies with the <em>App Store Review Guidelines</em></li>
+          <li>In case of conflict between these Terms and Apple's EULA, Apple's terms shall prevail for iOS users</li>
+        </ul>
+
+        <h2>17. General Provisions</h2>
+        <ul>
+          <li><strong>Entire agreement:</strong> These Terms, together with the Privacy Policy, constitute the entire agreement between you and the Developer</li>
+          <li><strong>Severability:</strong> If any clause is deemed invalid or unenforceable, the remaining clauses remain in full effect</li>
+          <li><strong>Waiver:</strong> Failure to exercise any right under these Terms does not constitute a waiver of that right</li>
+          <li><strong>Assignment:</strong> You may not assign or transfer your rights under these Terms without prior consent</li>
+        </ul>
+
+        <h2>18. Contact</h2>
+        <p>For questions, support, or complaints related to these Terms:</p>
+        <p><strong>Email:</strong> <a href="mailto:suporte@maynab.com">suporte@maynab.com</a><br>
+        <strong>Website:</strong> <a href="https://mayinab.com">https://mayinab.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTERS -->
+  <div class="footer-mini" data-lang="pt" class="active">
     <p>© 2026 Mayinab · <a href="privacy.html">Privacidade</a> · <a href="terms.html">Termos de Uso</a> · <a href="../index.html">Início</a></p>
   </div>
+  <div class="footer-mini" data-lang="en">
+    <p>© 2026 Mayinab · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of Use</a> · <a href="../index.html">Home</a></p>
+  </div>
 
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+      });
+      document.getElementById('backLink').textContent = lang === 'pt' ? '← Voltar ao site' : '← Back to site';
+      if (lang === 'pt') {
+        document.title = 'Termos de Uso – Mayinab';
+        document.querySelector('meta[name="description"]').setAttribute('content', 'Termos de Uso do aplicativo Mayinab. Condições de uso do serviço em conformidade com a legislação brasileira e LGPD.');
+      } else {
+        document.title = 'Terms of Use – Mayinab';
+        document.querySelector('meta[name="description"]').setAttribute('content', 'Mayinab Terms of Use. Service conditions in compliance with Brazilian legislation and LGPD.');
+      }
+      localStorage.setItem('mayinab-lang', lang);
+    }
+    const saved = localStorage.getItem('mayinab-lang');
+    if (saved) { setLang(saved); } else { setLang(navigator.language.slice(0,2) === 'pt' ? 'pt' : 'en'); }
+  </script>
 </body>
 </html>
