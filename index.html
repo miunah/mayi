@@ -15,17 +15,32 @@
   <meta property="og:description" content="The study app that feels like texting. Flashcards, spaced repetition, Markdown + LaTeX. 100% offline, no ads, ever.">
   <meta property="og:url" content="https://mayinab.com">
   <meta property="og:site_name" content="Mayinab">
-  <meta property="og:image" content="https://mayinab.com/app_icon.png">
+  <meta property="og:image" content="https://mayinab.com/img/og-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mayinab – Study notes reimagined as chat">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mayinab: Study Notes as Chat">
   <meta name="twitter:description" content="The study app that feels like texting. Flashcards, spaced repetition, Markdown + LaTeX. 100% offline, no ads, ever.">
+  <meta name="twitter:image" content="https://mayinab.com/img/og-banner.png">
+  <meta name="twitter:image:alt" content="Mayinab – Study notes reimagined as chat">
 
-  <title>Mayinab: Study Notes Reimagined as Chat ✨</title>
+  <title>Mayinab: Study Notes Reimagined as Chat</title>
 
   <link rel="canonical" href="https://mayinab.com">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com">
   <link rel="icon" type="image/png" href="app_icon.png">
+
+  <!-- Google Fonts (preconnect + stylesheet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -56,11 +71,7 @@
         "description": "Vault Pro: 50GB encrypted cloud backup"
       }
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "1"
-    }
+    "url": "https://mayinab.com"
   }
   </script>
 
@@ -68,7 +79,29 @@
     /* ═══════════════════════════════════════════════════════════════
        FONTS
     ═══════════════════════════════════════════════════════════════ */
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+    /* Fonts loaded via <link> in <head> for better performance */
+
+    /* ═══════════════════════════════════════════════════════════════
+       SKIP TO CONTENT (Accessibility)
+    ═══════════════════════════════════════════════════════════════ */
+    .skip-to-content {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      z-index: 9999;
+      background: var(--matcha-600, #5a8a5b);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 0 0 8px 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+    .skip-to-content:focus {
+      top: 0;
+      color: #fff;
+    }
 
     /* ═══════════════════════════════════════════════════════════════
        CSS VARIABLES - Matcha Green & Cream Palette
@@ -2017,6 +2050,9 @@
     <div class="bg-shape"></div>
   </div>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#hero" class="skip-to-content">Skip to content</a>
+
   <!-- ═══════════════ NAVIGATION ═══════════════ -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
@@ -2100,7 +2136,7 @@
               <div class="hero-float-card">🔒 <span data-i18n="hero.float3">AES-256</span></div>
             </div>
 
-            <div class="phone-mockup">
+            <div class="phone-mockup" aria-hidden="true">
               <div class="phone-notch"></div>
               <div class="phone-screen">
                 <div class="phone-header">
