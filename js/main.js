@@ -142,6 +142,13 @@ document.querySelectorAll('.screenshot-item picture').forEach(pic => {
   }
 });
 
+// ── Lang switcher click handlers ─────────────────────────────
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    setLang(btn.textContent.trim().toLowerCase());
+  });
+});
+
 // ── Initialize language from storage ─────────────────────────
 const savedLang = localStorage.getItem('mayinab-lang');
 if (savedLang && translations[savedLang]) {
