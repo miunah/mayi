@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+
+  <title>What Is Spaced Repetition? A Complete Guide to Studying Smarter in 2026 | Mayinab</title>
+  <meta name="description" content="Learn how spaced repetition works, why it's the most effective study technique, and how to use it with flashcards. Includes SM-2 algorithm explanation and practical tips.">
+  <meta name="keywords" content="spaced repetition, what is spaced repetition, spaced repetition guide, how to study with spaced repetition, SM-2 algorithm, spaced repetition flashcards, spaced repetition technique, study smarter, effective study methods 2026, spaced repetition app, active recall study">
+  <meta name="author" content="Mayinab">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What Is Spaced Repetition? A Complete Guide to Studying Smarter">
+  <meta property="og:description" content="The science-backed study technique that helps you remember anything long-term. Learn how spaced repetition works and how to use it.">
+  <meta property="og:url" content="https://mayinab.com/blog/spaced-repetition-guide.html">
+  <meta property="og:site_name" content="Mayinab">
+  <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta property="og:image:alt" content="Mayinab – Spaced repetition guide">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Is Spaced Repetition? A Complete Guide to Studying Smarter">
+  <meta name="twitter:description" content="The science-backed study technique that helps you remember anything long-term. Learn how it works and how to start.">
+  <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+
+  <link rel="canonical" href="https://mayinab.com/blog/spaced-repetition-guide.html">
+  <link rel="icon" type="image/png" href="../app_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is Spaced Repetition? A Complete Guide to Studying Smarter in 2026",
+    "description": "Learn how spaced repetition works, why it's the most effective study technique, and how to use it with flashcards.",
+    "author": { "@type": "Organization", "name": "Mayinab" },
+    "publisher": { "@type": "Organization", "name": "Mayinab", "url": "https://mayinab.com" },
+    "datePublished": "2026-02-13",
+    "dateModified": "2026-02-13",
+    "mainEntityOfPage": "https://mayinab.com/blog/spaced-repetition-guide.html",
+    "image": "https://mayinab.com/img/mayinab-pc-01-english.png",
+    "keywords": ["spaced repetition", "study technique", "SM-2 algorithm", "flashcards", "active recall"]
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is spaced repetition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spaced repetition is a study technique where you review information at increasing intervals over time. Instead of cramming everything in one session, you revisit material just before you're about to forget it, which strengthens long-term memory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the SM-2 algorithm work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The SM-2 algorithm calculates optimal review intervals based on how well you remember each card. If you answer correctly, the interval increases. If you struggle, the card is shown again sooner. This ensures you spend time only on material you're about to forget."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best app for spaced repetition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mayinab is a modern spaced repetition app that combines notes and flashcards in one place. It uses the SM-2 algorithm, supports Markdown + LaTeX, works 100% offline, and is free. It's a great alternative to Anki with a modern interface."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is spaced repetition better than cramming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Research shows spaced repetition leads to 200-400% better long-term retention compared to cramming. Cramming may work for a test tomorrow, but spaced repetition ensures you remember information for months or years."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="top-bar">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="../app_icon.png" alt="Mayinab">Mayinab
+      </a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
+          <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+        </div>
+        <a href="/blog/" class="back-link" id="backLink">← Back to Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div data-lang="en" class="active">
+    <article>
+      <header class="post-hero">
+        <div class="container">
+          <span class="post-tag guide">Guide</span>
+          <h1>What Is Spaced Repetition? A Complete Guide to Studying Smarter</h1>
+          <div class="post-meta">
+            <time datetime="2026-02-13">February 13, 2026</time> · 10 min read
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="post-content">
+          <h2>The Forgetting Curve Problem</h2>
+          <p>
+            In 1885, German psychologist Hermann Ebbinghaus discovered that we forget new information at a predictable rate. Within <strong>24 hours</strong>, we lose up to 70% of what we learned. After a week, nearly 90% is gone. This is the <strong>forgetting curve</strong>.
+          </p>
+          <p>
+            Most students deal with this by cramming — re-reading notes and textbooks the night before a test. It feels productive, but research consistently shows that cramming produces <strong>short-term recall at best</strong>. The information vanishes within days.
+          </p>
+          <p>
+            Spaced repetition is the antidote to the forgetting curve. It works <em>with</em> your brain's natural memory patterns instead of against them.
+          </p>
+
+          <h2>What Is Spaced Repetition?</h2>
+          <p>
+            <strong>Spaced repetition</strong> is a study technique where you review information at <strong>increasing intervals</strong> over time. Instead of reviewing everything at once, you revisit each piece of knowledge just before you're likely to forget it.
+          </p>
+          <p>
+            Here's how the intervals typically grow:
+          </p>
+          <ul>
+            <li><strong>Day 1:</strong> Learn the concept</li>
+            <li><strong>Day 2:</strong> First review (1-day interval)</li>
+            <li><strong>Day 5:</strong> Second review (3-day interval)</li>
+            <li><strong>Day 12:</strong> Third review (7-day interval)</li>
+            <li><strong>Day 30:</strong> Fourth review (18-day interval)</li>
+            <li><strong>Day 90:</strong> Fifth review (60-day interval)</li>
+          </ul>
+          <p>
+            Each successful review <strong>doubles or triples</strong> the time until the next review. Over weeks and months, a concept you initially struggled with moves into long-term memory — and you spend less and less time reviewing it.
+          </p>
+
+          <h2>The Science Behind It</h2>
+          <p>
+            Spaced repetition is backed by over a century of cognitive science research. Two key principles make it work:
+          </p>
+
+          <h3>1. The Spacing Effect</h3>
+          <p>
+            Spreading study sessions over time produces <strong>stronger and more durable memories</strong> than massed practice (cramming). This effect has been replicated in hundreds of studies across different subjects, age groups, and types of material.
+          </p>
+
+          <h3>2. Active Recall</h3>
+          <p>
+            Testing yourself — actively retrieving information from memory — is <strong>3x more effective</strong> than passively re-reading notes. When you see a flashcard and try to recall the answer before flipping it, you're using active recall. This act of retrieval strengthens the neural pathways associated with that memory.
+          </p>
+          <p>
+            Spaced repetition combines both: you <strong>actively recall</strong> information at <strong>spaced intervals</strong>. This one-two combination is why it's considered the most effective study technique ever discovered.
+          </p>
+
+          <h2>The SM-2 Algorithm Explained</h2>
+          <p>
+            The most widely used spaced repetition algorithm is <strong>SM-2</strong> (SuperMemo 2), created by Piotr Wozniak in 1987. Apps like Anki and Mayinab use this algorithm to calculate optimal review intervals.
+          </p>
+          <p>
+            Here's how SM-2 works in simple terms:
+          </p>
+          <ol>
+            <li>Each flashcard has an <strong>ease factor</strong> (starting at 2.5) that tracks how easy it is for you</li>
+            <li>After each review, you rate your recall (e.g., "again", "hard", "good", "easy")</li>
+            <li>If you answer correctly, the <strong>interval increases</strong> based on the ease factor</li>
+            <li>If you answer incorrectly, the card <strong>resets to a short interval</strong></li>
+            <li>The ease factor adjusts over time — easy cards get longer intervals, hard cards get shorter ones</li>
+          </ol>
+          <p>
+            The result: you spend most of your study time on material you find difficult, while easy material is reviewed less and less frequently. <strong>Maximum learning, minimum time.</strong>
+          </p>
+
+          <h2>How to Start Using Spaced Repetition</h2>
+          <p>
+            You can do spaced repetition manually with paper flashcards and a calendar, but a <strong>software tool</strong> automates the scheduling and makes it effortless. Here's a practical guide to get started:
+          </p>
+
+          <h3>Step 1: Choose the Right Tool</h3>
+          <p>
+            You need an app that supports SM-2 algorithm scheduling. Popular options include:
+          </p>
+          <ul>
+            <li><strong>Mayinab</strong> — Notes + flashcards + SM-2 in one app. Modern UI, offline, free.</li>
+            <li><strong>Anki</strong> — Powerful SRS, steep learning curve, dated interface.</li>
+            <li><strong>Quizlet</strong> — Limited free tier, cloud-dependent, basic SRS.</li>
+          </ul>
+
+          <h3>Step 2: Write Good Flashcards</h3>
+          <p>
+            The quality of your flashcards matters more than the quantity. Follow these principles:
+          </p>
+          <ul>
+            <li><strong>One idea per card</strong> — don't cram multiple concepts</li>
+            <li><strong>Ask specific questions</strong> — "What is X?" beats "Tell me everything about X"</li>
+            <li><strong>Use your own words</strong> — paraphrasing improves understanding</li>
+            <li><strong>Include context</strong> — add examples or connections to other knowledge</li>
+          </ul>
+
+          <h3>Step 3: Study Consistently</h3>
+          <p>
+            Spaced repetition only works if you <strong>review daily</strong>. It doesn't take long — 15-30 minutes per day is usually enough. The key is consistency:
+          </p>
+          <ul>
+            <li>Review your due cards every day, no exceptions</li>
+            <li>Don't add too many new cards at once (10-20 per day is ideal)</li>
+            <li>Trust the algorithm — don't review cards before they're due</li>
+            <li>Track your streak for motivation</li>
+          </ul>
+
+          <h3>Step 4: Create Cards While Learning</h3>
+          <p>
+            The best time to make flashcards is <strong>while taking notes</strong>. In Mayinab, you can type a note and immediately create a flashcard below it using <code>/flashcard</code>. This eliminates the friction of copying content between apps.
+          </p>
+
+          <h2>Spaced Repetition for Different Subjects</h2>
+
+          <h3>Languages</h3>
+          <p>
+            Vocabulary, grammar rules, and verb conjugations are perfect for spaced repetition. Create cards for new words as you encounter them and let the algorithm handle review scheduling.
+          </p>
+
+          <h3>Medicine & Sciences</h3>
+          <p>
+            Medical students have used Anki for years because there's a massive amount of factual knowledge to retain. Anatomy, pharmacology, pathology — all benefit enormously from spaced repetition.
+          </p>
+
+          <h3>Law</h3>
+          <p>
+            Legal terminology, case precedents, statutory provisions, and constitutional articles are ideal for flashcard-based spaced repetition.
+          </p>
+
+          <h3>Programming</h3>
+          <p>
+            Syntax, design patterns, algorithms, and API references can be retained long-term through spaced repetition instead of constant Googling.
+          </p>
+
+          <h3>History & Humanities</h3>
+          <p>
+            Dates, events, key figures, philosophical concepts, and literary analysis — all can be encoded as flashcards and reviewed at optimal intervals.
+          </p>
+
+          <h2>Common Mistakes to Avoid</h2>
+          <ul>
+            <li><strong>Making cards too complex</strong> — Keep one fact per card</li>
+            <li><strong>Skipping review days</strong> — Consistency matters more than marathon sessions</li>
+            <li><strong>Adding too many cards</strong> — Start with 10-20 new cards per day</li>
+            <li><strong>Copying verbatim from textbooks</strong> — Use your own words for better retention</li>
+            <li><strong>Not combining with notes</strong> — Flashcards without context are harder to remember</li>
+          </ul>
+
+          <h2>Why Mayinab Is Ideal for Spaced Repetition</h2>
+          <p>
+            Most spaced repetition apps only do flashcards. Mayinab is different because it combines <strong>notes and flashcards in one timeline</strong>, so your study context is never lost.
+          </p>
+          <ul>
+            <li><strong>SM-2 algorithm</strong> with configurable intervals</li>
+            <li><strong>Flip mode + typing mode</strong> for different review styles</li>
+            <li><strong>Daily reminders</strong> and streak tracking</li>
+            <li><strong>7 note types</strong> — text, flashcards, checklists, images, audio, video, files</li>
+            <li><strong>Markdown + LaTeX</strong> for STEM subjects</li>
+            <li><strong>100% offline</strong> — no internet needed, no data collection</li>
+            <li><strong>Free forever</strong> — all features included, no ads</li>
+          </ul>
+
+          <div class="verdict-box">
+            <h3>🍵 Key Takeaway</h3>
+            <p>
+              Spaced repetition is the <strong>most effective study technique backed by science</strong>. It works by reviewing information at increasing intervals, combining the spacing effect with active recall to build durable long-term memory.
+            </p>
+            <p>
+              The best way to start is with an app that automates the scheduling. Mayinab makes it simple — take notes and create flashcards in the same place, and let the SM-2 algorithm tell you exactly what to review and when. Free, offline, and available on every platform.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+          <h2>Start studying with spaced repetition 🍵</h2>
+          <p>Download Mayinab for free. SM-2 algorithm, notes + flashcards, works offline. No account required.</p>
+          <a href="/#download" class="btn btn-white">⬇ Download Mayinab Free</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
+  <div data-lang="pt">
+    <article>
+      <header class="post-hero">
+        <div class="container">
+          <span class="post-tag guide">Guia</span>
+          <h1>O que É Repetição Espaçada? Guia Completo para Estudar Melhor</h1>
+          <div class="post-meta">
+            <time datetime="2026-02-13">13 de fevereiro de 2026</time> · 10 min de leitura
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="post-content">
+          <h2>O Problema da Curva do Esquecimento</h2>
+          <p>
+            Em 1885, o psicólogo alemão Hermann Ebbinghaus descobriu que esquecemos informações novas em uma taxa previsível. Em <strong>24 horas</strong>, perdemos até 70% do que aprendemos. Após uma semana, quase 90% se foi. Essa é a <strong>curva do esquecimento</strong>.
+          </p>
+          <p>
+            A maioria dos estudantes lida com isso fazendo decoreba — relendo notas e livros na véspera da prova. Parece produtivo, mas pesquisas consistentemente mostram que decoreba produz <strong>memorização de curto prazo no máximo</strong>. A informação desaparece em dias.
+          </p>
+          <p>
+            A repetição espaçada é o antídoto para a curva do esquecimento. Ela funciona <em>a favor</em> dos padrões naturais de memória do seu cérebro, não contra eles.
+          </p>
+
+          <h2>O que É Repetição Espaçada?</h2>
+          <p>
+            <strong>Repetição espaçada</strong> é uma técnica de estudo onde você revisa informações em <strong>intervalos crescentes</strong> ao longo do tempo. Em vez de revisar tudo de uma vez, você revisita cada conceito exatamente antes de esquecê-lo.
+          </p>
+          <p>
+            Veja como os intervalos tipicamente crescem:
+          </p>
+          <ul>
+            <li><strong>Dia 1:</strong> Aprenda o conceito</li>
+            <li><strong>Dia 2:</strong> Primeira revisão (intervalo de 1 dia)</li>
+            <li><strong>Dia 5:</strong> Segunda revisão (intervalo de 3 dias)</li>
+            <li><strong>Dia 12:</strong> Terceira revisão (intervalo de 7 dias)</li>
+            <li><strong>Dia 30:</strong> Quarta revisão (intervalo de 18 dias)</li>
+            <li><strong>Dia 90:</strong> Quinta revisão (intervalo de 60 dias)</li>
+          </ul>
+          <p>
+            Cada revisão bem-sucedida <strong>dobra ou triplica</strong> o tempo até a próxima revisão. Ao longo de semanas e meses, um conceito que inicialmente era difícil passa para a memória de longo prazo — e você gasta cada vez menos tempo revisando.
+          </p>
+
+          <h2>A Ciência por Trás</h2>
+          <p>
+            A repetição espaçada é respaldada por mais de um século de pesquisa em ciência cognitiva. Dois princípios-chave a fazem funcionar:
+          </p>
+
+          <h3>1. O Efeito de Espaçamento</h3>
+          <p>
+            Distribuir sessões de estudo ao longo do tempo produz <strong>memórias mais fortes e duráveis</strong> do que prática massiva (decoreba). Este efeito foi replicado em centenas de estudos em diferentes matérias, faixas etárias e tipos de material.
+          </p>
+
+          <h3>2. Recall Ativo</h3>
+          <p>
+            Testar a si mesmo — recuperar ativamente informações da memória — é <strong>3x mais eficaz</strong> do que reler passivamente. Quando você vê um flashcard e tenta lembrar a resposta antes de virá-lo, está usando recall ativo. Esse ato de recuperação fortalece as vias neurais associadas àquela memória.
+          </p>
+          <p>
+            A repetição espaçada combina ambos: você <strong>relembra ativamente</strong> informações em <strong>intervalos espaçados</strong>. Essa combinação é por isso que é considerada a técnica de estudo mais eficaz já descoberta.
+          </p>
+
+          <h2>O Algoritmo SM-2 Explicado</h2>
+          <p>
+            O algoritmo de repetição espaçada mais usado é o <strong>SM-2</strong> (SuperMemo 2), criado por Piotr Wozniak em 1987. Apps como Anki e Mayinab usam esse algoritmo para calcular intervalos ideais de revisão.
+          </p>
+          <p>
+            Veja como o SM-2 funciona em termos simples:
+          </p>
+          <ol>
+            <li>Cada flashcard tem um <strong>fator de facilidade</strong> (começando em 2.5) que rastreia quão fácil é para você</li>
+            <li>Após cada revisão, você avalia seu recall (ex: "de novo", "difícil", "bom", "fácil")</li>
+            <li>Se acertar, o <strong>intervalo aumenta</strong> baseado no fator de facilidade</li>
+            <li>Se errar, o card <strong>volta para um intervalo curto</strong></li>
+            <li>O fator de facilidade se ajusta ao longo do tempo — cards fáceis ganham intervalos mais longos, difíceis mais curtos</li>
+          </ol>
+          <p>
+            O resultado: você gasta a maior parte do tempo de estudo em material que acha difícil, enquanto material fácil é revisado cada vez menos. <strong>Máximo aprendizado, mínimo tempo.</strong>
+          </p>
+
+          <h2>Como Começar a Usar Repetição Espaçada</h2>
+          <p>
+            Você pode fazer repetição espaçada manualmente com flashcards de papel e um calendário, mas um <strong>software</strong> automatiza o agendamento e torna tudo mais fácil. Veja um guia prático:
+          </p>
+
+          <h3>Passo 1: Escolha a Ferramenta Certa</h3>
+          <p>
+            Você precisa de um app que suporte o algoritmo SM-2. Opções populares incluem:
+          </p>
+          <ul>
+            <li><strong>Mayinab</strong> — Notas + flashcards + SM-2 em um app. UI moderna, offline, grátis.</li>
+            <li><strong>Anki</strong> — SRS poderoso, curva de aprendizado íngreme, interface datada.</li>
+            <li><strong>Quizlet</strong> — Plano grátis limitado, dependente de nuvem, SRS básico.</li>
+          </ul>
+
+          <h3>Passo 2: Crie Bons Flashcards</h3>
+          <p>
+            A qualidade dos seus flashcards importa mais que a quantidade. Siga estes princípios:
+          </p>
+          <ul>
+            <li><strong>Uma ideia por card</strong> — não aglomere múltiplos conceitos</li>
+            <li><strong>Faça perguntas específicas</strong> — "O que é X?" é melhor que "Conte tudo sobre X"</li>
+            <li><strong>Use suas próprias palavras</strong> — parafrasear melhora a compreensão</li>
+            <li><strong>Inclua contexto</strong> — adicione exemplos ou conexões com outros conhecimentos</li>
+          </ul>
+
+          <h3>Passo 3: Estude Consistentemente</h3>
+          <p>
+            A repetição espaçada só funciona se você <strong>revisar diariamente</strong>. Não leva muito tempo — 15-30 minutos por dia geralmente bastam. A chave é consistência:
+          </p>
+          <ul>
+            <li>Revise seus cards pendentes todo dia, sem exceção</li>
+            <li>Não adicione cards demais de uma vez (10-20 por dia é ideal)</li>
+            <li>Confie no algoritmo — não revise cards antes da hora</li>
+            <li>Acompanhe seu streak para motivação</li>
+          </ul>
+
+          <h3>Passo 4: Crie Cards Enquanto Aprende</h3>
+          <p>
+            O melhor momento para criar flashcards é <strong>enquanto faz anotações</strong>. No Mayinab, você pode escrever uma nota e imediatamente criar um flashcard abaixo usando <code>/flashcard</code>. Isso elimina a fricção de copiar conteúdo entre apps.
+          </p>
+
+          <h2>Repetição Espaçada para Diferentes Matérias</h2>
+
+          <h3>Idiomas</h3>
+          <p>
+            Vocabulário, regras gramaticais e conjugações verbais são perfeitos para repetição espaçada. Crie cards para palavras novas conforme as encontra e deixe o algoritmo cuidar do agendamento.
+          </p>
+
+          <h3>Medicina & Ciências</h3>
+          <p>
+            Estudantes de medicina usam o Anki há anos porque há uma quantidade massiva de conhecimento factual para reter. Anatomia, farmacologia, patologia — tudo se beneficia enormemente da repetição espaçada.
+          </p>
+
+          <h3>Direito</h3>
+          <p>
+            Terminologia jurídica, precedentes, dispositivos legais e artigos constitucionais são ideais para repetição espaçada com flashcards.
+          </p>
+
+          <h3>Programação</h3>
+          <p>
+            Sintaxe, padrões de design, algoritmos e referências de API podem ser retidos a longo prazo com repetição espaçada em vez de pesquisar constantemente no Google.
+          </p>
+
+          <h3>História & Humanas</h3>
+          <p>
+            Datas, eventos, figuras-chave, conceitos filosóficos e análise literária — tudo pode ser codificado como flashcards e revisado em intervalos ideais.
+          </p>
+
+          <h2>Erros Comuns a Evitar</h2>
+          <ul>
+            <li><strong>Criar cards muito complexos</strong> — Mantenha um fato por card</li>
+            <li><strong>Pular dias de revisão</strong> — Consistência importa mais que sessões maratona</li>
+            <li><strong>Adicionar cards demais</strong> — Comece com 10-20 novos cards por dia</li>
+            <li><strong>Copiar textos literalmente</strong> — Use suas próprias palavras para melhor retenção</li>
+            <li><strong>Não combinar com notas</strong> — Flashcards sem contexto são mais difíceis de lembrar</li>
+          </ul>
+
+          <h2>Por que o Mayinab É Ideal para Repetição Espaçada</h2>
+          <p>
+            A maioria dos apps de repetição espaçada só faz flashcards. O Mayinab é diferente porque combina <strong>notas e flashcards em uma timeline</strong>, então o contexto do seu estudo nunca se perde.
+          </p>
+          <ul>
+            <li><strong>Algoritmo SM-2</strong> com intervalos configuráveis</li>
+            <li><strong>Modo flip + modo digitação</strong> para diferentes estilos de revisão</li>
+            <li><strong>Lembretes diários</strong> e rastreamento de streak</li>
+            <li><strong>7 tipos de nota</strong> — texto, flashcards, checklists, imagens, áudio, vídeo, arquivos</li>
+            <li><strong>Markdown + LaTeX</strong> para exatas</li>
+            <li><strong>100% offline</strong> — sem internet necessária, sem coleta de dados</li>
+            <li><strong>Grátis para sempre</strong> — todos os recursos incluídos, sem anúncios</li>
+          </ul>
+
+          <div class="verdict-box">
+            <h3>🍵 Conclusão</h3>
+            <p>
+              A repetição espaçada é a <strong>técnica de estudo mais eficaz comprovada pela ciência</strong>. Funciona revisando informações em intervalos crescentes, combinando o efeito de espaçamento com recall ativo para construir memória de longo prazo durável.
+            </p>
+            <p>
+              A melhor forma de começar é com um app que automatize o agendamento. O Mayinab torna isso simples — faça notas e crie flashcards no mesmo lugar, e deixe o algoritmo SM-2 dizer exatamente o que revisar e quando. Grátis, offline e disponível em todas as plataformas.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+          <h2>Comece a estudar com repetição espaçada 🍵</h2>
+          <p>Baixe o Mayinab grátis. Algoritmo SM-2, notas + flashcards, funciona offline. Sem conta obrigatória.</p>
+          <a href="/#download" class="btn btn-white">⬇ Baixar Mayinab Grátis</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-mini">
+    © 2026 Mayinab · <a href="/" id="footerHome">Back to site</a>
+  </footer>
+
+  <script src="../js/lang.js"></script>
+  <script>
+    initLang({
+      en: {
+        title: 'What Is Spaced Repetition? A Complete Guide to Studying Smarter in 2026 | Mayinab',
+        description: 'Learn how spaced repetition works, why it\'s the most effective study technique, and how to use it with flashcards.'
+      },
+      pt: {
+        title: 'O que É Repetição Espaçada? Guia Completo para Estudar Melhor | Mayinab',
+        description: 'Aprenda como a repetição espaçada funciona, por que é a técnica de estudo mais eficaz, e como usá-la com flashcards.'
+      }
+    });
+  </script>
+</body>
+</html>
