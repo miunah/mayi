@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
   <title>Política de Privacidade – Mayinab</title>
   <meta name="description" content="Política de Privacidade do aplicativo Mayinab. Saiba como tratamos seus dados pessoais em conformidade com a LGPD.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="../app_icon.png">
   <link rel="canonical" href="https://mayinab.com/legal/privacy.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nunito.css">
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/pages.css">
 </head>
@@ -25,10 +23,10 @@
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn active" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn" aria-label="English">EN</button>
+          <button class="lang-btn active" aria-label="Português">PT</button>
         </div>
-        <a href="/" class="back-link" id="backLink">← Voltar ao site</a>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
       </div>
     </div>
   </nav>
@@ -433,12 +431,10 @@
     <p>© 2026 Mayinab · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of Use</a> · <a href="/">Home</a></p>
   </div>
 
-  <script src="../js/lang.js"></script>
-  <script>
-    initLang({
-      pt: { title: 'Política de Privacidade – Mayinab', description: 'Política de Privacidade do aplicativo Mayinab. Saiba como tratamos seus dados pessoais em conformidade com a LGPD.' },
-      en: { title: 'Privacy Policy – Mayinab', description: 'Mayinab Privacy Policy. Learn how we handle your personal data in compliance with LGPD and GDPR.' }
-    });
-  </script>
+  <script src="../js/lang.js"
+    data-meta-en-title="Privacy Policy – Mayinab"
+    data-meta-en-desc="Mayinab Privacy Policy. Learn how we handle your personal data in compliance with LGPD and GDPR."
+    data-meta-pt-title="Política de Privacidade – Mayinab"
+    data-meta-pt-desc="Política de Privacidade do aplicativo Mayinab. Saiba como tratamos seus dados pessoais em conformidade com a LGPD."></script>
 </body>
 </html>

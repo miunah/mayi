@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
 
   <title>Best Study App for Tablets: iPad, Galaxy Tab & Android Tablets | Mayinab</title>
   <meta name="description" content="The best study app optimized for tablets. Mayinab works on iPad, Galaxy Tab, Android tablets, and Windows tablets with split-view, flashcards, SM-2 spaced repetition, and 7 note types. Free, offline.">
@@ -19,18 +19,21 @@
   <meta property="og:site_name" content="Mayinab">
   <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
   <meta property="og:image:alt" content="Mayinab – Study app for tablets with flashcards and spaced repetition">
+  <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Best Study App for Tablets: iPad, Galaxy Tab & Android Tablets">
   <meta name="twitter:description" content="Flashcards, spaced repetition, and notes on your tablet. Split-view, 7 note types, free, offline.">
   <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab – Study app for tablets with flashcards and spaced repetition">
 
   <link rel="canonical" href="https://mayinab.com/blog/study-app-tablet.html">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com/blog/study-app-tablet.html">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com/blog/study-app-tablet.html">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com/blog/study-app-tablet.html">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nunito.css">
 
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
@@ -112,21 +115,26 @@
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#post-content" class="skip-to-content">Skip to content</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="../app_icon.png" alt="Mayinab">Mayinab
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
         </div>
-        <a href="/blog/" class="back-link" id="backLink">← Back to Blog</a>
+        <a href="/blog/" class="back-link" id="backLink" data-en="← Back to Blog" data-pt="← Voltar ao Blog">← Back to Blog</a>
       </div>
     </div>
   </nav>
+
+  <main id="post-content">
 
   <!-- ═══════════════ ENGLISH ═══════════════ -->
   <div data-lang="en" class="active">
@@ -791,22 +799,37 @@
   </div>
 
   <!-- FOOTER -->
+  
+  <!-- Related Articles -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 data-en="Related Articles" data-pt="Artigos Relacionados">Related Articles</h2>
+      <div class="related-grid">
+        <a href="/blog/best-note-taking-app.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="Best Note-Taking App to Organize Your Notes" data-pt="Melhor App para Organizar suas Notas">Best Note-Taking App to Organize Your Notes</h3>
+        </a>
+        <a href="/blog/personal-notes-app.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="Best Personal Notes App: Private, Offline, and Free" data-pt="Melhor App para Notas Pessoais: Privado, Offline e Gratis">Best Personal Notes App: Private, Offline, and Free</h3>
+        </a>
+        <a href="/blog/self-notes-app.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="Best App for Self Notes and Self-Study: Build Your Personal Knowledge Base" data-pt="Melhor App para Anotacoes Pessoais e Autoestudo: Construa sua Base de Conhecimento">Best App for Self Notes and Self-Study: Build Your Personal Knowledge Base</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
   <footer class="footer-mini">
-    © 2026 Mayinab · <a href="/" id="footerHome">Back to site</a>
+    © 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a>
   </footer>
 
-  <script src="../js/lang.js"></script>
-  <script>
-    initLang({
-      en: {
-        title: 'Best Study App for Tablets: iPad, Galaxy Tab & Android Tablets | Mayinab',
-        description: 'Study app optimized for tablets with flashcards, spaced repetition, split-view, and offline support. Free.'
-      },
-      pt: {
-        title: 'Melhor App para Estudar no Tablet: iPad, Galaxy Tab e Tablets Android | Mayinab',
-        description: 'App de estudo otimizado para tablets com flashcards, repetição espaçada, split-view e suporte offline. Grátis.'
-      }
-    });
-  </script>
+  <script src="../js/lang.js"
+    data-meta-en-title="Best Study App for Tablets: iPad, Galaxy Tab &amp; Android Tablets | Mayinab"
+    data-meta-en-desc="Study app optimized for tablets with flashcards, spaced repetition, split-view, and offline support. Free."
+    data-meta-pt-title="Melhor App para Estudar no Tablet: iPad, Galaxy Tab e Tablets Android | Mayinab"
+    data-meta-pt-desc="App de estudo otimizado para tablets com flashcards, repetição espaçada, split-view e suporte offline. Grátis."></script>
 </body>
 </html>

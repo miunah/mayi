@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
 
   <title>Best Anki Alternative | Modern Flashcard App with Spaced Repetition | Mayinab</title>
   <meta name="description" content="Looking for a modern alternative to Anki? Mayinab has the same SM-2 spaced repetition with a beautiful UI, chat-style notes, 7 note types, Markdown + LaTeX. 100% free, offline, no ads.">
@@ -19,18 +19,21 @@
   <meta property="og:site_name" content="Mayinab">
   <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
   <meta property="og:image:alt" content="Mayinab – Best Anki alternative">
+  <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mayinab | The Best Modern Alternative to Anki">
   <meta name="twitter:description" content="Same SM-2 algorithm, modern UI. Notes + flashcards in one app. Free, offline, no ads.">
   <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab – Best Anki alternative">
 
   <link rel="canonical" href="https://mayinab.com/blog/anki-alternative.html">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com/blog/anki-alternative.html">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com/blog/anki-alternative.html">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com/blog/anki-alternative.html">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nunito.css">
 
   <!-- Structured Data: SoftwareApplication -->
   <script type="application/ld+json">
@@ -98,21 +101,26 @@
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#post-content" class="skip-to-content">Skip to content</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="../app_icon.png" alt="Mayinab">Mayinab
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
         </div>
-        <a href="/" class="back-link" id="backLink">← Back to site</a>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
       </div>
     </div>
   </nav>
+
+  <main id="post-content">
 
   <!-- ═══════════════ ENGLISH ═══════════════ -->
   <div data-lang="en" class="active">
@@ -181,7 +189,7 @@
     </section>
 
     <!-- CONTENT SECTION -->
-    <section style="padding:0 0 40px">
+    <section class="section-flush">
       <div class="container">
         <div class="post-content">
           <h2>Why People Look for Anki Alternatives</h2>
@@ -329,7 +337,7 @@
     </section>
 
     <!-- CONTENT SECTION -->
-    <section style="padding:0 0 40px">
+    <section class="section-flush">
       <div class="container">
         <div class="post-content">
           <h2>Por que Procurar Alternativas ao Anki</h2>
@@ -411,22 +419,37 @@
   </div>
 
   <!-- FOOTER -->
+  
+  <!-- Related Articles -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 data-en="Related Articles" data-pt="Artigos Relacionados">Related Articles</h2>
+      <div class="related-grid">
+        <a href="/blog/flashcard-app-windows.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guide">Guide</span>
+          <h3 data-en="flashcard-app-windows.html" data-pt="flashcard-app-windows.html">flashcard-app-windows.html</h3>
+        </a>
+        <a href="/blog/free-study-app.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guide">Guide</span>
+          <h3 data-en="free-study-app.html" data-pt="free-study-app.html">free-study-app.html</h3>
+        </a>
+        <a href="/blog/notes-and-flashcards-app.html" class="related-card">
+          <span class="related-tag tips" data-en="Tips" data-pt="Dicas">Tips</span>
+          <h3 data-en="Stop Using Two Apps to Study. Combine Notes and Flashcards in One." data-pt="Pare de Usar Dois Apps para Estudar. Combine Notas e Flashcards em Um Só.">Stop Using Two Apps to Study. Combine Notes and Flashcards in One.</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
   <footer class="footer-mini">
-    © 2026 Mayinab · <a href="/" id="footerHome">Back to site</a>
+    © 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a>
   </footer>
 
-  <script src="../js/lang.js"></script>
-  <script>
-    initLang({
-      en: {
-        title: 'Best Anki Alternative | Modern Flashcard App with Spaced Repetition | Mayinab',
-        description: 'Looking for a modern alternative to Anki? Mayinab has the same SM-2 spaced repetition with a beautiful UI, chat-style notes, 7 note types. 100% free, offline, no ads.'
-      },
-      pt: {
-        title: 'Melhor Alternativa ao Anki | App de Flashcards Moderno com Repetição Espaçada | Mayinab',
-        description: 'Procurando uma alternativa moderna ao Anki? O Mayinab tem a mesma repetição espaçada SM-2 com UI bonita, notas estilo chat, 7 tipos de nota. 100% grátis, offline, sem anúncios.'
-      }
-    });
-  </script>
+  <script src="../js/lang.js"
+    data-meta-en-title="Best Anki Alternative | Modern Flashcard App with Spaced Repetition | Mayinab"
+    data-meta-en-desc="Looking for a modern alternative to Anki? Mayinab has the same SM-2 spaced repetition with a beautiful UI, chat-style notes, 7 note types. 100% free, offline, no ads."
+    data-meta-pt-title="Melhor Alternativa ao Anki | App de Flashcards Moderno com Repetição Espaçada | Mayinab"
+    data-meta-pt-desc="Procurando uma alternativa moderna ao Anki? O Mayinab tem a mesma repetição espaçada SM-2 com UI bonita, notas estilo chat, 7 tipos de nota. 100% grátis, offline, sem anúncios."></script>
 </body>
 </html>

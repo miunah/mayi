@@ -1,40 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
-  <title>Contato – Mayinab</title>
-  <meta name="description" content="Entre em contato com a equipe do Mayinab. Suporte, feedback, parcerias e imprensa.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
+  <title>Contact – Mayinab</title>
+  <meta name="description" content="Get in touch with the Mayinab team. Support, feedback, partnerships, and press.">
+  <meta name="author" content="Mayinab">
   <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact – Mayinab">
+  <meta property="og:description" content="Get in touch with the Mayinab team. Support, feedback, partnerships, and press.">
+  <meta property="og:url" content="https://mayinab.com/contact.html">
+  <meta property="og:site_name" content="Mayinab">
+  <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta property="og:image:alt" content="Mayinab – Study notes reimagined as chat">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact – Mayinab">
+  <meta name="twitter:description" content="Get in touch with the Mayinab team. Support, feedback, partnerships, and press.">
+  <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab – Study notes reimagined as chat">
+
   <link rel="icon" type="image/png" href="app_icon.png">
   <link rel="canonical" href="https://mayinab.com/contact.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="css/nunito.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#contact-content" class="skip-to-content">Skip to content</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="app_icon.png" alt="Mayinab">Mayinab
+        <img src="app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn active" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
         </div>
-        <a href="/" class="back-link" id="backLink">← Voltar ao site</a>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
       </div>
     </div>
   </nav>
 
+  <main id="contact-content">
   <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
-  <div data-lang="pt" class="active">
+  <div data-lang="pt">
     <div class="page-hero">
       <div class="container">
         <h1>💬 Contato</h1>
@@ -75,7 +95,7 @@
   </div>
 
   <!-- ═══════════════ ENGLISH ═══════════════ -->
-  <div data-lang="en">
+  <div data-lang="en" class="active">
     <div class="page-hero">
       <div class="container">
         <h1>💬 Contact</h1>
@@ -114,13 +134,13 @@
       </div>
     </div>
   </div>
+  </main>
 
   <!-- FOOTER -->
   <div class="footer-mini">
-    <p>© 2026 Mayinab · <a href="/" id="footerHome">Voltar ao site</a></p>
+    <p>© 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a></p>
   </div>
 
   <script src="js/lang.js"></script>
-  <script>initLang();</script>
 </body>
 </html>

@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
   <title>404 – Mayinab</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" href="app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional">
+  <link rel="stylesheet" href="css/nunito.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/404.css">
 </head>
 <body>
+  <main>
   <div data-lang="en" class="active">
     <div class="card">
       <div class="emoji">🍵</div>
       <h1>Page not found</h1>
       <p>The page you're looking for doesn't exist or has been moved.</p>
       <a href="/" class="btn">← Go Home</a>
+      <div class="extra-links">
+        <a href="/blog/">Blog</a>
+        <a href="/sitemap.xml">Sitemap</a>
+        <a href="/contact.html">Contact</a>
+      </div>
       <a href="/" class="brand">
         <img src="app_icon.png" alt="Mayinab"> Mayinab
       </a>
@@ -31,12 +35,17 @@
       <h1>Página não encontrada</h1>
       <p>A página que você procura não existe ou foi movida.</p>
       <a href="/" class="btn">← Voltar ao início</a>
+      <div class="extra-links">
+        <a href="/blog/">Blog</a>
+        <a href="/sitemap.xml">Sitemap</a>
+        <a href="/contact.html">Contato</a>
+      </div>
       <a href="/" class="brand">
         <img src="app_icon.png" alt="Mayinab"> Mayinab
       </a>
     </div>
   </div>
+  </main>
   <script src="js/lang.js"></script>
-  <script>initLang();</script>
 </body>
 </html>

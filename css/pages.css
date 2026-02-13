@@ -5,6 +5,9 @@
 ═══════════════════════════════════════════════════════════════ */
 
 /* ── Reset & Base ─────────────────────────────────────────── */
+/* ── Skip to content (accessibility) ──────────────────────── */
+.skip-to-content{position:absolute;top:-100%;left:16px;z-index:9999;background:var(--matcha-600,#5a8a5b);color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:top .2s ease}
+.skip-to-content:focus{top:0;color:#fff}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.8;-webkit-font-smoothing:antialiased}

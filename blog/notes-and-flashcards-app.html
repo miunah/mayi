@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
 
   <title>Best App for Notes and Flashcards Together | Stop Using 2 Apps | Mayinab</title>
   <meta name="description" content="Tired of using Notion for notes and Anki for flashcards? Mayinab combines both with spaced repetition built-in. Create flashcards inline with your notes. 100% offline, free.">
@@ -19,18 +19,21 @@
   <meta property="og:site_name" content="Mayinab">
   <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
   <meta property="og:image:alt" content="Mayinab – Notes and flashcards in one app">
+  <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Best App for Notes and Flashcards Together | Stop Using 2 Apps">
   <meta name="twitter:description" content="Combine notes and flashcards with spaced repetition. One app that replaces Notion + Anki.">
   <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab – Notes and flashcards in one app">
 
   <link rel="canonical" href="https://mayinab.com/blog/notes-and-flashcards-app.html">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com/blog/notes-and-flashcards-app.html">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com/blog/notes-and-flashcards-app.html">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com/blog/notes-and-flashcards-app.html">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nunito.css">
 
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
@@ -88,21 +91,26 @@
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#post-content" class="skip-to-content">Skip to content</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="../app_icon.png" alt="Mayinab">Mayinab
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
         </div>
-        <a href="/blog/" class="back-link" id="backLink">← Back to Blog</a>
+        <a href="/blog/" class="back-link" id="backLink" data-en="← Back to Blog" data-pt="← Voltar ao Blog">← Back to Blog</a>
       </div>
     </div>
   </nav>
+
+  <main id="post-content">
 
   <!-- ═══════════════ ENGLISH ═══════════════ -->
   <div data-lang="en" class="active">
@@ -439,22 +447,37 @@
   </div>
 
   <!-- FOOTER -->
+  
+  <!-- Related Articles -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 data-en="Related Articles" data-pt="Artigos Relacionados">Related Articles</h2>
+      <div class="related-grid">
+        <a href="/blog/anki-alternative.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guide">Guide</span>
+          <h3 data-en="anki-alternative.html" data-pt="anki-alternative.html">anki-alternative.html</h3>
+        </a>
+        <a href="/blog/flashcard-app-windows.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guide">Guide</span>
+          <h3 data-en="flashcard-app-windows.html" data-pt="flashcard-app-windows.html">flashcard-app-windows.html</h3>
+        </a>
+        <a href="/blog/free-study-app.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guide">Guide</span>
+          <h3 data-en="free-study-app.html" data-pt="free-study-app.html">free-study-app.html</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
   <footer class="footer-mini">
-    © 2026 Mayinab · <a href="/" id="footerHome">Back to site</a>
+    © 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a>
   </footer>
 
-  <script src="../js/lang.js"></script>
-  <script>
-    initLang({
-      en: {
-        title: 'Best App for Notes and Flashcards Together | Stop Using 2 Apps | Mayinab',
-        description: 'Combine notes and flashcards in one app with built-in spaced repetition. No more juggling Notion and Anki.'
-      },
-      pt: {
-        title: 'Melhor App para Notas e Flashcards Juntos | Pare de Usar 2 Apps | Mayinab',
-        description: 'Combine notas e flashcards em um app com repetição espaçada integrada. Sem mais alternar entre Notion e Anki.'
-      }
-    });
-  </script>
+  <script src="../js/lang.js"
+    data-meta-en-title="Best App for Notes and Flashcards Together | Stop Using 2 Apps | Mayinab"
+    data-meta-en-desc="Combine notes and flashcards in one app with built-in spaced repetition. No more juggling Notion and Anki."
+    data-meta-pt-title="Melhor App para Notas e Flashcards Juntos | Pare de Usar 2 Apps | Mayinab"
+    data-meta-pt-desc="Combine notas e flashcards em um app com repetição espaçada integrada. Sem mais alternar entre Notion e Anki."></script>
 </body>
 </html>

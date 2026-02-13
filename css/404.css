@@ -72,6 +72,26 @@ p {
 }
 .brand img { width: 24px; height: 24px; border-radius: 6px; }
 
+/* ── Extra Links ──────────────────────────────────────────── */
+.extra-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.extra-links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--matcha-500);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.extra-links a:hover {
+  color: var(--matcha-700);
+  text-decoration: underline;
+}
+
 /* ── Language Toggle ──────────────────────────────────────── */
 [data-lang] { display: none; }
 [data-lang].active { display: block; }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
 
   <title>Best Flashcard App for Windows | Spaced Repetition, Offline & Free | Mayinab</title>
   <meta name="description" content="Mayinab is the best flashcard app for Windows with spaced repetition, Markdown, LaTeX, 7 note types, and a modern UI. A beautiful alternative to Anki. 100% offline, no ads, free.">
@@ -19,18 +19,21 @@
   <meta property="og:site_name" content="Mayinab">
   <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
   <meta property="og:image:alt" content="Mayinab – Best flashcard app for Windows">
+  <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mayinab | The Best Flashcard App for Windows">
   <meta name="twitter:description" content="Modern spaced repetition app for Windows. Chat-style notes, 7 note types, offline, free.">
   <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab – Best flashcard app for Windows">
 
   <link rel="canonical" href="https://mayinab.com/blog/flashcard-app-windows.html">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com/blog/flashcard-app-windows.html">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com/blog/flashcard-app-windows.html">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com/blog/flashcard-app-windows.html">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nunito.css">
 
   <!-- Structured Data: SoftwareApplication -->
   <script type="application/ld+json">
@@ -104,21 +107,26 @@
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#post-content" class="skip-to-content">Skip to content</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="../app_icon.png" alt="Mayinab">Mayinab
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
         </div>
-        <a href="/" class="back-link" id="backLink">← Back to site</a>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
       </div>
     </div>
   </nav>
+
+  <main id="post-content">
 
   <!-- ═══════════════ ENGLISH ═══════════════ -->
   <div data-lang="en" class="active">
@@ -187,7 +195,7 @@
     </section>
 
     <!-- CONTENT SECTION: Positioning against Anki -->
-    <section style="padding:0 0 40px">
+    <section class="section-flush">
       <div class="container">
         <div class="post-content">
           <h2>Why Switch from Anki to Mayinab?</h2>
@@ -314,7 +322,7 @@
     </section>
 
     <!-- CONTENT SECTION -->
-    <section style="padding:0 0 40px">
+    <section class="section-flush">
       <div class="container">
         <div class="post-content">
           <h2>Por que Trocar do Anki para o Mayinab?</h2>
@@ -375,22 +383,37 @@
   </div>
 
   <!-- FOOTER -->
+  
+  <!-- Related Articles -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 data-en="Related Articles" data-pt="Artigos Relacionados">Related Articles</h2>
+      <div class="related-grid">
+        <a href="/blog/anki-alternative.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guide">Guide</span>
+          <h3 data-en="anki-alternative.html" data-pt="anki-alternative.html">anki-alternative.html</h3>
+        </a>
+        <a href="/blog/free-study-app.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guide">Guide</span>
+          <h3 data-en="free-study-app.html" data-pt="free-study-app.html">free-study-app.html</h3>
+        </a>
+        <a href="/blog/notes-and-flashcards-app.html" class="related-card">
+          <span class="related-tag tips" data-en="Tips" data-pt="Dicas">Tips</span>
+          <h3 data-en="Stop Using Two Apps to Study. Combine Notes and Flashcards in One." data-pt="Pare de Usar Dois Apps para Estudar. Combine Notas e Flashcards em Um Só.">Stop Using Two Apps to Study. Combine Notes and Flashcards in One.</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
   <footer class="footer-mini">
-    © 2026 Mayinab · <a href="/" id="footerHome">Back to site</a>
+    © 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a>
   </footer>
 
-  <script src="../js/lang.js"></script>
-  <script>
-    initLang({
-      en: {
-        title: 'Best Flashcard App for Windows | Spaced Repetition, Offline & Free | Mayinab',
-        description: 'Mayinab is the best flashcard app for Windows with spaced repetition, Markdown, LaTeX, 7 note types, and a modern UI. A beautiful alternative to Anki. 100% offline, no ads, free.'
-      },
-      pt: {
-        title: 'Melhor App de Flashcards para Windows | Repetição Espaçada, Offline e Grátis | Mayinab',
-        description: 'Mayinab é o melhor app de flashcards para Windows com repetição espaçada, Markdown, LaTeX, 7 tipos de nota e UI moderna. Uma alternativa bonita ao Anki. 100% offline, sem anúncios, grátis.'
-      }
-    });
-  </script>
+  <script src="../js/lang.js"
+    data-meta-en-title="Best Flashcard App for Windows | Spaced Repetition, Offline &amp; Free | Mayinab"
+    data-meta-en-desc="Mayinab is the best flashcard app for Windows with spaced repetition, Markdown, LaTeX, 7 note types, and a modern UI. A beautiful alternative to Anki. 100% offline, no ads, free."
+    data-meta-pt-title="Melhor App de Flashcards para Windows | Repetição Espaçada, Offline e Grátis | Mayinab"
+    data-meta-pt-desc="Mayinab é o melhor app de flashcards para Windows com repetição espaçada, Markdown, LaTeX, 7 tipos de nota e UI moderna. Uma alternativa bonita ao Anki. 100% offline, sem anúncios, grátis."></script>
 </body>
 </html>

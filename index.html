@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://formspree.io">
   <meta name="description" content="Mayinab: Study notes reimagined as chat. Flashcards with spaced repetition, Markdown + LaTeX, 100% offline, no ads. Free for Android, iOS, Linux, macOS & Windows.">
   <meta name="keywords" content="study app, flashcards, spaced repetition, chat notes, SRS, Anki alternative, offline study, markdown notes, LaTeX, student app, free study tool">
   <meta name="author" content="Mayinab">
@@ -37,9 +37,7 @@
   <link rel="icon" type="image/png" href="app_icon.png">
 
   <!-- Google Fonts (preconnect + stylesheet) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=optional">
+  <link rel="stylesheet" href="css/nunito.css">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -91,7 +89,7 @@
   <!-- ═══════════════ NAVIGATION ═══════════════ -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-logo" aria-label="Mayinab Home">
+      <a href="/" class="nav-logo" aria-label="Mayinab Home">
         <span class="nav-logo-icon"><img src="app_icon.png" alt="Mayinab icon" width="36" height="36"></span>
         <span data-i18n="brand">Mayinab</span>
       </a>
@@ -104,8 +102,8 @@
         <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
         <li>
           <div class="lang-switcher">
-            <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
-            <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+            <button class="lang-btn active" aria-label="English">EN</button>
+            <button class="lang-btn" aria-label="Português">PT</button>
           </div>
         </li>
         <li><a href="#download" class="nav-cta" data-i18n="nav.download">Download Free</a></li>
@@ -881,6 +879,23 @@
             </div>
           </div>
 
+          <!-- SHA-256 Checksums -->
+          <div class="checksums reveal">
+            <details>
+              <summary data-i18n="platforms.checksum.title">🔒 Verify your download (SHA-256)</summary>
+              <div class="checksum-list">
+                <div class="checksum-item">
+                  <span class="checksum-label">🐧 Linux AppImage</span>
+                  <code class="checksum-hash" data-i18n="platforms.checksum.linux">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code>
+                </div>
+                <div class="checksum-item">
+                  <span class="checksum-label">🪟 Windows Setup</span>
+                  <code class="checksum-hash" data-i18n="platforms.checksum.windows">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code>
+                </div>
+              </div>
+            </details>
+          </div>
+
           <div class="platform-group reveal">
             <div class="platform-group-label">📱 <span data-i18n="platforms.mobile">Mobile</span></div>
             <div class="platforms-grid">
@@ -919,7 +934,7 @@
                       <span>📱 iOS</span>
                     </label>
                   </div>
-                  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                  <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
                 </form>
                 <div id="notifySuccess" class="notify-success" hidden>
                   <span class="notify-success-icon">✅</span>
@@ -1134,6 +1149,7 @@
   </button>
 
   <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+  <script src="js/translations.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

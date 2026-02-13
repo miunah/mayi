@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
 
   <title>How to Pass Concurso Caixa Econômica Federal: Study Plan & Best App | Mayinab</title>
   <meta name="description" content="Complete guide to passing concurso Caixa Econômica Federal. Study plan, key subjects, past exam analysis, and how Mayinab's spaced repetition helps you pass.">
@@ -19,18 +19,21 @@
   <meta property="og:site_name" content="Mayinab">
   <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
   <meta property="og:image:alt" content="Mayinab - Concurso Caixa Econômica Federal">
+  <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Pass Concurso Caixa Econômica Federal">
   <meta name="twitter:description" content="Study plan for concurso Caixa with spaced repetition. Free app with flashcards and SM-2 algorithm.">
   <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab - Concurso Caixa Econômica Federal">
 
   <link rel="canonical" href="https://mayinab.com/blog/concurso-caixa.html">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com/blog/concurso-caixa.html">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com/blog/concurso-caixa.html">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com/blog/concurso-caixa.html">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nunito.css">
 
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
@@ -96,21 +99,26 @@
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#post-content" class="skip-to-content">Skip to content</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="../app_icon.png" alt="Mayinab">Mayinab
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
         </div>
-        <a href="/blog/" class="back-link" id="backLink">← Back to Blog</a>
+        <a href="/blog/" class="back-link" id="backLink" data-en="← Back to Blog" data-pt="← Voltar ao Blog">← Back to Blog</a>
       </div>
     </div>
   </nav>
+
+  <main id="post-content">
 
   <!-- ═══════════════ ENGLISH ═══════════════ -->
   <div data-lang="en" class="active">
@@ -597,22 +605,37 @@
   </div>
 
   <!-- FOOTER -->
+  
+  <!-- Related Articles -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 data-en="Related Articles" data-pt="Artigos Relacionados">Related Articles</h2>
+      <div class="related-grid">
+        <a href="/blog/concurso-banco-do-brasil.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="How to Pass Concurso Banco do Brasil: Complete Study Plan" data-pt="Como Passar no Concurso Banco do Brasil: Plano de Estudos Completo">How to Pass Concurso Banco do Brasil: Complete Study Plan</h3>
+        </a>
+        <a href="/blog/concurso-correios.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="How to Pass Concurso Correios: Complete Study Plan" data-pt="Como Passar no Concurso dos Correios: Plano de Estudos Completo">How to Pass Concurso Correios: Complete Study Plan</h3>
+        </a>
+        <a href="/blog/concurso-ibge.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="How to Pass Concurso IBGE: Complete Study Plan" data-pt="Como Passar no Concurso do IBGE: Plano de Estudos Completo">How to Pass Concurso IBGE: Complete Study Plan</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
   <footer class="footer-mini">
-    © 2026 Mayinab · <a href="/" id="footerHome">Back to site</a>
+    © 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a>
   </footer>
 
-  <script src="../js/lang.js"></script>
-  <script>
-    initLang({
-      en: {
-        title: 'How to Pass Concurso Caixa Econômica Federal: Study Plan & Best App | Mayinab',
-        description: 'Complete guide to passing concurso Caixa with spaced repetition and flashcards.'
-      },
-      pt: {
-        title: 'Como Passar no Concurso Caixa Econômica Federal: Plano de Estudos | Mayinab',
-        description: 'Guia completo para passar no concurso Caixa com repetição espaçada e flashcards.'
-      }
-    });
-  </script>
+  <script src="../js/lang.js"
+    data-meta-en-title="How to Pass Concurso Caixa Econômica Federal: Study Plan &amp; Best App | Mayinab"
+    data-meta-en-desc="Complete guide to passing concurso Caixa with spaced repetition and flashcards."
+    data-meta-pt-title="Como Passar no Concurso Caixa Econômica Federal: Plano de Estudos | Mayinab"
+    data-meta-pt-desc="Guia completo para passar no concurso Caixa com repetição espaçada e flashcards."></script>
 </body>
 </html>

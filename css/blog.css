@@ -4,6 +4,9 @@
 ═══════════════════════════════════════════════════════════════ */
 
 /* ── Reset & Base (same as pages.css) ─────────────────────── */
+/* ── Skip to content (accessibility) ──────────────────────── */
+.skip-to-content{position:absolute;top:-100%;left:16px;z-index:9999;background:var(--matcha-600,#5a8a5b);color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:top .2s ease}
+.skip-to-content:focus{top:0;color:#fff}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.8;-webkit-font-smoothing:antialiased}
@@ -173,8 +176,26 @@ img{max-width:100%;display:block}
   .landing-hero .hero-btns{flex-direction:column;align-items:center}
 }
 
+/* ── Section Flush (no top padding) ───────────────────────── */
+.section-flush{padding:0 0 40px}
+
 /* ── Text Selection ───────────────────────────────────────── */
 ::selection{background:var(--matcha-200);color:var(--text-primary)}
+
+/* ── Related Articles ─────────────────────────────────────── */
+.related-posts{padding:32px 0 0}
+.related-posts h2{font-size:1.3rem;font-weight:800;margin-bottom:20px;color:var(--text-primary)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.related-card{display:block;background:var(--bg-card);border-radius:var(--radius-md);padding:20px;text-decoration:none;border:1.5px solid var(--matcha-50);transition:var(--transition)}
+.related-card:hover{border-color:var(--matcha-200);transform:translateY(-2px);box-shadow:var(--shadow-medium)}
+.related-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:3px 10px;border-radius:var(--radius-full);margin-bottom:10px}
+.related-tag.guide{background:var(--matcha-50);color:var(--matcha-700)}
+.related-tag.tips{background:#fef3c7;color:#92400e}
+.related-tag.comparison{background:#e0e7ff;color:#3730a3}
+.related-tag.landing{background:#fce7f3;color:#9d174d}
+.related-card h3{font-size:.95rem;font-weight:700;color:var(--text-primary);line-height:1.4;margin:0}
+@media(max-width:768px){.related-grid{grid-template-columns:1fr}}
+@media(max-width:1024px) and (min-width:769px){.related-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* ── Reduced Motion ───────────────────────────────────────── */
 @media(prefers-reduced-motion:reduce){

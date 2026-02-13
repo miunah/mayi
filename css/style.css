@@ -2388,3 +2388,15 @@ a.platform-item {
     display: none;
   }
 }
+
+/* ── Honeypot (anti-spam) ─────────────────────────────────── */
+.honeypot{display:none}
+
+/* ── Checksums ────────────────────────────────────────────── */
+.checksums{margin-top:24px;text-align:left}
+.checksums summary{font-size:.9rem;font-weight:700;color:var(--text-secondary);cursor:pointer;padding:12px 0}
+.checksums summary:hover{color:var(--text-primary)}
+.checksum-list{display:flex;flex-direction:column;gap:12px;padding:12px 0}
+.checksum-item{display:flex;flex-direction:column;gap:4px}
+.checksum-label{font-size:.85rem;font-weight:600;color:var(--text-primary)}
+.checksum-hash{font-size:.75rem;font-family:'Courier New',monospace;color:var(--text-secondary);word-break:break-all;background:var(--bg-secondary,rgba(0,0,0,.05));padding:6px 10px;border-radius:6px;user-select:all}

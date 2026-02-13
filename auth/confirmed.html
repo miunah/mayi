@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
   <title>Email Confirmed – Mayinab</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional">
+  <link rel="stylesheet" href="../css/nunito.css">
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/confirmed.css">
 </head>
@@ -23,15 +21,6 @@
       <a href="https://mayinab.com">mayinab.com</a>
     </p>
   </div>
-  <script>
-    const lang = (navigator.language || '').slice(0, 2);
-    if (lang === 'pt') {
-      document.documentElement.lang = 'pt-BR';
-      document.title = 'E-mail Confirmado – Mayinab';
-      document.getElementById('title').textContent = 'E-mail Confirmado!';
-      document.getElementById('desc').textContent = 'Sua conta foi verificada com sucesso.';
-      document.getElementById('action').innerHTML = 'Você pode fechar esta aba e <strong>voltar ao app Mayinab</strong> para entrar.';
-    }
-  </script>
+  <script src="../js/confirmed.js"></script>
 </body>
 </html>

@@ -3,2024 +3,996 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'">
 
   <title>Blog – Mayinab</title>
   <meta name="description" content="Mayinab blog: study tips, app comparisons, and guides for smarter learning with flashcards, spaced repetition, and modern note-taking.">
   <meta name="keywords" content="mayinab blog, study tips, flashcard app, spaced repetition, anki alternative, study app blog">
   <meta name="robots" content="index, follow">
+  <meta name="author" content="Mayinab">
+  <meta name="author" content="Mayinab">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Blog – Mayinab">
   <meta property="og:description" content="Study tips, app comparisons, and guides for smarter learning.">
   <meta property="og:url" content="https://mayinab.com/blog/">
   <meta property="og:site_name" content="Mayinab">
+  <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta property="og:image:alt" content="Mayinab – Study notes reimagined as chat">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog – Mayinab">
+  <meta name="twitter:description" content="Study tips, app comparisons, and guides for smarter learning.">
+  <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab – Study notes reimagined as chat">
 
   <link rel="canonical" href="https://mayinab.com/blog/">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com/blog/">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com/blog/">
   <link rel="icon" type="image/png" href="../app_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=optional" rel="stylesheet">
+  <link rel="stylesheet" href="../css/nunito.css">
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/blog.css">
 </head>
 <body>
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#blog-content" class="skip-to-content">Skip to content</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="../app_icon.png" alt="Mayinab">Mayinab
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('en')" aria-label="English">EN</button>
-          <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">PT</button>
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
         </div>
-        <a href="/" class="back-link" id="backLink">← Back to site</a>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
       </div>
     </div>
   </nav>
 
-  <!-- ═══════════════ ENGLISH ═══════════════ -->
-  <div data-lang="en" class="active">
+
+  <main id="blog-content">
     <div class="blog-hero">
       <div class="container">
         <h1>📝 Blog</h1>
-        <p class="subtitle">Study tips, comparisons, and guides to help you learn smarter with Mayinab</p>
+        <p class="subtitle" data-en="Study tips, comparisons, and guides to help you learn smarter with Mayinab" data-pt="Dicas de estudo, comparativos e guias para aprender melhor com o Mayinab">Study tips, comparisons, and guides to help you learn smarter with Mayinab</p>
       </div>
     </div>
 
     <div class="container">
       <div class="blog-grid">
 
-        <!-- Card: Mayinab vs Anki -->
         <a href="mayinab-vs-anki-windows.html" class="blog-card">
           <div class="blog-card-img">⚔️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparison</span>
-            <h3>Mayinab vs Anki on Windows: Which Is Better?</h3>
-            <p>Side-by-side comparison of features, UI, spaced repetition, and usability. Find out which flashcard app is right for you.</p>
+            <span class="blog-card-tag comparison" data-en="Comparison" data-pt="Comparativo">Comparison</span>
+            <h3 data-en="Mayinab vs Anki on Windows: Which Is Better?" data-pt="Mayinab vs Anki no Windows: Qual É Melhor?">Mayinab vs Anki on Windows: Which Is Better?</h3>
+            <p data-en="Side-by-side comparison of features, UI, spaced repetition, and usability. Find out which flashcard app is right for you." data-pt="Comparação lado a lado de recursos, UI, repetição espaçada e usabilidade. Descubra qual app de flashcards é ideal para você.">Side-by-side comparison of features, UI, spaced repetition, and usability. Find out which flashcard app is right for you.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 8 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 8 min read" data-pt="⏱ 8 min de leitura">⏱ 8 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Flashcard App for Windows -->
         <a href="flashcard-app-windows.html" class="blog-card">
           <div class="blog-card-img">🪟</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best Flashcard App for Windows with Spaced Repetition</h3>
-            <p>Discover why Mayinab is the modern alternative to Anki for Windows, with a beautiful UI, 7 note types, and offline support.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best Flashcard App for Windows with Spaced Repetition" data-pt="Melhor App de Flashcards para Windows com Repetição Espaçada">Best Flashcard App for Windows with Spaced Repetition</h3>
+            <p data-en="Discover why Mayinab is the modern alternative to Anki for Windows, with a beautiful UI, 7 note types, and offline support." data-pt="Descubra por que o Mayinab é a alternativa moderna ao Anki para Windows, com UI bonita, 7 tipos de nota e suporte offline.">Discover why Mayinab is the modern alternative to Anki for Windows, with a beautiful UI, 7 note types, and offline support.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 5 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 5 min read" data-pt="⏱ 5 min de leitura">⏱ 5 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Mayinab vs Notion -->
         <a href="mayinab-vs-notion.html" class="blog-card">
           <div class="blog-card-img">⚔️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparison</span>
-            <h3>Mayinab vs Notion for Studying: Which Is Better?</h3>
-            <p>Notion is great for productivity, but not for studying. Compare flashcards, spaced repetition, offline support, and privacy side by side.</p>
+            <span class="blog-card-tag comparison" data-en="Comparison" data-pt="Comparativo">Comparison</span>
+            <h3 data-en="Mayinab vs Notion for Studying: Which Is Better?" data-pt="Mayinab vs Notion para Estudar: Qual É Melhor?">Mayinab vs Notion for Studying: Which Is Better?</h3>
+            <p data-en="Notion is great for productivity, but not for studying. Compare flashcards, spaced repetition, offline support, and privacy side by side." data-pt="O Notion é ótimo para produtividade, mas não para estudar. Compare flashcards, repetição espaçada, offline e privacidade lado a lado.">Notion is great for productivity, but not for studying. Compare flashcards, spaced repetition, offline support, and privacy side by side.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Notion Alternative for Students -->
         <a href="notion-alternative-study.html" class="blog-card">
           <div class="blog-card-img">📚</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternative</span>
-            <h3>Best Notion Alternative for Students: Notes + Flashcards + SRS</h3>
-            <p>Stop taking notes you'll never review. Mayinab combines notes, flashcards, and spaced repetition in one app. 100% offline, free.</p>
+            <span class="blog-card-tag landing" data-en="Alternative" data-pt="Alternativa">Alternative</span>
+            <h3 data-en="Best Notion Alternative for Students: Notes + Flashcards + SRS" data-pt="Melhor Alternativa ao Notion para Estudantes: Notas + Flashcards + SRS">Best Notion Alternative for Students: Notes + Flashcards + SRS</h3>
+            <p data-en="Stop taking notes you&#x27;ll never review. Mayinab combines notes, flashcards, and spaced repetition in one app. 100% offline, free." data-pt="Pare de fazer anotações que nunca vai revisar. O Mayinab combina notas, flashcards e repetição espaçada em um app. 100% offline, grátis.">Stop taking notes you&#x27;ll never review. Mayinab combines notes, flashcards, and spaced repetition in one app. 100% offline, free.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 6 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 6 min read" data-pt="⏱ 6 min de leitura">⏱ 6 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Notes and Flashcards App -->
         <a href="notes-and-flashcards-app.html" class="blog-card">
           <div class="blog-card-img">🗂️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag tips">Tips</span>
-            <h3>Stop Using Two Apps to Study: Combine Notes and Flashcards</h3>
-            <p>Tired of juggling Notion + Anki? Learn why notes and flashcards should live together, and how Mayinab solves the two-app problem.</p>
+            <span class="blog-card-tag tips" data-en="Tips" data-pt="Dicas">Tips</span>
+            <h3 data-en="Stop Using Two Apps to Study: Combine Notes and Flashcards" data-pt="Pare de Usar Dois Apps: Combine Notas e Flashcards">Stop Using Two Apps to Study: Combine Notes and Flashcards</h3>
+            <p data-en="Tired of juggling Notion + Anki? Learn why notes and flashcards should live together, and how Mayinab solves the two-app problem." data-pt="Cansado de alternar entre Notion e Anki? Entenda por que notas e flashcards devem viver juntos e como o Mayinab resolve esse problema.">Tired of juggling Notion + Anki? Learn why notes and flashcards should live together, and how Mayinab solves the two-app problem.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 7 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 7 min read" data-pt="⏱ 7 min de leitura">⏱ 7 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Mayinab vs Obsidian -->
         <a href="mayinab-vs-obsidian.html" class="blog-card">
           <div class="blog-card-img">⚔️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparison</span>
-            <h3>Mayinab vs Obsidian for Studying: Which Note App Is Better?</h3>
-            <p>Obsidian is great for PKM, but studying needs flashcards and spaced repetition. Compare plugins vs built-in features, setup time, and sync costs.</p>
+            <span class="blog-card-tag comparison" data-en="Comparison" data-pt="Comparativo">Comparison</span>
+            <h3 data-en="Mayinab vs Obsidian for Studying: Which Note App Is Better?" data-pt="Mayinab vs Obsidian para Estudar: Qual App É Melhor?">Mayinab vs Obsidian for Studying: Which Note App Is Better?</h3>
+            <p data-en="Obsidian is great for PKM, but studying needs flashcards and spaced repetition. Compare plugins vs built-in features, setup time, and sync costs." data-pt="O Obsidian é ótimo para PKM, mas estudar exige flashcards e repetição espaçada. Compare plugins vs recursos nativos, setup e custos de sync.">Obsidian is great for PKM, but studying needs flashcards and spaced repetition. Compare plugins vs built-in features, setup time, and sync costs.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Obsidian Alternative for Students -->
         <a href="obsidian-alternative-study.html" class="blog-card">
           <div class="blog-card-img">📚</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternative</span>
-            <h3>Best Obsidian Alternative for Students: Notes + Flashcards + SRS</h3>
-            <p>Stop configuring plugins. Mayinab has built-in flashcards, SM-2 spaced repetition, and free cloud sync. 100% offline, no account needed.</p>
+            <span class="blog-card-tag landing" data-en="Alternative" data-pt="Alternativa">Alternative</span>
+            <h3 data-en="Best Obsidian Alternative for Students: Notes + Flashcards + SRS" data-pt="Melhor Alternativa ao Obsidian para Estudantes: Notas + Flashcards + SRS">Best Obsidian Alternative for Students: Notes + Flashcards + SRS</h3>
+            <p data-en="Stop configuring plugins. Mayinab has built-in flashcards, SM-2 spaced repetition, and free cloud sync. 100% offline, no account needed." data-pt="Pare de configurar plugins. O Mayinab tem flashcards integrados, repetição espaçada SM-2 e sync cloud grátis. 100% offline, sem conta.">Stop configuring plugins. Mayinab has built-in flashcards, SM-2 spaced repetition, and free cloud sync. 100% offline, no account needed.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 7 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 7 min read" data-pt="⏱ 7 min de leitura">⏱ 7 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Spaced Repetition Guide -->
         <a href="spaced-repetition-guide.html" class="blog-card">
           <div class="blog-card-img">🧠</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>What Is Spaced Repetition? A Complete Guide to Studying Smarter</h3>
-            <p>Learn how spaced repetition works, why it's the most effective study technique, and how to use the SM-2 algorithm with flashcards.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="What Is Spaced Repetition? A Complete Guide to Studying Smarter" data-pt="O que É Repetição Espaçada? Guia Completo para Estudar Melhor">What Is Spaced Repetition? A Complete Guide to Studying Smarter</h3>
+            <p data-en="Learn how spaced repetition works, why it&#x27;s the most effective study technique, and how to use the SM-2 algorithm with flashcards." data-pt="Aprenda como a repetição espaçada funciona, por que é a técnica de estudo mais eficaz, e como usar o algoritmo SM-2 com flashcards.">Learn how spaced repetition works, why it&#x27;s the most effective study technique, and how to use the SM-2 algorithm with flashcards.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Anki Alternative -->
         <a href="anki-alternative.html" class="blog-card">
           <div class="blog-card-img">🔄</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternative</span>
-            <h3>Best Anki Alternative: Modern Flashcard App with Spaced Repetition</h3>
-            <p>Same SM-2 algorithm, modern UI. Chat-style notes, 7 note types, Markdown + LaTeX. 100% free, offline, no ads.</p>
+            <span class="blog-card-tag landing" data-en="Alternative" data-pt="Alternativa">Alternative</span>
+            <h3 data-en="Best Anki Alternative: Modern Flashcard App with Spaced Repetition" data-pt="Melhor Alternativa ao Anki: App de Flashcards Moderno com Repetição Espaçada">Best Anki Alternative: Modern Flashcard App with Spaced Repetition</h3>
+            <p data-en="Same SM-2 algorithm, modern UI. Chat-style notes, 7 note types, Markdown + LaTeX. 100% free, offline, no ads." data-pt="Mesmo algoritmo SM-2, UI moderna. Notas estilo chat, 7 tipos de nota, Markdown + LaTeX. 100% grátis, offline, sem anúncios.">Same SM-2 algorithm, modern UI. Chat-style notes, 7 note types, Markdown + LaTeX. 100% free, offline, no ads.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 7 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 7 min read" data-pt="⏱ 7 min de leitura">⏱ 7 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Mayinab vs Quizlet -->
         <a href="mayinab-vs-quizlet.html" class="blog-card">
           <div class="blog-card-img">⚔️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparison</span>
-            <h3>Mayinab vs Quizlet: Which Flashcard App Is Better?</h3>
-            <p>Compare spaced repetition, pricing, offline support, privacy, and features. Find out which flashcard app is the right choice for serious students.</p>
+            <span class="blog-card-tag comparison" data-en="Comparison" data-pt="Comparativo">Comparison</span>
+            <h3 data-en="Mayinab vs Quizlet: Which Flashcard App Is Better?" data-pt="Mayinab vs Quizlet: Qual App de Flashcards É Melhor?">Mayinab vs Quizlet: Which Flashcard App Is Better?</h3>
+            <p data-en="Compare spaced repetition, pricing, offline support, privacy, and features. Find out which flashcard app is the right choice for serious students." data-pt="Compare repetição espaçada, preço, suporte offline, privacidade e recursos. Descubra qual app é a escolha certa para estudantes sérios.">Compare spaced repetition, pricing, offline support, privacy, and features. Find out which flashcard app is the right choice for serious students.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 9 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 9 min read" data-pt="⏱ 9 min de leitura">⏱ 9 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Make Effective Flashcards -->
         <a href="how-to-make-effective-flashcards.html" class="blog-card">
           <div class="blog-card-img">✍️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag tips">Tips</span>
-            <h3>How to Make Effective Flashcards: 10 Tips Backed by Science</h3>
-            <p>Stop wasting time on bad flashcards. Learn 10 science-backed techniques for creating cards that improve long-term retention.</p>
+            <span class="blog-card-tag tips" data-en="Tips" data-pt="Dicas">Tips</span>
+            <h3 data-en="How to Make Effective Flashcards: 10 Tips Backed by Science" data-pt="Como Criar Flashcards Eficientes: 10 Dicas Baseadas em Ciência">How to Make Effective Flashcards: 10 Tips Backed by Science</h3>
+            <p data-en="Stop wasting time on bad flashcards. Learn 10 science-backed techniques for creating cards that improve long-term retention." data-pt="Pare de perder tempo com flashcards ruins. Aprenda 10 técnicas baseadas em ciência para criar cards que melhoram a retenção de longo prazo.">Stop wasting time on bad flashcards. Learn 10 science-backed techniques for creating cards that improve long-term retention.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 8 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 8 min read" data-pt="⏱ 8 min de leitura">⏱ 8 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Free Study App -->
         <a href="free-study-app.html" class="blog-card">
           <div class="blog-card-img">🎓</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternative</span>
-            <h3>Best Free Study App for Students | No Ads, No Paywall</h3>
-            <p>Notes, flashcards, and SM-2 spaced repetition in one free app. 100% offline, no ads, all platforms. Actually free, not "freemium."</p>
+            <span class="blog-card-tag landing" data-en="Alternative" data-pt="Alternativa">Alternative</span>
+            <h3 data-en="Best Free Study App for Students | No Ads, No Paywall" data-pt="Melhor App de Estudo Grátis para Estudantes | Sem Anúncios">Best Free Study App for Students | No Ads, No Paywall</h3>
+            <p data-en="Notes, flashcards, and SM-2 spaced repetition in one free app. 100% offline, no ads, all platforms. Actually free, not &quot;freemium.&quot;" data-pt="Notas, flashcards e repetição espaçada SM-2 em um app grátis. 100% offline, sem anúncios, todas as plataformas. Realmente grátis, não &quot;freemium.&quot;">Notes, flashcards, and SM-2 spaced repetition in one free app. 100% offline, no ads, all platforms. Actually free, not &quot;freemium.&quot;</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 6 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 6 min read" data-pt="⏱ 6 min de leitura">⏱ 6 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Study App for Medical Students -->
         <a href="study-app-medical-students.html" class="blog-card">
           <div class="blog-card-img">🩺</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best Study App for Medical Students: Flashcards & Spaced Repetition</h3>
-            <p>How to use Mayinab for anatomy, pharmacology, and board prep. SM-2 spaced repetition, LaTeX support, notes + flashcards together.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best Study App for Medical Students: Flashcards &amp; Spaced Repetition" data-pt="Melhor App de Estudo para Estudantes de Medicina: Flashcards e Repetição Espaçada">Best Study App for Medical Students: Flashcards &amp; Spaced Repetition</h3>
+            <p data-en="How to use Mayinab for anatomy, pharmacology, and board prep. SM-2 spaced repetition, LaTeX support, notes + flashcards together." data-pt="Como usar o Mayinab para anatomia, farmacologia e preparação para provas. Repetição espaçada SM-2, suporte LaTeX, notas + flashcards juntos.">How to use Mayinab for anatomy, pharmacology, and board prep. SM-2 spaced repetition, LaTeX support, notes + flashcards together.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 9 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 9 min read" data-pt="⏱ 9 min de leitura">⏱ 9 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: App to Study for ENEM -->
         <a href="app-estudar-enem.html" class="blog-card">
           <div class="blog-card-img">🎯</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best App to Study for ENEM: Flashcards, Notes & Spaced Repetition</h3>
-            <p>Prepare for ENEM with SM-2 spaced repetition, flashcards for every subject, LaTeX for math formulas, and organized notes. 100% free.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best App to Study for ENEM: Flashcards, Notes &amp; Spaced Repetition" data-pt="Melhor App para Estudar para o ENEM: Flashcards, Notas e Repetição Espaçada">Best App to Study for ENEM: Flashcards, Notes &amp; Spaced Repetition</h3>
+            <p data-en="Prepare for ENEM with SM-2 spaced repetition, flashcards for every subject, LaTeX for math formulas, and organized notes. 100% free." data-pt="Prepare-se para o ENEM com repetição espaçada SM-2, flashcards para cada matéria, LaTeX para fórmulas e notas organizadas. 100% grátis.">Prepare for ENEM with SM-2 spaced repetition, flashcards for every subject, LaTeX for math formulas, and organized notes. 100% free.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: App to Study for Concursos -->
         <a href="app-estudar-concursos.html" class="blog-card">
           <div class="blog-card-img">⚖️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best App to Study for Public Exams (Concursos): Flashcards & Spaced Repetition</h3>
-            <p>Memorize laws, legal concepts, and exam content with SM-2 spaced repetition. Notes + flashcards in one free, offline app.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best App to Study for Public Exams (Concursos): Flashcards &amp; Spaced Repetition" data-pt="Melhor App para Estudar para Concursos Públicos: Flashcards e Repetição Espaçada">Best App to Study for Public Exams (Concursos): Flashcards &amp; Spaced Repetition</h3>
+            <p data-en="Memorize laws, legal concepts, and exam content with SM-2 spaced repetition. Notes + flashcards in one free, offline app." data-pt="Memorize leis, conceitos jurídicos e conteúdo do edital com repetição espaçada SM-2. Notas + flashcards em um app grátis e offline.">Memorize laws, legal concepts, and exam content with SM-2 spaced repetition. Notes + flashcards in one free, offline app.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 11 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 11 min read" data-pt="⏱ 11 min de leitura">⏱ 11 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: App to Study for Vestibular -->
         <a href="app-estudar-vestibular.html" class="blog-card">
           <div class="blog-card-img">🎓</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best App to Study for Vestibular: FUVEST, UNICAMP, UNESP & More</h3>
-            <p>Prepare for vestibulares with SM-2 spaced repetition, flashcards, mandatory reading notes, and LaTeX for formulas. 100% free.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best App to Study for Vestibular: FUVEST, UNICAMP, UNESP &amp; More" data-pt="Melhor App para Estudar para o Vestibular: FUVEST, UNICAMP, UNESP e Mais">Best App to Study for Vestibular: FUVEST, UNICAMP, UNESP &amp; More</h3>
+            <p data-en="Prepare for vestibulares with SM-2 spaced repetition, flashcards, mandatory reading notes, and LaTeX for formulas. 100% free." data-pt="Prepare-se para vestibulares com repetição espaçada SM-2, flashcards, notas de leituras obrigatórias e LaTeX para fórmulas. 100% grátis.">Prepare for vestibulares with SM-2 spaced repetition, flashcards, mandatory reading notes, and LaTeX for formulas. 100% free.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 11 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 11 min read" data-pt="⏱ 11 min de leitura">⏱ 11 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass Vestibular -->
         <a href="como-passar-vestibular.html" class="blog-card">
           <div class="blog-card-img">🏆</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag tips">Tips</span>
-            <h3>How to Pass Vestibular: 7 Study Techniques That Actually Work</h3>
-            <p>Science-backed study techniques for vestibulares. Active recall, spaced repetition, interleaving, and more.</p>
+            <span class="blog-card-tag tips" data-en="Tips" data-pt="Dicas">Tips</span>
+            <h3 data-en="How to Pass Vestibular: 7 Study Techniques That Actually Work" data-pt="Como Passar no Vestibular: 7 Técnicas de Estudo que Realmente Funcionam">How to Pass Vestibular: 7 Study Techniques That Actually Work</h3>
+            <p data-en="Science-backed study techniques for vestibulares. Active recall, spaced repetition, interleaving, and more." data-pt="Técnicas de estudo comprovadas pela ciência para vestibulares. Active recall, repetição espaçada, intercalação e mais.">Science-backed study techniques for vestibulares. Active recall, spaced repetition, interleaving, and more.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Flashcards Vestibular Medicina -->
         <a href="flashcards-vestibular-medicina.html" class="blog-card">
           <div class="blog-card-img">🩺</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Flashcards for Vestibular de Medicina: Biology, Chemistry & Physics</h3>
-            <p>How to study for the hardest vestibulares de Medicina with flashcards and SM-2 spaced repetition. Subject-by-subject strategy.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Flashcards for Vestibular de Medicina: Biology, Chemistry &amp; Physics" data-pt="Flashcards para Vestibular de Medicina: Biologia, Química e Física">Flashcards for Vestibular de Medicina: Biology, Chemistry &amp; Physics</h3>
+            <p data-en="How to study for the hardest vestibulares de Medicina with flashcards and SM-2 spaced repetition. Subject-by-subject strategy." data-pt="Como estudar para os vestibulares de Medicina mais concorridos com flashcards e repetição espaçada SM-2. Estratégia por matéria.">How to study for the hardest vestibulares de Medicina with flashcards and SM-2 spaced repetition. Subject-by-subject strategy.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Study Schedule Vestibular -->
         <a href="cronograma-estudos-vestibular.html" class="blog-card">
           <div class="blog-card-img">📅</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Study Schedule for Vestibular: How to Organize 12 Months of Prep</h3>
-            <p>Complete 12-month study plan with weekly targets, daily routines, and spaced repetition. Never forget what you studied.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Study Schedule for Vestibular: How to Organize 12 Months of Prep" data-pt="Cronograma de Estudos para Vestibular: Como Organizar 12 Meses de Preparação">Study Schedule for Vestibular: How to Organize 12 Months of Prep</h3>
+            <p data-en="Complete 12-month study plan with weekly targets, daily routines, and spaced repetition. Never forget what you studied." data-pt="Plano completo de 12 meses com metas semanais, rotina diária e repetição espaçada. Nunca esqueça o que estudou.">Complete 12-month study plan with weekly targets, daily routines, and spaced repetition. Never forget what you studied.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Most Tested Vestibular Subjects -->
         <a href="vestibular-materias-mais-cobradas.html" class="blog-card">
           <div class="blog-card-img">📊</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag tips">Tips</span>
-            <h3>Most Tested Vestibular Subjects: What to Study First</h3>
-            <p>The most frequently tested topics in FUVEST, UNICAMP, UNESP by subject. Prioritize your study for maximum results.</p>
+            <span class="blog-card-tag tips" data-en="Tips" data-pt="Dicas">Tips</span>
+            <h3 data-en="Most Tested Vestibular Subjects: What to Study First" data-pt="Matérias que Mais Caem no Vestibular: O que Estudar Primeiro">Most Tested Vestibular Subjects: What to Study First</h3>
+            <p data-en="The most frequently tested topics in FUVEST, UNICAMP, UNESP by subject. Prioritize your study for maximum results." data-pt="Os temas mais cobrados na FUVEST, UNICAMP, UNESP por matéria. Priorize seus estudos para resultados máximos.">The most frequently tested topics in FUVEST, UNICAMP, UNESP by subject. Prioritize your study for maximum results.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 15 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 15 min read" data-pt="⏱ 15 min de leitura">⏱ 15 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass Medicina -->
         <a href="como-passar-medicina.html" class="blog-card">
           <div class="blog-card-img">🩺</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de Medicina: Complete Study Plan</h3>
-            <p>12-month study plan for Medicina: Biology, Chemistry, Physics. Spaced repetition strategy to retain thousands of concepts for FUVEST, UNICAMP, and ENEM.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de Medicina: Complete Study Plan" data-pt="Como Passar em Medicina no Vestibular: Plano de Estudos Completo">How to Pass Vestibular de Medicina: Complete Study Plan</h3>
+            <p data-en="12-month study plan for Medicina: Biology, Chemistry, Physics. Spaced repetition strategy to retain thousands of concepts for FUVEST, UNICAMP, and ENEM." data-pt="Plano de 12 meses para Medicina: Biologia, Química, Física. Estratégia de repetição espaçada para reter milhares de conceitos para FUVEST, UNICAMP e ENEM.">12-month study plan for Medicina: Biology, Chemistry, Physics. Spaced repetition strategy to retain thousands of concepts for FUVEST, UNICAMP, and ENEM.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass Direito -->
         <a href="como-passar-direito.html" class="blog-card">
           <div class="blog-card-img">⚖️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de Direito: Complete Study Plan</h3>
-            <p>Master History, Philosophy, Sociology, and Essay writing for Law school. Spaced repetition for USP, FGV, UNICAMP, and PUC.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de Direito: Complete Study Plan" data-pt="Como Passar em Direito no Vestibular: Plano de Estudos Completo">How to Pass Vestibular de Direito: Complete Study Plan</h3>
+            <p data-en="Master History, Philosophy, Sociology, and Essay writing for Law school. Spaced repetition for USP, FGV, UNICAMP, and PUC." data-pt="Domine História, Filosofia, Sociologia e Redação para Direito. Repetição espaçada para USP, FGV, UNICAMP e PUC.">Master History, Philosophy, Sociology, and Essay writing for Law school. Spaced repetition for USP, FGV, UNICAMP, and PUC.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass Ciencias da Computacao -->
         <a href="como-passar-ciencia-computacao.html" class="blog-card">
           <div class="blog-card-img">💻</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de Ciencias da Computacao</h3>
-            <p>Math-focused study plan for Computer Science at USP (IME), UNICAMP (IC), and federal universities. LaTeX flashcards for formulas.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de Ciencias da Computacao" data-pt="Como Passar em Ciencias da Computação no Vestibular">How to Pass Vestibular de Ciencias da Computacao</h3>
+            <p data-en="Math-focused study plan for Computer Science at USP (IME), UNICAMP (IC), and federal universities. LaTeX flashcards for formulas." data-pt="Plano focado em Matemática para Computação na USP (IME), UNICAMP (IC) e federais. Flashcards com LaTeX para fórmulas.">Math-focused study plan for Computer Science at USP (IME), UNICAMP (IC), and federal universities. LaTeX flashcards for formulas.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass ADS -->
         <a href="como-passar-ads.html" class="blog-card">
           <div class="blog-card-img">🖥️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de ADS (Systems Analysis)</h3>
-            <p>Guide for FATEC, IFs, and ENEM/SiSU. Study Math, Logic, Portuguese, and current events with spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de ADS (Systems Analysis)" data-pt="Como Passar em ADS (Análise e Desenvolvimento de Sistemas)">How to Pass Vestibular de ADS (Systems Analysis)</h3>
+            <p data-en="Guide for FATEC, IFs, and ENEM/SiSU. Study Math, Logic, Portuguese, and current events with spaced repetition." data-pt="Guia para FATEC, IFs e ENEM/SiSU. Estude Matemática, Lógica, Português e atualidades com repetição espaçada.">Guide for FATEC, IFs, and ENEM/SiSU. Study Math, Logic, Portuguese, and current events with spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 11 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 11 min read" data-pt="⏱ 11 min de leitura">⏱ 11 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass Biomedicina -->
         <a href="como-passar-biomedicina.html" class="blog-card">
           <div class="blog-card-img">🔬</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de Biomedicina: Complete Study Plan</h3>
-            <p>Lab science focus: Biology, Chemistry, Microbiology. Spaced repetition for processes, classifications, and chemical structures.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de Biomedicina: Complete Study Plan" data-pt="Como Passar em Biomedicina no Vestibular: Plano de Estudos">How to Pass Vestibular de Biomedicina: Complete Study Plan</h3>
+            <p data-en="Lab science focus: Biology, Chemistry, Microbiology. Spaced repetition for processes, classifications, and chemical structures." data-pt="Foco em ciência laboratorial: Biologia, Química, Microbiologia. Repetição espaçada para processos, classificações e estruturas químicas.">Lab science focus: Biology, Chemistry, Microbiology. Spaced repetition for processes, classifications, and chemical structures.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
-        <!-- Card: How to Pass Psicologia -->
+
         <a href="como-passar-psicologia.html" class="blog-card">
           <div class="blog-card-img">🧠</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de Psicologia: Complete Study Plan</h3>
-            <p>Biology + Humanities balance: Neuroscience, Philosophy, Sociology. Spaced repetition for theories, authors, and essay repertoire.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de Psicologia: Complete Study Plan" data-pt="Como Passar em Psicologia no Vestibular: Plano de Estudos">How to Pass Vestibular de Psicologia: Complete Study Plan</h3>
+            <p data-en="Biology + Humanities balance: Neuroscience, Philosophy, Sociology. Spaced repetition for theories, authors, and essay repertoire." data-pt="Equilíbrio Biologia + Humanas: Neurociência, Filosofia, Sociologia. Repetição espaçada para teorias, autores e repertório de redação.">Biology + Humanities balance: Neuroscience, Philosophy, Sociology. Spaced repetition for theories, authors, and essay repertoire.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass Mecatronica -->
         <a href="como-passar-mecatronica.html" class="blog-card">
           <div class="blog-card-img">⚙️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de Engenharia Mecatronica</h3>
-            <p>Math-heavy study plan for Mechatronics at USP (Poli), UNICAMP, ITA. LaTeX flashcards for hundreds of formulas.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de Engenharia Mecatronica" data-pt="Como Passar em Engenharia Mecatrônica no Vestibular">How to Pass Vestibular de Engenharia Mecatronica</h3>
+            <p data-en="Math-heavy study plan for Mechatronics at USP (Poli), UNICAMP, ITA. LaTeX flashcards for hundreds of formulas." data-pt="Plano focado em Matemática para Mecatrônica na USP (Poli), UNICAMP, ITA. Flashcards com LaTeX para centenas de fórmulas.">Math-heavy study plan for Mechatronics at USP (Poli), UNICAMP, ITA. LaTeX flashcards for hundreds of formulas.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: How to Pass Sistemas de Informacao -->
         <a href="como-passar-sistemas-informacao.html" class="blog-card">
           <div class="blog-card-img">🖥️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Vestibular de Sistemas de Informacao</h3>
-            <p>Tech + Business course: Math, Logic, Portuguese, and general knowledge. Spaced repetition for formulas, grammar, and essay prep.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Vestibular de Sistemas de Informacao" data-pt="Como Passar em Sistemas de Informação no Vestibular">How to Pass Vestibular de Sistemas de Informacao</h3>
+            <p data-en="Tech + Business course: Math, Logic, Portuguese, and general knowledge. Spaced repetition for formulas, grammar, and essay prep." data-pt="Curso de Tech + Negócios: Matemática, Lógica, Português e conhecimentos gerais. Repetição espaçada para fórmulas, gramática e redação.">Tech + Business course: Math, Logic, Portuguese, and general knowledge. Spaced repetition for formulas, grammar, and essay prep.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Financial Certifications -->
         <a href="certificacoes-financeiras.html" class="blog-card">
           <div class="blog-card-img">💰</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Financial Certifications in Brazil (CPA-10, CPA-20, CEA, CFP)</h3>
-            <p>Study plan for CPA-10, CPA-20, CEA, CFP, and CNPI. Spaced repetition for financial products, regulations, and formulas.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Financial Certifications in Brazil (CPA-10, CPA-20, CEA, CFP)" data-pt="Como Passar nas Certificações Financeiras (CPA-10, CPA-20, CEA, CFP)">How to Pass Financial Certifications in Brazil (CPA-10, CPA-20, CEA, CFP)</h3>
+            <p data-en="Study plan for CPA-10, CPA-20, CEA, CFP, and CNPI. Spaced repetition for financial products, regulations, and formulas." data-pt="Plano de estudos para CPA-10, CPA-20, CEA, CFP e CNPI. Repetição espaçada para produtos financeiros, regulamentação e fórmulas.">Study plan for CPA-10, CPA-20, CEA, CFP, and CNPI. Spaced repetition for financial products, regulations, and formulas.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: ANBIMA Certifications -->
         <a href="como-passar-anbima.html" class="blog-card">
           <div class="blog-card-img">🏦</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass ANBIMA Certifications (CPA-10, CPA-20, CEA)</h3>
-            <p>Complete ANBIMA study guide: exam structure, content breakdown, flashcard examples, and week-by-week study plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass ANBIMA Certifications (CPA-10, CPA-20, CEA)" data-pt="Como Passar nas Certificações ANBIMA (CPA-10, CPA-20, CEA)">How to Pass ANBIMA Certifications (CPA-10, CPA-20, CEA)</h3>
+            <p data-en="Complete ANBIMA study guide: exam structure, content breakdown, flashcard examples, and week-by-week study plan." data-pt="Guia completo ANBIMA: estrutura da prova, conteúdo por módulo, exemplos de flashcards e plano semanal de estudos.">Complete ANBIMA study guide: exam structure, content breakdown, flashcard examples, and week-by-week study plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Study for Bank Career -->
         <a href="estudar-trabalhar-banco.html" class="blog-card">
           <div class="blog-card-img">🏧</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Study for a Bank Career in Brazil: Complete Guide</h3>
-            <p>Public vs. private banks, certifications, career paths, salary progression, and study plan with spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Study for a Bank Career in Brazil: Complete Guide" data-pt="Como Estudar para Trabalhar em Banco: Guia Completo">How to Study for a Bank Career in Brazil: Complete Guide</h3>
+            <p data-en="Public vs. private banks, certifications, career paths, salary progression, and study plan with spaced repetition." data-pt="Banco público vs. privado, certificações, plano de carreira, progressão salarial e plano de estudos com repetição espaçada.">Public vs. private banks, certifications, career paths, salary progression, and study plan with spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Concurso Caixa -->
         <a href="concurso-caixa.html" class="blog-card">
           <div class="blog-card-img">🏛️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Concurso Caixa Economica Federal</h3>
-            <p>Complete study plan for Caixa: banking knowledge, financial math, CESGRANRIO tips, housing programs, and FGTS.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Concurso Caixa Economica Federal" data-pt="Como Passar no Concurso Caixa Econômica Federal">How to Pass Concurso Caixa Economica Federal</h3>
+            <p data-en="Complete study plan for Caixa: banking knowledge, financial math, CESGRANRIO tips, housing programs, and FGTS." data-pt="Plano completo para Caixa: conhecimentos bancários, matemática financeira, dicas CESGRANRIO, habitação e FGTS.">Complete study plan for Caixa: banking knowledge, financial math, CESGRANRIO tips, housing programs, and FGTS.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Concurso Banco do Brasil -->
         <a href="concurso-banco-do-brasil.html" class="blog-card">
           <div class="blog-card-img">🏦</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Concurso Banco do Brasil: Complete Study Plan</h3>
-            <p>Study plan for BB: agribusiness, banking knowledge, sales techniques, and digital banking with spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Concurso Banco do Brasil: Complete Study Plan" data-pt="Como Passar no Concurso Banco do Brasil: Plano de Estudos Completo">How to Pass Concurso Banco do Brasil: Complete Study Plan</h3>
+            <p data-en="Study plan for BB: agribusiness, banking knowledge, sales techniques, and digital banking with spaced repetition." data-pt="Plano para BB: agronegócio, conhecimentos bancários, técnicas de vendas e banco digital com repetição espaçada.">Study plan for BB: agribusiness, banking knowledge, sales techniques, and digital banking with spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Concurso Correios -->
         <a href="concurso-correios.html" class="blog-card">
           <div class="blog-card-img">📮</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Concurso Correios: Study Plan & Best App</h3>
-            <p>Complete guide for Correios: Carteiro, Atendente & Analista positions, subject strategies, and spaced repetition study plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Concurso Correios: Study Plan &amp; Best App" data-pt="Como Passar no Concurso dos Correios: Plano de Estudos Completo">How to Pass Concurso Correios: Study Plan &amp; Best App</h3>
+            <p data-en="Complete guide for Correios: Carteiro, Atendente &amp; Analista positions, subject strategies, and spaced repetition study plan." data-pt="Guia completo para Correios: Carteiro, Atendente e Analista, estratégia por matéria e plano com repetição espaçada.">Complete guide for Correios: Carteiro, Atendente &amp; Analista positions, subject strategies, and spaced repetition study plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Concurso Policia Federal -->
         <a href="concurso-policia-federal.html" class="blog-card">
           <div class="blog-card-img">🚔</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Concurso Polícia Federal: Study Plan & Best App</h3>
-            <p>Complete guide for PF: Agente & Delegado positions, CESPE strategy, TAF prep, and spaced repetition study plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Concurso Polícia Federal: Study Plan &amp; Best App" data-pt="Como Passar no Concurso da Polícia Federal: Plano de Estudos">How to Pass Concurso Polícia Federal: Study Plan &amp; Best App</h3>
+            <p data-en="Complete guide for PF: Agente &amp; Delegado positions, CESPE strategy, TAF prep, and spaced repetition study plan." data-pt="Guia completo para PF: Agente e Delegado, estratégia CESPE, preparação TAF e plano com repetição espaçada.">Complete guide for PF: Agente &amp; Delegado positions, CESPE strategy, TAF prep, and spaced repetition study plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 15 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 15 min read" data-pt="⏱ 15 min de leitura">⏱ 15 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Concurso Tribunais -->
         <a href="concurso-tribunais.html" class="blog-card">
           <div class="blog-card-img">⚖️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Concurso Tribunais: TJ, TRF, TRT Study Plan</h3>
-            <p>Complete guide for court exams: Tecnico & Analista positions, FCC/CESPE/FGV strategies, and spaced repetition study plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Concurso Tribunais: TJ, TRF, TRT Study Plan" data-pt="Como Passar em Concurso de Tribunais: TJ, TRF, TRT">How to Pass Concurso Tribunais: TJ, TRF, TRT Study Plan</h3>
+            <p data-en="Complete guide for court exams: Tecnico &amp; Analista positions, FCC/CESPE/FGV strategies, and spaced repetition study plan." data-pt="Guia completo para tribunais: Técnico e Analista, estratégias FCC/CESPE/FGV e plano com repetição espaçada.">Complete guide for court exams: Tecnico &amp; Analista positions, FCC/CESPE/FGV strategies, and spaced repetition study plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Concurso INSS -->
         <a href="concurso-inss.html" class="blog-card">
           <div class="blog-card-img">🏥</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Concurso INSS: Study Plan & Best App</h3>
-            <p>Complete guide for INSS: Tecnico, Analista & Perito Medico, Direito Previdenciario focus, and SM-2 spaced repetition plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Concurso INSS: Study Plan &amp; Best App" data-pt="Como Passar no Concurso do INSS: Plano de Estudos Completo">How to Pass Concurso INSS: Study Plan &amp; Best App</h3>
+            <p data-en="Complete guide for INSS: Tecnico, Analista &amp; Perito Medico, Direito Previdenciario focus, and SM-2 spaced repetition plan." data-pt="Guia completo para INSS: Técnico, Analista e Perito Médico, foco em Direito Previdenciário e repetição espaçada SM-2.">Complete guide for INSS: Tecnico, Analista &amp; Perito Medico, Direito Previdenciario focus, and SM-2 spaced repetition plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 15 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 15 min read" data-pt="⏱ 15 min de leitura">⏱ 15 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Concurso Receita Federal -->
         <a href="concurso-receita-federal.html" class="blog-card">
           <div class="blog-card-img">💰</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Concurso Receita Federal: Study Plan & Best App</h3>
-            <p>Complete guide for RFB: Auditor & Analista Tributario, Tax Law, Accounting, customs, and SM-2 spaced repetition plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Concurso Receita Federal: Study Plan &amp; Best App" data-pt="Como Passar no Concurso da Receita Federal: Plano de Estudos">How to Pass Concurso Receita Federal: Study Plan &amp; Best App</h3>
+            <p data-en="Complete guide for RFB: Auditor &amp; Analista Tributario, Tax Law, Accounting, customs, and SM-2 spaced repetition plan." data-pt="Guia completo para RFB: Auditor e Analista Tributário, Direito Tributário, Contabilidade, aduana e repetição espaçada SM-2.">Complete guide for RFB: Auditor &amp; Analista Tributario, Tax Law, Accounting, customs, and SM-2 spaced repetition plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 15 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 15 min read" data-pt="⏱ 15 min de leitura">⏱ 15 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: App to Study Japanese -->
         <a href="app-estudar-japones.html" class="blog-card">
           <div class="blog-card-img">🇯🇵</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best App to Study Japanese: Kanji, Hiragana & Vocabulary Flashcards</h3>
-            <p>Learn Japanese with SM-2 spaced repetition. Flashcards for kanji, hiragana, katakana, vocabulary, and JLPT prep. Free, offline.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best App to Study Japanese: Kanji, Hiragana &amp; Vocabulary Flashcards" data-pt="Melhor App para Estudar Japonês: Flashcards de Kanji, Hiragana e Vocabulário">Best App to Study Japanese: Kanji, Hiragana &amp; Vocabulary Flashcards</h3>
+            <p data-en="Learn Japanese with SM-2 spaced repetition. Flashcards for kanji, hiragana, katakana, vocabulary, and JLPT prep. Free, offline." data-pt="Aprenda japonês com repetição espaçada SM-2. Flashcards para kanji, hiragana, katakana, vocabulário e preparação JLPT. Grátis, offline.">Learn Japanese with SM-2 spaced repetition. Flashcards for kanji, hiragana, katakana, vocabulary, and JLPT prep. Free, offline.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: App to Study Mandarin -->
         <a href="app-estudar-mandarim.html" class="blog-card">
           <div class="blog-card-img">🇨🇳</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best App to Study Mandarin Chinese: Hanzi, Pinyin & Vocabulary Flashcards</h3>
-            <p>Learn Mandarin with SM-2 spaced repetition. Flashcards for hanzi, pinyin, tones, vocabulary, and HSK prep. Free, offline.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best App to Study Mandarin Chinese: Hanzi, Pinyin &amp; Vocabulary Flashcards" data-pt="Melhor App para Estudar Mandarim: Flashcards de Hanzi, Pinyin e Vocabulário">Best App to Study Mandarin Chinese: Hanzi, Pinyin &amp; Vocabulary Flashcards</h3>
+            <p data-en="Learn Mandarin with SM-2 spaced repetition. Flashcards for hanzi, pinyin, tones, vocabulary, and HSK prep. Free, offline." data-pt="Aprenda mandarim com repetição espaçada SM-2. Flashcards para hanzi, pinyin, tons, vocabulário e preparação HSK. Grátis, offline.">Learn Mandarin with SM-2 spaced repetition. Flashcards for hanzi, pinyin, tones, vocabulary, and HSK prep. Free, offline.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: App to Study Languages -->
         <a href="app-estudar-idiomas.html" class="blog-card">
           <div class="blog-card-img">🌍</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best App to Learn Languages: Vocabulary Flashcards & Spaced Repetition</h3>
-            <p>Learn any language with SM-2 spaced repetition. Spanish, French, German, Korean, and more. Notes + flashcards in one free, offline app.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best App to Learn Languages: Vocabulary Flashcards &amp; Spaced Repetition" data-pt="Melhor App para Estudar Idiomas: Flashcards de Vocabulário e Repetição Espaçada">Best App to Learn Languages: Vocabulary Flashcards &amp; Spaced Repetition</h3>
+            <p data-en="Learn any language with SM-2 spaced repetition. Spanish, French, German, Korean, and more. Notes + flashcards in one free, offline app." data-pt="Aprenda qualquer idioma com repetição espaçada SM-2. Espanhol, francês, alemão, coreano e mais. Notas + flashcards em um app grátis e offline.">Learn any language with SM-2 spaced repetition. Spanish, French, German, Korean, and more. Notes + flashcards in one free, offline app.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Best Note-Taking App -->
         <a href="best-note-taking-app.html" class="blog-card">
           <div class="blog-card-img">📒</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best Note-Taking App to Organize Your Notes</h3>
-            <p>Stop scattering notes across 5 apps. Organize everything by Subject → Topic with 7 note types, Markdown + LaTeX, and built-in flashcards. Free, offline.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best Note-Taking App to Organize Your Notes" data-pt="Melhor App para Organizar suas Notas">Best Note-Taking App to Organize Your Notes</h3>
+            <p data-en="Stop scattering notes across 5 apps. Organize everything by Subject → Topic with 7 note types, Markdown + LaTeX, and built-in flashcards. Free, offline." data-pt="Pare de espalhar notas em 5 apps. Organize tudo por Matéria → Tópico com 7 tipos de nota, Markdown + LaTeX e flashcards integrados. Grátis, offline.">Stop scattering notes across 5 apps. Organize everything by Subject → Topic with 7 note types, Markdown + LaTeX, and built-in flashcards. Free, offline.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 8 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 8 min read" data-pt="⏱ 8 min de leitura">⏱ 8 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Personal Notes App -->
         <a href="personal-notes-app.html" class="blog-card">
           <div class="blog-card-img">🔒</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best Personal Notes App: Private, Offline, and Free</h3>
-            <p>Your personal notes deserve privacy. No account, no cloud, no data collection. 7 note types, Markdown, flashcards. 100% offline on all platforms.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best Personal Notes App: Private, Offline, and Free" data-pt="Melhor App para Notas Pessoais: Privado, Offline e Grátis">Best Personal Notes App: Private, Offline, and Free</h3>
+            <p data-en="Your personal notes deserve privacy. No account, no cloud, no data collection. 7 note types, Markdown, flashcards. 100% offline on all platforms." data-pt="Suas notas pessoais merecem privacidade. Sem conta, sem nuvem, sem coleta de dados. 7 tipos de nota, Markdown, flashcards. 100% offline em todas as plataformas.">Your personal notes deserve privacy. No account, no cloud, no data collection. 7 note types, Markdown, flashcards. 100% offline on all platforms.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 8 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 8 min read" data-pt="⏱ 8 min de leitura">⏱ 8 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Self Notes App -->
         <a href="self-notes-app.html" class="blog-card">
           <div class="blog-card-img">🧩</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best App for Self Notes & Self-Study: Build Your Knowledge Base</h3>
-            <p>Take self notes that actually stick. Combine notes with flashcards and SM-2 spaced repetition to build a personal knowledge base. Free, offline.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best App for Self Notes &amp; Self-Study: Build Your Knowledge Base" data-pt="Melhor App para Anotações Pessoais e Autoestudo">Best App for Self Notes &amp; Self-Study: Build Your Knowledge Base</h3>
+            <p data-en="Take self notes that actually stick. Combine notes with flashcards and SM-2 spaced repetition to build a personal knowledge base. Free, offline." data-pt="Faça anotações que realmente ficam na memória. Combine notas com flashcards e repetição espaçada SM-2 para construir sua base de conhecimento. Grátis, offline.">Take self notes that actually stick. Combine notes with flashcards and SM-2 spaced repetition to build a personal knowledge base. Free, offline.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 9 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 9 min read" data-pt="⏱ 9 min de leitura">⏱ 9 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Samsung Notes Alternative -->
         <a href="samsung-notes-alternative.html" class="blog-card">
           <div class="blog-card-img">📱</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparison</span>
-            <h3>Best Samsung Notes Alternative for Studying: Flashcards & Spaced Repetition</h3>
-            <p>Samsung Notes is great for handwriting, but not for studying. Mayinab adds flashcards, SM-2 spaced repetition, and works on all platforms. Free.</p>
+            <span class="blog-card-tag comparison" data-en="Comparison" data-pt="Comparativo">Comparison</span>
+            <h3 data-en="Best Samsung Notes Alternative for Studying: Flashcards &amp; Spaced Repetition" data-pt="Melhor Alternativa ao Samsung Notes para Estudar: Flashcards e Repetição Espaçada">Best Samsung Notes Alternative for Studying: Flashcards &amp; Spaced Repetition</h3>
+            <p data-en="Samsung Notes is great for handwriting, but not for studying. Mayinab adds flashcards, SM-2 spaced repetition, and works on all platforms. Free." data-pt="O Samsung Notes é ótimo para escrita à mão, mas não para estudar. O Mayinab adiciona flashcards, repetição espaçada SM-2 e funciona em todas as plataformas. Grátis.">Samsung Notes is great for handwriting, but not for studying. Mayinab adds flashcards, SM-2 spaced repetition, and works on all platforms. Free.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 9 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 9 min read" data-pt="⏱ 9 min de leitura">⏱ 9 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Study App for Tablets -->
         <a href="study-app-tablet.html" class="blog-card">
           <div class="blog-card-img">📲</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Best Study App for Tablets: iPad, Galaxy Tab & Android Tablets</h3>
-            <p>Study on your tablet with split-view, flashcards, SM-2 spaced repetition, and 7 note types. Works on iPad, Galaxy Tab, and all tablets. Free, offline.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Best Study App for Tablets: iPad, Galaxy Tab &amp; Android Tablets" data-pt="Melhor App para Estudar no Tablet: iPad, Galaxy Tab e Tablets Android">Best Study App for Tablets: iPad, Galaxy Tab &amp; Android Tablets</h3>
+            <p data-en="Study on your tablet with split-view, flashcards, SM-2 spaced repetition, and 7 note types. Works on iPad, Galaxy Tab, and all tablets. Free, offline." data-pt="Estude no tablet com split-view, flashcards, repetição espaçada SM-2 e 7 tipos de nota. Funciona no iPad, Galaxy Tab e todos os tablets. Grátis, offline.">Study on your tablet with split-view, flashcards, SM-2 spaced repetition, and 7 note types. Works on iPad, Galaxy Tab, and all tablets. Free, offline.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
         <a href="como-passar-oab.html" class="blog-card">
           <div class="blog-card-img">⚖️</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass the OAB Exam: Complete Study Guide</h3>
-            <p>Master the Brazilian Bar Exam with flashcards, SM-2 spaced repetition, and a 12-week study plan. Memorize legal articles and súmulas effectively.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass the OAB Exam: Complete Study Guide" data-pt="Como Passar na OAB: Guia Completo de Estudos">How to Pass the OAB Exam: Complete Study Guide</h3>
+            <p data-en="Master the Brazilian Bar Exam with flashcards, SM-2 spaced repetition, and a 12-week study plan. Memorize legal articles and súmulas effectively." data-pt="Domine o Exame da Ordem com flashcards, repetição espaçada SM-2 e cronograma de 12 semanas. Memorize artigos de lei e súmulas com eficiência.">Master the Brazilian Bar Exam with flashcards, SM-2 spaced repetition, and a 12-week study plan. Memorize legal articles and súmulas effectively.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
         <a href="como-passar-residencia-medica.html" class="blog-card">
           <div class="blog-card-img">🩺</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass Medical Residency Exams: Complete Study Guide</h3>
-            <p>Prepare for ENARE, USP, UNICAMP & UNIFESP residency exams with SM-2 spaced repetition, flashcards, and a 12-month study plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass Medical Residency Exams: Complete Study Guide" data-pt="Como Passar na Residência Médica: Guia Completo de Estudos">How to Pass Medical Residency Exams: Complete Study Guide</h3>
+            <p data-en="Prepare for ENARE, USP, UNICAMP &amp; UNIFESP residency exams with SM-2 spaced repetition, flashcards, and a 12-month study plan." data-pt="Prepare-se para ENARE, USP, UNICAMP e UNIFESP com repetição espaçada SM-2, flashcards e cronograma de 12 meses.">Prepare for ENARE, USP, UNICAMP &amp; UNIFESP residency exams with SM-2 spaced repetition, flashcards, and a 12-month study plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 15 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 15 min read" data-pt="⏱ 15 min de leitura">⏱ 15 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
         <a href="concurso-prf.html" class="blog-card">
           <div class="blog-card-img">🚔</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass the PRF Exam: Complete Study Guide</h3>
-            <p>Ace the Federal Highway Police exam with CESPE-focused strategies, CTB flashcards, SM-2 spaced repetition, and a 12-week study plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass the PRF Exam: Complete Study Guide" data-pt="Concurso PRF: Como Passar na Polícia Rodoviária Federal">How to Pass the PRF Exam: Complete Study Guide</h3>
+            <p data-en="Ace the Federal Highway Police exam with CESPE-focused strategies, CTB flashcards, SM-2 spaced repetition, and a 12-week study plan." data-pt="Passe no concurso da PRF com estratégias para questões CESPE, flashcards de CTB, repetição espaçada SM-2 e cronograma de 12 semanas.">Ace the Federal Highway Police exam with CESPE-focused strategies, CTB flashcards, SM-2 spaced repetition, and a 12-week study plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 14 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 14 min read" data-pt="⏱ 14 min de leitura">⏱ 14 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
         <a href="como-estudar-para-provas.html" class="blog-card">
           <div class="blog-card-img">📖</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag tips">Tips</span>
-            <h3>How to Study for Exams: 5 Proven Techniques</h3>
-            <p>Master any exam with Active Recall, Spaced Repetition, Interleaving, Practice Testing, and Elaboration. Science-backed study methods that work.</p>
+            <span class="blog-card-tag tips" data-en="Tips" data-pt="Dicas">Tips</span>
+            <h3 data-en="How to Study for Exams: 5 Proven Techniques" data-pt="Como Estudar para Provas: 5 Técnicas Comprovadas">How to Study for Exams: 5 Proven Techniques</h3>
+            <p data-en="Master any exam with Active Recall, Spaced Repetition, Interleaving, Practice Testing, and Elaboration. Science-backed study methods that work." data-pt="Domine qualquer prova com Recuperação Ativa, Repetição Espaçada, Intercalação, Simulados e Elaboração. Métodos de estudo comprovados pela ciência.">Master any exam with Active Recall, Spaced Repetition, Interleaving, Practice Testing, and Elaboration. Science-backed study methods that work.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
         <a href="como-passar-encceja.html" class="blog-card">
           <div class="blog-card-img">📝</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass ENCCEJA: Complete Study Guide</h3>
-            <p>Get your high school equivalency with an 8-week study plan, flashcards for all 4 knowledge areas, essay tips, and SM-2 spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass ENCCEJA: Complete Study Guide" data-pt="Como Passar no ENCCEJA: Guia Completo de Estudos">How to Pass ENCCEJA: Complete Study Guide</h3>
+            <p data-en="Get your high school equivalency with an 8-week study plan, flashcards for all 4 knowledge areas, essay tips, and SM-2 spaced repetition." data-pt="Conquiste seu certificado com cronograma de 8 semanas, flashcards para as 4 áreas do conhecimento, dicas de redação e repetição espaçada SM-2.">Get your high school equivalency with an 8-week study plan, flashcards for all 4 knowledge areas, essay tips, and SM-2 spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
         <a href="concurso-ibge.html" class="blog-card">
           <div class="blog-card-img">📊</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>How to Pass the IBGE Exam: Complete Study Guide</h3>
-            <p>Prepare for IBGE census roles with flashcards, geography & statistics study strategies, SM-2 spaced repetition, and an 8-week plan.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="How to Pass the IBGE Exam: Complete Study Guide" data-pt="Concurso IBGE: Como Passar no Concurso do IBGE">How to Pass the IBGE Exam: Complete Study Guide</h3>
+            <p data-en="Prepare for IBGE census roles with flashcards, geography &amp; statistics study strategies, SM-2 spaced repetition, and an 8-week plan." data-pt="Prepare-se para o concurso do IBGE com flashcards, estratégias de geografia e estatística, repetição espaçada SM-2 e cronograma de 8 semanas.">Prepare for IBGE census roles with flashcards, geography &amp; statistics study strategies, SM-2 spaced repetition, and an 8-week plan.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 13 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 13 min read" data-pt="⏱ 13 min de leitura">⏱ 13 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Best Online Cursinho -->
         <a href="melhor-cursinho-concurso.html" class="blog-card">
           <div class="blog-card-img">🏆</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparison</span>
-            <h3>Best Online Prep Courses for Concursos in 2026</h3>
-            <p>Compare Estratégia, Gran, Descomplica, AlfaCon, Direção, and Aprova Total. Discover which cursinho fits your profile and how to boost retention.</p>
+            <span class="blog-card-tag comparison" data-en="Comparison" data-pt="Comparativo">Comparison</span>
+            <h3 data-en="Best Online Prep Courses for Concursos in 2026" data-pt="Melhor Cursinho Online para Concurso em 2026">Best Online Prep Courses for Concursos in 2026</h3>
+            <p data-en="Compare Estratégia, Gran, Descomplica, AlfaCon, Direção, and Aprova Total. Discover which cursinho fits your profile and how to boost retention." data-pt="Compare Estratégia, Gran, Descomplica, AlfaCon, Direção e Aprova Total. Veja qual cursinho combina com seu perfil e como aumentar retenção.">Compare Estratégia, Gran, Descomplica, AlfaCon, Direção, and Aprova Total. Discover which cursinho fits your profile and how to boost retention.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 15 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 15 min read" data-pt="⏱ 15 min de leitura">⏱ 15 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Estratégia Concursos -->
         <a href="estrategia-concursos-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">📘</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Estratégia Concursos Worth It? Complete Review</h3>
-            <p>In-depth review of Estratégia Concursos: best PDFs, largest question bank, and how to maximize results with spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Estratégia Concursos Worth It? Complete Review" data-pt="Estratégia Concursos Vale a Pena? Review Completo">Is Estratégia Concursos Worth It? Complete Review</h3>
+            <p data-en="In-depth review of Estratégia Concursos: best PDFs, largest question bank, and how to maximize results with spaced repetition." data-pt="Análise completa do Estratégia: melhores PDFs, maior banco de questões e como potencializar os resultados com repetição espaçada.">In-depth review of Estratégia Concursos: best PDFs, largest question bank, and how to maximize results with spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Gran Cursos -->
         <a href="gran-cursos-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🎓</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Gran Cursos Online Worth It? Complete Review</h3>
-            <p>Full review of Gran Cursos Online: live classes, community, unlimited access, and how to combine with spaced repetition for maximum retention.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Gran Cursos Online Worth It? Complete Review" data-pt="Gran Cursos Vale a Pena? Review Completo">Is Gran Cursos Online Worth It? Complete Review</h3>
+            <p data-en="Full review of Gran Cursos Online: live classes, community, unlimited access, and how to combine with spaced repetition for maximum retention." data-pt="Review do Gran Cursos: aulas ao vivo, comunidade, acesso ilimitado e como combinar com repetição espaçada para retenção máxima.">Full review of Gran Cursos Online: live classes, community, unlimited access, and how to combine with spaced repetition for maximum retention.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Descomplica -->
         <a href="descomplica-concursos-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🚀</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Descomplica Worth It for Concursos? Complete Review</h3>
-            <p>Review of Descomplica for concursos: modern interface, short videos, ENEM-to-concurso bridge, and how to complement with spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Descomplica Worth It for Concursos? Complete Review" data-pt="Descomplica Vale a Pena para Concurso? Review Completo">Is Descomplica Worth It for Concursos? Complete Review</h3>
+            <p data-en="Review of Descomplica for concursos: modern interface, short videos, ENEM-to-concurso bridge, and how to complement with spaced repetition." data-pt="Análise do Descomplica para concursos: interface moderna, vídeos curtos, transição do ENEM e como complementar com repetição espaçada.">Review of Descomplica for concursos: modern interface, short videos, ENEM-to-concurso bridge, and how to complement with spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 11 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 11 min read" data-pt="⏱ 11 min de leitura">⏱ 11 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: AlfaCon -->
         <a href="alfacon-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🚔</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is AlfaCon Worth It? Complete Review for Police Careers</h3>
-            <p>AlfaCon review: police career specialist (PF, PRF, PC, PM), TAF prep, CESPE focus, and how to lock in knowledge with spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is AlfaCon Worth It? Complete Review for Police Careers" data-pt="AlfaCon Vale a Pena? Review Completo para Carreiras Policiais">Is AlfaCon Worth It? Complete Review for Police Careers</h3>
+            <p data-en="AlfaCon review: police career specialist (PF, PRF, PC, PM), TAF prep, CESPE focus, and how to lock in knowledge with spaced repetition." data-pt="Review do AlfaCon: especialização em carreiras policiais (PF, PRF, PC, PM), preparo TAF e como fixar conteúdo com repetição espaçada.">AlfaCon review: police career specialist (PF, PRF, PC, PM), TAF prep, CESPE focus, and how to lock in knowledge with spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 11 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 11 min read" data-pt="⏱ 11 min de leitura">⏱ 11 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Direção Concursos -->
         <a href="direcao-concursos-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🎯</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Direção Concursos Worth It? Complete Review</h3>
-            <p>Direção Concursos review: star professors, exceptional didactics, fiscal & juridical focus, and how to combine with SM-2 spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Direção Concursos Worth It? Complete Review" data-pt="Direção Concursos Vale a Pena? Review Completo">Is Direção Concursos Worth It? Complete Review</h3>
+            <p data-en="Direção Concursos review: star professors, exceptional didactics, fiscal &amp; juridical focus, and how to combine with SM-2 spaced repetition." data-pt="Review do Direção Concursos: professores estrela, didática forte, foco fiscal e jurídico, e combinação com repetição espaçada SM-2.">Direção Concursos review: star professors, exceptional didactics, fiscal &amp; juridical focus, and how to combine with SM-2 spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 12 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 12 min read" data-pt="⏱ 12 min de leitura">⏱ 12 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Aprova Total -->
         <a href="aprova-total-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">✅</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Aprova Total Worth It? Complete Review</h3>
-            <p>Aprova Total review: affordable pricing, structured study paths, entry-level concursos, and how to maximize with free spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Aprova Total Worth It? Complete Review" data-pt="Aprova Total Vale a Pena? Review Completo">Is Aprova Total Worth It? Complete Review</h3>
+            <p data-en="Aprova Total review: affordable pricing, structured study paths, entry-level concursos, and how to maximize with free spaced repetition." data-pt="Review do Aprova Total: preço acessível, trilhas organizadas, foco em concursos de nível médio e como potencializar com repetição espaçada grátis.">Aprova Total review: affordable pricing, structured study paths, entry-level concursos, and how to maximize with free spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Aprova Total Vestibular -->
         <a href="aprova-total-vestibular-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🎒</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Aprova Total Worth It for Vestibular? Complete Review</h3>
-            <p>Vestibular-focused Aprova Total review: organization, cost-benefit, ideal student profile, and how to retain content with spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Aprova Total Worth It for Vestibular? Complete Review" data-pt="Aprova Total para Vestibular Vale a Pena? Review Completo">Is Aprova Total Worth It for Vestibular? Complete Review</h3>
+            <p data-en="Vestibular-focused Aprova Total review: organization, cost-benefit, ideal student profile, and how to retain content with spaced repetition." data-pt="Análise do Aprova Total para vestibular: organização, custo-benefício, perfil ideal e estratégia de retenção com repetição espaçada.">Vestibular-focused Aprova Total review: organization, cost-benefit, ideal student profile, and how to retain content with spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Ferretto -->
         <a href="ferretto-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">📐</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Ferretto Worth It? Complete Review for Vestibular & ENEM</h3>
-            <p>Ferretto review for vestibular and ENEM: exact sciences focus, ideal profile, and a practical routine with flashcards and SM-2.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Ferretto Worth It? Complete Review for Vestibular &amp; ENEM" data-pt="Ferretto Vale a Pena? Review Completo para Vestibular e ENEM">Is Ferretto Worth It? Complete Review for Vestibular &amp; ENEM</h3>
+            <p data-en="Ferretto review for vestibular and ENEM: exact sciences focus, ideal profile, and a practical routine with flashcards and SM-2." data-pt="Review do Ferretto: foco em exatas, perfil ideal de estudante e rotina prática com flashcards e SM-2 para retenção real.">Ferretto review for vestibular and ENEM: exact sciences focus, ideal profile, and a practical routine with flashcards and SM-2.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Descomplica Vestibular -->
         <a href="descomplica-vestibular-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🧩</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Descomplica Worth It for Vestibular? Complete Review</h3>
-            <p>Descomplica vestibular review: short classes, beginner-friendly didactics, and a study workflow to improve retention until exam day.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Descomplica Worth It for Vestibular? Complete Review" data-pt="Descomplica para Vestibular Vale a Pena? Review Completo">Is Descomplica Worth It for Vestibular? Complete Review</h3>
+            <p data-en="Descomplica vestibular review: short classes, beginner-friendly didactics, and a study workflow to improve retention until exam day." data-pt="Análise do Descomplica para vestibular: aulas curtas, didática acessível e método de revisão ativa para lembrar até a prova.">Descomplica vestibular review: short classes, beginner-friendly didactics, and a study workflow to improve retention until exam day.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 9 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 9 min read" data-pt="⏱ 9 min de leitura">⏱ 9 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Poliedro -->
         <a href="poliedro-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🧱</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Poliedro Worth It? Complete Review for Vestibular & ENEM</h3>
-            <p>Poliedro review for vestibular and ENEM: structured routine, ideal profile, and practical active-recall strategy with SM-2.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Poliedro Worth It? Complete Review for Vestibular &amp; ENEM" data-pt="Poliedro Vale a Pena? Review Completo para Vestibular e ENEM">Is Poliedro Worth It? Complete Review for Vestibular &amp; ENEM</h3>
+            <p data-en="Poliedro review for vestibular and ENEM: structured routine, ideal profile, and practical active-recall strategy with SM-2." data-pt="Review do Poliedro para vestibular e ENEM: rotina estruturada, perfil ideal e estratégia prática com revisão ativa e SM-2.">Poliedro review for vestibular and ENEM: structured routine, ideal profile, and practical active-recall strategy with SM-2.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 10 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 10 min read" data-pt="⏱ 10 min de leitura">⏱ 10 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Anglo -->
         <a href="anglo-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">🏫</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Anglo Worth It? Complete Review for Vestibular & ENEM</h3>
-            <p>Anglo review for vestibular and ENEM: organized prep style, profile fit, and a practical workflow with flashcards and spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Anglo Worth It? Complete Review for Vestibular &amp; ENEM" data-pt="Anglo Vale a Pena? Review Completo para Vestibular e ENEM">Is Anglo Worth It? Complete Review for Vestibular &amp; ENEM</h3>
+            <p data-en="Anglo review for vestibular and ENEM: organized prep style, profile fit, and a practical workflow with flashcards and spaced repetition." data-pt="Análise do Anglo para vestibular e ENEM: estilo de estudo organizado, perfil de aluno e fluxo com flashcards + repetição espaçada.">Anglo review for vestibular and ENEM: organized prep style, profile fit, and a practical workflow with flashcards and spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 9 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 9 min read" data-pt="⏱ 9 min de leitura">⏱ 9 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
-        <!-- Card: Bernoulli -->
         <a href="bernoulli-vale-a-pena.html" class="blog-card">
           <div class="blog-card-img">📘</div>
           <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guide</span>
-            <h3>Is Bernoulli Worth It? Complete Review for Vestibular & ENEM</h3>
-            <p>Bernoulli review: strengths, profile fit, and a step-by-step study method with active recall and spaced repetition.</p>
+            <span class="blog-card-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+            <h3 data-en="Is Bernoulli Worth It? Complete Review for Vestibular &amp; ENEM" data-pt="Bernoulli Vale a Pena? Review Completo para Vestibular e ENEM">Is Bernoulli Worth It? Complete Review for Vestibular &amp; ENEM</h3>
+            <p data-en="Bernoulli review: strengths, profile fit, and a step-by-step study method with active recall and spaced repetition." data-pt="Review do Bernoulli: pontos fortes, perfil ideal e método de estudo com recuperação ativa e repetição espaçada.">Bernoulli review: strengths, profile fit, and a step-by-step study method with active recall and spaced repetition.</p>
             <div class="blog-card-meta">
-              <span>📅 Feb 13, 2026</span>
-              <span>⏱ 9 min read</span>
+              <span data-en="📅 Feb 13, 2026" data-pt="📅 13 fev 2026">📅 Feb 13, 2026</span>
+              <span data-en="⏱ 9 min read" data-pt="⏱ 9 min de leitura">⏱ 9 min read</span>
             </div>
-            <span class="blog-card-link">Read article →</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
-  <div data-lang="pt">
-    <div class="blog-hero">
-      <div class="container">
-        <h1>📝 Blog</h1>
-        <p class="subtitle">Dicas de estudo, comparativos e guias para aprender melhor com o Mayinab</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="blog-grid">
-
-        <!-- Card: Mayinab vs Anki -->
-        <a href="mayinab-vs-anki-windows.html" class="blog-card">
-          <div class="blog-card-img">⚔️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparativo</span>
-            <h3>Mayinab vs Anki no Windows: Qual É Melhor?</h3>
-            <p>Comparação lado a lado de recursos, UI, repetição espaçada e usabilidade. Descubra qual app de flashcards é ideal para você.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 8 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Flashcard App for Windows -->
-        <a href="flashcard-app-windows.html" class="blog-card">
-          <div class="blog-card-img">🪟</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App de Flashcards para Windows com Repetição Espaçada</h3>
-            <p>Descubra por que o Mayinab é a alternativa moderna ao Anki para Windows, com UI bonita, 7 tipos de nota e suporte offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 5 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Mayinab vs Notion -->
-        <a href="mayinab-vs-notion.html" class="blog-card">
-          <div class="blog-card-img">⚔️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparativo</span>
-            <h3>Mayinab vs Notion para Estudar: Qual É Melhor?</h3>
-            <p>O Notion é ótimo para produtividade, mas não para estudar. Compare flashcards, repetição espaçada, offline e privacidade lado a lado.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Notion Alternative for Students -->
-        <a href="notion-alternative-study.html" class="blog-card">
-          <div class="blog-card-img">📚</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternativa</span>
-            <h3>Melhor Alternativa ao Notion para Estudantes: Notas + Flashcards + SRS</h3>
-            <p>Pare de fazer anotações que nunca vai revisar. O Mayinab combina notas, flashcards e repetição espaçada em um app. 100% offline, grátis.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 6 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Notes and Flashcards App -->
-        <a href="notes-and-flashcards-app.html" class="blog-card">
-          <div class="blog-card-img">🗂️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag tips">Dicas</span>
-            <h3>Pare de Usar Dois Apps: Combine Notas e Flashcards</h3>
-            <p>Cansado de alternar entre Notion e Anki? Entenda por que notas e flashcards devem viver juntos e como o Mayinab resolve esse problema.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 7 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Mayinab vs Obsidian -->
-        <a href="mayinab-vs-obsidian.html" class="blog-card">
-          <div class="blog-card-img">⚔️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparativo</span>
-            <h3>Mayinab vs Obsidian para Estudar: Qual App É Melhor?</h3>
-            <p>O Obsidian é ótimo para PKM, mas estudar exige flashcards e repetição espaçada. Compare plugins vs recursos nativos, setup e custos de sync.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Obsidian Alternative for Students -->
-        <a href="obsidian-alternative-study.html" class="blog-card">
-          <div class="blog-card-img">📚</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternativa</span>
-            <h3>Melhor Alternativa ao Obsidian para Estudantes: Notas + Flashcards + SRS</h3>
-            <p>Pare de configurar plugins. O Mayinab tem flashcards integrados, repetição espaçada SM-2 e sync cloud grátis. 100% offline, sem conta.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 7 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Spaced Repetition Guide -->
-        <a href="spaced-repetition-guide.html" class="blog-card">
-          <div class="blog-card-img">🧠</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>O que É Repetição Espaçada? Guia Completo para Estudar Melhor</h3>
-            <p>Aprenda como a repetição espaçada funciona, por que é a técnica de estudo mais eficaz, e como usar o algoritmo SM-2 com flashcards.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Anki Alternative -->
-        <a href="anki-alternative.html" class="blog-card">
-          <div class="blog-card-img">🔄</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternativa</span>
-            <h3>Melhor Alternativa ao Anki: App de Flashcards Moderno com Repetição Espaçada</h3>
-            <p>Mesmo algoritmo SM-2, UI moderna. Notas estilo chat, 7 tipos de nota, Markdown + LaTeX. 100% grátis, offline, sem anúncios.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 7 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Mayinab vs Quizlet -->
-        <a href="mayinab-vs-quizlet.html" class="blog-card">
-          <div class="blog-card-img">⚔️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparativo</span>
-            <h3>Mayinab vs Quizlet: Qual App de Flashcards É Melhor?</h3>
-            <p>Compare repetição espaçada, preço, suporte offline, privacidade e recursos. Descubra qual app é a escolha certa para estudantes sérios.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 9 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: How to Make Effective Flashcards -->
-        <a href="how-to-make-effective-flashcards.html" class="blog-card">
-          <div class="blog-card-img">✍️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag tips">Dicas</span>
-            <h3>Como Criar Flashcards Eficientes: 10 Dicas Baseadas em Ciência</h3>
-            <p>Pare de perder tempo com flashcards ruins. Aprenda 10 técnicas baseadas em ciência para criar cards que melhoram a retenção de longo prazo.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 8 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Free Study App -->
-        <a href="free-study-app.html" class="blog-card">
-          <div class="blog-card-img">🎓</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag landing">Alternativa</span>
-            <h3>Melhor App de Estudo Grátis para Estudantes | Sem Anúncios</h3>
-            <p>Notas, flashcards e repetição espaçada SM-2 em um app grátis. 100% offline, sem anúncios, todas as plataformas. Realmente grátis, não "freemium."</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 6 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Study App for Medical Students -->
-        <a href="study-app-medical-students.html" class="blog-card">
-          <div class="blog-card-img">🩺</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App de Estudo para Estudantes de Medicina: Flashcards e Repetição Espaçada</h3>
-            <p>Como usar o Mayinab para anatomia, farmacologia e preparação para provas. Repetição espaçada SM-2, suporte LaTeX, notas + flashcards juntos.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 9 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Estudar para o ENEM -->
-        <a href="app-estudar-enem.html" class="blog-card">
-          <div class="blog-card-img">🎯</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Estudar para o ENEM: Flashcards, Notas e Repetição Espaçada</h3>
-            <p>Prepare-se para o ENEM com repetição espaçada SM-2, flashcards para cada matéria, LaTeX para fórmulas e notas organizadas. 100% grátis.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Estudar para Concursos -->
-        <a href="app-estudar-concursos.html" class="blog-card">
-          <div class="blog-card-img">⚖️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Estudar para Concursos Públicos: Flashcards e Repetição Espaçada</h3>
-            <p>Memorize leis, conceitos jurídicos e conteúdo do edital com repetição espaçada SM-2. Notas + flashcards em um app grátis e offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 11 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Estudar para Vestibular -->
-        <a href="app-estudar-vestibular.html" class="blog-card">
-          <div class="blog-card-img">🎓</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Estudar para o Vestibular: FUVEST, UNICAMP, UNESP e Mais</h3>
-            <p>Prepare-se para vestibulares com repetição espaçada SM-2, flashcards, notas de leituras obrigatórias e LaTeX para fórmulas. 100% grátis.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 11 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar no Vestibular -->
-        <a href="como-passar-vestibular.html" class="blog-card">
-          <div class="blog-card-img">🏆</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag tips">Dicas</span>
-            <h3>Como Passar no Vestibular: 7 Técnicas de Estudo que Realmente Funcionam</h3>
-            <p>Técnicas de estudo comprovadas pela ciência para vestibulares. Active recall, repetição espaçada, intercalação e mais.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Flashcards Vestibular Medicina -->
-        <a href="flashcards-vestibular-medicina.html" class="blog-card">
-          <div class="blog-card-img">🩺</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Flashcards para Vestibular de Medicina: Biologia, Química e Física</h3>
-            <p>Como estudar para os vestibulares de Medicina mais concorridos com flashcards e repetição espaçada SM-2. Estratégia por matéria.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Cronograma de Estudos Vestibular -->
-        <a href="cronograma-estudos-vestibular.html" class="blog-card">
-          <div class="blog-card-img">📅</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Cronograma de Estudos para Vestibular: Como Organizar 12 Meses de Preparação</h3>
-            <p>Plano completo de 12 meses com metas semanais, rotina diária e repetição espaçada. Nunca esqueça o que estudou.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Matérias Mais Cobradas Vestibular -->
-        <a href="vestibular-materias-mais-cobradas.html" class="blog-card">
-          <div class="blog-card-img">📊</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag tips">Dicas</span>
-            <h3>Matérias que Mais Caem no Vestibular: O que Estudar Primeiro</h3>
-            <p>Os temas mais cobrados na FUVEST, UNICAMP, UNESP por matéria. Priorize seus estudos para resultados máximos.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 15 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em Medicina -->
-        <a href="como-passar-medicina.html" class="blog-card">
-          <div class="blog-card-img">🩺</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Medicina no Vestibular: Plano de Estudos Completo</h3>
-            <p>Plano de 12 meses para Medicina: Biologia, Química, Física. Estratégia de repetição espaçada para reter milhares de conceitos para FUVEST, UNICAMP e ENEM.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em Direito -->
-        <a href="como-passar-direito.html" class="blog-card">
-          <div class="blog-card-img">⚖️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Direito no Vestibular: Plano de Estudos Completo</h3>
-            <p>Domine História, Filosofia, Sociologia e Redação para Direito. Repetição espaçada para USP, FGV, UNICAMP e PUC.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em Ciencias da Computação -->
-        <a href="como-passar-ciencia-computacao.html" class="blog-card">
-          <div class="blog-card-img">💻</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Ciencias da Computação no Vestibular</h3>
-            <p>Plano focado em Matemática para Computação na USP (IME), UNICAMP (IC) e federais. Flashcards com LaTeX para fórmulas.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em ADS -->
-        <a href="como-passar-ads.html" class="blog-card">
-          <div class="blog-card-img">🖥️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em ADS (Análise e Desenvolvimento de Sistemas)</h3>
-            <p>Guia para FATEC, IFs e ENEM/SiSU. Estude Matemática, Lógica, Português e atualidades com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 11 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em Biomedicina -->
-        <a href="como-passar-biomedicina.html" class="blog-card">
-          <div class="blog-card-img">🔬</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Biomedicina no Vestibular: Plano de Estudos</h3>
-            <p>Foco em ciência laboratorial: Biologia, Química, Microbiologia. Repetição espaçada para processos, classificações e estruturas químicas.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em Psicologia -->
-        <a href="como-passar-psicologia.html" class="blog-card">
-          <div class="blog-card-img">🧠</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Psicologia no Vestibular: Plano de Estudos</h3>
-            <p>Equilíbrio Biologia + Humanas: Neurociência, Filosofia, Sociologia. Repetição espaçada para teorias, autores e repertório de redação.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em Mecatrônica -->
-        <a href="como-passar-mecatronica.html" class="blog-card">
-          <div class="blog-card-img">⚙️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Engenharia Mecatrônica no Vestibular</h3>
-            <p>Plano focado em Matemática para Mecatrônica na USP (Poli), UNICAMP, ITA. Flashcards com LaTeX para centenas de fórmulas.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Como Passar em Sistemas de Informação -->
-        <a href="como-passar-sistemas-informacao.html" class="blog-card">
-          <div class="blog-card-img">🖥️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Sistemas de Informação no Vestibular</h3>
-            <p>Curso de Tech + Negócios: Matemática, Lógica, Português e conhecimentos gerais. Repetição espaçada para fórmulas, gramática e redação.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Certificações Financeiras -->
-        <a href="certificacoes-financeiras.html" class="blog-card">
-          <div class="blog-card-img">💰</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar nas Certificações Financeiras (CPA-10, CPA-20, CEA, CFP)</h3>
-            <p>Plano de estudos para CPA-10, CPA-20, CEA, CFP e CNPI. Repetição espaçada para produtos financeiros, regulamentação e fórmulas.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Certificações ANBIMA -->
-        <a href="como-passar-anbima.html" class="blog-card">
-          <div class="blog-card-img">🏦</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar nas Certificações ANBIMA (CPA-10, CPA-20, CEA)</h3>
-            <p>Guia completo ANBIMA: estrutura da prova, conteúdo por módulo, exemplos de flashcards e plano semanal de estudos.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Estudar para Trabalhar em Banco -->
-        <a href="estudar-trabalhar-banco.html" class="blog-card">
-          <div class="blog-card-img">🏧</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Estudar para Trabalhar em Banco: Guia Completo</h3>
-            <p>Banco público vs. privado, certificações, plano de carreira, progressão salarial e plano de estudos com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Concurso Caixa -->
-        <a href="concurso-caixa.html" class="blog-card">
-          <div class="blog-card-img">🏛️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar no Concurso Caixa Econômica Federal</h3>
-            <p>Plano completo para Caixa: conhecimentos bancários, matemática financeira, dicas CESGRANRIO, habitação e FGTS.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Concurso Banco do Brasil -->
-        <a href="concurso-banco-do-brasil.html" class="blog-card">
-          <div class="blog-card-img">🏦</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar no Concurso Banco do Brasil: Plano de Estudos Completo</h3>
-            <p>Plano para BB: agronegócio, conhecimentos bancários, técnicas de vendas e banco digital com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Concurso Correios -->
-        <a href="concurso-correios.html" class="blog-card">
-          <div class="blog-card-img">📮</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar no Concurso dos Correios: Plano de Estudos Completo</h3>
-            <p>Guia completo para Correios: Carteiro, Atendente e Analista, estratégia por matéria e plano com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Concurso Polícia Federal -->
-        <a href="concurso-policia-federal.html" class="blog-card">
-          <div class="blog-card-img">🚔</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar no Concurso da Polícia Federal: Plano de Estudos</h3>
-            <p>Guia completo para PF: Agente e Delegado, estratégia CESPE, preparação TAF e plano com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 15 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Concurso Tribunais -->
-        <a href="concurso-tribunais.html" class="blog-card">
-          <div class="blog-card-img">⚖️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar em Concurso de Tribunais: TJ, TRF, TRT</h3>
-            <p>Guia completo para tribunais: Técnico e Analista, estratégias FCC/CESPE/FGV e plano com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Concurso INSS -->
-        <a href="concurso-inss.html" class="blog-card">
-          <div class="blog-card-img">🏥</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar no Concurso do INSS: Plano de Estudos Completo</h3>
-            <p>Guia completo para INSS: Técnico, Analista e Perito Médico, foco em Direito Previdenciário e repetição espaçada SM-2.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 15 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Concurso Receita Federal -->
-        <a href="concurso-receita-federal.html" class="blog-card">
-          <div class="blog-card-img">💰</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar no Concurso da Receita Federal: Plano de Estudos</h3>
-            <p>Guia completo para RFB: Auditor e Analista Tributário, Direito Tributário, Contabilidade, aduana e repetição espaçada SM-2.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 15 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Estudar Japonês -->
-        <a href="app-estudar-japones.html" class="blog-card">
-          <div class="blog-card-img">🇯🇵</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Estudar Japonês: Flashcards de Kanji, Hiragana e Vocabulário</h3>
-            <p>Aprenda japonês com repetição espaçada SM-2. Flashcards para kanji, hiragana, katakana, vocabulário e preparação JLPT. Grátis, offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Estudar Mandarim -->
-        <a href="app-estudar-mandarim.html" class="blog-card">
-          <div class="blog-card-img">🇨🇳</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Estudar Mandarim: Flashcards de Hanzi, Pinyin e Vocabulário</h3>
-            <p>Aprenda mandarim com repetição espaçada SM-2. Flashcards para hanzi, pinyin, tons, vocabulário e preparação HSK. Grátis, offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Estudar Idiomas -->
-        <a href="app-estudar-idiomas.html" class="blog-card">
-          <div class="blog-card-img">🌍</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Estudar Idiomas: Flashcards de Vocabulário e Repetição Espaçada</h3>
-            <p>Aprenda qualquer idioma com repetição espaçada SM-2. Espanhol, francês, alemão, coreano e mais. Notas + flashcards em um app grátis e offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Melhor App para Organizar Notas -->
-        <a href="best-note-taking-app.html" class="blog-card">
-          <div class="blog-card-img">📒</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Organizar suas Notas</h3>
-            <p>Pare de espalhar notas em 5 apps. Organize tudo por Matéria → Tópico com 7 tipos de nota, Markdown + LaTeX e flashcards integrados. Grátis, offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 8 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App de Notas Pessoais -->
-        <a href="personal-notes-app.html" class="blog-card">
-          <div class="blog-card-img">🔒</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Notas Pessoais: Privado, Offline e Grátis</h3>
-            <p>Suas notas pessoais merecem privacidade. Sem conta, sem nuvem, sem coleta de dados. 7 tipos de nota, Markdown, flashcards. 100% offline em todas as plataformas.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 8 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Anotações Pessoais e Autoestudo -->
-        <a href="self-notes-app.html" class="blog-card">
-          <div class="blog-card-img">🧩</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Anotações Pessoais e Autoestudo</h3>
-            <p>Faça anotações que realmente ficam na memória. Combine notas com flashcards e repetição espaçada SM-2 para construir sua base de conhecimento. Grátis, offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 9 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Alternativa ao Samsung Notes -->
-        <a href="samsung-notes-alternative.html" class="blog-card">
-          <div class="blog-card-img">📱</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparativo</span>
-            <h3>Melhor Alternativa ao Samsung Notes para Estudar: Flashcards e Repetição Espaçada</h3>
-            <p>O Samsung Notes é ótimo para escrita à mão, mas não para estudar. O Mayinab adiciona flashcards, repetição espaçada SM-2 e funciona em todas as plataformas. Grátis.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 9 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: App para Estudar no Tablet -->
-        <a href="study-app-tablet.html" class="blog-card">
-          <div class="blog-card-img">📲</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Melhor App para Estudar no Tablet: iPad, Galaxy Tab e Tablets Android</h3>
-            <p>Estude no tablet com split-view, flashcards, repetição espaçada SM-2 e 7 tipos de nota. Funciona no iPad, Galaxy Tab e todos os tablets. Grátis, offline.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <a href="como-passar-oab.html" class="blog-card">
-          <div class="blog-card-img">⚖️</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar na OAB: Guia Completo de Estudos</h3>
-            <p>Domine o Exame da Ordem com flashcards, repetição espaçada SM-2 e cronograma de 12 semanas. Memorize artigos de lei e súmulas com eficiência.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <a href="como-passar-residencia-medica.html" class="blog-card">
-          <div class="blog-card-img">🩺</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar na Residência Médica: Guia Completo de Estudos</h3>
-            <p>Prepare-se para ENARE, USP, UNICAMP e UNIFESP com repetição espaçada SM-2, flashcards e cronograma de 12 meses.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 15 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <a href="concurso-prf.html" class="blog-card">
-          <div class="blog-card-img">🚔</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Concurso PRF: Como Passar na Polícia Rodoviária Federal</h3>
-            <p>Passe no concurso da PRF com estratégias para questões CESPE, flashcards de CTB, repetição espaçada SM-2 e cronograma de 12 semanas.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 14 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <a href="como-estudar-para-provas.html" class="blog-card">
-          <div class="blog-card-img">📖</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag tips">Dicas</span>
-            <h3>Como Estudar para Provas: 5 Técnicas Comprovadas</h3>
-            <p>Domine qualquer prova com Recuperação Ativa, Repetição Espaçada, Intercalação, Simulados e Elaboração. Métodos de estudo comprovados pela ciência.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <a href="como-passar-encceja.html" class="blog-card">
-          <div class="blog-card-img">📝</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Como Passar no ENCCEJA: Guia Completo de Estudos</h3>
-            <p>Conquiste seu certificado com cronograma de 8 semanas, flashcards para as 4 áreas do conhecimento, dicas de redação e repetição espaçada SM-2.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <a href="concurso-ibge.html" class="blog-card">
-          <div class="blog-card-img">📊</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Concurso IBGE: Como Passar no Concurso do IBGE</h3>
-            <p>Prepare-se para o concurso do IBGE com flashcards, estratégias de geografia e estatística, repetição espaçada SM-2 e cronograma de 8 semanas.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 13 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Melhor Cursinho Online -->
-        <a href="melhor-cursinho-concurso.html" class="blog-card">
-          <div class="blog-card-img">🏆</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag comparison">Comparativo</span>
-            <h3>Melhor Cursinho Online para Concurso em 2026</h3>
-            <p>Compare Estratégia, Gran, Descomplica, AlfaCon, Direção e Aprova Total. Veja qual cursinho combina com seu perfil e como aumentar retenção.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 15 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Estratégia Concursos -->
-        <a href="estrategia-concursos-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">📘</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Estratégia Concursos Vale a Pena? Review Completo</h3>
-            <p>Análise completa do Estratégia: melhores PDFs, maior banco de questões e como potencializar os resultados com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Gran Cursos -->
-        <a href="gran-cursos-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🎓</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Gran Cursos Vale a Pena? Review Completo</h3>
-            <p>Review do Gran Cursos: aulas ao vivo, comunidade, acesso ilimitado e como combinar com repetição espaçada para retenção máxima.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Descomplica -->
-        <a href="descomplica-concursos-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🚀</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Descomplica Vale a Pena para Concurso? Review Completo</h3>
-            <p>Análise do Descomplica para concursos: interface moderna, vídeos curtos, transição do ENEM e como complementar com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 11 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: AlfaCon -->
-        <a href="alfacon-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🚔</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>AlfaCon Vale a Pena? Review Completo para Carreiras Policiais</h3>
-            <p>Review do AlfaCon: especialização em carreiras policiais (PF, PRF, PC, PM), preparo TAF e como fixar conteúdo com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 11 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Direção Concursos -->
-        <a href="direcao-concursos-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🎯</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Direção Concursos Vale a Pena? Review Completo</h3>
-            <p>Review do Direção Concursos: professores estrela, didática forte, foco fiscal e jurídico, e combinação com repetição espaçada SM-2.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 12 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Aprova Total -->
-        <a href="aprova-total-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">✅</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Aprova Total Vale a Pena? Review Completo</h3>
-            <p>Review do Aprova Total: preço acessível, trilhas organizadas, foco em concursos de nível médio e como potencializar com repetição espaçada grátis.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Aprova Total Vestibular -->
-        <a href="aprova-total-vestibular-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🎒</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Aprova Total para Vestibular Vale a Pena? Review Completo</h3>
-            <p>Análise do Aprova Total para vestibular: organização, custo-benefício, perfil ideal e estratégia de retenção com repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Ferretto -->
-        <a href="ferretto-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">📐</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Ferretto Vale a Pena? Review Completo para Vestibular e ENEM</h3>
-            <p>Review do Ferretto: foco em exatas, perfil ideal de estudante e rotina prática com flashcards e SM-2 para retenção real.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Descomplica Vestibular -->
-        <a href="descomplica-vestibular-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🧩</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Descomplica para Vestibular Vale a Pena? Review Completo</h3>
-            <p>Análise do Descomplica para vestibular: aulas curtas, didática acessível e método de revisão ativa para lembrar até a prova.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 9 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Poliedro -->
-        <a href="poliedro-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🧱</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Poliedro Vale a Pena? Review Completo para Vestibular e ENEM</h3>
-            <p>Review do Poliedro para vestibular e ENEM: rotina estruturada, perfil ideal e estratégia prática com revisão ativa e SM-2.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 10 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Anglo -->
-        <a href="anglo-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">🏫</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Anglo Vale a Pena? Review Completo para Vestibular e ENEM</h3>
-            <p>Análise do Anglo para vestibular e ENEM: estilo de estudo organizado, perfil de aluno e fluxo com flashcards + repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 9 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
-          </div>
-        </a>
-
-        <!-- Card: Bernoulli -->
-        <a href="bernoulli-vale-a-pena.html" class="blog-card">
-          <div class="blog-card-img">📘</div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag guide">Guia</span>
-            <h3>Bernoulli Vale a Pena? Review Completo para Vestibular e ENEM</h3>
-            <p>Review do Bernoulli: pontos fortes, perfil ideal e método de estudo com recuperação ativa e repetição espaçada.</p>
-            <div class="blog-card-meta">
-              <span>📅 13 fev 2026</span>
-              <span>⏱ 9 min de leitura</span>
-            </div>
-            <span class="blog-card-link">Ler artigo →</span>
+            <span class="blog-card-link" data-en="Read article →" data-pt="Ler artigo →">Read article →</span>
           </div>
         </a>
 
       </div>
     </div>
-  </div>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer-mini">
-    © 2026 Mayinab · <a href="/" id="footerHome">Back to site</a>
+    © 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a>
   </footer>
 
-  <script src="../js/lang.js"></script>
-  <script>
-    initLang({
-      en: { title: 'Blog – Mayinab', description: 'Study tips, comparisons, and guides for smarter learning with Mayinab.' },
-      pt: { title: 'Blog – Mayinab', description: 'Dicas de estudo, comparativos e guias para aprender melhor com o Mayinab.' }
-    });
-  </script>
+  <script src="../js/lang.js"
+    data-meta-en-title="Blog – Mayinab"
+    data-meta-en-desc="Study tips, comparisons, and guides for smarter learning with Mayinab."
+    data-meta-pt-title="Blog – Mayinab"
+    data-meta-pt-desc="Dicas de estudo, comparativos e guias para aprender melhor com o Mayinab."></script>
 </body>
 </html>
