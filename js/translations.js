@@ -180,7 +180,6 @@ const translations = {
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Available',
     'platforms.coming': 'Coming Soon',
-    'platforms.checksum.title': '🔒 Verify your download (SHA-256)',
 
     'notify.title': 'Notify me when it launches!',
     'notify.subtitle': 'Be the first to know when Mayinab arrives on mobile.',
@@ -478,7 +477,6 @@ const translations = {
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Disponível',
     'platforms.coming': 'Em Breve',
-    'platforms.checksum.title': '🔒 Verifique seu download (SHA-256)',
 
     'notify.title': 'Me avise quando lançar!',
     'notify.subtitle': 'Seja o primeiro a saber quando o Mayinab chegar no mobile.',
