@@ -1,4 +1,4 @@
-]633;E;echo "Checksum CSS added";6b2422de-f858-465e-b2b5-850a72d22901]633;C// ── i18n — translations loaded from translations.js ─────────
+// ── i18n — translations loaded from translations.js ─────────
 // (translations.js must be loaded before this file)
 
 let currentLang = 'en';
