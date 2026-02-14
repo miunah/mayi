@@ -44,6 +44,88 @@
 
         <div class="version-entry">
           <div class="version-header">
+            <span class="version-tag">v1.0.5</span>
+            <span class="version-date">13 de fevereiro de 2026</span>
+            <span class="version-badge badge-new">Novo</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Integração com Stripe para assinaturas no Windows e Linux (cross-platform)</li>
+            <li>Gerenciamento completo de assinaturas: cancelar, upgrade, downgrade e portal de billing</li>
+            <li>Sincronização de assinatura em tempo real</li>
+            <li>Build MSIX para submissão na Microsoft Store</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Autenticação mais segura no fluxo de checkout (JWT)</li>
+            <li>Webhook de pagamento com suporte a upgrade/downgrade e status <code>past_due</code></li>
+            <li>Traduções atualizadas (EN/PT) com todas as strings de gerenciamento de assinatura</li>
+            <li>Login/criar conta permitido sem plano ativo nas configurações de sincronização</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.4</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Links de política de privacidade e termos de uso nas configurações</li>
+            <li>Consentimento de termos na tela de cadastro</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.3</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>URL dos termos de serviço atualizada</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.2</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Snackbar com auto-dismiss e ícone de fechar no desktop</li>
+            <li>Vinculação automática da conta ao fazer login/logout do vault</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Instalador Windows (Inno Setup) corrigido no pipeline de CI</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.1</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Exibição dinâmica da versão real do app nas configurações</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Permissão desnecessária removida no Android (<code>SCHEDULE_EXACT_ALARM</code>)</li>
+            <li>Link de privacidade atualizado</li>
+            <li>Conflito de animação em botões flutuantes resolvido</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Compatibilidade com Flutter/Dart mais recentes no CI</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
             <span class="version-tag">v1.0.0</span>
             <span class="version-date">12 de fevereiro de 2026</span>
             <span class="version-badge badge-new">Lançamento</span>
@@ -89,6 +171,88 @@
     </div>
     <div class="container">
       <div class="page-content">
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.5</span>
+            <span class="version-date">February 13, 2026</span>
+            <span class="version-badge badge-new">New</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Stripe integration for subscriptions on Windows and Linux (cross-platform)</li>
+            <li>Full subscription management: cancel, upgrade, downgrade and billing portal</li>
+            <li>Real-time subscription sync</li>
+            <li>MSIX build for Microsoft Store submission</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>More secure authentication in checkout flow (JWT)</li>
+            <li>Payment webhook with upgrade/downgrade and <code>past_due</code> status support</li>
+            <li>Updated translations (EN/PT) with all subscription management strings</li>
+            <li>Login/create account allowed without active plan in sync settings</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.4</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Privacy policy and terms of use links in settings</li>
+            <li>Terms consent on sign-up screen</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.3</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Terms of service URL updated</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.2</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Snackbar with auto-dismiss and close icon on desktop</li>
+            <li>Automatic account linking on vault login/logout</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Windows installer (Inno Setup) fixed in CI pipeline</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.1</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Dynamic display of real app version in settings</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Unnecessary Android permission removed (<code>SCHEDULE_EXACT_ALARM</code>)</li>
+            <li>Privacy link updated</li>
+            <li>Floating action button animation conflict resolved</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>Compatibility with latest Flutter/Dart in CI</li>
+          </ul>
+        </div>
 
         <div class="version-entry">
           <div class="version-header">
