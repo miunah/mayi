@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+
+  <title>Best Flashcard App for Linux | Spaced Repetition, Offline & Free | Mayinab</title>
+  <meta name="description" content="Mayinab is the best flashcard app for Linux with spaced repetition, Markdown, LaTeX, 7 note types, and a modern UI. A beautiful alternative to Anki. 100% offline, no ads, free. AppImage, Snap & Flatpak.">
+  <meta name="keywords" content="flashcard app linux, best flashcard app linux, spaced repetition linux, anki alternative linux, study app linux, free flashcard app linux, offline flashcard app linux, flashcard app ubuntu, flashcard app fedora, flashcard appimage, app de flashcard linux, melhor app flashcard linux, repetição espaçada linux">
+  <meta name="author" content="Mayinab">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mayinab | The Best Flashcard App for Linux with Spaced Repetition">
+  <meta property="og:description" content="A modern alternative to Anki for Linux. Chat-style notes, SM-2 spaced repetition, Markdown + LaTeX. 100% offline, free, no ads. AppImage, Snap & Flatpak.">
+  <meta property="og:url" content="https://mayinab.com/blog/flashcard-app-linux.html">
+  <meta property="og:site_name" content="Mayinab">
+  <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta property="og:image:alt" content="Mayinab – Best flashcard app for Linux">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mayinab | The Best Flashcard App for Linux">
+  <meta name="twitter:description" content="Modern spaced repetition app for Linux. Chat-style notes, 7 note types, offline, free.">
+  <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
+  <meta name="twitter:image:alt" content="Mayinab – Best flashcard app for Linux">
+
+  <link rel="canonical" href="https://mayinab.com/blog/flashcard-app-linux.html">
+  <link rel="alternate" hreflang="pt" href="https://mayinab.com/blog/flashcard-app-linux.html">
+  <link rel="alternate" hreflang="en" href="https://mayinab.com/blog/flashcard-app-linux.html">
+  <link rel="alternate" hreflang="x-default" href="https://mayinab.com/blog/flashcard-app-linux.html">
+  <link rel="icon" type="image/png" href="../app_icon.png">
+  <link rel="stylesheet" href="../css/nunito.css">
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Mayinab",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+    "description": "The best flashcard app for Linux with spaced repetition. Modern UI, chat-style notes, Markdown + LaTeX, 7 note types. 100% offline, no ads, free. Available as AppImage, Snap and Flatpak.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free: All features, offline, no limits"
+    },
+    "url": "https://mayinab.com"
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best flashcard app for Linux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mayinab is one of the best flashcard apps natively available on Linux. It features SM-2 spaced repetition, a modern chat-style interface, Markdown + LaTeX support, 7 note types, and works 100% offline. Available as AppImage, Snap, and Flatpak."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Mayinab a good alternative to Anki on Linux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mayinab uses the same SM-2 algorithm as Anki but with a modern, beautiful UI. Unlike Anki's dated Qt interface, Mayinab has chat-style notes, 7 note types, resizable split-view, command palette, and Markdown + LaTeX — all with zero configuration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I install Mayinab on Linux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mayinab is available for Linux as AppImage (portable, works on any distro), Snap (Ubuntu, Mint, etc.), and Flatpak (Fedora, openSUSE, etc.). Download from mayinab.com and start studying in under a minute."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Mayinab work on Ubuntu, Fedora, and Arch Linux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mayinab runs on any modern Linux distribution. The AppImage works on any distro without installation. Snap and Flatpak packages are also available for easy installation via your package manager."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I sync Mayinab between Linux and my phone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Mayinab works on Linux, Windows, macOS, Android, and iOS. With the optional encrypted cloud backup, your study data syncs across all your devices seamlessly."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+  <!-- Skip to content (accessibility) -->
+  <a href="#post-content" class="skip-to-content">Skip to content</a>
+
+  <!-- TOP BAR -->
+  <nav class="top-bar" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
+      </a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" aria-label="English">EN</button>
+          <button class="lang-btn" aria-label="Português">PT</button>
+        </div>
+        <a href="/blog/" class="back-link" id="backLink" data-en="← Back to Blog" data-pt="← Voltar ao Blog">← Back to Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="post-content">
+
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div data-lang="en" class="active">
+
+    <!-- HERO -->
+    <section class="landing-hero">
+      <div class="container">
+        <div class="badge">🍵 A modern alternative to Anki for Linux</div>
+        <h1>The Best <span class="accent">Flashcard App</span> for Linux with <span class="accent">Spaced Repetition</span></h1>
+        <p class="lead">
+          Study smarter with Mayinab: chat-style notes, SM-2 spaced repetition, Markdown + LaTeX, 7 note types, resizable split-view. 100% offline, no ads, free. Available as AppImage, Snap & Flatpak.
+        </p>
+        <div class="hero-btns">
+          <a href="/#download" class="btn btn-primary">⬇ Download Free for Linux</a>
+          <a href="/blog/flashcard-app-windows.html" class="btn btn-secondary">🪟 Windows Version</a>
+        </div>
+        <div class="platform-badges">
+          <span class="platform-badge">🪟 Windows</span>
+          <span class="platform-badge">🍎 macOS</span>
+          <span class="platform-badge active">🐧 Linux</span>
+          <span class="platform-badge">📱 Android</span>
+          <span class="platform-badge">📱 iOS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- USP SECTION -->
+    <section class="usp-section">
+      <div class="container">
+        <div class="section-label">✨ Why Linux users choose Mayinab</div>
+        <h2>A study app that respects your OS choice</h2>
+
+        <div class="usp-grid">
+          <div class="usp-card">
+            <div class="icon green">🧠</div>
+            <h3>Spaced Repetition (SM-2)</h3>
+            <p>The same proven algorithm used by Anki. Configurable intervals, flip and typing modes, streak tracking, daily reminders. Never forget what you learn.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon peach">💬</div>
+            <h3>Chat-Style Interface</h3>
+            <p>Take notes as naturally as typing in a terminal chat. No forms, no complex editors. Type or use /flashcard to create cards inline with notes, checklists, and media.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon pink">🎨</div>
+            <h3>Modern UI, Not Anki's Qt</h3>
+            <p>Anki's Qt-based UI looks outdated on every desktop environment. Mayinab has a clean, modern interface with custom themes, dark mode, wallpapers, and accent colors. Works beautifully on GNOME, KDE, XFCE, and more.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon lavender">📝</div>
+            <h3>Markdown + LaTeX</h3>
+            <p>Full Markdown formatting, LaTeX math rendering, syntax-highlighted code blocks, wiki-links [[like this]], and #tags. Perfect for CS and STEM students who live in the terminal.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon sky">🖥️</div>
+            <h3>Desktop Power Features</h3>
+            <p>Resizable split-view with draggable dividers. Discord-style sidebar. Command palette (Ctrl+K). Full keyboard shortcuts. Drag & drop file upload. Designed for large screens and power users.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon cream">🔒</div>
+            <h3>100% Offline & Private</h3>
+            <p>Works completely offline. Your data stays on your machine. No telemetry, no tracking, no ads. Optional AES-256 encrypted cloud backup. The privacy-first approach Linux users appreciate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="section-flush">
+      <div class="container">
+        <div class="post-content">
+          <h2>Why Switch from Anki to Mayinab on Linux?</h2>
+          <p>
+            Anki is arguably the most well-known spaced repetition tool, and it does run on Linux. But let's be honest: <strong>Anki's interface looks and feels like software from another era</strong>. The Qt-based UI doesn't integrate well with modern GTK or Qt5/6 themes, and the setup process is confusing for new users.
+          </p>
+          <p>
+            Mayinab uses the <strong>same SM-2 algorithm</strong> as Anki, but with a <strong>modern, beautiful interface</strong> and zero configuration. It's what Anki would look like if it were built today.
+          </p>
+
+          <h3>Easy Installation on Any Distro</h3>
+          <p>
+            Forget about dependency issues and manual compilation. Mayinab is available in three convenient formats:
+          </p>
+          <ul>
+            <li><strong>AppImage</strong> — portable, works on any distro. Download, make executable, run.</li>
+            <li><strong>Snap</strong> — one-click install on Ubuntu, Linux Mint, and Snap-enabled distros.</li>
+            <li><strong>Flatpak</strong> — install via Flathub on Fedora, openSUSE, Arch, and more.</li>
+          </ul>
+          <p>
+            No PPAs, no compiling from source, no broken dependencies. Pick your format and study in under a minute.
+          </p>
+
+          <h3>Notes + Flashcards in One App</h3>
+          <p>
+            On Linux, most students use a patchwork: Anki for flashcards, Joplin or Obsidian for notes, maybe a separate LaTeX editor. That's <strong>three apps, three workflows</strong>, constant context switching.
+          </p>
+          <p>
+            In Mayinab, you take notes and create flashcards <strong>in the same chat timeline</strong>. Type <code>/flashcard</code> right where you're studying. When it's time to review, SM-2 serves your cards. One app for everything.
+          </p>
+
+          <h3>7 Note Types, Not Just Flashcards</h3>
+          <p>
+            Mayinab gives you <strong>text notes, flashcards, checklists, images, audio, video, and file attachments</strong>. Organized by Subject → Topic with a Discord-style sidebar. Your entire study life in one app, not scattered across multiple tools.
+          </p>
+
+          <h3>Markdown + LaTeX: First-Class Citizens</h3>
+          <p>
+            Linux users love plain-text workflows. Mayinab embraces that with <strong>full Markdown rendering, LaTeX math support, syntax-highlighted code blocks</strong> (perfect for programming study), wiki-links, and #tags. Write your notes in the format you already know.
+          </p>
+
+          <h3>Keyboard-Driven Workflow</h3>
+          <p>
+            Linux power users live by the keyboard. Mayinab supports:
+          </p>
+          <ul>
+            <li><strong>Command palette</strong> (Ctrl+K) — search everything instantly</li>
+            <li><strong>Ctrl+F</strong> — search within topics</li>
+            <li><strong>Ctrl+Shift+E</strong> — open spaced repetition review</li>
+            <li><strong>Resizable split-view</strong> with draggable dividers</li>
+            <li><strong>Full keyboard navigation</strong> — 10+ shortcuts</li>
+          </ul>
+
+          <h3>Syncs with Your Phone & Other Devices</h3>
+          <p>
+            Study on your Linux desktop at home and review on your Android phone on the bus. Mayinab runs on <strong>Linux, Windows, macOS, Android, and iOS</strong>. Free encrypted cloud backup keeps everything in sync.
+          </p>
+
+          <h3>Import Your Anki Decks</h3>
+          <p>
+            Already invested in Anki? Export your decks as CSV and import them directly into Mayinab. Your cards and scheduling data are preserved.
+          </p>
+
+          <h2>Who Should Stay with Anki?</h2>
+          <ul>
+            <li><strong>Power users</strong> who depend on complex note types, cloze deletions, and community add-ons</li>
+            <li>People who already have <strong>massive Anki libraries</strong> with thousands of customized cards</li>
+            <li>Users who need <strong>AnkiWeb shared decks</strong> from the community</li>
+          </ul>
+          <p>
+            For everyone else — especially Linux users who want a <strong>modern, privacy-first, all-in-one study app</strong> that installs cleanly and works beautifully — Mayinab is the better choice.
+          </p>
+
+          <h2>Mayinab vs Anki on Linux</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight-col">Mayinab</th>
+                <th>Anki</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Spaced Repetition</strong></td>
+                <td class="highlight-col"><span class="check">SM-2 built-in</span></td>
+                <td><span class="check">SM-2 built-in</span></td>
+              </tr>
+              <tr>
+                <td><strong>Notes</strong></td>
+                <td class="highlight-col"><span class="check">7 types (text, flashcard, etc.)</span></td>
+                <td><span class="cross">Flashcards only</span></td>
+              </tr>
+              <tr>
+                <td><strong>UI Design</strong></td>
+                <td class="highlight-col"><span class="check">Modern, clean</span></td>
+                <td><span class="cross">Dated Qt UI</span></td>
+              </tr>
+              <tr>
+                <td><strong>Installation</strong></td>
+                <td class="highlight-col"><span class="check">AppImage / Snap / Flatpak</span></td>
+                <td><span class="partial">Manual install or distro package</span></td>
+              </tr>
+              <tr>
+                <td><strong>Setup Required</strong></td>
+                <td class="highlight-col"><span class="check">None (instant start)</span></td>
+                <td><span class="cross">Note types, fields, templates</span></td>
+              </tr>
+              <tr>
+                <td><strong>Markdown + LaTeX</strong></td>
+                <td class="highlight-col"><span class="check">Full support</span></td>
+                <td><span class="partial">LaTeX only (image-based)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Organization</strong></td>
+                <td class="highlight-col"><span class="check">Subject → Topic tree</span></td>
+                <td><span class="partial">Decks only</span></td>
+              </tr>
+              <tr>
+                <td><strong>Desktop Features</strong></td>
+                <td class="highlight-col"><span class="check">Split-view, Ctrl+K, sidebar</span></td>
+                <td><span class="partial">Basic window</span></td>
+              </tr>
+              <tr>
+                <td><strong>Cross-Platform</strong></td>
+                <td class="highlight-col"><span class="check">Linux/Win/Mac/Android/iOS</span></td>
+                <td><span class="partial">Via separate apps ($25 on iOS)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Privacy</strong></td>
+                <td class="highlight-col"><span class="check">No telemetry, no tracking</span></td>
+                <td><span class="check">Open-source</span></td>
+              </tr>
+              <tr>
+                <td><strong>Offline</strong></td>
+                <td class="highlight-col"><span class="check">100%</span></td>
+                <td><span class="check">100%</span></td>
+              </tr>
+              <tr>
+                <td><strong>Price</strong></td>
+                <td class="highlight-col"><span class="check">Free</span></td>
+                <td><span class="check">Free</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="verdict-box">
+            <h3>🍵 Mayinab at a Glance</h3>
+            <ul>
+              <li>✓ <strong>Spaced repetition</strong> with SM-2 algorithm</li>
+              <li>✓ <strong>Modern, beautiful UI</strong>: works on GNOME, KDE, XFCE & more</li>
+              <li>✓ <strong>Notes + flashcards</strong> in the same app</li>
+              <li>✓ <strong>7 note types</strong> in a chat interface</li>
+              <li>✓ <strong>Markdown + LaTeX</strong> rendering</li>
+              <li>✓ <strong>AppImage, Snap & Flatpak</strong>: install on any distro</li>
+              <li>✓ <strong>100% offline</strong>, no telemetry, no ads</li>
+              <li>✓ <strong>Free</strong> on Linux, Windows, macOS, Android & iOS</li>
+              <li>✓ <strong>Anki CSV import</strong>: bring your decks</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+          <h2>Start studying smarter on Linux 🍵</h2>
+          <p>Download Mayinab for free. AppImage, Snap or Flatpak. No account, no ads, works offline. Also on Windows, Mac, Android & iOS.</p>
+          <a href="/#download" class="btn btn-white">⬇ Download Mayinab Free</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
+  <div data-lang="pt">
+
+    <!-- HERO -->
+    <section class="landing-hero">
+      <div class="container">
+        <div class="badge">🍵 Uma alternativa moderna ao Anki para Linux</div>
+        <h1>O Melhor <span class="accent">App de Flashcards</span> para Linux com <span class="accent">Repetição Espaçada</span></h1>
+        <p class="lead">
+          Estude de forma mais inteligente com o Mayinab: notas estilo chat, repetição espaçada SM-2, Markdown + LaTeX, 7 tipos de nota, visão dividida. 100% offline, sem anúncios, grátis. Disponível como AppImage, Snap e Flatpak.
+        </p>
+        <div class="hero-btns">
+          <a href="/#download" class="btn btn-primary">⬇ Baixar Grátis para Linux</a>
+          <a href="/blog/flashcard-app-windows.html" class="btn btn-secondary">🪟 Versão Windows</a>
+        </div>
+        <div class="platform-badges">
+          <span class="platform-badge">🪟 Windows</span>
+          <span class="platform-badge">🍎 macOS</span>
+          <span class="platform-badge active">🐧 Linux</span>
+          <span class="platform-badge">📱 Android</span>
+          <span class="platform-badge">📱 iOS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- USP SECTION -->
+    <section class="usp-section">
+      <div class="container">
+        <div class="section-label">✨ Por que usuários Linux escolhem o Mayinab</div>
+        <h2>Um app de estudo que respeita sua escolha de SO</h2>
+
+        <div class="usp-grid">
+          <div class="usp-card">
+            <div class="icon green">🧠</div>
+            <h3>Repetição Espaçada (SM-2)</h3>
+            <p>O mesmo algoritmo comprovado do Anki. Intervalos configuráveis, modos flip e digitação, rastreamento de streak, lembretes diários. Nunca esqueça o que aprendeu.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon peach">💬</div>
+            <h3>Interface Estilo Chat</h3>
+            <p>Faça anotações tão naturalmente quanto digitar em um chat. Sem formulários, sem editores complexos. Use /flashcard para criar cards junto com notas e checklists.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon pink">🎨</div>
+            <h3>UI Moderna, Não o Qt do Anki</h3>
+            <p>A interface Qt do Anki parece datada em qualquer DE. O Mayinab tem interface limpa e moderna com temas, modo escuro, wallpapers e cores customizáveis. Bonito no GNOME, KDE, XFCE e mais.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon lavender">📝</div>
+            <h3>Markdown + LaTeX</h3>
+            <p>Markdown completo, renderização LaTeX, blocos de código com syntax highlighting, wiki-links [[assim]], e #tags. Perfeito para estudantes de computação e exatas.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon sky">🖥️</div>
+            <h3>Recursos Desktop Poderosos</h3>
+            <p>Visão dividida redimensionável. Sidebar estilo Discord. Paleta de comandos (Ctrl+K). Atalhos de teclado completos. Drag & drop de arquivos. Feito para telas grandes e power users.</p>
+          </div>
+          <div class="usp-card">
+            <div class="icon cream">🔒</div>
+            <h3>100% Offline & Privado</h3>
+            <p>Funciona completamente offline. Seus dados ficam na sua máquina. Sem telemetria, sem rastreamento, sem anúncios. Backup cloud opcional com criptografia AES-256. A privacidade que usuários Linux valorizam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="section-flush">
+      <div class="container">
+        <div class="post-content">
+          <h2>Por que Trocar do Anki para o Mayinab no Linux?</h2>
+          <p>
+            O Anki é a ferramenta de repetição espaçada mais conhecida, e roda no Linux. Mas sejamos honestos: <strong>a interface do Anki parece software de outra era</strong>. A UI baseada em Qt não integra bem com temas GTK ou Qt5/6 modernos, e o processo de configuração é confuso para novos usuários.
+          </p>
+          <p>
+            O Mayinab usa o <strong>mesmo algoritmo SM-2</strong> do Anki, mas com uma <strong>interface moderna e bonita</strong> e zero configuração. É como o Anki seria se fosse criado hoje.
+          </p>
+
+          <h3>Instalação Fácil em Qualquer Distro</h3>
+          <p>
+            Esqueça problemas de dependência e compilação manual. O Mayinab está disponível em três formatos:
+          </p>
+          <ul>
+            <li><strong>AppImage</strong> — portátil, funciona em qualquer distro. Baixe, torne executável, rode.</li>
+            <li><strong>Snap</strong> — instalação em um clique no Ubuntu, Linux Mint e distros com Snap.</li>
+            <li><strong>Flatpak</strong> — instale via Flathub no Fedora, openSUSE, Arch e mais.</li>
+          </ul>
+          <p>
+            Sem PPAs, sem compilar do código-fonte, sem dependências quebradas. Escolha seu formato e estude em menos de um minuto.
+          </p>
+
+          <h3>Notas + Flashcards em Um Só App</h3>
+          <p>
+            No Linux, a maioria dos estudantes usa uma colcha de retalhos: Anki para flashcards, Joplin ou Obsidian para notas, talvez um editor LaTeX separado. São <strong>três apps, três fluxos</strong>, troca constante de contexto.
+          </p>
+          <p>
+            No Mayinab, você faz anotações e cria flashcards <strong>na mesma timeline chat</strong>. Digite <code>/flashcard</code> onde está estudando. Na hora de revisar, o SM-2 serve seus cards. Um app para tudo.
+          </p>
+
+          <h3>7 Tipos de Nota, Não Apenas Flashcards</h3>
+          <p>
+            O Mayinab oferece <strong>notas de texto, flashcards, checklists, imagens, áudio, vídeo e anexos</strong>. Organizado por Matéria → Tópico com sidebar estilo Discord. Toda sua vida de estudos em um app.
+          </p>
+
+          <h3>Markdown + LaTeX: Cidadãos de Primeira Classe</h3>
+          <p>
+            Usuários Linux amam fluxos em texto puro. O Mayinab abraça isso com <strong>renderização Markdown completa, suporte a LaTeX, blocos de código com syntax highlighting</strong> (perfeito para estudar programação), wiki-links e #tags. Escreva no formato que você já conhece.
+          </p>
+
+          <h3>Fluxo de Trabalho por Teclado</h3>
+          <p>
+            Power users de Linux vivem pelo teclado. O Mayinab suporta:
+          </p>
+          <ul>
+            <li><strong>Paleta de comandos</strong> (Ctrl+K) — busque tudo instantaneamente</li>
+            <li><strong>Ctrl+F</strong> — busca dentro de tópicos</li>
+            <li><strong>Ctrl+Shift+E</strong> — abrir revisão de repetição espaçada</li>
+            <li><strong>Visão dividida redimensionável</strong> com divisores arrastáveis</li>
+            <li><strong>Navegação completa por teclado</strong> — 10+ atalhos</li>
+          </ul>
+
+          <h3>Sincroniza com Celular e Outros Dispositivos</h3>
+          <p>
+            Estude no desktop Linux em casa e revise no celular Android no ônibus. O Mayinab roda no <strong>Linux, Windows, macOS, Android e iOS</strong>. Backup cloud criptografado grátis mantém tudo sincronizado.
+          </p>
+
+          <h3>Importe Seus Decks do Anki</h3>
+          <p>
+            Já investiu no Anki? Exporte seus decks como CSV e importe diretamente no Mayinab. Seus cards e dados de agendamento são preservados.
+          </p>
+
+          <h2>Quem Deve Ficar com o Anki?</h2>
+          <ul>
+            <li><strong>Usuários avançados</strong> que dependem de tipos de nota complexos, cloze deletions e add-ons da comunidade</li>
+            <li>Pessoas que já têm <strong>bibliotecas gigantes</strong> com milhares de cards customizados</li>
+            <li>Quem precisa de <strong>decks compartilhados do AnkiWeb</strong></li>
+          </ul>
+          <p>
+            Para todos os outros — especialmente usuários Linux que querem um <strong>app de estudo moderno, privado e completo</strong> que instala limpo e funciona bonito — o Mayinab é a melhor escolha.
+          </p>
+
+          <h2>Mayinab vs Anki no Linux</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Recurso</th>
+                <th class="highlight-col">Mayinab</th>
+                <th>Anki</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Repetição Espaçada</strong></td>
+                <td class="highlight-col"><span class="check">SM-2 integrado</span></td>
+                <td><span class="check">SM-2 integrado</span></td>
+              </tr>
+              <tr>
+                <td><strong>Notas</strong></td>
+                <td class="highlight-col"><span class="check">7 tipos</span></td>
+                <td><span class="cross">Apenas flashcards</span></td>
+              </tr>
+              <tr>
+                <td><strong>Interface</strong></td>
+                <td class="highlight-col"><span class="check">Moderna, limpa</span></td>
+                <td><span class="cross">UI Qt datada</span></td>
+              </tr>
+              <tr>
+                <td><strong>Instalação</strong></td>
+                <td class="highlight-col"><span class="check">AppImage / Snap / Flatpak</span></td>
+                <td><span class="partial">Instalação manual ou pacote distro</span></td>
+              </tr>
+              <tr>
+                <td><strong>Configuração</strong></td>
+                <td class="highlight-col"><span class="check">Nenhuma</span></td>
+                <td><span class="cross">Tipos, campos, templates</span></td>
+              </tr>
+              <tr>
+                <td><strong>Markdown + LaTeX</strong></td>
+                <td class="highlight-col"><span class="check">Suporte completo</span></td>
+                <td><span class="partial">LaTeX apenas (imagem)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Organização</strong></td>
+                <td class="highlight-col"><span class="check">Matéria → Tópico</span></td>
+                <td><span class="partial">Apenas decks</span></td>
+              </tr>
+              <tr>
+                <td><strong>Recursos Desktop</strong></td>
+                <td class="highlight-col"><span class="check">Split-view, Ctrl+K, sidebar</span></td>
+                <td><span class="partial">Janela básica</span></td>
+              </tr>
+              <tr>
+                <td><strong>Multiplataforma</strong></td>
+                <td class="highlight-col"><span class="check">Linux/Win/Mac/Android/iOS</span></td>
+                <td><span class="partial">Via apps separados ($25 no iOS)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Privacidade</strong></td>
+                <td class="highlight-col"><span class="check">Sem telemetria, sem tracking</span></td>
+                <td><span class="check">Open-source</span></td>
+              </tr>
+              <tr>
+                <td><strong>Offline</strong></td>
+                <td class="highlight-col"><span class="check">100%</span></td>
+                <td><span class="check">100%</span></td>
+              </tr>
+              <tr>
+                <td><strong>Preço</strong></td>
+                <td class="highlight-col"><span class="check">Grátis</span></td>
+                <td><span class="check">Grátis</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="verdict-box">
+            <h3>🍵 Mayinab em Resumo</h3>
+            <ul>
+              <li>✓ <strong>Repetição espaçada</strong> com algoritmo SM-2</li>
+              <li>✓ <strong>UI moderna e bonita</strong>: funciona no GNOME, KDE, XFCE e mais</li>
+              <li>✓ <strong>Notas + flashcards</strong> no mesmo app</li>
+              <li>✓ <strong>7 tipos de nota</strong> em interface chat</li>
+              <li>✓ <strong>Markdown + LaTeX</strong></li>
+              <li>✓ <strong>AppImage, Snap & Flatpak</strong>: instale em qualquer distro</li>
+              <li>✓ <strong>100% offline</strong>, sem telemetria, sem anúncios</li>
+              <li>✓ <strong>Grátis</strong> no Linux, Windows, macOS, Android e iOS</li>
+              <li>✓ <strong>Importação CSV do Anki</strong>: traga seus decks</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+          <h2>Comece a estudar melhor no Linux 🍵</h2>
+          <p>Baixe o Mayinab grátis. AppImage, Snap ou Flatpak. Sem conta, sem anúncios, funciona offline. Também no Windows, Mac, Android e iOS.</p>
+          <a href="/#download" class="btn btn-white">⬇ Baixar Mayinab Grátis</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Related Articles -->
+  <section class="related-posts">
+    <div class="container">
+      <h2 data-en="Related Articles" data-pt="Artigos Relacionados">Related Articles</h2>
+      <div class="related-grid">
+        <a href="/blog/flashcard-app-windows.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="Best Flashcard App for Windows" data-pt="Melhor App de Flashcards para Windows">Best Flashcard App for Windows</h3>
+        </a>
+        <a href="/blog/flashcard-app-mac.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="Best Flashcard App for Mac" data-pt="Melhor App de Flashcards para Mac">Best Flashcard App for Mac</h3>
+        </a>
+        <a href="/blog/anki-alternative.html" class="related-card">
+          <span class="related-tag guide" data-en="Guide" data-pt="Guia">Guide</span>
+          <h3 data-en="Best Anki Alternative" data-pt="Melhor Alternativa ao Anki">Best Anki Alternative</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer-mini">
+    © 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a>
+  </footer>
+
+  <script src="../js/lang.js"
+    data-meta-en-title="Best Flashcard App for Linux | Spaced Repetition, Offline &amp; Free | Mayinab"
+    data-meta-en-desc="Mayinab is the best flashcard app for Linux with spaced repetition, Markdown, LaTeX, 7 note types, and a modern UI. A beautiful alternative to Anki. 100% offline, no ads, free. AppImage, Snap &amp; Flatpak."
+    data-meta-pt-title="Melhor App de Flashcards para Linux | Repetição Espaçada, Offline e Grátis | Mayinab"
+    data-meta-pt-desc="Mayinab é o melhor app de flashcards para Linux com repetição espaçada, Markdown, LaTeX, 7 tipos de nota e UI moderna. Uma alternativa bonita ao Anki. 100% offline, sem anúncios, grátis. AppImage, Snap e Flatpak."></script>
+</body>
+</html>
