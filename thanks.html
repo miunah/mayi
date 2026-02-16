@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <title>Download Started – Mayinab</title>
+  <meta name="description" content="Your Mayinab download for Windows has started. Learn how to install it safely.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="app_icon.png">
+  <link rel="stylesheet" href="css/nunito.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/thanks.css">
+</head>
+<body>
+
+  <a href="/" class="thanks-logo" aria-label="Mayinab Home">
+    <img src="app_icon.png" alt="Mayinab icon" width="40" height="40">
+    <span>Mayinab</span>
+  </a>
+
+  <div class="thanks-card">
+    <div class="thanks-icon">🌸</div>
+
+    <h1 class="thanks-title" id="title">Quase lá!</h1>
+    <p class="thanks-subtitle" id="subtitle">Agora execute o instalador que acabou de baixar.</p>
+
+    <a href="https://download.mayinab.com/Mayinab-1.0.6-Setup.exe" class="thanks-retry" id="retryLink" download>
+      O download não começou? Tente novamente.
+    </a>
+
+    <!-- Windows SmartScreen warning -->
+    <div class="warning-box">
+      <div class="warning-box-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--matcha-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="3"/>
+          <path d="M8 12h0M12 12h0M16 12h0"/>
+        </svg>
+        <strong id="warningTitle">Windows</strong>
+      </div>
+
+      <p id="warningDesc">
+        Se aparecer um aviso informando que o aplicativo que você está instalando não é verificado pela Microsoft,
+        clique em <strong>"Instalar mesmo assim"</strong> ou <strong>"Mais informações" → "Executar assim mesmo"</strong>.
+      </p>
+
+      <ol class="steps-list" id="stepsList">
+        <li>
+          <span class="step-number">1</span>
+          <span>O Windows SmartScreen pode exibir: <strong>"O Windows protegeu o computador"</strong></span>
+        </li>
+        <li>
+          <span class="step-number">2</span>
+          <span>Clique em <strong>"Mais informações"</strong></span>
+        </li>
+        <li>
+          <span class="step-number">3</span>
+          <span>Clique em <strong>"Executar assim mesmo"</strong></span>
+        </li>
+      </ol>
+
+      <p id="warningExplain">
+        Isso acontece porque o Mayinab é novo e ainda não tem uma assinatura digital reconhecida pela Microsoft.
+        O app é <strong>100% seguro</strong> e sem nenhum rastreador.
+      </p>
+
+      <div class="safe-badge" id="safeBadge">🔒 Sem rastreadores · 100% offline · Sem anúncios</div>
+    </div>
+
+    <p class="thanks-help" id="helpText">
+      Algum problema? <a href="/contact.html">Peça ajuda para sua instalação.</a>
+    </p>
+  </div>
+
+  <p class="thanks-footer">
+    <a href="https://mayinab.com">mayinab.com</a>
+  </p>
+
+  <script>
+    // Auto-start the download
+    (function () {
+      var url = 'https://download.mayinab.com/Mayinab-1.0.6-Setup.exe';
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = '';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    })();
+
+    // i18n: detect browser language
+    (function () {
+      var lang = (navigator.language || '').toLowerCase();
+      var isPt = lang.startsWith('pt');
+
+      // Default is PT; switch to EN only if not Portuguese
+      if (!isPt) {
+        document.documentElement.lang = 'en';
+        document.title = 'Download Started – Mayinab';
+
+        document.getElementById('title').textContent = 'Almost there!';
+        document.getElementById('subtitle').textContent = 'Now run the installer you just downloaded.';
+        document.getElementById('retryLink').textContent = "Download didn't start? Try again.";
+        document.getElementById('warningTitle').textContent = 'Windows';
+        document.getElementById('warningDesc').innerHTML =
+          'If you see a warning saying the app you\'re installing is not verified by Microsoft, ' +
+          'click <strong>"Install anyway"</strong> or <strong>"More info" → "Run anyway"</strong>.';
+
+        var steps = document.getElementById('stepsList');
+        steps.innerHTML =
+          '<li><span class="step-number">1</span><span>Windows SmartScreen may show: <strong>"Windows protected your PC"</strong></span></li>' +
+          '<li><span class="step-number">2</span><span>Click <strong>"More info"</strong></span></li>' +
+          '<li><span class="step-number">3</span><span>Click <strong>"Run anyway"</strong></span></li>';
+
+        document.getElementById('warningExplain').innerHTML =
+          'This happens because Mayinab is new and doesn\'t have a Microsoft-recognized digital signature yet. ' +
+          'The app is <strong>100% safe</strong> and contains no trackers.';
+
+        document.getElementById('safeBadge').innerHTML = '🔒 No trackers · 100% offline · No ads';
+        document.getElementById('helpText').innerHTML =
+          'Having trouble? <a href="/contact.html">Get help with your installation.</a>';
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* ═══════════════════════════════════════════════════════════════
+   Windows Download Thanks – Standalone page styles
+   Variables: see css/variables.css
+═══════════════════════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Logo ── */
+.thanks-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+.thanks-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.thanks-logo span {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--matcha-600);
+}
+
+/* ── Main card ── */
+.thanks-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  padding: 48px 36px 40px;
+  border: 1.5px solid var(--matcha-50);
+}
+
+.thanks-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.thanks-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--matcha-600);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.thanks-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.thanks-retry {
+  display: inline-block;
+  font-size: 0.92rem;
+  color: var(--matcha-500);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+.thanks-retry:hover {
+  color: var(--matcha-700);
+}
+
+/* ── Windows warning box ── */
+.warning-box {
+  background: var(--cream-50);
+  border: 1.5px solid var(--cream-200);
+  border-radius: var(--radius-md);
+  padding: 28px 24px 24px;
+  text-align: left;
+}
+
+.warning-box-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.warning-box-header svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.warning-box-header strong {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.warning-box p {
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.warning-box p:last-child {
+  margin-bottom: 0;
+}
+
+.warning-box strong {
+  color: var(--text-primary);
+}
+
+/* ── Steps list ── */
+.steps-list {
+  list-style: none;
+  margin: 16px 0 6px;
+  padding: 0;
+}
+
+.steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--matcha-100);
+  color: var(--matcha-700);
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.steps-list li strong {
+  color: var(--text-primary);
+}
+
+/* ── Info badge ── */
+.safe-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--matcha-50);
+  color: var(--matcha-700);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-top: 8px;
+}
+
+/* ── Help link ── */
+.thanks-help {
+  margin-top: 28px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+.thanks-help a {
+  color: var(--matcha-500);
+  font-weight: 700;
+  text-decoration: none;
+}
+.thanks-help a:hover {
+  color: var(--matcha-700);
+  text-decoration: underline;
+}
+
+/* ── Footer subtle ── */
+.thanks-footer {
+  margin-top: 24px;
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+.thanks-footer a {
+  color: var(--matcha-500);
+  text-decoration: none;
+  font-weight: 600;
+}
+.thanks-footer a:hover {
+  color: var(--matcha-700);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .thanks-card {
+    padding: 36px 20px 32px;
+  }
+  .thanks-title {
+    font-size: 1.4rem;
+  }
+  .warning-box {
+    padding: 20px 16px 18px;
+  }
+}
