@@ -899,31 +899,22 @@
               <div class="notify-form-card">
                 <div class="notify-form-header">
                   <span class="notify-bell">🔔</span>
-                  <h3 data-i18n="notify.title">Notify me when it launches!</h3>
-                  <p data-i18n="notify.subtitle">Be the first to know when Mayinab arrives on mobile.</p>
+                  <h3 data-i18n="notify.title">Get notified when iOS launches!</h3>
+                  <p data-i18n="notify.subtitle">Android is live! Be the first to know when Mayinab arrives on iOS.</p>
                 </div>
                 <form id="notifyForm" action="https://formspree.io/f/mjgeyrqp" method="POST" class="notify-form">
                   <div class="notify-input-row">
                     <input type="email" name="email" required placeholder="you@email.com" class="notify-input" aria-label="Email">
                     <button type="submit" class="btn btn-primary notify-btn" data-i18n="notify.btn">🔔 Notify Me</button>
                   </div>
-                  <div class="notify-platforms-check">
-                    <label class="notify-check">
-                      <input type="checkbox" name="platform" value="Android" checked>
-                      <span>🤖 Android</span>
-                    </label>
-                    <label class="notify-check">
-                      <input type="checkbox" name="platform" value="iOS" checked>
-                      <span>📱 iOS</span>
-                    </label>
-                  </div>
+                  <input type="hidden" name="platform" value="iOS">
                   <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
                 </form>
                 <div id="notifySuccess" class="notify-success" hidden>
                   <span class="notify-success-icon">✅</span>
                   <p data-i18n="notify.success">You're on the list! We'll email you when it's ready.</p>
                 </div>
-                <p class="notify-privacy" data-i18n="notify.privacy">We'll only use your email to notify you about the launch. No spam, ever.</p>
+                <p class="notify-privacy" data-i18n="notify.privacy">We'll only use your email to notify you about the iOS launch. No spam, ever.</p>
               </div>
             </div>
           </div>

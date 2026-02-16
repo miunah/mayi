@@ -182,11 +182,11 @@ const translations = {
     'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Coming Soon',
 
-    'notify.title': 'Notify me when it launches!',
-    'notify.subtitle': 'Be the first to know when Mayinab arrives on mobile.',
+    'notify.title': 'Get notified when iOS launches!',
+    'notify.subtitle': 'Android is live! Be the first to know when Mayinab arrives on iOS.',
     'notify.btn': '🔔 Notify Me',
     'notify.success': 'You\'re on the list! We\'ll email you when it\'s ready.',
-    'notify.privacy': 'We\'ll only use your email to notify you about the launch. No spam, ever.',
+    'notify.privacy': 'We\'ll only use your email to notify you about the iOS launch. No spam, ever.',
 
     'langs.label': 'Languages',
     'langs.title': 'Study in your language',
@@ -480,11 +480,11 @@ const translations = {
     'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Em Breve',
 
-    'notify.title': 'Me avise quando lançar!',
-    'notify.subtitle': 'Seja o primeiro a saber quando o Mayinab chegar no mobile.',
+    'notify.title': 'Saiba quando o iOS lançar!',
+    'notify.subtitle': 'Android já está disponível! Seja o primeiro a saber quando o Mayinab chegar no iOS.',
     'notify.btn': '🔔 Quero ser avisado',
     'notify.success': 'Você está na lista! Avisaremos por email quando estiver pronto.',
-    'notify.privacy': 'Usaremos seu email apenas para avisar sobre o lançamento. Sem spam, nunca.',
+    'notify.privacy': 'Usaremos seu email apenas para avisar sobre o lançamento no iOS. Sem spam, nunca.',
 
     'langs.label': 'Idiomas',
     'langs.title': 'Estude no seu idioma',
