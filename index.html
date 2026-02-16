@@ -894,13 +894,24 @@
               </div>
             </div>
 
-            <!-- Notify Me Form -->
+            <!-- Android Available + iOS Notify -->
             <div class="notify-form-wrapper reveal">
+              <!-- Android Available Card -->
+              <div class="notify-form-card" style="margin-bottom: 16px;">
+                <div class="notify-form-header">
+                  <span class="notify-bell" style="animation: none;">🤖</span>
+                  <h3 data-i18n="notify.androidTitle">Android is available!</h3>
+                  <p data-i18n="notify.androidSubtitle">Mayinab is now on the Google Play Store. Download the open beta for free.</p>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.hamasaki.mayinab" target="_blank" rel="noopener noreferrer" class="btn btn-primary notify-btn" style="display: inline-flex; text-decoration: none;" data-i18n="notify.androidBtn">▶ Get it on Google Play</a>
+              </div>
+
+              <!-- iOS Notify Card -->
               <div class="notify-form-card">
                 <div class="notify-form-header">
                   <span class="notify-bell">🔔</span>
-                  <h3 data-i18n="notify.title">Get notified when iOS launches!</h3>
-                  <p data-i18n="notify.subtitle">Android is live! Be the first to know when Mayinab arrives on iOS.</p>
+                  <h3 data-i18n="notify.title">iOS coming soon!</h3>
+                  <p data-i18n="notify.subtitle">Be the first to know when Mayinab arrives on iPhone & iPad.</p>
                 </div>
                 <form id="notifyForm" action="https://formspree.io/f/mjgeyrqp" method="POST" class="notify-form">
                   <div class="notify-input-row">
