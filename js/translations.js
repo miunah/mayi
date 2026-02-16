@@ -136,7 +136,7 @@ const translations = {
 
     'platforms.label': 'Platforms',
     'platforms.title': 'Study anywhere, on any device',
-    'platforms.subtitle': 'No account required. No ads. No data collection.',
+    'platforms.subtitle': 'No account required.',
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Available',
@@ -398,7 +398,7 @@ const translations = {
 
     'platforms.label': 'Plataformas',
     'platforms.title': 'Estude em qualquer lugar, em qualquer dispositivo',
-    'platforms.subtitle': 'Sem conta obrigatória. Sem anúncios. Sem coleta de dados.',
+    'platforms.subtitle': 'Sem conta obrigatória.',
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Disponível',
