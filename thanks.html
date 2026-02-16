@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,15 +77,10 @@
   </p>
 
   <script>
-    // Auto-start the download
+    // Auto-start the download (window.location works cross-origin, unlike <a download>)
     (function () {
       var url = 'https://download.mayinab.com/Mayinab-1.0.6-Setup.exe';
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = '';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      window.location.href = url;
     })();
 
     // i18n: detect browser language
