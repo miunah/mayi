@@ -136,14 +136,12 @@ const translations = {
 
     'platforms.label': 'Platforms',
     'platforms.title': 'Study anywhere, on any device',
-    'platforms.subtitle': 'Native performance on every platform. Desktop features like split-view and keyboard shortcuts. Mobile with touch-optimized gestures.',
+    'platforms.subtitle': 'No account required. No ads. No data collection.',
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Available',
     'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Coming Soon',
-    'platforms.cta': '⬇ Download — it\'s free',
-    'platforms.ctaSub': 'No account required. No ads. No data collection.',
 
     'notify.androidTitle': 'Android is available!',
     'notify.androidSubtitle': 'Mayinab is now on the Google Play Store. Download the open beta for free.',
@@ -400,14 +398,12 @@ const translations = {
 
     'platforms.label': 'Plataformas',
     'platforms.title': 'Estude em qualquer lugar, em qualquer dispositivo',
-    'platforms.subtitle': 'Performance nativa em toda plataforma. Desktop com split-view e atalhos de teclado. Mobile com gestos otimizados para toque.',
+    'platforms.subtitle': 'Sem conta obrigatória. Sem anúncios. Sem coleta de dados.',
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Disponível',
     'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Em Breve',
-    'platforms.cta': '⬇ Baixe grátis',
-    'platforms.ctaSub': 'Sem conta obrigatória. Sem anúncios. Sem coleta de dados.',
 
     'notify.androidTitle': 'Android já está disponível!',
     'notify.androidSubtitle': 'O Mayinab está na Google Play Store. Baixe o open beta de graça.',

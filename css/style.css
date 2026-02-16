@@ -1558,35 +1558,6 @@ a.platform-card.available:hover {
   50% { box-shadow: 0 0 0 6px rgba(107, 154, 108, 0); }
 }
 
-/* Platform CTA */
-.platforms-cta {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.platforms-cta .btn {
-  font-size: 1.05rem;
-  padding: 16px 40px;
-  background: var(--matcha-500);
-  color: #fff;
-  border: none;
-  box-shadow: 0 4px 20px rgba(107, 154, 108, 0.25);
-  font-weight: 800;
-  letter-spacing: 0.01em;
-}
-
-.platforms-cta .btn:hover {
-  transform: translateY(-2px);
-  background: var(--matcha-600);
-  box-shadow: 0 8px 32px rgba(107, 154, 108, 0.3);
-}
-
-.platforms-cta-sub {
-  color: var(--text-light);
-  font-size: 0.82rem;
-  margin-top: 10px;
-}
-
 /* ═══════════════════════════════════════════════════════════════
    FAQ SECTION
 ═══════════════════════════════════════════════════════════════ */

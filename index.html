@@ -699,13 +699,8 @@
           <div class="section-label">📱 <span data-i18n="platforms.label">Platforms</span></div>
           <h2 class="section-title" data-i18n="platforms.title">Study anywhere, on any device</h2>
           <p class="section-subtitle mx-auto" data-i18n="platforms.subtitle">
-            Native performance on every platform. Desktop features like split-view and keyboard shortcuts. Mobile with touch-optimized gestures.
+            No account required. No ads. No data collection.
           </p>
-        </div>
-
-        <div class="platforms-cta reveal">
-          <a href="#" class="btn btn-primary" id="platformCtaBtn" data-i18n="platforms.cta">⬇ Download — it's free</a>
-          <p class="platforms-cta-sub" data-i18n="platforms.ctaSub">No account required. No ads. No data collection.</p>
         </div>
 
         <!-- All platforms in a single unified grid -->
@@ -978,26 +973,6 @@
   <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
   <script src="js/translations.js" defer></script>
   <script src="js/main.js" defer></script>
-  <script>
-    // Smart CTA: detect OS and point to the right download
-    (function() {
-      var btn = document.getElementById('platformCtaBtn');
-      if (!btn) return;
-      var ua = navigator.userAgent || '';
-      if (/Android/i.test(ua)) {
-        btn.href = 'https://play.google.com/store/apps/details?id=com.hamasaki.mayinab';
-        btn.target = '_blank';
-        btn.rel = 'noopener noreferrer';
-      } else if (/Linux/i.test(ua) && !/Android/i.test(ua)) {
-        btn.href = 'https://download.mayinab.com/Mayinab-x86_64.AppImage';
-        btn.download = '';
-      } else if (/Win/i.test(ua)) {
-        btn.href = '/thanks.html';
-      } else {
-        // Default: scroll to the platform cards
-        btn.href = '#download';
-      }
-    })();
-  </script>
+
 </body>
 </html>
