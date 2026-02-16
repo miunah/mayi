@@ -179,6 +179,7 @@ const translations = {
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Available',
+    'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Coming Soon',
 
     'notify.title': 'Notify me when it launches!',
@@ -476,6 +477,7 @@ const translations = {
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
     'platforms.available': 'Disponível',
+    'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Em Breve',
 
     'notify.title': 'Me avise quando lançar!',
