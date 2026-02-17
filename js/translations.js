@@ -23,7 +23,7 @@ const translations = {
 
     'features.label': 'Features',
     'features.title': 'Everything you need to study smarter',
-    'features.subtitle': 'Seven types of notes, spaced repetition, file upload, drawing pad, resizable panels, slash commands, and much more. All in a chat interface that feels natural.',
+    'features.subtitle': 'A chat interface that turns studying into something natural. Here\'s what\'s inside.',
     'features.chat.title': 'Chat-Based Notes',
     'features.chat.desc': 'Take notes like you\'re texting. Text, flashcards, images, audio, video, files, and checklists, all in one timeline. Pin, reply, edit, reorder by drag, multi-select, and filter by type.',
     'features.srs.title': 'Spaced Repetition (SRS)',
@@ -34,8 +34,7 @@ const translations = {
     'features.org.desc': 'Subjects → Topics with unlimited nesting depth. Folders on the home screen. Sidebar topic tree on desktop. Breadcrumbs on mobile. Command palette (Ctrl+K) for instant navigation.',
     'features.security.title': 'Private & Encrypted',
     'features.security.desc': '100% offline by default. Your data never leaves your device. Optional cloud backup uses AES-256-GCM encryption with zero-knowledge design.',
-    'features.tools.title': 'Rich Media & Tools',
-    'features.tools.desc': 'File upload with drag & drop, clipboard paste, audio recorder, video player, YouTube embed, scribble pad, image editor, link previews, syntax highlighting, Anki CSV import, and Pomodoro timer.',
+
     'features.files.title': 'File Upload & Drag-Drop',
     'features.files.desc': 'Attach any file from your device, drag & drop from your OS file manager, or paste images from clipboard. Auto compression and content-addressable storage for zero duplicates.',
     'features.scribble.title': 'Scribble & Image Editor',
@@ -131,9 +130,6 @@ const translations = {
     'comp.table.val.free': 'Free',
     'comp.table.val.notionPrice': '$10/mo',
 
-    'noads.title': 'Zero ads. Not now. Not ever.',
-    'noads.desc': 'Study apps should help you focus, not distract you. Mayinab will never show ads, sell your data, or interrupt your learning. That\'s a promise.',
-
     'platforms.label': 'Platforms',
     'platforms.title': 'Study anywhere, on any device',
     'platforms.subtitle': 'No account required.',
@@ -153,6 +149,7 @@ const translations = {
     'notify.privacy': 'We\'ll only use your email to notify you about the iOS launch. No spam, ever.',
 
     'langs.label': 'Languages',
+    'langs.available': 'Available',
     'langs.title': 'Study in your language',
     'langs.subtitle': 'Mayinab\'s interface is fully translated. More languages coming soon.',
 
@@ -285,7 +282,7 @@ const translations = {
 
     'features.label': 'Recursos',
     'features.title': 'Tudo que você precisa para estudar melhor',
-    'features.subtitle': 'Sete tipos de notas, repetição espaçada, upload de arquivos, pad de desenho, painéis redimensionáveis, slash commands e muito mais. Tudo em uma interface de chat natural.',
+    'features.subtitle': 'Uma interface de chat que torna o estudo algo natural. Veja o que tem dentro.',
     'features.chat.title': 'Notas Estilo Chat',
     'features.chat.desc': 'Anote como se estivesse conversando. Texto, flashcards, imagens, áudio, vídeo, arquivos e checklists, tudo em uma timeline. Fixe, responda, edite, reordene arrastando, multi-selecione e filtre por tipo.',
     'features.srs.title': 'Repetição Espaçada (SRS)',
@@ -296,8 +293,7 @@ const translations = {
     'features.org.desc': 'Matérias → Tópicos com profundidade ilimitada. Pastas na tela inicial. Sidebar com árvore de tópicos no desktop. Breadcrumbs no mobile. Command palette (Ctrl+K) para navegação instantânea.',
     'features.security.title': 'Privado & Criptografado',
     'features.security.desc': '100% offline por padrão. Seus dados nunca saem do dispositivo. Backup na nuvem opcional usa criptografia AES-256-GCM com design zero-knowledge.',
-    'features.tools.title': 'Mídia Rica & Ferramentas',
-    'features.tools.desc': 'Upload de arquivos com drag & drop, colagem da área de transferência, gravador de áudio, player de vídeo, YouTube embutido, scribble pad, editor de imagem, previews de link, syntax highlighting, import CSV do Anki e timer Pomodoro.',
+
     'features.files.title': 'Upload de Arquivos & Drag-Drop',
     'features.files.desc': 'Anexe qualquer arquivo do seu dispositivo, arraste e solte do gerenciador de arquivos, ou cole imagens da área de transferência. Compressão automática e armazenamento por hash para zero duplicatas.',
     'features.scribble.title': 'Scribble & Editor de Imagem',
@@ -393,9 +389,6 @@ const translations = {
     'comp.table.val.free': 'Grátis',
     'comp.table.val.notionPrice': '$10/mês',
 
-    'noads.title': 'Zero anúncios. Nem agora. Nem nunca.',
-    'noads.desc': 'Apps de estudo devem ajudar você a focar, não distrair. O Mayinab nunca vai mostrar anúncios, vender seus dados ou interromper seu estudo. Isso é uma promessa.',
-
     'platforms.label': 'Plataformas',
     'platforms.title': 'Estude em qualquer lugar, em qualquer dispositivo',
     'platforms.subtitle': 'Sem conta obrigatória.',
@@ -415,6 +408,7 @@ const translations = {
     'notify.privacy': 'Usaremos seu email apenas para avisar sobre o lançamento no iOS. Sem spam, nunca.',
 
     'langs.label': 'Idiomas',
+    'langs.available': 'Disponível',
     'langs.title': 'Estude no seu idioma',
     'langs.subtitle': 'A interface do Mayinab é totalmente traduzida. Mais idiomas em breve.',
 
