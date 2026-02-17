@@ -139,7 +139,7 @@ const translations = {
     'platforms.subtitle': 'No account required.',
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
-    'platforms.available': 'Available',
+    'platforms.available': 'AppImage',
     'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Coming Soon',
 
@@ -401,7 +401,7 @@ const translations = {
     'platforms.subtitle': 'Sem conta obrigatória.',
     'platforms.desktop': 'Desktop',
     'platforms.mobile': 'Mobile',
-    'platforms.available': 'Disponível',
+    'platforms.available': 'AppImage',
     'platforms.openBeta': 'Open Beta',
     'platforms.coming': 'Em Breve',
 
