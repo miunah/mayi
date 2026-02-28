@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'">
-  <title>Changelog – Mayinab</title>
+  <title>Changelog – Benkyo</title>
   <meta name="description" content="Changelog do Mayinab. Veja todas as novidades, melhorias e correções em cada versão do app.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="app_icon.png">
@@ -44,9 +44,55 @@
 
         <div class="version-entry">
           <div class="version-header">
+            <span class="version-tag">v1.0.12</span>
+            <span class="version-date">27 de fevereiro de 2026</span>
+            <span class="version-badge badge-new">Novo</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Sistema de lixeira com exclusão reversível (soft delete) e limpeza automática após 30 dias</li>
+            <li>Tela de lixeira com restauração e exclusão permanente de notas</li>
+            <li>Gestos de swipe nos itens da lista de notas (excluir, fixar)</li>
+            <li>Entrada "Lixeira" no drawer lateral</li>
+            <li>Serviço de limpeza automática da lixeira (<code>TrashCleanupService</code>)</li>
+            <li>Testes unitários e de widget para lixeira</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Correções na renderização de Markdown</li>
+            <li>Exibição de flashcards fixados e detecção de <code>isPinned</code></li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Tema e cores do app refinados</li>
+            <li>Snackbar redesenhado com melhor feedback visual</li>
+            <li>Ações de notas atualizadas para suportar lixeira</li>
+            <li>Novas strings de localização (EN/PT) para lixeira e ações de notas</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.9</span>
+            <span class="version-date">20 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Prompt de avaliação in-app após sessão de estudo (Android/iOS)
+              <ul><li>Regras anti-spam: mínimo 3 sessões, ≥70% de acerto, intervalo de 30 dias, limite de 3 prompts</li></ul>
+            </li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Exibição de flashcards fixados: overflow corrigido com <code>ClipRect</code></li>
+            <li>Detecção de <code>isPinned</code> na comparação de igualdade dos providers</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
             <span class="version-tag">v1.0.8</span>
             <span class="version-date">19 de fevereiro de 2026</span>
-            <span class="version-badge badge-new">Novo</span>
           </div>
           <p class="change-category">✅ Adicionado</p>
           <ul>
@@ -226,9 +272,55 @@
 
         <div class="version-entry">
           <div class="version-header">
+            <span class="version-tag">v1.0.12</span>
+            <span class="version-date">February 27, 2026</span>
+            <span class="version-badge badge-new">New</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Trash system with reversible deletion (soft delete) and automatic cleanup after 30 days</li>
+            <li>Trash screen with note restoration and permanent deletion</li>
+            <li>Swipe gestures on note list items (delete, pin)</li>
+            <li>"Trash" entry in the side drawer</li>
+            <li>Automatic trash cleanup service (<code>TrashCleanupService</code>)</li>
+            <li>Unit and widget tests for trash</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Markdown rendering fixes</li>
+            <li>Pinned flashcards display and <code>isPinned</code> detection</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>App theme and colors refined</li>
+            <li>Snackbar redesigned with better visual feedback</li>
+            <li>Note actions updated to support trash</li>
+            <li>New localization strings (EN/PT) for trash and note actions</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.9</span>
+            <span class="version-date">February 20, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>In-app review prompt after study session (Android/iOS)
+              <ul><li>Anti-spam rules: minimum 3 sessions, ≥70% accuracy, 30-day interval, limit of 3 prompts</li></ul>
+            </li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Pinned flashcards display: overflow fixed with <code>ClipRect</code></li>
+            <li><code>isPinned</code> detection in provider equality comparison</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
             <span class="version-tag">v1.0.8</span>
             <span class="version-date">February 19, 2026</span>
-            <span class="version-badge badge-new">New</span>
           </div>
           <p class="change-category">✅ Added</p>
           <ul>
