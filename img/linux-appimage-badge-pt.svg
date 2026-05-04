@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="52" viewBox="0 0 180 52">
+  <rect x="0.5" y="0.5" width="179" height="51" rx="5" fill="#111" stroke="#333" stroke-width="0.8"/>
+  <!-- Simple Tux penguin -->
+  <g transform="translate(12, 5)">
+    <!-- Body -->
+    <ellipse cx="20" cy="26" rx="13" ry="16" fill="#2b2b2b"/>
+    <!-- Belly -->
+    <ellipse cx="20" cy="28" rx="8.5" ry="11" fill="#e8e8e8"/>
+    <!-- Head -->
+    <circle cx="20" cy="12" r="9" fill="#2b2b2b"/>
+    <!-- Eyes -->
+    <ellipse cx="17" cy="11" rx="2.8" ry="3.2" fill="#fff"/>
+    <ellipse cx="23" cy="11" rx="2.8" ry="3.2" fill="#fff"/>
+    <circle cx="17.5" cy="11.5" r="1.5" fill="#111"/>
+    <circle cx="23.5" cy="11.5" r="1.5" fill="#111"/>
+    <!-- Beak -->
+    <path d="M16.5 14.5 L20 17.5 L23.5 14.5Z" fill="#e8a317"/>
+    <!-- Feet -->
+    <path d="M13 40 L9 42 L17 42Z" fill="#e8a317"/>
+    <path d="M27 40 L23 42 L31 42Z" fill="#e8a317"/>
+    <!-- Flippers -->
+    <path d="M7 22 Q4 28 8 35" stroke="#2b2b2b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M33 22 Q36 28 32 35" stroke="#2b2b2b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- "Baixar para" small text -->
+  <text x="52" y="21" fill="#999" font-family="-apple-system,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="10.5" font-weight="400">Baixar para</text>
+  <!-- "Linux" large text -->
+  <text x="52" y="38" fill="#fff" font-family="-apple-system,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="0.3">Linux</text>
+  <!-- AppImage pill -->
+  <rect x="106" y="25.5" width="62" height="16" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="137" y="36.5" fill="#aaa" font-family="-apple-system,'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" text-anchor="middle" letter-spacing="0.5">AppImage</text>
+</svg>

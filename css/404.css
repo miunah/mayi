@@ -1,0 +1,97 @@
+/* ═══════════════════════════════════════════════════════════════
+   404 – Standalone page styles
+   Variables: see css/variables.css
+═══════════════════════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px;
+}
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  padding: 48px 32px;
+  border: 1.5px solid var(--matcha-50);
+}
+.emoji { font-size: 4rem; margin-bottom: 16px; }
+h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  background: linear-gradient(135deg, #7aa87b, var(--matcha-500));
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(107,154,108,.35);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(107,154,108,.45);
+  color: #fff;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.brand img { width: 24px; height: 24px; border-radius: 6px; }
+
+/* ── Extra Links ──────────────────────────────────────────── */
+.extra-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.extra-links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--matcha-500);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.extra-links a:hover {
+  color: var(--matcha-700);
+  text-decoration: underline;
+}
+
+/* ── Language Toggle ──────────────────────────────────────── */
+[data-lang] { display: none; }
+[data-lang].active { display: block; }

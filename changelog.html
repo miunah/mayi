@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <title>Changelog – Benkyo</title>
+  <meta name="description" content="Changelog do Mayinab. Veja todas as novidades, melhorias e correções em cada versão do app.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="app_icon.png">
+  <link rel="canonical" href="https://mayinab.com/changelog.html">
+  <link rel="stylesheet" href="css/nunito.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="top-bar" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
+      </a>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn" aria-label="English">EN</button>
+          <button class="lang-btn active" aria-label="Português">PT</button>
+        </div>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
+  <div data-lang="pt" class="active">
+    <div class="page-hero">
+      <div class="container">
+        <h1>📋 Changelog</h1>
+        <p class="subtitle">Todas as novidades, melhorias e correções do Mayinab</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-content">
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.12</span>
+            <span class="version-date">27 de fevereiro de 2026</span>
+            <span class="version-badge badge-new">Novo</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Sistema de lixeira com exclusão reversível (soft delete) e limpeza automática após 30 dias</li>
+            <li>Tela de lixeira com restauração e exclusão permanente de notas</li>
+            <li>Gestos de swipe nos itens da lista de notas (excluir, fixar)</li>
+            <li>Entrada "Lixeira" no drawer lateral</li>
+            <li>Serviço de limpeza automática da lixeira (<code>TrashCleanupService</code>)</li>
+            <li>Testes unitários e de widget para lixeira</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Correções na renderização de Markdown</li>
+            <li>Exibição de flashcards fixados e detecção de <code>isPinned</code></li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Tema e cores do app refinados</li>
+            <li>Snackbar redesenhado com melhor feedback visual</li>
+            <li>Ações de notas atualizadas para suportar lixeira</li>
+            <li>Novas strings de localização (EN/PT) para lixeira e ações de notas</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.9</span>
+            <span class="version-date">20 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Prompt de avaliação in-app após sessão de estudo (Android/iOS)
+              <ul><li>Regras anti-spam: mínimo 3 sessões, ≥70% de acerto, intervalo de 30 dias, limite de 3 prompts</li></ul>
+            </li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Exibição de flashcards fixados: overflow corrigido com <code>ClipRect</code></li>
+            <li>Detecção de <code>isPinned</code> na comparação de igualdade dos providers</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.8</span>
+            <span class="version-date">19 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Escaneamento de documentos com extração de texto via OCR</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Modo flashcard travado ao cancelar flashcard de vídeo</li>
+            <li>Falhas na certificação da Microsoft Store resolvidas</li>
+            <li>Pipeline de CI: <code>flutter clean</code> adicionado antes do rebuild da MS Store para evitar cache de dart-defines</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Remoção do serviço Turnstile (não utilizado em produção)</li>
+            <li>Limpeza e simplificação do <code>StorageService</code></li>
+            <li>Melhorias nas ações de notas (<code>NoteActionsMixin</code>)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.7</span>
+            <span class="version-date">17 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Escaneamento de documentos com extração de texto via OCR integrado ao chat</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.6</span>
+            <span class="version-date">15 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Precificação multi-moeda: BRL para <code>pt_BR</code>, USD para demais regiões</li>
+            <li>IDs de preço Stripe em USD adicionados</li>
+            <li>Exportação/importação de campos SRS (<code>nextReviewDate</code>, <code>interval</code>, <code>easeFactor</code>, <code>repetitions</code>)</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Página de resultado do checkout simplificada</li>
+            <li>Exportação de <code>createdAt</code> corrigida para usar UTC</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.5</span>
+            <span class="version-date">13 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Integração com Stripe para assinaturas no Windows e Linux (cross-platform)</li>
+            <li>Gerenciamento completo de assinaturas: cancelar, upgrade, downgrade e portal de billing</li>
+            <li>Sincronização de assinatura em tempo real</li>
+            <li>Build MSIX para submissão na Microsoft Store</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Autenticação mais segura no fluxo de checkout (JWT)</li>
+            <li>Webhook de pagamento com suporte a upgrade/downgrade e status <code>past_due</code></li>
+            <li>Traduções atualizadas (EN/PT) com todas as strings de gerenciamento de assinatura</li>
+            <li>Login/criar conta permitido sem plano ativo nas configurações de sincronização</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.4</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Links de política de privacidade e termos de uso nas configurações</li>
+            <li>Consentimento de termos na tela de cadastro</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.3</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>URL dos termos de serviço atualizada</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.2</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Snackbar com auto-dismiss e ícone de fechar no desktop</li>
+            <li>Vinculação automática da conta ao fazer login/logout do vault</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Instalador Windows (Inno Setup) corrigido no pipeline de CI</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.1</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Exibição dinâmica da versão real do app nas configurações</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Permissão desnecessária removida no Android (<code>SCHEDULE_EXACT_ALARM</code>)</li>
+            <li>Link de privacidade atualizado</li>
+            <li>Conflito de animação em botões flutuantes resolvido</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Compatibilidade com Flutter/Dart mais recentes no CI</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.0</span>
+            <span class="version-date">12 de fevereiro de 2026</span>
+            <span class="version-badge badge-new">Lançamento</span>
+          </div>
+          <p class="change-category">🎉 Lançamento Inicial</p>
+          <ul>
+            <li>7 tipos de nota: texto, flashcard, imagem, vídeo, áudio, arquivo e checklist</li>
+            <li>Interface de chat para anotações rápidas e naturais</li>
+            <li>Repetição espaçada (SRS) com algoritmo SM-2</li>
+            <li>Markdown completo + LaTeX + syntax highlighting</li>
+            <li>Wiki-links [[assim]] e #tags com autocomplete</li>
+            <li>Slash commands para criação rápida</li>
+            <li>Busca full-text com SQLite FTS5</li>
+            <li>Split-view redimensionável no desktop</li>
+            <li>Sidebar com árvore de tópicos estilo Discord</li>
+            <li>Command palette (Ctrl+K)</li>
+            <li>Upload de arquivos com drag & drop</li>
+            <li>Gravador de áudio e player de vídeo integrados</li>
+            <li>YouTube embutido com timestamps</li>
+            <li>Pad de desenho e editor de imagem</li>
+            <li>Import CSV/TSV compatível com Anki</li>
+            <li>Timer Pomodoro integrado</li>
+            <li>Temas Claro, Escuro e Sistema</li>
+            <li>Cores, emojis e banners personalizáveis por matéria</li>
+            <li>Backup local (.zip) e export/import de matérias (.mayinab)</li>
+            <li>Vault: backup na nuvem com criptografia AES-256-GCM</li>
+            <li>100% offline, sem anúncios, sem rastreamento</li>
+            <li>Disponível para Android, iOS, Linux, macOS e Windows</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div data-lang="en">
+    <div class="page-hero">
+      <div class="container">
+        <h1>📋 Changelog</h1>
+        <p class="subtitle">All the news, improvements and fixes in Mayinab</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-content">
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.12</span>
+            <span class="version-date">February 27, 2026</span>
+            <span class="version-badge badge-new">New</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Trash system with reversible deletion (soft delete) and automatic cleanup after 30 days</li>
+            <li>Trash screen with note restoration and permanent deletion</li>
+            <li>Swipe gestures on note list items (delete, pin)</li>
+            <li>"Trash" entry in the side drawer</li>
+            <li>Automatic trash cleanup service (<code>TrashCleanupService</code>)</li>
+            <li>Unit and widget tests for trash</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Markdown rendering fixes</li>
+            <li>Pinned flashcards display and <code>isPinned</code> detection</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>App theme and colors refined</li>
+            <li>Snackbar redesigned with better visual feedback</li>
+            <li>Note actions updated to support trash</li>
+            <li>New localization strings (EN/PT) for trash and note actions</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.9</span>
+            <span class="version-date">February 20, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>In-app review prompt after study session (Android/iOS)
+              <ul><li>Anti-spam rules: minimum 3 sessions, ≥70% accuracy, 30-day interval, limit of 3 prompts</li></ul>
+            </li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Pinned flashcards display: overflow fixed with <code>ClipRect</code></li>
+            <li><code>isPinned</code> detection in provider equality comparison</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.8</span>
+            <span class="version-date">February 19, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Document scanning with text extraction via OCR</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Flashcard mode stuck when canceling video flashcard</li>
+            <li>Microsoft Store certification failures resolved</li>
+            <li>CI pipeline: <code>flutter clean</code> added before MS Store rebuild to avoid dart-defines cache</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>Removed Turnstile service (not used in production)</li>
+            <li>Cleanup and simplification of <code>StorageService</code></li>
+            <li>Improvements to note actions (<code>NoteActionsMixin</code>)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.7</span>
+            <span class="version-date">February 17, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Document scanning with text extraction via OCR integrated into chat</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.6</span>
+            <span class="version-date">February 15, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Multi-currency pricing: BRL for <code>pt_BR</code>, USD for other regions</li>
+            <li>Stripe price IDs in USD added</li>
+            <li>SRS field export/import (<code>nextReviewDate</code>, <code>interval</code>, <code>easeFactor</code>, <code>repetitions</code>)</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>Checkout result page simplified</li>
+            <li><code>createdAt</code> export fixed to use UTC</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.5</span>
+            <span class="version-date">February 13, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Stripe integration for subscriptions on Windows and Linux (cross-platform)</li>
+            <li>Full subscription management: cancel, upgrade, downgrade and billing portal</li>
+            <li>Real-time subscription sync</li>
+            <li>MSIX build for Microsoft Store submission</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>More secure authentication in checkout flow (JWT)</li>
+            <li>Payment webhook with upgrade/downgrade and <code>past_due</code> status support</li>
+            <li>Updated translations (EN/PT) with all subscription management strings</li>
+            <li>Login/create account allowed without active plan in sync settings</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.4</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Privacy policy and terms of use links in settings</li>
+            <li>Terms consent on sign-up screen</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.3</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Terms of service URL updated</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.2</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Snackbar with auto-dismiss and close icon on desktop</li>
+            <li>Automatic account linking on vault login/logout</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Windows installer (Inno Setup) fixed in CI pipeline</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.1</span>
+            <span class="version-date">February 12, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Dynamic display of real app version in settings</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Unnecessary Android permission removed (<code>SCHEDULE_EXACT_ALARM</code>)</li>
+            <li>Privacy link updated</li>
+            <li>Floating action button animation conflict resolved</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>Compatibility with latest Flutter/Dart in CI</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.0</span>
+            <span class="version-date">February 12, 2026</span>
+            <span class="version-badge badge-new">Launch</span>
+          </div>
+          <p class="change-category">🎉 Initial Release</p>
+          <ul>
+            <li>7 note types: text, flashcard, image, video, audio, file and checklist</li>
+            <li>Chat-style interface for quick, natural note-taking</li>
+            <li>Spaced repetition (SRS) with SM-2 algorithm</li>
+            <li>Full Markdown + LaTeX + syntax highlighting</li>
+            <li>Wiki-links [[like this]] and #tags with autocomplete</li>
+            <li>Slash commands for quick creation</li>
+            <li>Full-text search with SQLite FTS5</li>
+            <li>Resizable split-view on desktop</li>
+            <li>Discord-style topic tree sidebar</li>
+            <li>Command palette (Ctrl+K)</li>
+            <li>File upload with drag & drop</li>
+            <li>Built-in audio recorder and video player</li>
+            <li>Embedded YouTube with timestamps</li>
+            <li>Drawing pad and image editor</li>
+            <li>CSV/TSV import compatible with Anki</li>
+            <li>Built-in Pomodoro timer</li>
+            <li>Light, Dark and System themes</li>
+            <li>Custom colors, emojis and banners per subject</li>
+            <li>Local backup (.zip) and subject export/import (.mayinab)</li>
+            <li>Vault: cloud backup with AES-256-GCM encryption</li>
+            <li>100% offline, no ads, no tracking</li>
+            <li>Available for Android, iOS, Linux, macOS and Windows</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-mini">
+    <p>© 2026 Mayinab · <a href="/" id="footerHome" data-en="Back to site" data-pt="Voltar ao site">Back to site</a></p>
+  </div>
+
+  <script src="js/lang.js"></script>
+</body>
+</html>
