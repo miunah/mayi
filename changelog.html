@@ -44,9 +44,128 @@
 
         <div class="version-entry">
           <div class="version-header">
+            <span class="version-tag">v1.0.26</span>
+            <span class="version-date">18 de novembro de 2026</span>
+            <span class="version-badge badge-new">Novo</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Pareamento por QR Code para sincronização na rede local (LAN sync)</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Configurações de build mobile atualizadas</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.25</span>
+            <span class="version-date">18 de novembro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Serviço de sincronização na rede local (LAN sync) para sincronização P2P bidirecional entre dispositivos</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.24</span>
+            <span class="version-date">18 de novembro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Desbloqueio gradual de flashcards conforme os tópicos são visitados</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Remoção das permissões amplas <code>READ_MEDIA</code> no Android injetadas pelo pacote <code>open_filex</code></li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Estado de repetição espaçada (SRS) resetado automaticamente ao importar uma matéria</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.23</span>
+            <span class="version-date">18 de novembro de 2026</span>
+          </div>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Restauração de snapshot agora sobrescreve corretamente o banco de dados e as mídias existentes</li>
+            <li>Extração e execução habilitadas na criação do AppImage no Linux (<code>appimagetool</code>)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.21</span>
+            <span class="version-date">18 de novembro de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Migração do algoritmo de repetição espaçada (SRS) de SM-2 para <strong>FSRS-5</strong></li>
+            <li>Pastas aninhadas (nested folders) para organização de matérias e tópicos</li>
+            <li>Novo motor de desenho (Scribble engine) e visualizadores de mídia em tela cheia</li>
+            <li>Sincronização de armazenamento</li>
+            <li>Recursos de orientação de tela e nova activity dedicada para escaneamento de documentos no Android</li>
+          </ul>
+          <p class="change-category">⬆️ Melhorado</p>
+          <ul>
+            <li>Flashcards de vídeo, flashcards inline/cloze e checklists aprimorados</li>
+            <li>Importação de flashcards via CSV mais robusta</li>
+            <li>Polimento geral de UX nas telas de chat, estudo, explorar e busca</li>
+            <li>Alvo de build Android atualizado para <code>compileSdk</code> e <code>targetSdk</code> 36, com alinhamento de bibliotecas nativas</li>
+            <li>Atualização de dependências e compatibilidade com Flutter 3.47.9</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Correções de bugs gerais no app, armazenamento, backup e tela inicial</li>
+            <li>Suporte aprimorado a Unicode no CMake e correção de conflitos de assets nativos (<code>jni</code> no Windows e <code>sqlite3</code> duplicado)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.20</span>
+            <span class="version-date">29 de abril de 2026</span>
+          </div>
+          <p class="change-category">✅ Adicionado</p>
+          <ul>
+            <li>Modo gratuito com novas strings de localização (i18n) para acesso livre</li>
+            <li>4 pacotes de conteúdo AWS SAA-C03 no Explorar (187 notas e 142 flashcards)</li>
+          </ul>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Badge de "importado" na aba Explorar derivado corretamente do stream do Drift e removido após exclusão da matéria</li>
+            <li>Fundo de conteúdo agora é removido corretamente ao salvar</li>
+            <li>Erro de chave estrangeira em <code>imported_content_packs</code> ao excluir matéria</li>
+            <li>Conflito de slug único durante importação de conteúdo</li>
+            <li>Segurança em migrações do banco de dados e ajustes de UX</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.14</span>
+            <span class="version-date">3 de março de 2026</span>
+          </div>
+          <p class="change-category">🐛 Corrigido</p>
+          <ul>
+            <li>Compatibilidade com páginas de memória de 16 KB exigida pelo Google Play</li>
+            <li>Suporte à arquitetura <code>armeabi-v7a</code> restaurado no Android</li>
+            <li>Remoção dos dados de demonstração do onboarding antes da restauração de backup para evitar duplicatas</li>
+            <li>Erro 403 nas atualizações do Google Drive corrigido (remoção do campo <code>parents</code> nas requisições)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
             <span class="version-tag">v1.0.12</span>
             <span class="version-date">27 de fevereiro de 2026</span>
-            <span class="version-badge badge-new">Novo</span>
           </div>
           <p class="change-category">✅ Adicionado</p>
           <ul>
@@ -272,9 +391,128 @@
 
         <div class="version-entry">
           <div class="version-header">
+            <span class="version-tag">v1.0.26</span>
+            <span class="version-date">November 18, 2026</span>
+            <span class="version-badge badge-new">New</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>QR code pairing for LAN sync</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>Updated mobile build configuration</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.25</span>
+            <span class="version-date">November 18, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>LAN sync service for bidirectional peer-to-peer (P2P) synchronization across devices</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.24</span>
+            <span class="version-date">November 18, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Progressive flashcard unlocking as topics are visited</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Removed broad Android <code>READ_MEDIA</code> permissions injected by <code>open_filex</code></li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>Reset SRS state automatically when importing a subject</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.23</span>
+            <span class="version-date">November 18, 2026</span>
+          </div>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Snapshot restore now properly overwrites existing database and media files</li>
+            <li>Enabled extraction and execution during Linux AppImage creation (<code>appimagetool</code>)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.21</span>
+            <span class="version-date">November 18, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Migrated spaced repetition (SRS) algorithm from SM-2 to <strong>FSRS-5</strong></li>
+            <li>Nested folders for organizing subjects and topics</li>
+            <li>New scribble engine and fullscreen media viewers</li>
+            <li>Storage synchronization</li>
+            <li>Screen orientation features and dedicated Android activity for document scanning</li>
+          </ul>
+          <p class="change-category">⬆️ Improved</p>
+          <ul>
+            <li>Enhanced video flashcards, inline/cloze flashcards, and checklists</li>
+            <li>Hardened CSV flashcard import</li>
+            <li>App-wide UX polish across chat, study, explore, and search</li>
+            <li>Updated Android <code>compileSdk</code> and <code>targetSdk</code> to 36 with native library alignment</li>
+            <li>Upgraded dependencies and compatibility with Flutter 3.47.9</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>App-wide bug fixes across storage, backup, and home screen</li>
+            <li>Enhanced Unicode support in CMake and resolved native asset issues (<code>jni</code> Windows CMake bug and duplicate <code>sqlite3</code> assets)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.20</span>
+            <span class="version-date">April 29, 2026</span>
+          </div>
+          <p class="change-category">✅ Added</p>
+          <ul>
+            <li>Free mode with new localization strings (i18n) for free access</li>
+            <li>4 AWS SAA-C03 content packs in Explore (187 notes and 142 flashcards)</li>
+          </ul>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>Explore imported badge now derived from Drift stream and cleared after subject deletion</li>
+            <li>Content background is now properly removed on save</li>
+            <li>Foreign key constraint error on <code>imported_content_packs</code> when deleting a subject</li>
+            <li>Unique slug conflict during content import</li>
+            <li>Database migration safety and UX fixes</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
+            <span class="version-tag">v1.0.14</span>
+            <span class="version-date">March 3, 2026</span>
+          </div>
+          <p class="change-category">🐛 Fixed</p>
+          <ul>
+            <li>16 KB memory page size compatibility required by Google Play</li>
+            <li>Restored <code>armeabi-v7a</code> architecture support on Android</li>
+            <li>Removed onboarding demo data before backup restore to prevent duplicates</li>
+            <li>Fixed 403 error on Google Drive update requests (removed <code>parents</code> field)</li>
+          </ul>
+        </div>
+
+        <div class="version-entry">
+          <div class="version-header">
             <span class="version-tag">v1.0.12</span>
             <span class="version-date">February 27, 2026</span>
-            <span class="version-badge badge-new">New</span>
           </div>
           <p class="change-category">✅ Added</p>
           <ul>
