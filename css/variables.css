@@ -93,3 +93,79 @@
   letter-spacing: 0;
   font-weight: 600;
 }
+
+/* ── Lucide SVG Icons ────────────────────────────────────────── */
+.lucide {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.bento-icon .lucide,
+.usp-card .icon .lucide,
+.contact-icon .lucide,
+.capability-group-icon .lucide,
+.download-platform-icon .lucide,
+.blog-card-img .lucide {
+  vertical-align: middle;
+}
+
+.blog-card-img .lucide {
+  width: 52px;
+  height: 52px;
+  stroke-width: 1.75;
+}
+
+.bento-icon.green,
+.usp-card .icon.green,
+.contact-icon.green,
+.capability-group-icon,
+.persona-emoji,
+.download-platform-icon,
+.blog-card-img,
+.emoji,
+.thanks-icon,
+.card > .icon {
+  color: var(--matcha-600);
+}
+
+.bento-icon.cobalt,
+.usp-card .icon.sky {
+  color: var(--cobalt-500);
+}
+
+.bento-icon.peach,
+.usp-card .icon.peach,
+.contact-icon.peach {
+  color: #c25e00;
+}
+
+.bento-icon.pink,
+.usp-card .icon.pink {
+  color: #be185d;
+}
+
+.bento-icon.lavender,
+.usp-card .icon.lavender,
+.contact-icon.lavender {
+  color: #6d28d9;
+}
+
+.bento-icon.amber,
+.usp-card .icon.cream,
+.contact-icon.cream {
+  color: var(--amber-700);
+}
+
+.blog-card-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
