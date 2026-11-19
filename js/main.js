@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════
-// MAYINAB — Interactive Landing Engine
+// MAYINAB · Interactive Landing Engine
 // Strict CSP safe · Zero inline scripts
 // ═══════════════════════════════════════════════════════════════
 
@@ -30,6 +30,31 @@
   function t(key) {
     return (translations[currentLang] && translations[currentLang][key]) ||
            (translations.en && translations.en[key]) || '';
+  }
+
+  const KAOMOJI_RE = /(\(ﾉ◕ヮ◕\)ﾉ\*:･ﾟ✧|\(ﾉ´ヮ`\)ﾉ\*:･ﾟ✧|ヽ\(>∀<☆\)ノ|ヽ\(◕‿◕\)ノ|o\(≧▽≦\)o|\(\^_~\)✧|\(・ω・\)ﾉ|\(´∀｀\)♡|\(´∀｀\*\)|\(☆▽☆\)|\(☆ω☆\)|\(´･ω･`\)|\(≧◡≦\)|\(｡･ω･｡\)|\(・ω・\))/g;
+
+  function setTextWithKaomoji(el, text) {
+    if (!el) return;
+    if (!KAOMOJI_RE.test(text)) {
+      el.textContent = text;
+      return;
+    }
+    KAOMOJI_RE.lastIndex = 0;
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    let m;
+    while ((m = KAOMOJI_RE.exec(text)) !== null) {
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      const span = document.createElement('span');
+      span.className = 'kaomoji';
+      span.textContent = m[0];
+      frag.appendChild(span);
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    el.textContent = '';
+    el.appendChild(frag);
   }
 
   // ── OS Detection for Conversion Optimization ────────────────
@@ -138,15 +163,15 @@
       srcEl.srcset = webpPath;
       imgEl.src    = pngPath;
       imgEl.dataset.full = pngPath;
-      imgEl.alt    = `${t('brand')} — ${t(`tour.${tourTab}.title`)}`;
+      imgEl.alt    = `${t('brand')} · ${t(`tour.${tourTab}.title`)}`;
     }
 
-    if (badge) badge.textContent = t(`tour.${tourTab}.badge`);
-    if (title) title.textContent = t(`tour.${tourTab}.title`);
-    if (desc)  desc.textContent  = t(`tour.${tourTab}.desc`);
-    if (b1)    b1.textContent    = t(`tour.${tourTab}.b1`);
-    if (b2)    b2.textContent    = t(`tour.${tourTab}.b2`);
-    if (b3)    b3.textContent    = t(`tour.${tourTab}.b3`);
+    if (badge) setTextWithKaomoji(badge, t(`tour.${tourTab}.badge`));
+    if (title) setTextWithKaomoji(title, t(`tour.${tourTab}.title`));
+    if (desc)  setTextWithKaomoji(desc,  t(`tour.${tourTab}.desc`));
+    if (b1)    setTextWithKaomoji(b1,    t(`tour.${tourTab}.b1`));
+    if (b2)    setTextWithKaomoji(b2,    t(`tour.${tourTab}.b2`));
+    if (b3)    setTextWithKaomoji(b3,    t(`tour.${tourTab}.b3`));
 
     document.querySelectorAll('[data-tour-tab]').forEach(btn => {
       const active = btn.getAttribute('data-tour-tab') === tourTab;
@@ -184,9 +209,10 @@
       const val = t(key);
       if (!val) return;
       if (val.includes('<a ')) {
-        el.innerHTML = val;
+        KAOMOJI_RE.lastIndex = 0;
+        el.innerHTML = val.replace(KAOMOJI_RE, '<span class="kaomoji">$1</span>');
       } else {
-        el.textContent = val;
+        setTextWithKaomoji(el, val);
       }
     });
 

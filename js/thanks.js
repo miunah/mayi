@@ -14,9 +14,13 @@
     document.documentElement.lang = 'en';
     document.title = 'Download Started – Mayinab';
 
-    document.getElementById('title').textContent = 'Almost there!';
-    document.getElementById('subtitle').textContent = 'Now run the installer you just downloaded.';
-    document.getElementById('retryLink').textContent = "Download didn't start? Try again.";
+    document.getElementById('title').innerHTML = 'Almost there! <span class="kaomoji">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</span>';
+    document.getElementById('subtitle').textContent = 'Now just run the installer you downloaded.';
+    document.getElementById('retryLink').textContent = "Download didn't start? Click here to try again!";
+    var storeAltText = document.getElementById('storeAltText');
+    if (storeAltText) {
+      storeAltText.innerHTML = '💡 <strong>Sweet tip:</strong> install from the Microsoft Store with zero SmartScreen warnings! <span class="kaomoji">(^_~)✧</span>';
+    }
     document.getElementById('warningTitle').textContent = 'Windows';
     document.getElementById('warningDesc').innerHTML =
       'If you see a warning saying the app you\'re installing is not verified by Microsoft, ' +

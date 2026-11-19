@@ -85,3 +85,11 @@
   --transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   --transition-slow: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+/* Keep kaomojis intact on a single line with clean spacing */
+.kaomoji {
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: 0;
+  font-weight: 600;
+}

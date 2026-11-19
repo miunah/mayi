@@ -29,6 +29,30 @@
     }
   }
 
+  var KAOMOJI_RE = /(\(ﾉ◕ヮ◕\)ﾉ\*:･ﾟ✧|\(ﾉ´ヮ`\)ﾉ\*:･ﾟ✧|ヽ\(>∀<☆\)ノ|ヽ\(◕‿◕\)ノ|o\(≧▽≦\)o|\(\^_~\)✧|\(・ω・\)ﾉ|\(´∀｀\)♡|\(´∀｀\*\)|\(☆▽☆\)|\(☆ω☆\)|\(´･ω･`\)|\(≧◡≦\)|\(｡･ω･｡\)|\(・ω・\))/g;
+
+  function setTextWithKaomoji(el, text) {
+    if (!KAOMOJI_RE.test(text)) {
+      el.textContent = text;
+      return;
+    }
+    KAOMOJI_RE.lastIndex = 0;
+    var frag = document.createDocumentFragment();
+    var last = 0;
+    var m;
+    while ((m = KAOMOJI_RE.exec(text)) !== null) {
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      var span = document.createElement('span');
+      span.className = 'kaomoji';
+      span.textContent = m[0];
+      frag.appendChild(span);
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    el.textContent = '';
+    el.appendChild(frag);
+  }
+
   function setLang(lang) {
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
 
@@ -41,7 +65,7 @@
 
     // Inline data-en / data-pt translations (back links, footer, blog cards, etc.)
     document.querySelectorAll('[data-en][data-pt]').forEach(function (el) {
-      el.textContent = el.getAttribute('data-' + lang);
+      setTextWithKaomoji(el, el.getAttribute('data-' + lang));
     });
 
     // Toggle lang-switcher buttons
