@@ -26,9 +26,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img, picture, svg {
+img, picture {
   display: block;
   max-width: 100%;
+}
+
+svg.lucide {
+  display: inline-block;
+  vertical-align: -0.18em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
 }
 
 button, input {
@@ -567,6 +578,7 @@ input:focus-visible,
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
   border: none;
   background: transparent;
   color: var(--text-secondary);
@@ -576,6 +588,11 @@ input:focus-visible,
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: background var(--transition), color var(--transition);
+}
+
+.theme-toggle-btn svg.lucide {
+  width: 15px;
+  height: 15px;
 }
 
 .theme-toggle-btn.active {
@@ -809,6 +826,7 @@ input:focus-visible,
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  white-space: nowrap;
   padding: 10px 16px;
   border-radius: var(--radius-full);
   background: rgba(255, 255, 255, 0.06);
@@ -818,6 +836,11 @@ input:focus-visible,
   font-weight: 700;
   cursor: pointer;
   transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.showcase-tab svg.lucide {
+  width: 16px;
+  height: 16px;
 }
 
 .showcase-tab:hover {
@@ -850,6 +873,10 @@ input:focus-visible,
 }
 
 .dark-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
   border: none;
   background: transparent;
   color: rgba(243, 247, 244, 0.7);
@@ -859,6 +886,11 @@ input:focus-visible,
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: background var(--transition), color var(--transition);
+}
+
+.dark-pill-btn svg.lucide {
+  width: 14px;
+  height: 14px;
 }
 
 .dark-pill-btn.active {
@@ -1106,14 +1138,22 @@ input:focus-visible,
 }
 
 .sync-method-box strong {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-size: 0.92rem;
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
-.sync-method-box span {
+.sync-method-box strong svg.lucide {
+  width: 17px;
+  height: 17px;
+  color: var(--matcha-600);
+}
+
+.sync-method-box > span {
   font-size: 0.83rem;
   color: var(--text-secondary);
   line-height: 1.45;
@@ -1422,10 +1462,20 @@ input:focus-visible,
 
 .waitlist-card h3,
 .langs-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.12rem;
   font-weight: 800;
   margin-bottom: 6px;
   color: var(--text-primary);
+}
+
+.waitlist-card h3 svg.lucide,
+.langs-card h3 svg.lucide {
+  width: 20px;
+  height: 20px;
+  color: var(--matcha-600);
 }
 
 .waitlist-card p,
