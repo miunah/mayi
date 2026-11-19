@@ -131,7 +131,7 @@
             "name": "Is my data private? What happens to my AI API key?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Everything runs locally in SQLite with zero telemetry. BYOK AI requests go directly from your device to your provider (or 100% locally via Ollama). Your API key is stored outside SQLite and is never included in backups or sync snapshots."
+              "text": "Everything runs locally in SQLite with zero telemetry. If you configure an external API key in the BYOK AI Assistant, prompts, attachments, and note excerpts used in that conversation are sent directly from your device to that third-party AI provider's servers (or stay 100% local with Ollama). Your API key is stored outside SQLite and never included in backups."
             }
           },
           {
@@ -901,7 +901,7 @@
             <div class="faq-answer">
               <div class="faq-answer-inner">
                 <div class="faq-answer-body" data-i18n="faq.a3">
-                  Yes. Everything runs locally on your device in SQLite with zero telemetry. When using the BYOK AI Assistant, requests go directly from your device to your chosen provider (or 100% locally via Ollama). Your API key is stored outside SQLite and is never included in backups or sync snapshots.
+                  Yes. Everything runs locally on your device in SQLite with zero telemetry. If you choose to configure an external API key in the BYOK AI Assistant, the prompts, attachments, and note excerpts used in that chat are sent directly from your device to that third-party AI provider’s servers (subject to their privacy policy) — never through Mayinab servers. To stay 100% offline, use local Ollama or leave external APIs disabled. Your API key is stored outside SQLite and never enters backups or sync snapshots.
                 </div>
               </div>
             </div>

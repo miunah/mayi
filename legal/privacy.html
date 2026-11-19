@@ -47,7 +47,7 @@
       <div class="legal-content">
 
         <div class="highlight">
-          <strong>Resumo:</strong> O Mayinab é um projeto independente, 100% gratuito, sem fins lucrativos e <strong>offline-first</strong>. Não exigimos criação de conta, não usamos Supabase nem servidores próprios para armazenar seus dados, não coletamos telemetria e nunca exibimos anúncios. Suas notas, flashcards e mídias ficam exclusivamente no seu dispositivo.
+          <strong>Resumo:</strong> O Mayinab é um projeto independente, 100% gratuito, sem fins lucrativos e <strong>offline-first</strong>. Não exigimos criação de conta, não usamos Supabase nem servidores próprios para armazenar seus dados, não coletamos telemetria e nunca exibimos anúncios. Suas notas, flashcards e mídias ficam localmente no seu dispositivo. <strong>Atenção:</strong> caso você configure voluntariamente uma chave de API externa no Assistente de IA (BYOK), as mensagens, anexos e trechos de notas enviados nessa conversa são transmitidos diretamente do seu dispositivo para os <strong>servidores do provedor de IA terceiro</strong> escolhido por você (para manter tudo 100% local, use Ollama local ou não ative APIs externas).
         </div>
 
         <h2>1. Identificação dos Responsáveis</h2>
@@ -79,12 +79,13 @@
           <li>Não há planos pagos, assinaturas ou coleta de dados financeiros no aplicativo</li>
         </ul>
 
-        <h3>3.2 Assistente de IA — BYOK (opcional)</h3>
+        <h3>3.2 Assistente de IA — BYOK (opcional — envio a servidores de terceiros)</h3>
         <p>O Assistente de IA é totalmente opcional e funciona no modelo <strong>BYOK (Bring Your Own Key)</strong>:</p>
         <ul>
-          <li>Quando você configura uma chave de API própria (OpenAI, Google Gemini, Anthropic Claude, OpenRouter, Groq, DeepSeek ou endpoint compatível), as mensagens e anexos enviados por você trafegam <strong>diretamente do seu dispositivo para o provedor escolhido</strong>, sem passar por nenhum servidor intermediário do Mayinab.</li>
-          <li>O tratamento desses dados pelo provedor de IA escolhido é regido exclusivamente pela política de privacidade do respectivo provedor.</li>
-          <li>Quando você utiliza o <strong>Ollama local</strong>, todo o processamento ocorre na sua própria máquina, sem envio de dados à internet.</li>
+          <li><strong>Envio a servidores de terceiros:</strong> quando você configura uma chave de API externa (OpenAI, Google Gemini, Anthropic Claude, OpenRouter, Groq, DeepSeek ou qualquer endpoint remoto OpenAI-Compatible), os dados necessários para responder às suas solicitações — incluindo suas mensagens, anexos e trechos de notas, tópicos, flashcards ou estatísticas FSRS-5 lidos pelas ferramentas do assistente — <strong>são enviados diretamente do seu dispositivo para os servidores do provedor de IA terceiro escolhido por você</strong> (que podem estar hospedados fora do Brasil).</li>
+          <li>Nenhum servidor do Mayinab atua como intermediário e nós não temos acesso às suas conversas ou à sua chave de API.</li>
+          <li>O armazenamento, retenção e tratamento desses dados nos servidores do provedor de IA escolhido são regidos exclusivamente pela política de privacidade e pelos termos daquele terceiro. Recomendamos não enviar informações confidenciais ou sensíveis a APIs externas caso isso contrarie suas preferências de privacidade.</li>
+          <li><strong>Alternativa 100% local:</strong> quando você utiliza o <strong>Ollama local</strong>, todo o processamento ocorre na sua própria máquina, sem envio de dados para servidores de terceiros.</li>
           <li>Sua chave de API é armazenada localmente fora do banco SQLite e <strong>nunca é incluída em backups locais ou snapshots de sincronização</strong>.</li>
         </ul>
 
@@ -185,7 +186,7 @@
       <div class="legal-content">
 
         <div class="highlight">
-          <strong>Summary:</strong> Mayinab is an independent, 100% free, non-profit, and <strong>offline-first</strong> study app. We do not require accounts, do not use Supabase or operate cloud servers storing your notes, do not collect telemetry, and never show ads. Your notes, flashcards, and media stay strictly on your device.
+          <strong>Summary:</strong> Mayinab is an independent, 100% free, non-profit, and <strong>offline-first</strong> study app. We do not require accounts, do not use Supabase or operate cloud servers storing your notes, do not collect telemetry, and never show ads. Your notes, flashcards, and media stay locally on your device. <strong>Notice:</strong> if you voluntarily configure an external API key in the AI Assistant (BYOK), prompts, attachments, and note excerpts accessed during that conversation are sent directly from your device to the <strong>third-party AI provider's servers</strong> you chose (to keep everything 100% local, use local Ollama or leave external APIs disabled).
         </div>
 
         <h2>1. Data Controllers</h2>
@@ -217,12 +218,13 @@
           <li>There are no paid plans, subscriptions, or payment processing inside the app</li>
         </ul>
 
-        <h3>3.2 AI Assistant — BYOK (optional)</h3>
+        <h3>3.2 AI Assistant — BYOK (optional — sent to third-party servers)</h3>
         <p>The AI Study Assistant is completely optional and uses a <strong>BYOK (Bring Your Own Key)</strong> model:</p>
         <ul>
-          <li>When you configure your own API key (OpenAI, Google Gemini, Anthropic Claude, OpenRouter, Groq, DeepSeek, or an OpenAI-compatible endpoint), prompts and attachments you send go <strong>directly from your device to your chosen provider</strong> without passing through any Mayinab server.</li>
-          <li>Data handling by your chosen AI provider is governed solely by that provider's privacy policy.</li>
-          <li>When using local <strong>Ollama</strong>, all processing stays strictly on your own machine with no internet transmission.</li>
+          <li><strong>Transmission to third-party servers:</strong> when you configure an external API key (OpenAI, Google Gemini, Anthropic Claude, OpenRouter, Groq, DeepSeek, or any remote OpenAI-compatible endpoint), the data needed to fulfill your requests — including your prompts, attachments, and excerpts of notes, topics, flashcards, or FSRS-5 stats read by the assistant's tools — <strong>is transmitted directly from your device to the third-party AI provider's servers you chose</strong> (which may be located internationally).</li>
+          <li>No Mayinab server acts as an intermediary, and we have no access to your conversations or API key.</li>
+          <li>Storage, retention, and processing on those third-party servers are governed solely by that provider's privacy policy and terms. We recommend not sending confidential or sensitive personal data to external APIs if that conflicts with your privacy preferences.</li>
+          <li><strong>100% local option:</strong> when using local <strong>Ollama</strong>, all processing stays strictly on your own machine with no data sent to third-party servers.</li>
           <li>Your API key is stored locally outside SQLite and is <strong>never included in local backups or sync snapshots</strong>.</li>
         </ul>
 
