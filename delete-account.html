@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'">
-  <title>Excluir Conta – Mayinab</title>
-  <meta name="description" content="Solicite a exclusão da sua conta e dados do aplicativo Mayinab.">
+  <title>Exclusão de Dados – Mayinab</title>
+  <meta name="description" content="Saiba como excluir seus dados locais, revogar acesso ao Google Drive ou remover seu e-mail da lista de espera do Mayinab.">
+  <meta name="author" content="Miuna Hamasaki, Celso Takeshi Hamasaki">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="app_icon.png">
   <link rel="canonical" href="https://mayinab.com/delete-account.html">
@@ -15,6 +16,8 @@
 </head>
 <body>
 
+  <a href="#legal-main" class="skip-to-content">Pular para o conteúdo</a>
+
   <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
@@ -22,69 +25,56 @@
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn" aria-label="English">EN</button>
-          <button class="lang-btn active" aria-label="Português">PT</button>
+          <button type="button" class="lang-btn" aria-label="English">EN</button>
+          <button type="button" class="lang-btn active" aria-label="Português">PT</button>
         </div>
-        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Voltar ao site</a>
       </div>
     </div>
   </nav>
 
+  <main id="legal-main">
   <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
   <div data-lang="pt" class="active">
     <div class="legal-hero">
       <div class="container">
-        <h1>🗑️ Excluir Conta e Dados</h1>
-        <p class="updated">Aplicativo Mayinab — Desenvolvido por Hamasaki</p>
+        <h1>🗑️ Exclusão de Dados</h1>
+        <p class="updated">Aplicativo Mayinab — Criado por Miuna Hamasaki &amp; Celso Takeshi Hamasaki</p>
       </div>
     </div>
     <div class="container">
       <div class="legal-content">
 
         <div class="highlight">
-          Você pode solicitar a exclusão da sua conta e de todos os dados associados a qualquer momento. O processo é simples e pode ser feito diretamente pelo aplicativo ou por e-mail.
+          <strong>O Mayinab não possui nem exige contas de usuário.</strong> Todos os seus dados ficam armazenados localmente no seu dispositivo (SQLite offline-first) e não utilizamos servidores próprios nem Supabase para guardar suas notas.
         </div>
 
-        <h2>Como excluir sua conta pelo aplicativo</h2>
-        <p>Siga os passos abaixo dentro do app Mayinab:</p>
+        <h2>1. Como apagar seus dados no dispositivo</h2>
+        <p>Como todos os seus cadernos, notas, flashcards e mídias ficam apenas no seu aparelho, você tem controle imediato para removê-los:</p>
         <div class="steps">
-          <div class="step"><p>Abra o aplicativo <strong>Mayinab</strong></p></div>
-          <div class="step"><p>Acesse <strong>Configurações</strong> (ícone de engrenagem)</p></div>
-          <div class="step"><p>Toque em <strong>Conta</strong></p></div>
-          <div class="step"><p>Toque em <strong>Excluir conta</strong></p></div>
-          <div class="step"><p>Confirme a exclusão quando solicitado</p></div>
+          <div class="step"><p>Caso queira guardar uma cópia antes, exporte um backup em <strong>Configurações → Backup Local</strong>.</p></div>
+          <div class="step"><p>No celular (Android/iOS), limpe os dados do app nas configurações do sistema ou simplesmente <strong>desinstale o Mayinab</strong>.</p></div>
+          <div class="step"><p>No computador (Windows/Linux/macOS), remova o aplicativo e a pasta local de dados do Mayinab.</p></div>
         </div>
 
-        <h2>Como excluir sua conta por e-mail</h2>
-        <p>Se preferir, ou caso não consiga acessar o app, envie um e-mail para:</p>
-        <div class="highlight">
-          📧 <a href="mailto:suporte@mayinab.com"><strong>suporte@mayinab.com</strong></a><br>
-          Assunto: <strong>Solicitação de exclusão de conta</strong><br><br>
-          Inclua o endereço de e-mail associado à sua conta. Responderemos e processaremos a solicitação em até <strong>15 dias úteis</strong>.
-        </div>
-
-        <h2>Dados que são excluídos</h2>
-        <p>Ao excluir sua conta, os seguintes dados são <strong>removidos permanentemente</strong> dos nossos servidores:</p>
-        <table>
-          <tr><th>Tipo de dado</th><th>Ação</th><th>Prazo</th></tr>
-          <tr><td>Dados de autenticação (e-mail, senha hash, UID)</td><td>Excluído permanentemente</td><td>Até 30 dias</td></tr>
-          <tr><td>Backups em nuvem (Vault)</td><td>Excluído permanentemente</td><td>Até 30 dias</td></tr>
-          <tr><td>Registros de acesso (logs)</td><td>Excluído após período legal</td><td>6 meses (Marco Civil da Internet)</td></tr>
-          <tr><td>Dados locais no dispositivo (notas, flashcards)</td><td>Mantidos no dispositivo — você controla a exclusão local</td><td>N/A</td></tr>
-        </table>
-
-        <h2>Informações importantes</h2>
+        <h2>2. Como revogar o Google Drive (se você ativou o Auto-Sync)</h2>
+        <p>Se você conectou sua própria conta Google para sincronização automática no <code>appDataFolder</code>:</p>
         <ul>
-          <li>A exclusão da conta é <strong>irreversível</strong>. Todos os backups em nuvem serão perdidos permanentemente.</li>
-          <li>Os dados locais no seu dispositivo (notas, flashcards, arquivos) <strong>não são afetados</strong> — eles permanecem no dispositivo e você pode excluí-los desinstalando o app.</li>
-          <li>Se você possui uma assinatura ativa do Vault, <strong>cancele a assinatura</strong> pela Google Play Store ou Apple App Store antes de excluir a conta, para evitar cobranças futuras.</li>
-          <li>Registros de acesso (logs) são mantidos por <strong>6 meses</strong> após a exclusão, conforme exigência do Marco Civil da Internet (Lei nº 12.965/2014, Art. 15).</li>
+          <li>Desconecte o Google Drive em <strong>Configurações → Sincronização</strong> dentro do app; e</li>
+          <li>Acesse as configurações de aplicativos conectados da sua <strong>Conta Google</strong> (<code>myaccount.google.com/permissions</code>) para revogar o acesso e apagar dados ocultos do aplicativo no Drive.</li>
         </ul>
 
+        <h2>3. Exclusão de e-mail da lista de espera ou suporte</h2>
+        <p>Se você se inscreveu na lista de espera (iOS/macOS) em <code>mayinab.com</code> ou enviou um e-mail de suporte e deseja remover seu endereço de e-mail dos nossos registros, envie uma solicitação para:</p>
+        <div class="highlight">
+          📧 <a href="mailto:suporte@mayinab.com?subject=Exclusao%20de%20Dados%20-%20Mayinab"><strong>suporte@mayinab.com</strong></a><br>
+          Assunto: <strong>Solicitação de exclusão de dados</strong><br><br>
+          Processaremos a remoção em até <strong>15 dias úteis</strong>, conforme a LGPD.
+        </div>
+
         <h2>Dúvidas?</h2>
-        <p>Se tiver qualquer dúvida sobre a exclusão de conta ou tratamento de dados, entre em contato:</p>
-        <p><strong>E-mail:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></p>
-        <p>Para mais detalhes, consulte nossa <a href="legal/privacy.html">Política de Privacidade</a> e os <a href="legal/terms.html">Termos de Uso</a>.</p>
+        <p><strong>Suporte:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a> · <strong>Autores:</strong> <a href="mailto:i@cth.jp">i@cth.jp</a> (<a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">cth.jp</a>)</p>
+        <p>Consulte também nossa <a href="legal/privacy.html">Política de Privacidade</a> e os <a href="legal/terms.html">Termos de Uso</a>.</p>
       </div>
     </div>
   </div>
@@ -93,73 +83,60 @@
   <div data-lang="en">
     <div class="legal-hero">
       <div class="container">
-        <h1>🗑️ Delete Account and Data</h1>
-        <p class="updated">Mayinab App — Developed by Hamasaki</p>
+        <h1>🗑️ Data Deletion</h1>
+        <p class="updated">Mayinab App — Created by Miuna Hamasaki &amp; Celso Takeshi Hamasaki</p>
       </div>
     </div>
     <div class="container">
       <div class="legal-content">
 
         <div class="highlight">
-          You can request the deletion of your account and all associated data at any time. The process is simple and can be done directly through the app or by email.
+          <strong>Mayinab does not have or require user accounts.</strong> All your data is stored locally on your device (offline-first SQLite), and we do not operate user-data servers or use Supabase.
         </div>
 
-        <h2>How to delete your account from the app</h2>
-        <p>Follow the steps below inside the Mayinab app:</p>
+        <h2>1. How to delete your local app data</h2>
+        <p>Because all your notebooks, notes, flashcards, and media live exclusively on your device, you can permanently delete them immediately:</p>
         <div class="steps">
-          <div class="step"><p>Open the <strong>Mayinab</strong> app</p></div>
-          <div class="step"><p>Go to <strong>Settings</strong> (gear icon)</p></div>
-          <div class="step"><p>Tap <strong>Account</strong></p></div>
-          <div class="step"><p>Tap <strong>Delete account</strong></p></div>
-          <div class="step"><p>Confirm the deletion when prompted</p></div>
+          <div class="step"><p>If you want to keep a copy first, export a backup in <strong>Settings → Local Backup</strong>.</p></div>
+          <div class="step"><p>On mobile (Android/iOS), clear app storage in system settings or simply <strong>uninstall Mayinab</strong>.</p></div>
+          <div class="step"><p>On desktop (Windows/Linux/macOS), uninstall the app and delete the local Mayinab data folder.</p></div>
         </div>
 
-        <h2>How to delete your account by email</h2>
-        <p>If you prefer, or if you cannot access the app, send an email to:</p>
-        <div class="highlight">
-          📧 <a href="mailto:suporte@mayinab.com"><strong>suporte@mayinab.com</strong></a><br>
-          Subject: <strong>Account deletion request</strong><br><br>
-          Include the email address associated with your account. We will respond and process the request within <strong>15 business days</strong>.
-        </div>
-
-        <h2>Data that is deleted</h2>
-        <p>When you delete your account, the following data is <strong>permanently removed</strong> from our servers:</p>
-        <table>
-          <tr><th>Data type</th><th>Action</th><th>Timeframe</th></tr>
-          <tr><td>Authentication data (email, password hash, UID)</td><td>Permanently deleted</td><td>Up to 30 days</td></tr>
-          <tr><td>Cloud backups (Vault)</td><td>Permanently deleted</td><td>Up to 30 days</td></tr>
-          <tr><td>Access logs</td><td>Deleted after legal period</td><td>6 months (Marco Civil da Internet)</td></tr>
-          <tr><td>Local data on device (notes, flashcards)</td><td>Kept on device — you control local deletion</td><td>N/A</td></tr>
-        </table>
-
-        <h2>Important information</h2>
+        <h2>2. How to revoke Google Drive (if you enabled Auto-Sync)</h2>
+        <p>If you connected your own Google account for Auto-Sync in <code>appDataFolder</code>:</p>
         <ul>
-          <li>Account deletion is <strong>irreversible</strong>. All cloud backups will be permanently lost.</li>
-          <li>Local data on your device (notes, flashcards, files) is <strong>not affected</strong> — it remains on your device and you can delete it by uninstalling the app.</li>
-          <li>If you have an active Vault subscription, <strong>cancel the subscription</strong> through Google Play Store or Apple App Store before deleting your account to avoid future charges.</li>
-          <li>Access logs are kept for <strong>6 months</strong> after deletion, as required by the Marco Civil da Internet (Law No. 12,965/2014, Art. 15).</li>
+          <li>Disconnect Google Drive inside <strong>Settings → Sync</strong> in the app; and</li>
+          <li>Open your <strong>Google Account</strong> connected apps settings (<code>myaccount.google.com/permissions</code>) to revoke access and remove hidden app data from your Drive.</li>
         </ul>
 
+        <h2>3. Removing your email from the waitlist or support history</h2>
+        <p>If you signed up for the iOS/macOS waitlist on <code>mayinab.com</code> or contacted us by email and want your email address removed, send a request to:</p>
+        <div class="highlight">
+          📧 <a href="mailto:suporte@mayinab.com?subject=Data%20Deletion%20Request%20-%20Mayinab"><strong>suporte@mayinab.com</strong></a><br>
+          Subject: <strong>Data deletion request</strong><br><br>
+          We will complete removal within <strong>15 business days</strong>.
+        </div>
+
         <h2>Questions?</h2>
-        <p>If you have any questions about account deletion or data processing, contact us:</p>
-        <p><strong>Email:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></p>
-        <p>For more details, see our <a href="legal/privacy.html">Privacy Policy</a> and <a href="legal/terms.html">Terms of Use</a>.</p>
+        <p><strong>Support:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a> · <strong>Authors:</strong> <a href="mailto:i@cth.jp">i@cth.jp</a> (<a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">cth.jp</a>)</p>
+        <p>See also our <a href="legal/privacy.html">Privacy Policy</a> and <a href="legal/terms.html">Terms of Use</a>.</p>
       </div>
     </div>
   </div>
+  </main>
 
   <!-- FOOTERS -->
   <div class="footer-mini active" data-lang="pt">
-    <p>© 2026 Mayinab · <a href="legal/privacy.html">Privacidade</a> · <a href="legal/terms.html">Termos de Uso</a> · <a href="/">Início</a></p>
+    <p>© 2026 <a href="https://mayinab.com/">Mayinab</a> · <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki &amp; Celso Takeshi Hamasaki</a> · <a href="legal/privacy.html">Privacidade</a> · <a href="legal/terms.html">Termos de Uso</a> · <a href="/">Início</a></p>
   </div>
   <div class="footer-mini" data-lang="en">
-    <p>© 2026 Mayinab · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms of Use</a> · <a href="/">Home</a></p>
+    <p>© 2026 <a href="https://mayinab.com/">Mayinab</a> · <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki &amp; Celso Takeshi Hamasaki</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms of Use</a> · <a href="/">Home</a></p>
   </div>
 
   <script src="js/lang.js"
-    data-meta-en-title="Delete Account – Mayinab"
-    data-meta-en-desc="Request the deletion of your Mayinab account and data."
-    data-meta-pt-title="Excluir Conta – Mayinab"
-    data-meta-pt-desc="Solicite a exclusão da sua conta e dados do aplicativo Mayinab."></script>
+    data-meta-en-title="Data Deletion – Mayinab"
+    data-meta-en-desc="Learn how to delete your local Mayinab data, revoke Google Drive sync, or remove your waitlist email."
+    data-meta-pt-title="Exclusão de Dados – Mayinab"
+    data-meta-pt-desc="Saiba como excluir seus dados locais, revogar acesso ao Google Drive ou remover seu e-mail da lista de espera do Mayinab."></script>
 </body>
 </html>

@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'">
   <title>Política de Privacidade – Mayinab</title>
-  <meta name="description" content="Política de Privacidade do aplicativo Mayinab. Saiba como tratamos seus dados pessoais em conformidade com a LGPD.">
+  <meta name="description" content="Política de Privacidade do aplicativo Mayinab. 100% gratuito, offline-first em SQLite, sem contas, sem anúncios e sem rastreadores. Conformidade com LGPD e GDPR.">
+  <meta name="author" content="Miuna Hamasaki, Celso Takeshi Hamasaki">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="../app_icon.png">
   <link rel="canonical" href="https://mayinab.com/legal/privacy.html">
@@ -15,22 +16,25 @@
 </head>
 <body>
 
+  <a href="#legal-main" class="skip-to-content">Pular para o conteúdo</a>
+
   <!-- TOP BAR -->
-  <nav class="top-bar">
+  <nav class="top-bar" aria-label="Main navigation">
     <div class="container">
       <a href="/" class="brand">
-        <img src="../app_icon.png" alt="Mayinab">Mayinab
+        <img src="../app_icon.png" alt="Mayinab" width="28" height="28">Mayinab
       </a>
       <div class="nav-right">
         <div class="lang-switcher">
-          <button class="lang-btn" aria-label="English">EN</button>
-          <button class="lang-btn active" aria-label="Português">PT</button>
+          <button type="button" class="lang-btn" aria-label="English">EN</button>
+          <button type="button" class="lang-btn active" aria-label="Português">PT</button>
         </div>
-        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Back to site</a>
+        <a href="/" class="back-link" id="backLink" data-en="← Back to site" data-pt="← Voltar ao site">← Voltar ao site</a>
       </div>
     </div>
   </nav>
 
+  <main id="legal-main">
   <!-- ═══════════════ PORTUGUÊS ═══════════════ -->
   <div data-lang="pt" class="active">
     <div class="legal-hero">
@@ -43,14 +47,15 @@
       <div class="legal-content">
 
         <div class="highlight">
-          <strong>Resumo:</strong> O Mayinab é 100% gratuito, sem fins lucrativos e funciona offline-first em SQLite. Seus dados ficam no seu dispositivo. Não usamos servidores de rastreamento nem Supabase, não exigimos conta, não coletamos nem vendemos dados pessoais e não exibimos anúncios. Chaves de API do Assistente de IA (BYOK) ficam exclusivamente no seu dispositivo e nunca entram em backups.
+          <strong>Resumo:</strong> O Mayinab é um projeto independente, 100% gratuito, sem fins lucrativos e <strong>offline-first</strong>. Não exigimos criação de conta, não usamos Supabase nem servidores próprios para armazenar seus dados, não coletamos telemetria e nunca exibimos anúncios. Suas notas, flashcards e mídias ficam exclusivamente no seu dispositivo.
         </div>
 
-        <h2>1. Identificação do Controlador</h2>
+        <h2>1. Identificação dos Responsáveis</h2>
         <p><strong>Autores / Responsáveis:</strong> Miuna Hamasaki &amp; Celso Takeshi Hamasaki (<a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">https://cth.jp/</a>)<br>
         <strong>Nome do Aplicativo:</strong> Mayinab<br>
-        <strong>Site:</strong> <a href="https://mayinab.com/">https://mayinab.com/</a><br>
-        <strong>E-mail de contato:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></p>
+        <strong>Site Oficial:</strong> <a href="https://mayinab.com/">https://mayinab.com/</a><br>
+        <strong>E-mail de suporte e privacidade:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a><br>
+        <strong>E-mail direto dos autores:</strong> <a href="mailto:i@cth.jp">i@cth.jp</a></p>
 
         <h2>2. Legislação Aplicável</h2>
         <p>Esta Política de Privacidade é elaborada em conformidade com:</p>
@@ -58,180 +63,111 @@
           <li><strong>Lei Geral de Proteção de Dados (LGPD)</strong> — Lei nº 13.709/2018 (Brasil)</li>
           <li><strong>Marco Civil da Internet</strong> — Lei nº 12.965/2014 (Brasil)</li>
           <li><strong>Código de Defesa do Consumidor</strong> — Lei nº 8.078/1990 (Brasil)</li>
-          <li><strong>Google Play Developer Program Policies</strong></li>
-          <li><strong>Apple App Store Review Guidelines</strong> (seção 5.1 — Privacidade)</li>
-          <li><strong>GDPR</strong> — Regulamento (UE) 2016/679, quando aplicável a usuários na UE</li>
+          <li><strong>GDPR</strong> — Regulamento (UE) 2016/679, quando aplicável a usuários na União Europeia</li>
+          <li><strong>Google Play Developer Program Policies</strong> (User Data Policy)</li>
+          <li><strong>Microsoft Store Policies</strong></li>
+          <li><strong>Apple App Store Review Guidelines</strong> (Seção 5.1 — Privacidade)</li>
         </ul>
 
-        <h2>3. Dados que Coletamos</h2>
-        <h3>3.1 Uso offline (padrão)</h3>
-        <p>O Mayinab funciona inteiramente offline por padrão. Neste modo:</p>
+        <h2>3. Arquitetura Offline-First e Dados no Aplicativo</h2>
+        <h3>3.1 Uso padrão (100% local)</h3>
+        <p>O Mayinab funciona inteiramente offline em banco de dados <strong>SQLite local</strong>. No uso padrão:</p>
         <ul>
-          <li>Nenhum dado pessoal é coletado, transmitido ou armazenado em servidores externos</li>
-          <li>Todo o conteúdo (notas, flashcards, áudios, imagens, vídeos, arquivos) permanece exclusivamente no dispositivo do usuário</li>
-          <li>Não utilizamos cookies, rastreadores, analytics ou pixels de terceiros</li>
-          <li>Não exibimos anúncios</li>
+          <li><strong>Nenhuma conta é necessária</strong> e nenhum dado pessoal é coletado ou enviado a servidores nossos</li>
+          <li>Todo o seu conteúdo (pastas, matérias, tópicos, notas, flashcards FSRS-5, desenhos do Scribble, imagens, áudios, vídeos, checklists e arquivos) permanece exclusivamente no seu dispositivo</li>
+          <li>Não utilizamos SDKs de analytics, rastreadores, cookies, telemetria de uso ou redes de anúncios</li>
+          <li>Não há planos pagos, assinaturas ou coleta de dados financeiros no aplicativo</li>
         </ul>
 
-        <h3>3.2 Conta e autenticação (opcional)</h3>
-        <p>Caso o usuário opte por criar uma conta para utilizar o recurso de backup em nuvem (Vault), coletamos:</p>
+        <h3>3.2 Assistente de IA — BYOK (opcional)</h3>
+        <p>O Assistente de IA é totalmente opcional e funciona no modelo <strong>BYOK (Bring Your Own Key)</strong>:</p>
+        <ul>
+          <li>Quando você configura uma chave de API própria (OpenAI, Google Gemini, Anthropic Claude, OpenRouter, Groq, DeepSeek ou endpoint compatível), as mensagens e anexos enviados por você trafegam <strong>diretamente do seu dispositivo para o provedor escolhido</strong>, sem passar por nenhum servidor intermediário do Mayinab.</li>
+          <li>O tratamento desses dados pelo provedor de IA escolhido é regido exclusivamente pela política de privacidade do respectivo provedor.</li>
+          <li>Quando você utiliza o <strong>Ollama local</strong>, todo o processamento ocorre na sua própria máquina, sem envio de dados à internet.</li>
+          <li>Sua chave de API é armazenada localmente fora do banco SQLite e <strong>nunca é incluída em backups locais ou snapshots de sincronização</strong>.</li>
+        </ul>
+
+        <h3>3.3 Sincronização Multi-Dispositivo (opcional e gratuita)</h3>
+        <p>Você pode manter seus dispositivos sincronizados por conta própria usando qualquer uma das opções gratuitas abaixo:</p>
+        <ul>
+          <li><strong>LAN Sync P2P (Wi-Fi / Tailscale):</strong> transfere dados diretamente entre seus dispositivos via HTTP na rede local ou Tailscale, protegido por PIN de 4 dígitos e pareamento por QR Code. Nenhum servidor externo participa da transferência.</li>
+          <li><strong>Auto-Sync por Pasta Monitorada:</strong> salva e mescla o arquivo <code>mayinab_sync.zip</code> em uma pasta local escolhida por você (por exemplo, sincronizada via Syncthing, OneDrive, Dropbox, iCloud ou Google Drive Desktop). O serviço de nuvem que você escolher rege a privacidade dessa pasta.</li>
+          <li><strong>Auto-Sync com Google Drive:</strong> se você conectar voluntariamente sua conta Google via Google Sign-In / OAuth2, o aplicativo solicita acesso restrito apenas à pasta privada do aplicativo (<code>appDataFolder</code>) no seu próprio Google Drive, exclusivamente para gravar e ler seus arquivos de sincronização. O Mayinab não acessa outros arquivos do seu Drive e não armazena suas credenciais em servidores próprios.</li>
+        </ul>
+
+        <h3>3.4 Recursos com acesso opcional à internet</h3>
+        <ul>
+          <li><strong>Explorar (Content Packs):</strong> ao abrir o catálogo de pacotes de estudo ou baixar um arquivo <code>.mayinab</code>, o dispositivo consulta o catálogo público e faz o download diretamente dos arquivos hospedados (por exemplo, via GitHub Releases).</li>
+          <li><strong>Player do YouTube e Previews de Link:</strong> ao reproduzir vídeos do YouTube embutidos ou carregar pré-visualizações de URLs inseridas nas suas notas, seu dispositivo faz requisições diretas aos respectivos sites (ex.: YouTube/Google), sujeitos às políticas desses terceiros.</li>
+        </ul>
+
+        <h3>3.5 OCR, Scanner de Documentos e Permissões do Dispositivo</h3>
+        <ul>
+          <li><strong>OCR e Scanner de Documentos (mobile):</strong> utiliza o Google ML Kit para reconhecimento de texto e digitalização em PDF localmente no dispositivo, sem envio dos seus documentos para os desenvolvedores do Mayinab.</li>
+          <li><strong>Câmera, Microfone e Arquivos:</strong> acessados somente quando você aciona explicitamente ações como tirar foto, escanear QR Code de LAN Sync, gravar áudio ou anexar arquivos.</li>
+          <li><strong>Notificações Locais:</strong> lembretes diários de revisão FSRS-5 e alertas de streak são agendados e disparados 100% localmente no dispositivo, sem serviços de push de terceiros.</li>
+        </ul>
+
+        <h3>3.6 Site mayinab.com (Lista de Espera e Contato)</h3>
+        <p>O site <a href="https://mayinab.com/">mayinab.com</a> é estático e <strong>não utiliza cookies de rastreamento nem analytics invasivos</strong> (armazena apenas sua preferência de idioma EN/PT no <code>localStorage</code> do navegador).</p>
         <table>
-          <tr><th>Dado</th><th>Finalidade</th><th>Base legal (LGPD)</th></tr>
-          <tr><td>Endereço de e-mail</td><td>Autenticação, recuperação de conta, comunicações essenciais</td><td>Execução de contrato (Art. 7º, V)</td></tr>
-          <tr><td>Senha (hash criptográfico)</td><td>Autenticação segura</td><td>Execução de contrato (Art. 7º, V)</td></tr>
-          <tr><td>Identificador único da conta (UID)</td><td>Vincular dados de backup à conta</td><td>Execução de contrato (Art. 7º, V)</td></tr>
+          <tr><th>Canal no site</th><th>Dado fornecido</th><th>Finalidade</th><th>Base legal (LGPD)</th></tr>
+          <tr><td>Lista de espera iOS / macOS</td><td>Endereço de e-mail</td><td>Enviar aviso único quando as versões Apple forem lançadas (processado via <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree</a>)</td><td>Consentimento (Art. 7º, I)</td></tr>
+          <tr><td>Contato / Suporte por e-mail</td><td>E-mail e mensagem enviada</td><td>Responder dúvidas, feedbacks ou relatos de bugs</td><td>Consentimento / Legítimo interesse (Art. 7º, I e IX)</td></tr>
         </table>
 
-        <h3>3.3 Proteção anti-bot (Cloudflare Turnstile)</h3>
-        <p>Durante o processo de criação de conta e autenticação, utilizamos o <strong>Cloudflare Turnstile</strong> como mecanismo de verificação anti-bot. Este serviço pode processar:</p>
+        <h3>3.7 Dados que NÃO coletamos</h3>
         <ul>
-          <li>Endereço IP (de forma anonimizada)</li>
-          <li>Dados básicos do navegador e dispositivo (user-agent, resolução de tela)</li>
-          <li>Dados de interação para distinguir humanos de bots</li>
-        </ul>
-        <p>O Cloudflare Turnstile <strong>não utiliza cookies de rastreamento</strong>, não acompanha usuários entre sites e não coleta dados pessoais identificáveis além do necessário para a verificação. Os dados são processados pela Cloudflare, Inc. de acordo com a <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Política de Privacidade da Cloudflare</a>.</p>
-
-        <h3>3.4 Backup em nuvem — Vault (opcional)</h3>
-        <p>Se o usuário ativar o Vault (plano pago), os dados do aplicativo são:</p>
-        <ul>
-          <li><strong>Criptografados localmente</strong> com AES-256-GCM antes de qualquer transmissão</li>
-          <li>Armazenados de forma criptografada em servidores seguros</li>
-          <li>Inacessíveis para nós ou terceiros (<strong>zero-knowledge encryption</strong>)</li>
-        </ul>
-        <p>Não temos acesso ao conteúdo das notas, flashcards ou quaisquer arquivos do usuário.</p>
-
-        <h3>3.5 Dados de pagamento</h3>
-        <p>Os pagamentos de assinaturas (Vault) são processados inteiramente pela <strong>Google Play</strong> ou <strong>Apple App Store</strong>. Não temos acesso a dados de cartão de crédito, conta bancária ou outros dados financeiros. Recebemos apenas a confirmação do status da assinatura.</p>
-
-        <h3>3.6 Dados que NÃO coletamos</h3>
-        <ul>
+          <li>Contas de usuário, senhas ou perfis em nuvem própria</li>
+          <li>Dados bancários, cartão de crédito ou histórico de compras/assinaturas</li>
           <li>Localização (GPS ou rede)</li>
-          <li>Contatos do dispositivo</li>
-          <li>Registros de chamadas ou SMS</li>
-          <li>Identificadores de publicidade (GAID/IDFA)</li>
-          <li>Dados de uso do aplicativo ou analytics</li>
-          <li>Dados de outros aplicativos</li>
-          <li>Dados biométricos</li>
-          <li>Dados sensíveis (origem racial, saúde, convicção religiosa, etc.)</li>
+          <li>Contatos, registros de chamadas ou SMS</li>
+          <li>Identificadores de publicidade (GAID / IDFA)</li>
+          <li>Telemetria, analytics de comportamento ou rastreamento entre apps</li>
+          <li>Dados biométricos ou dados sensíveis</li>
         </ul>
 
-        <h2>4. Finalidade do Tratamento de Dados</h2>
-        <p>Os dados pessoais eventualmente coletados são utilizados exclusivamente para:</p>
-        <ol>
-          <li>Criação e autenticação da conta do usuário</li>
-          <li>Fornecimento do serviço de backup em nuvem (Vault)</li>
-          <li>Comunicações operacionais essenciais (confirmação de e-mail, recuperação de senha)</li>
-          <li>Cumprimento de obrigações legais e regulatórias</li>
-        </ol>
-
-        <h2>5. Compartilhamento de Dados</h2>
+        <h2>4. Compartilhamento de Dados</h2>
         <p><strong>Não vendemos, alugamos ou compartilhamos dados pessoais com terceiros para fins comerciais, publicitários ou de marketing.</strong></p>
-        <p>Dados podem ser compartilhados apenas nas seguintes hipóteses:</p>
+        <p>Os únicos terceiros envolvidos são aqueles explicitamente acionados por você — como o provedor de IA configurado no BYOK, sua própria conta do Google Drive (caso ative o Auto-Sync) ou o Formspree (caso você preencha voluntariamente a lista de espera iOS/macOS no site) — ou em caso de cumprimento de obrigação legal (Art. 7º, II da LGPD).</p>
+
+        <h2>5. Armazenamento e Segurança</h2>
+        <p>Seus dados do aplicativo permanecem armazenados localmente no seu dispositivo e são protegidos pelas camadas de segurança do seu sistema operacional (criptografia de disco, PIN, senha ou biometria). Você pode exportar backups completos em ZIP ou matérias individuais em <code>.mayinab</code> a qualquer momento.</p>
+
+        <h2>6. Direitos do Titular dos Dados (LGPD Art. 18 e GDPR)</h2>
+        <p>Em relação a qualquer dado pessoal eventualmente fornecido por e-mail ou na lista de espera do site, você pode solicitar a qualquer momento:</p>
         <ul>
-          <li><strong>Provedores de infraestrutura:</strong> serviços de hospedagem e autenticação necessários para operar o Vault (ex.: Supabase, servidores cloud). Estes provedores atuam como operadores de dados sob contrato que exige sigilo e conformidade com a LGPD.</li>
-          <li><strong>Proteção anti-bot:</strong> Cloudflare Turnstile, utilizado para verificação de segurança durante a autenticação. A Cloudflare processa dados mínimos exclusivamente para fins de proteção contra abuso.</li>
-          <li><strong>Obrigação legal:</strong> quando exigido por lei, ordem judicial ou requisição de autoridade competente (Art. 7º, II da LGPD).</li>
-          <li><strong>Proteção de direitos:</strong> para proteger direitos, propriedade ou segurança do Mayinab, dos usuários ou do público.</li>
+          <li>Confirmação de existência de tratamento e acesso aos dados</li>
+          <li>Correção de dados incompletos ou desatualizados</li>
+          <li>Eliminação dos dados tratados com consentimento e revogação do consentimento</li>
+        </ul>
+        <p>Para exercer qualquer direito, envie um e-mail para <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a>. Responderemos em até <strong>15 dias úteis</strong>.</p>
+
+        <h2>7. Exclusão de Dados</h2>
+        <ul>
+          <li><strong>Dados no aplicativo:</strong> como não mantemos contas nem banco de dados na nuvem, basta apagar os dados do aplicativo nas configurações do sistema ou desinstalá-lo para remover permanentemente os dados locais.</li>
+          <li><strong>Sincronização Google Drive:</strong> você pode desconectar o Google Drive nas configurações do app e revogar o acesso do Mayinab diretamente nas configurações de segurança da sua Conta Google.</li>
+          <li><strong>Lista de espera ou e-mails de suporte:</strong> solicite a remoção a qualquer momento pelo e-mail <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a> (veja também <a href="../delete-account.html">Exclusão de Dados</a>).</li>
         </ul>
 
-        <h2>6. Armazenamento e Segurança</h2>
-        <h3>6.1 Dados locais</h3>
-        <p>Os dados armazenados localmente no dispositivo estão protegidos pelas medidas de segurança do sistema operacional (criptografia de disco, biometria, PIN/senha do dispositivo). O usuário é responsável pela segurança de acesso ao seu dispositivo.</p>
-        <h3>6.2 Dados em nuvem (Vault)</h3>
+        <h2>8. Menores de Idade</h2>
+        <p>O Mayinab é um aplicativo educacional seguro para todas as idades, pois funciona offline sem criar contas nem coletar dados pessoais. Não coletamos intencionalmente dados pessoais de crianças ou adolescentes. Caso identifique o envio indevido de um e-mail na lista de espera por menor sem consentimento parental, entre em contato para exclusão imediata.</p>
+
+        <h2>9. Alterações nesta Política</h2>
+        <p>Podemos atualizar esta Política de Privacidade caso novas funcionalidades sejam adicionadas ao aplicativo. Sempre atualizaremos a data de "Última atualização" no topo desta página.</p>
+
+        <h2>10. Contato e Encarregado (DPO)</h2>
+        <p>Para dúvidas, solicitações ou reclamações relacionadas à privacidade e proteção de dados:</p>
+        <p><strong>Suporte e Privacidade:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a><br>
+        <strong>Autores:</strong> <a href="mailto:i@cth.jp">i@cth.jp</a> · <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">https://cth.jp/</a></p>
+        <p>Caso necessário, você também pode contatar a <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">www.gov.br/anpd</a>.</p>
+
+        <h2>11. Conformidade com Lojas de Aplicativos</h2>
         <ul>
-          <li>Criptografia AES-256-GCM de ponta a ponta (end-to-end)</li>
-          <li>Arquitetura zero-knowledge — a chave de criptografia nunca é transmitida ao servidor</li>
-          <li>Transmissão via TLS 1.2+ (HTTPS)</li>
-          <li>Servidores com certificações de segurança da indústria</li>
-          <li>Backups do servidor criptografados em repouso</li>
-        </ul>
-
-        <h2>7. Direitos do Titular dos Dados (LGPD Art. 18)</h2>
-        <p>Você tem direito a, a qualquer momento, solicitar:</p>
-        <ul>
-          <li><strong>Confirmação</strong> da existência de tratamento de dados</li>
-          <li><strong>Acesso</strong> aos dados pessoais tratados</li>
-          <li><strong>Correção</strong> de dados incompletos, inexatos ou desatualizados</li>
-          <li><strong>Anonimização, bloqueio ou eliminação</strong> de dados desnecessários ou tratados em desconformidade</li>
-          <li><strong>Portabilidade</strong> dos dados a outro fornecedor de serviço</li>
-          <li><strong>Eliminação</strong> dos dados pessoais tratados com consentimento</li>
-          <li><strong>Informação</strong> sobre entidades públicas e privadas com as quais compartilhamos dados</li>
-          <li><strong>Informação</strong> sobre a possibilidade de não fornecer consentimento e consequências</li>
-          <li><strong>Revogação</strong> do consentimento a qualquer momento</li>
-        </ul>
-        <p>Para exercer qualquer direito, entre em contato pelo e-mail <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a>. Responderemos em até <strong>15 dias úteis</strong>, conforme Art. 18, §5º da LGPD.</p>
-
-        <h2>8. Exclusão de Dados e Conta</h2>
-        <p>Você pode excluir sua conta e todos os dados associados a qualquer momento:</p>
-        <ul>
-          <li><strong>Dentro do app:</strong> Configurações → Backup & Vault → Excluir conta</li>
-          <li><strong>Por e-mail:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></li>
-        </ul>
-        <p>Ao excluir a conta:</p>
-        <ul>
-          <li>Todos os dados de autenticação são removidos permanentemente</li>
-          <li>Todos os backups em nuvem são eliminados de forma irreversível</li>
-          <li>Os dados locais no dispositivo permanecem intactos (você controla a exclusão local)</li>
-          <li>A exclusão é concluída em até <strong>30 dias corridos</strong></li>
-        </ul>
-
-        <h2>9. Retenção de Dados</h2>
-        <table>
-          <tr><th>Tipo de dado</th><th>Período de retenção</th></tr>
-          <tr><td>Dados de conta (e-mail, UID)</td><td>Enquanto a conta estiver ativa, ou até solicitação de exclusão</td></tr>
-          <tr><td>Backups em nuvem (Vault)</td><td>Enquanto a assinatura estiver ativa + 30 dias após cancelamento</td></tr>
-          <tr><td>Registros de acesso (logs)</td><td>6 meses (conforme Marco Civil da Internet, Art. 15)</td></tr>
-        </table>
-
-        <h2>10. Menores de Idade</h2>
-        <p>O Mayinab é um aplicativo educacional classificado para todas as idades. No entanto:</p>
-        <ul>
-          <li>A criação de conta (para uso do Vault) requer <strong>idade mínima de 16 anos</strong>, ou consentimento específico de um dos pais ou responsável legal para menores entre 12 e 16 anos, conforme Art. 14 da LGPD.</li>
-          <li>O uso offline (sem conta) não requer idade mínima, pois nenhum dado pessoal é coletado.</li>
-          <li>Não coletamos intencionalmente dados de crianças menores de 12 anos. Caso tomemos conhecimento da coleta de dados de menores de 12 anos sem o consentimento dos pais, tomaremos medidas para exclusão imediata.</li>
-        </ul>
-
-        <h2>11. Transferência Internacional de Dados</h2>
-        <p>Os servidores utilizados para o serviço Vault podem estar localizados fora do Brasil. Nestes casos:</p>
-        <ul>
-          <li>Todos os dados são criptografados de ponta a ponta antes da transferência</li>
-          <li>A transferência é realizada em conformidade com o Art. 33 da LGPD</li>
-          <li>Os provedores de infraestrutura são obrigados contratualmente a manter padrões de proteção adequados</li>
-        </ul>
-
-        <h2>12. Cookies e Tecnologias de Rastreamento</h2>
-        <p>O aplicativo Mayinab <strong>não utiliza cookies, web beacons, pixels de rastreamento, fingerprinting ou quaisquer tecnologias de rastreamento</strong>.</p>
-        <p>O site <a href="https://mayinab.com">mayinab.com</a> é estático e não utiliza cookies ou analytics de terceiros.</p>
-
-        <h2>13. Notificações</h2>
-        <p>O Mayinab pode enviar notificações locais (lembretes de revisão SRS) que são processadas inteiramente no dispositivo. Não utilizamos serviços de push notification de terceiros para rastreamento. Você pode desativar as notificações a qualquer momento nas configurações do app ou do sistema operacional.</p>
-
-        <h2>14. Alterações nesta Política</h2>
-        <p>Podemos atualizar esta Política de Privacidade periodicamente. Em caso de mudanças significativas:</p>
-        <ul>
-          <li>Notificaremos os usuários com conta ativa por e-mail</li>
-          <li>Atualizaremos a data de "Última atualização" no topo desta página</li>
-          <li>Disponibilizaremos a versão anterior para consulta</li>
-        </ul>
-        <p>O uso continuado do aplicativo após a publicação das alterações constitui aceitação da política revisada.</p>
-
-        <h2>15. Canal de Comunicação e Encarregado (DPO)</h2>
-        <p>Para dúvidas, solicitações ou reclamações relacionadas à proteção de dados pessoais:</p>
-        <p><strong>E-mail:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></p>
-        <p>Caso não obtenha resposta satisfatória, você pode apresentar reclamação à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>: <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">www.gov.br/anpd</a></p>
-
-        <h2>16. Conformidade com Lojas de Aplicativos</h2>
-        <h3>Google Play</h3>
-        <ul>
-          <li>Esta política atende aos requisitos da <em>Google Play User Data Policy</em></li>
-          <li>O formulário de segurança de dados (Data Safety Section) do Google Play reflete fielmente as práticas descritas nesta política</li>
-          <li>Não utilizamos bibliotecas ou SDKs que coletam dados sem conhecimento do usuário</li>
-        </ul>
-        <h3>Apple App Store</h3>
-        <ul>
-          <li>Esta política atende aos requisitos da seção 5.1 (Legal — Privacy) das <em>App Store Review Guidelines</em></li>
-          <li>Os rótulos de privacidade (Privacy Nutrition Labels) da App Store refletem fielmente as práticas descritas nesta política</li>
-          <li>Cumprimos os requisitos do <em>App Tracking Transparency</em> (ATT) — não rastreamos usuários entre apps</li>
+          <li><strong>Google Play:</strong> esta política e a seção <em>Data Safety</em> refletem fielmente que o app é offline-first, sem contas e sem coleta de telemetria.</li>
+          <li><strong>Microsoft Store:</strong> em conformidade com as políticas de privacidade da Microsoft Store para aplicativos desktop offline.</li>
+          <li><strong>Apple App Store:</strong> em conformidade com a Seção 5.1 (Privacidade) e <em>App Tracking Transparency</em> — não rastreamos usuários entre apps ou sites.</li>
         </ul>
       </div>
     </div>
@@ -249,14 +185,15 @@
       <div class="legal-content">
 
         <div class="highlight">
-          <strong>Summary:</strong> Mayinab is 100% free, non-profit, and offline-first on SQLite. Your data stays on your device. We do not use tracking servers or Supabase, do not require an account, do not collect or sell personal data, and never show ads. BYOK AI API keys stay strictly on your device and are never included in backups.
+          <strong>Summary:</strong> Mayinab is an independent, 100% free, non-profit, and <strong>offline-first</strong> study app. We do not require accounts, do not use Supabase or operate cloud servers storing your notes, do not collect telemetry, and never show ads. Your notes, flashcards, and media stay strictly on your device.
         </div>
 
-        <h2>1. Data Controller</h2>
+        <h2>1. Data Controllers</h2>
         <p><strong>Authors / Maintainers:</strong> Miuna Hamasaki &amp; Celso Takeshi Hamasaki (<a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">https://cth.jp/</a>)<br>
         <strong>Application Name:</strong> Mayinab<br>
-        <strong>Website:</strong> <a href="https://mayinab.com/">https://mayinab.com/</a><br>
-        <strong>Contact email:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></p>
+        <strong>Official Website:</strong> <a href="https://mayinab.com/">https://mayinab.com/</a><br>
+        <strong>Support &amp; Privacy Email:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a><br>
+        <strong>Direct Authors Email:</strong> <a href="mailto:i@cth.jp">i@cth.jp</a></p>
 
         <h2>2. Applicable Legislation</h2>
         <p>This Privacy Policy is drafted in compliance with:</p>
@@ -264,197 +201,129 @@
           <li><strong>Lei Geral de Proteção de Dados (LGPD)</strong> — Law No. 13,709/2018 (Brazil)</li>
           <li><strong>Marco Civil da Internet</strong> — Law No. 12,965/2014 (Brazil)</li>
           <li><strong>Consumer Defense Code</strong> — Law No. 8,078/1990 (Brazil)</li>
-          <li><strong>Google Play Developer Program Policies</strong></li>
+          <li><strong>GDPR</strong> — Regulation (EU) 2016/679, where applicable to EU users</li>
+          <li><strong>Google Play Developer Program Policies</strong> (User Data Policy)</li>
+          <li><strong>Microsoft Store Policies</strong></li>
           <li><strong>Apple App Store Review Guidelines</strong> (Section 5.1 — Privacy)</li>
-          <li><strong>GDPR</strong> — Regulation (EU) 2016/679, when applicable to users in the EU</li>
         </ul>
 
-        <h2>3. Data We Collect</h2>
-        <h3>3.1 Offline usage (default)</h3>
-        <p>Mayinab works entirely offline by default. In this mode:</p>
+        <h2>3. Offline-First Architecture &amp; App Data</h2>
+        <h3>3.1 Default usage (100% local)</h3>
+        <p>Mayinab runs entirely offline on a local <strong>SQLite</strong> database. By default:</p>
         <ul>
-          <li>No personal data is collected, transmitted, or stored on external servers</li>
-          <li>All content (notes, flashcards, audio, images, videos, files) remains exclusively on the user's device</li>
-          <li>We do not use cookies, trackers, analytics, or third-party pixels</li>
-          <li>We do not display ads</li>
+          <li><strong>No account is required</strong> and no personal data is collected or transmitted to our servers</li>
+          <li>All your content (folders, subjects, topics, notes, FSRS-5 flashcards, Scribble drawings, images, audio, videos, checklists, and files) stays exclusively on your device</li>
+          <li>We do not embed analytics SDKs, trackers, cookies, usage telemetry, or advertising networks</li>
+          <li>There are no paid plans, subscriptions, or payment processing inside the app</li>
         </ul>
 
-        <h3>3.2 Account and authentication (optional)</h3>
-        <p>If the user chooses to create an account to use the cloud backup feature (Vault), we collect:</p>
+        <h3>3.2 AI Assistant — BYOK (optional)</h3>
+        <p>The AI Study Assistant is completely optional and uses a <strong>BYOK (Bring Your Own Key)</strong> model:</p>
+        <ul>
+          <li>When you configure your own API key (OpenAI, Google Gemini, Anthropic Claude, OpenRouter, Groq, DeepSeek, or an OpenAI-compatible endpoint), prompts and attachments you send go <strong>directly from your device to your chosen provider</strong> without passing through any Mayinab server.</li>
+          <li>Data handling by your chosen AI provider is governed solely by that provider's privacy policy.</li>
+          <li>When using local <strong>Ollama</strong>, all processing stays strictly on your own machine with no internet transmission.</li>
+          <li>Your API key is stored locally outside SQLite and is <strong>never included in local backups or sync snapshots</strong>.</li>
+        </ul>
+
+        <h3>3.3 Multi-Device Sync (optional &amp; free)</h3>
+        <p>You can sync your devices under your own control using any of these free options:</p>
+        <ul>
+          <li><strong>LAN Sync P2P (Wi-Fi / Tailscale):</strong> transfers data directly between your own devices over local HTTP or Tailscale, protected by a 4-digit PIN and QR Code pairing. No external server is involved.</li>
+          <li><strong>Monitored Folder Auto-Sync:</strong> writes and merges <code>mayinab_sync.zip</code> inside a local folder you choose (such as Syncthing, OneDrive, Dropbox, iCloud, or Google Drive Desktop), governed by whichever sync tool you choose.</li>
+          <li><strong>Google Drive Auto-Sync:</strong> if you voluntarily connect your Google account via Google Sign-In / OAuth2, Mayinab requests access strictly limited to the private app folder (<code>appDataFolder</code>) inside your own Google Drive solely to read and write your sync files. Mayinab cannot access other files in your Drive and does not store your credentials on our servers.</li>
+        </ul>
+
+        <h3>3.4 Optional Network Features</h3>
+        <ul>
+          <li><strong>Explore (Content Packs):</strong> browsing the curated catalog or downloading <code>.mayinab</code> study packs makes direct read-only requests to public hosted pack files (such as GitHub Releases).</li>
+          <li><strong>YouTube Player &amp; Link Previews:</strong> playing embedded YouTube videos or loading previews for URLs you paste triggers direct requests from your device to those third-party websites (e.g., YouTube/Google), subject to their privacy policies.</li>
+        </ul>
+
+        <h3>3.5 OCR, Document Scanner &amp; Device Permissions</h3>
+        <ul>
+          <li><strong>OCR &amp; Document Scanner (mobile):</strong> powered locally on-device by Google ML Kit to recognize text and scan PDFs without sending your documents to Mayinab developers.</li>
+          <li><strong>Camera, Microphone &amp; Files:</strong> accessed only when you explicitly take a photo, scan a LAN Sync QR Code, record audio, or attach files.</li>
+          <li><strong>Local Notifications:</strong> daily FSRS-5 study reminders and streak alerts are scheduled and delivered 100% locally on your device, with no third-party push servers.</li>
+        </ul>
+
+        <h3>3.6 Website mayinab.com (Waitlist &amp; Contact)</h3>
+        <p>The <a href="https://mayinab.com/">mayinab.com</a> website is static and <strong>does not use tracking cookies or invasive analytics</strong> (it only saves your EN/PT language preference in your browser's <code>localStorage</code>).</p>
         <table>
-          <tr><th>Data</th><th>Purpose</th><th>Legal basis (LGPD)</th></tr>
-          <tr><td>Email address</td><td>Authentication, account recovery, essential communications</td><td>Contract performance (Art. 7, V)</td></tr>
-          <tr><td>Password (cryptographic hash)</td><td>Secure authentication</td><td>Contract performance (Art. 7, V)</td></tr>
-          <tr><td>Unique account identifier (UID)</td><td>Link backup data to account</td><td>Contract performance (Art. 7, V)</td></tr>
+          <tr><th>Website channel</th><th>Data provided</th><th>Purpose</th><th>Legal basis (LGPD / GDPR)</th></tr>
+          <tr><td>iOS / macOS Waitlist</td><td>Email address</td><td>Send a one-time announcement when Apple builds launch (processed via <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree</a>)</td><td>Consent</td></tr>
+          <tr><td>Email Contact / Support</td><td>Email &amp; message content</td><td>Reply to support inquiries, feedback, or bug reports</td><td>Consent / Legitimate interest</td></tr>
         </table>
 
-        <h3>3.3 Anti-bot protection (Cloudflare Turnstile)</h3>
-        <p>During account creation and authentication, we use <strong>Cloudflare Turnstile</strong> as an anti-bot verification mechanism. This service may process:</p>
+        <h3>3.7 Data We Do NOT Collect</h3>
         <ul>
-          <li>IP address (anonymized)</li>
-          <li>Basic browser and device data (user-agent, screen resolution)</li>
-          <li>Interaction data to distinguish humans from bots</li>
-        </ul>
-        <p>Cloudflare Turnstile <strong>does not use tracking cookies</strong>, does not track users across websites, and does not collect personally identifiable data beyond what is necessary for verification. Data is processed by Cloudflare, Inc. in accordance with the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>.</p>
-
-        <h3>3.4 Cloud backup — Vault (optional)</h3>
-        <p>If the user activates the Vault (paid plan), the app data is:</p>
-        <ul>
-          <li><strong>Encrypted locally</strong> with AES-256-GCM before any transmission</li>
-          <li>Stored in encrypted form on secure servers</li>
-          <li>Inaccessible to us or third parties (<strong>zero-knowledge encryption</strong>)</li>
-        </ul>
-        <p>We have no access to the content of notes, flashcards, or any user files.</p>
-
-        <h3>3.5 Payment data</h3>
-        <p>Subscription payments (Vault) are processed entirely by <strong>Google Play</strong> or <strong>Apple App Store</strong>. We have no access to credit card data, bank accounts, or other financial data. We only receive confirmation of the subscription status.</p>
-
-        <h3>3.6 Data we do NOT collect</h3>
-        <ul>
-          <li>Location (GPS or network)</li>
-          <li>Device contacts</li>
-          <li>Call or SMS logs</li>
-          <li>Advertising identifiers (GAID/IDFA)</li>
-          <li>App usage data or analytics</li>
-          <li>Data from other apps</li>
-          <li>Biometric data</li>
-          <li>Sensitive data (racial origin, health, religious beliefs, etc.)</li>
+          <li>User accounts, passwords, or cloud profiles on our servers</li>
+          <li>Financial, credit card, or subscription billing data</li>
+          <li>GPS or network location</li>
+          <li>Contacts, call logs, or SMS messages</li>
+          <li>Advertising IDs (GAID / IDFA)</li>
+          <li>Behavioral telemetry, analytics, or cross-app tracking</li>
+          <li>Biometric or sensitive personal data</li>
         </ul>
 
-        <h2>4. Purpose of Data Processing</h2>
-        <p>Any personal data collected is used exclusively for:</p>
-        <ol>
-          <li>User account creation and authentication</li>
-          <li>Providing the cloud backup service (Vault)</li>
-          <li>Essential operational communications (email confirmation, password recovery)</li>
-          <li>Compliance with legal and regulatory obligations</li>
-        </ol>
-
-        <h2>5. Data Sharing</h2>
+        <h2>4. Data Sharing</h2>
         <p><strong>We do not sell, rent, or share personal data with third parties for commercial, advertising, or marketing purposes.</strong></p>
-        <p>Data may be shared only in the following cases:</p>
+        <p>The only third parties involved are services you explicitly choose to connect — such as your BYOK AI provider, your own Google Drive account (if you enable Auto-Sync), or Formspree (if you voluntarily join the iOS/macOS waitlist on our website) — or where strictly required by law.</p>
+
+        <h2>5. Storage and Security</h2>
+        <p>Your app data remains locally on your device and is protected by your operating system's security mechanisms (disk encryption, PIN, password, or biometrics). You can export full ZIP backups or individual <code>.mayinab</code> subjects at any time.</p>
+
+        <h2>6. Your Data Protection Rights (LGPD &amp; GDPR)</h2>
+        <p>For any personal data you voluntarily send via email or the website waitlist, you may request at any time:</p>
         <ul>
-          <li><strong>Infrastructure providers:</strong> hosting and authentication services required to operate the Vault (e.g., Supabase, cloud servers). These providers act as data processors under contract requiring confidentiality and LGPD compliance.</li>
-          <li><strong>Anti-bot protection:</strong> Cloudflare Turnstile, used for security verification during authentication. Cloudflare processes minimal data exclusively for abuse protection purposes.</li>
-          <li><strong>Legal obligation:</strong> when required by law, court order, or request from a competent authority (Art. 7, II of the LGPD).</li>
-          <li><strong>Rights protection:</strong> to protect the rights, property, or safety of Mayinab, its users, or the public.</li>
+          <li>Confirmation and access to your personal data</li>
+          <li>Correction of inaccurate or outdated data</li>
+          <li>Permanent deletion and revocation of consent</li>
+        </ul>
+        <p>To exercise any right, email <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a>. We respond within <strong>15 business days</strong>.</p>
+
+        <h2>7. Data Deletion</h2>
+        <ul>
+          <li><strong>App data:</strong> since Mayinab has no user accounts or cloud backend, clearing app storage or uninstalling the app permanently removes all local data from your device.</li>
+          <li><strong>Google Drive sync:</strong> you can disconnect Google Drive inside app settings and revoke Mayinab's access anytime in your Google Account security settings.</li>
+          <li><strong>Waitlist or support emails:</strong> email <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a> to request immediate deletion (see also <a href="../delete-account.html">Data Deletion</a>).</li>
         </ul>
 
-        <h2>6. Storage and Security</h2>
-        <h3>6.1 Local data</h3>
-        <p>Data stored locally on the device is protected by the operating system's security measures (disk encryption, biometrics, device PIN/password). The user is responsible for the security of access to their device.</p>
-        <h3>6.2 Cloud data (Vault)</h3>
+        <h2>8. Minors</h2>
+        <p>Mayinab is an educational app safe for all ages because it runs offline without accounts or personal data collection. We do not knowingly collect personal data from children. If a minor submitted an email to the waitlist without parental consent, contact us for immediate removal.</p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy if new capabilities are added to the app. We will always update the "Last updated" date at the top of this page.</p>
+
+        <h2>10. Contact &amp; DPO</h2>
+        <p>For questions, privacy requests, or complaints:</p>
+        <p><strong>Support &amp; Privacy:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a><br>
+        <strong>Authors:</strong> <a href="mailto:i@cth.jp">i@cth.jp</a> · <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">https://cth.jp/</a></p>
+        <p>If needed, residents in Brazil may also contact the <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> at <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">www.gov.br/anpd</a>.</p>
+
+        <h2>11. App Store Compliance</h2>
         <ul>
-          <li>AES-256-GCM end-to-end encryption</li>
-          <li>Zero-knowledge architecture — the encryption key is never transmitted to the server</li>
-          <li>Transmission via TLS 1.2+ (HTTPS)</li>
-          <li>Servers with industry security certifications</li>
-          <li>Server backups encrypted at rest</li>
-        </ul>
-
-        <h2>7. Data Subject Rights (LGPD Art. 18)</h2>
-        <p>You have the right to request at any time:</p>
-        <ul>
-          <li><strong>Confirmation</strong> of data processing</li>
-          <li><strong>Access</strong> to personal data being processed</li>
-          <li><strong>Correction</strong> of incomplete, inaccurate, or outdated data</li>
-          <li><strong>Anonymization, blocking, or deletion</strong> of unnecessary or non-compliant data</li>
-          <li><strong>Portability</strong> of data to another service provider</li>
-          <li><strong>Deletion</strong> of personal data processed with consent</li>
-          <li><strong>Information</strong> about public and private entities with which we share data</li>
-          <li><strong>Information</strong> about the possibility of not providing consent and its consequences</li>
-          <li><strong>Revocation</strong> of consent at any time</li>
-        </ul>
-        <p>To exercise any right, contact us at <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a>. We will respond within <strong>15 business days</strong>, as per Art. 18, §5 of the LGPD.</p>
-
-        <h2>8. Account and Data Deletion</h2>
-        <p>You can delete your account and all associated data at any time:</p>
-        <ul>
-          <li><strong>In the app:</strong> Settings → Backup & Vault → Delete account</li>
-          <li><strong>By email:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></li>
-        </ul>
-        <p>When you delete your account:</p>
-        <ul>
-          <li>All authentication data is permanently removed</li>
-          <li>All cloud backups are irreversibly deleted</li>
-          <li>Local data on your device remains intact (you control local deletion)</li>
-          <li>Deletion is completed within <strong>30 calendar days</strong></li>
-        </ul>
-
-        <h2>9. Data Retention</h2>
-        <table>
-          <tr><th>Data type</th><th>Retention period</th></tr>
-          <tr><td>Account data (email, UID)</td><td>While the account is active, or until deletion is requested</td></tr>
-          <tr><td>Cloud backups (Vault)</td><td>While subscription is active + 30 days after cancellation</td></tr>
-          <tr><td>Access logs</td><td>6 months (as per Marco Civil da Internet, Art. 15)</td></tr>
-        </table>
-
-        <h2>10. Minors</h2>
-        <p>Mayinab is an educational app rated for all ages. However:</p>
-        <ul>
-          <li>Account creation (for Vault use) requires a <strong>minimum age of 16</strong>, or specific consent from a parent or legal guardian for minors aged 12–16, as per Art. 14 of the LGPD.</li>
-          <li>Offline use (without an account) does not require a minimum age, as no personal data is collected.</li>
-          <li>We do not intentionally collect data from children under 12. If we become aware that data from children under 12 has been collected without parental consent, we will take steps to delete it immediately.</li>
-        </ul>
-
-        <h2>11. International Data Transfers</h2>
-        <p>The servers used for the Vault service may be located outside Brazil. In these cases:</p>
-        <ul>
-          <li>All data is end-to-end encrypted before transfer</li>
-          <li>The transfer complies with Art. 33 of the LGPD</li>
-          <li>Infrastructure providers are contractually obligated to maintain adequate protection standards</li>
-        </ul>
-
-        <h2>12. Cookies and Tracking Technologies</h2>
-        <p>The Mayinab app <strong>does not use cookies, web beacons, tracking pixels, fingerprinting, or any tracking technologies</strong>.</p>
-        <p>The website <a href="https://mayinab.com">mayinab.com</a> is static and does not use cookies or third-party analytics.</p>
-
-        <h2>13. Notifications</h2>
-        <p>Mayinab may send local notifications (SRS review reminders) that are processed entirely on the device. We do not use third-party push notification services for tracking. You can disable notifications at any time in the app or operating system settings.</p>
-
-        <h2>14. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy periodically. In case of significant changes:</p>
-        <ul>
-          <li>We will notify users with active accounts by email</li>
-          <li>We will update the "Last updated" date at the top of this page</li>
-          <li>We will make the previous version available for reference</li>
-        </ul>
-        <p>Continued use of the app after changes are published constitutes acceptance of the revised policy.</p>
-
-        <h2>15. Communication Channel and DPO</h2>
-        <p>For questions, requests, or complaints related to personal data protection:</p>
-        <p><strong>Email:</strong> <a href="mailto:suporte@mayinab.com">suporte@mayinab.com</a></p>
-        <p>If you do not receive a satisfactory response, you may file a complaint with the <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>: <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">www.gov.br/anpd</a></p>
-
-        <h2>16. App Store Compliance</h2>
-        <h3>Google Play</h3>
-        <ul>
-          <li>This policy meets the requirements of the <em>Google Play User Data Policy</em></li>
-          <li>The Google Play Data Safety Section accurately reflects the practices described in this policy</li>
-          <li>We do not use libraries or SDKs that collect data without user knowledge</li>
-        </ul>
-        <h3>Apple App Store</h3>
-        <ul>
-          <li>This policy meets the requirements of Section 5.1 (Legal — Privacy) of the <em>App Store Review Guidelines</em></li>
-          <li>The App Store Privacy Nutrition Labels accurately reflect the practices described in this policy</li>
-          <li>We comply with <em>App Tracking Transparency</em> (ATT) requirements — we do not track users across apps</li>
+          <li><strong>Google Play:</strong> this policy and our Data Safety declaration accurately reflect that Mayinab is offline-first, account-free, and telemetry-free.</li>
+          <li><strong>Microsoft Store:</strong> compliant with Microsoft Store privacy requirements for offline desktop software.</li>
+          <li><strong>Apple App Store:</strong> compliant with Section 5.1 (Privacy) and App Tracking Transparency — we never track users across apps or websites.</li>
         </ul>
       </div>
     </div>
   </div>
+  </main>
 
   <!-- FOOTERS -->
-  <div class="footer-mini" data-lang="pt" class="active">
-    <p>© 2026 Mayinab · <a href="privacy.html">Privacidade</a> · <a href="terms.html">Termos de Uso</a> · <a href="/">Início</a></p>
+  <div class="footer-mini active" data-lang="pt">
+    <p>© 2026 <a href="https://mayinab.com/">Mayinab</a> · <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki &amp; Celso Takeshi Hamasaki</a> · <a href="privacy.html">Privacidade</a> · <a href="terms.html">Termos de Uso</a> · <a href="/">Início</a></p>
   </div>
   <div class="footer-mini" data-lang="en">
-    <p>© 2026 Mayinab · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of Use</a> · <a href="/">Home</a></p>
+    <p>© 2026 <a href="https://mayinab.com/">Mayinab</a> · <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki &amp; Celso Takeshi Hamasaki</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of Use</a> · <a href="/">Home</a></p>
   </div>
 
   <script src="../js/lang.js"
     data-meta-en-title="Privacy Policy – Mayinab"
-    data-meta-en-desc="Mayinab Privacy Policy. Learn how we handle your personal data in compliance with LGPD and GDPR."
+    data-meta-en-desc="Mayinab Privacy Policy. 100% free, offline-first SQLite study app with no accounts, no ads, and no trackers."
     data-meta-pt-title="Política de Privacidade – Mayinab"
-    data-meta-pt-desc="Política de Privacidade do aplicativo Mayinab. Saiba como tratamos seus dados pessoais em conformidade com a LGPD."></script>
+    data-meta-pt-desc="Política de Privacidade do Mayinab. App de estudos 100% gratuito, offline-first em SQLite, sem contas, sem anúncios e sem rastreadores."></script>
 </body>
 </html>
