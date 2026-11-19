@@ -83,6 +83,21 @@ body {
   color: var(--matcha-700);
 }
 
+.store-alt-box {
+  margin: 0 0 24px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--cobalt-50), var(--matcha-50));
+  border: 1px solid var(--cobalt-100);
+  text-align: center;
+}
+
+.store-alt-text {
+  margin: 0 0 12px;
+  font-size: 0.94rem;
+  color: var(--text-primary);
+}
+
 /* ── Windows warning box ── */
 .warning-box {
   background: var(--cream-50);

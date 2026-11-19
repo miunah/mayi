@@ -4,212 +4,275 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloudflareinsights.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'">
-  <meta name="description" content="Mayinab: Study notes reimagined as chat. Flashcards with spaced repetition, Markdown + LaTeX, 100% offline, no ads. Free for Android, iOS, Linux, macOS & Windows.">
-  <meta name="keywords" content="study app, flashcards, spaced repetition, chat notes, SRS, Anki alternative, offline study, markdown notes, LaTeX, student app, free study tool">
-  <meta name="author" content="Mayinab">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#8DB48E">
+
+  <title>Mayinab — Chat-Style Study Notes, FSRS-5 Flashcards &amp; BYOK AI (100% Free &amp; Offline)</title>
+  <meta name="description" content="Turn study notes into chat conversations. 100% offline SQLite app with FSRS-5 spaced repetition, BYOK AI copilot (OpenAI, Gemini, Claude, Ollama), Scribble Engine &amp; free LAN/Folder/Drive sync. Free &amp; non-profit.">
+  <meta name="keywords" content="Mayinab, study app, chat notes, FSRS-5 flashcards, spaced repetition, Anki alternative, BYOK AI study assistant, Ollama flashcards, offline SQLite study app, LAN P2P sync, Markdown LaTeX notes, Cloze deletions, Scribble drawing notes, free study app">
+  <meta name="author" content="Miuna Hamasaki, Celso Takeshi Hamasaki">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#2e6f4e">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mayinab: Study Notes as Chat">
-  <meta property="og:description" content="The study app that feels like texting. Flashcards, spaced repetition, Markdown + LaTeX. 100% offline, no ads, ever.">
+  <meta property="og:title" content="Mayinab — Study Notes Reimagined as Chat (FSRS-5 &amp; BYOK AI)">
+  <meta property="og:description" content="Take notes like texting, master them with FSRS-5 spaced repetition &amp; BYOK AI (or local Ollama). 100% offline, 100% free &amp; non-profit, zero ads.">
   <meta property="og:url" content="https://mayinab.com/">
   <meta property="og:site_name" content="Mayinab">
-  <meta property="og:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
-  <meta property="og:image:alt" content="Mayinab – Study notes reimagined as chat">
+  <meta property="og:image" content="https://mayinab.com/screenshots/en/light/desktop/01_home.png">
+  <meta property="og:image:width" content="2560">
+  <meta property="og:image:height" content="1600">
+  <meta property="og:image:alt" content="Mayinab desktop workspace showing chat notes, FSRS-5 flashcards, and nested topics">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mayinab: Study Notes as Chat">
-  <meta name="twitter:description" content="The study app that feels like texting. Flashcards, spaced repetition, Markdown + LaTeX. 100% offline, no ads, ever.">
-  <meta name="twitter:image" content="https://mayinab.com/img/mayinab-pc-01-english.png">
-  <meta name="twitter:image:alt" content="Mayinab – Study notes reimagined as chat">
-
-  <title>Mayinab: Study Notes Reimagined as Chat</title>
+  <meta name="twitter:title" content="Mayinab — Study Notes Reimagined as Chat (FSRS-5 &amp; BYOK AI)">
+  <meta name="twitter:description" content="Offline-first chat notes, FSRS-5 spaced repetition, BYOK AI + Ollama, Scribble Engine &amp; free LAN/Folder/Drive sync. 100% free &amp; non-profit.">
+  <meta name="twitter:image" content="https://mayinab.com/screenshots/en/light/desktop/01_home.png">
+  <meta name="twitter:image:alt" content="Mayinab desktop workspace showing chat notes, FSRS-5 flashcards, and nested topics">
 
   <link rel="canonical" href="https://mayinab.com/">
   <link rel="alternate" hreflang="en" href="https://mayinab.com/">
   <link rel="alternate" hreflang="pt" href="https://mayinab.com/">
   <link rel="alternate" hreflang="x-default" href="https://mayinab.com/">
   <link rel="icon" type="image/png" href="app_icon.png">
+  <link rel="apple-touch-icon" href="app_icon.png">
 
-  <!-- Google Fonts (preconnect + stylesheet) -->
   <link rel="stylesheet" href="css/nunito.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  <!-- Structured Data -->
+  <!-- Structured Data (@graph: WebSite + SoftwareApplication + FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Mayinab",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "Android, iOS, Linux, macOS, Windows",
-    "description": "Study notes reimagined as chat. Flashcards with spaced repetition, Markdown + LaTeX, 100% offline, no ads.",
-    "offers": [
+    "@graph": [
       {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "Free: All features, offline, no limits"
+        "@type": "WebSite",
+        "@id": "https://mayinab.com/#website",
+        "url": "https://mayinab.com/",
+        "name": "Mayinab",
+        "description": "Chat-style study notes with FSRS-5 spaced repetition, BYOK AI copilot, Scribble Engine, and free multi-device sync.",
+        "inLanguage": ["en", "pt-BR"]
       },
       {
-        "@type": "Offer",
-        "price": "1.50",
-        "priceCurrency": "USD",
-        "description": "Vault Basic: 2GB encrypted cloud backup"
+        "@type": "SoftwareApplication",
+        "@id": "https://mayinab.com/#app",
+        "name": "Mayinab",
+        "url": "https://mayinab.com/",
+        "applicationCategory": "EducationalApplication",
+        "applicationSubCategory": "Study & Spaced Repetition",
+        "operatingSystem": "Android, Windows, Linux, iOS, macOS",
+        "softwareVersion": "1.0.26",
+        "isAccessibleForFree": true,
+        "description": "Offline-first chat-style study app with FSRS-5 spaced repetition, BYOK AI copilot (OpenAI, Gemini, Claude, DeepSeek, Groq, OpenRouter, Ollama), Scribble drawing engine, SQLite FTS5 search, curated Content Packs, and free multi-device sync via LAN P2P QR Code, monitored folder, or Google Drive.",
+        "screenshot": [
+          "https://mayinab.com/screenshots/en/light/desktop/01_home.png",
+          "https://mayinab.com/screenshots/en/light/desktop/02_chat.png",
+          "https://mayinab.com/screenshots/en/light/desktop/03_study.png",
+          "https://mayinab.com/screenshots/en/light/desktop/04_ai_assistant.png",
+          "https://mayinab.com/screenshots/en/light/desktop/05_scribble.png",
+          "https://mayinab.com/screenshots/en/light/desktop/07_explore.png"
+        ],
+        "featureList": [
+          "7 chat-style note types (Markdown + LaTeX, Flashcard, Image, Video, Audio, File, Checklist)",
+          "FSRS-5 spaced repetition with automatic SM-2 migration and Cloze deletions",
+          "BYOK AI Study Assistant with 22 tools and local Ollama support",
+          "Free LAN Sync P2P (Wi-Fi / Tailscale) with 4-digit PIN and QR Code",
+          "Monitored folder Auto-Sync and Google Drive Auto-Sync with Smart Merge",
+          "Scribble Engine with 12 drawing tools, stylus pressure, and 5 paper patterns",
+          "Curated Explore Content Packs (.mayinab) with automatic SRS reset",
+          "100% offline SQLite storage with FTS5 full-text search and zero ads"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "description": "100% free and non-profit. All features unlocked, zero ads, no account required."
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Miuna Hamasaki",
+            "url": "https://cth.jp/"
+          },
+          {
+            "@type": "Person",
+            "name": "Celso Takeshi Hamasaki",
+            "url": "https://cth.jp/"
+          }
+        ],
+        "downloadUrl": "https://mayinab.com/#download"
       },
       {
-        "@type": "Offer",
-        "price": "2.90",
-        "priceCurrency": "USD",
-        "description": "Vault Pro: 50GB encrypted cloud backup"
+        "@type": "FAQPage",
+        "@id": "https://mayinab.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Mayinab really 100% free? What is the catch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no catch. Mayinab is 100% free and non-profit, with no plans to change that. There are no ads, no subscriptions, no locked features, and no paid cloud backend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I sync between my phone and computer for free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mayinab supports three free sync options: LAN Sync P2P over Wi-Fi or Tailscale with a 4-digit PIN and QR Code, Monitored Folder Auto-Sync (Syncthing, OneDrive, Dropbox, iCloud, Google Drive Desktop), and Google Drive Auto-Sync in your private appDataFolder — all using Smart Merge with Tombstones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data private? What happens to my AI API key?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Everything runs locally in SQLite with zero telemetry. BYOK AI requests go directly from your device to your provider (or 100% locally via Ollama). Your API key is stored outside SQLite and is never included in backups or sync snapshots."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is FSRS-5 and can I import my Anki decks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "FSRS-5 is a state-of-the-art spaced repetition algorithm with configurable target retention (70%–97%). Mayinab supports Anki-compatible CSV/TSV bulk import and automatically migrates legacy SM-2 cards to FSRS-5."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who created Mayinab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mayinab is created and maintained by Miuna Hamasaki and Celso Takeshi Hamasaki (https://cth.jp/) as an independent, non-profit project."
+            }
+          }
+        ]
       }
-    ],
-    "url": "https://mayinab.com/"
+    ]
   }
   </script>
-
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Background shapes -->
-  <div class="bg-shapes" aria-hidden="true">
-    <div class="bg-shape"></div>
-    <div class="bg-shape"></div>
-    <div class="bg-shape"></div>
-  </div>
-
-  <!-- Skip to content (accessibility) -->
-  <a href="#hero" class="skip-to-content">Skip to content</a>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
   <!-- ═══════════════ NAVIGATION ═══════════════ -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo" aria-label="Mayinab Home">
-        <span class="nav-logo-icon"><img src="app_icon.png" alt="Mayinab icon" width="36" height="36"></span>
-        <span data-i18n="brand">Mayinab</span>
-      </a>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="https://mayinab.com/" class="nav-logo" aria-label="Mayinab Home">
+          <img src="app_icon.png" alt="Mayinab mascot icon" width="34" height="34">
+          <span data-i18n="brand">Mayinab</span>
+        </a>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#features" data-i18n="nav.features">Features</a></li>
-        <li><a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a></li>
-        <li><a href="#comparison" data-i18n="nav.comparison">Comparison</a></li>
-        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-        <li>
-          <div class="lang-switcher">
-            <button class="lang-btn active" aria-label="English">EN</button>
-            <button class="lang-btn" aria-label="Português">PT</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#showcase" data-i18n="nav.tour">Tour</a></li>
+          <li><a href="#features" data-i18n="nav.features">Features</a></li>
+          <li><a href="#comparison" data-i18n="nav.compare">Compare</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="blog/" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="lang-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" aria-pressed="true" aria-label="English">EN</button>
+            <button type="button" class="lang-btn" aria-pressed="false" aria-label="Português">PT</button>
           </div>
-        </li>
-        <li><a href="#download" class="nav-cta" data-i18n="nav.download">Download Free</a></li>
-      </ul>
+          <a href="#download" class="nav-cta nav-cta-desktop" data-i18n="nav.download">Download Free</a>
+          <button type="button" class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-      <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-    </div>
-  </nav>
-
-  <main>
+  <main id="main-content">
     <!-- ═══════════════ HERO ═══════════════ -->
-    <section class="hero section" id="hero">
+    <section class="hero" id="hero">
       <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="hero-badge">🌸 <span data-i18n="hero.badge">Free & Open for Everyone</span></div>
-            <h1 class="hero-title">
-              <span data-i18n="hero.title1">Study notes,</span><br>
-              <span class="highlight" data-i18n="hero.title2">reimagined as chat.</span>
-            </h1>
-            <p class="hero-description" data-i18n="hero.description">
-              Take notes like you're texting a friend. Flashcards with spaced repetition, Markdown + LaTeX, 7 note types, file upload, drawing pad, resizable split-view. All offline, all free, no ads ever.
-            </p>
-            <div class="hero-buttons">
-              <a href="#download" class="btn btn-primary" data-i18n="hero.cta1">⬇ Download Free</a>
-              <a href="#features" class="btn btn-secondary" data-i18n="hero.cta2">✨ See Features</a>
+        <div class="hero-top">
+          <a href="changelog.html" class="release-pill">
+            <span class="release-pill-tag" data-i18n="hero.releaseTag">v1.0.26</span>
+            <span data-i18n="hero.releaseText">New: LAN Sync via QR Code, FSRS-5 &amp; BYOK AI →</span>
+          </a>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero.title1">Study notes,</span><br>
+            <span class="accent" data-i18n="hero.title2">reimagined as chat.</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Capture knowledge in a messenger timeline, memorize faster with FSRS-5 spaced repetition, and study with your own AI copilot (BYOK or local Ollama). 100% offline, 100% free &amp; non-profit, zero ads.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#download" class="btn btn-primary btn-lg" id="heroPrimaryCta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span id="heroPrimaryCtaLabel" data-i18n="hero.ctaPrimary">Download Free</span>
+            </a>
+            <a href="#showcase" class="btn btn-secondary btn-lg">
+              <span data-i18n="hero.ctaSecondary">Interactive Tour</span>
+            </a>
+          </div>
+
+          <p class="hero-sub-platforms">
+            <a href="#download" data-i18n="hero.subPlatforms">Available free for Android, Windows &amp; Linux · iOS &amp; macOS waitlist open</a>
+          </p>
+
+          <div class="trust-strip" role="list">
+            <div class="trust-item" role="listitem"><span class="trust-check" aria-hidden="true">✓</span><span data-i18n="hero.trust1">100% Free &amp; Non-Profit</span></div>
+            <div class="trust-item" role="listitem"><span class="trust-check" aria-hidden="true">✓</span><span data-i18n="hero.trust2">No Account Needed</span></div>
+            <div class="trust-item" role="listitem"><span class="trust-check" aria-hidden="true">✓</span><span data-i18n="hero.trust3">Offline SQLite</span></div>
+            <div class="trust-item" role="listitem"><span class="trust-check" aria-hidden="true">✓</span><span data-i18n="hero.trust4">Zero Ads &amp; Trackers</span></div>
+          </div>
+        </div>
+
+        <!-- Real Dual-Device App Showcase -->
+        <div class="hero-stage">
+          <div class="stage-controls">
+            <div class="stage-caption-pill">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span data-i18n="hero.stageCaption">Real app interface — switch theme or click any screen to zoom</span>
             </div>
-            <div class="hero-stats">
-              <div class="hero-stat">
-                <div class="hero-stat-number">7</div>
-                <div class="hero-stat-label" data-i18n="hero.stat1">Note types</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-number">5</div>
-                <div class="hero-stat-label" data-i18n="hero.stat2">Platforms</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-number">∞</div>
-                <div class="hero-stat-label" data-i18n="hero.stat3">Offline use</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-number">0</div>
-                <div class="hero-stat-label" data-i18n="hero.stat4">Ads, ever</div>
-              </div>
+            <div class="theme-toggle-group" role="group" aria-label="App theme preview">
+              <button type="button" class="theme-toggle-btn active" data-hero-theme="light" aria-pressed="true" data-i18n="hero.themeLight">☀️ Light</button>
+              <button type="button" class="theme-toggle-btn" data-hero-theme="dark" aria-pressed="false" data-i18n="hero.themeDark">🌙 Dark</button>
             </div>
           </div>
 
-          <!-- Phone Mockup -->
-          <div class="hero-visual">
-            <div class="hero-float float-1">
-              <div class="hero-float-card">🧠 <span data-i18n="hero.float1">SRS Review</span></div>
-            </div>
-            <div class="hero-float float-2">
-              <div class="hero-float-card">📝 <span data-i18n="hero.float2">LaTeX Ready</span></div>
-            </div>
-            <div class="hero-float float-3">
-              <div class="hero-float-card">🔒 <span data-i18n="hero.float3">AES-256</span></div>
+          <div class="hero-devices">
+            <div class="desktop-window" id="heroDesktopWindow">
+              <div class="window-chrome">
+                <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <span class="window-title">Mayinab — Desktop Workspace</span>
+                <button type="button" class="window-zoom-btn" id="heroZoomBtn" data-i18n="hero.zoom">⤢ Zoom</button>
+              </div>
+              <div class="desktop-screen" id="heroDesktopScreen" role="button" tabindex="0" aria-label="Zoom desktop screenshot">
+                <picture>
+                  <source id="heroDesktopWebp" type="image/webp" srcset="screenshots/en/light/desktop/01_home.webp">
+                  <img id="heroDesktopImg" src="screenshots/en/light/desktop/01_home.png" data-full="screenshots/en/light/desktop/01_home.png" alt="Mayinab desktop study workspace with nested folders, Discord-style topic tree, checklists, and FSRS-5 flashcards" width="1600" height="1000" fetchpriority="high" decoding="async">
+                </picture>
+              </div>
             </div>
 
-            <div class="phone-mockup" aria-hidden="true">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="phone-header">
-                  <div class="phone-header-avatar">📐</div>
-                  <div>
-                    <div class="phone-header-title">Mathematics</div>
-                    <div class="phone-header-sub">Calculus I › Limits</div>
-                  </div>
-                </div>
-                <div class="phone-messages">
-                  <div class="phone-msg note">
-                    The limit of a function describes the behavior of f(x) as x approaches a value.
-                  </div>
-                  <div class="phone-msg flashcard">
-                    <div class="fc-label">Flashcard</div>
-                    <div class="fc-q">What is lim(x→0) sin(x)/x ?</div>
-                  </div>
-                  <div class="phone-msg note">
-                    Remember: L'Hôpital's rule applies when we get 0/0 or ∞/∞ ✨
-                  </div>
-                  <div class="phone-msg checklist">
-                    <div class="check-item"><span class="check-box done">✓</span> Study limit definition</div>
-                    <div class="check-item"><span class="check-box done">✓</span> Practice squeeze theorem</div>
-                    <div class="check-item"><span class="check-box"></span> Solve exercises 1-10</div>
-                  </div>
-                  <div class="phone-msg image-note">
-                    <div class="img-placeholder">📊</div>
-                    <div class="img-caption">Graph of f(x) near x=0</div>
-                  </div>
-                  <div class="phone-msg audio-note">
-                    <div class="audio-icon">▶</div>
-                    <div class="audio-wave">
-                      <span></span><span></span><span></span><span></span>
-                      <span></span><span></span><span></span><span></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="phone-input">
-                  <div class="phone-input-field">Type a note…</div>
-                  <div class="phone-input-send">↑</div>
-                </div>
+            <div class="hero-mobile-overlay" id="heroMobileOverlay" role="button" tabindex="0" aria-label="Zoom mobile screenshot">
+              <div class="hero-mobile-screen">
+                <picture>
+                  <source id="heroMobileWebp" type="image/webp" srcset="screenshots/en/light/mobile/02_chat.webp">
+                  <img id="heroMobileImg" src="screenshots/en/light/mobile/02_chat.png" data-full="screenshots/en/light/mobile/02_chat.png" alt="Mayinab mobile chat notes screen with backlinks, pinned notes, and flashcards" width="720" height="1558" decoding="async">
+                </picture>
               </div>
             </div>
           </div>
@@ -217,577 +280,578 @@
       </div>
     </section>
 
-    <!-- ═══════════════ FEATURES ═══════════════ -->
-    <section class="features section" id="features">
+    <!-- ═══════════════ PROBLEM → SOLUTION ═══════════════ -->
+    <section class="section section-subtle" id="why">
       <div class="container">
-        <div class="text-center reveal">
-          <div class="section-label">✨ <span data-i18n="features.label">Features</span></div>
-          <h2 class="section-title" data-i18n="features.title">Everything you need to study smarter</h2>
-          <p class="section-subtitle mx-auto" data-i18n="features.subtitle">
-            A chat interface that turns studying into something natural. Here's what's inside.
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="contrast.eyebrow">The Problem</div>
+          <h2 class="section-title" data-i18n="contrast.title">Why traditional study tools slow you down</h2>
+          <p class="section-subtitle" data-i18n="contrast.subtitle">
+            Students bounce between messy note apps, rigid flashcard decks, and improvised chat groups. Mayinab ends the fragmentation.
           </p>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card reveal">
-            <div class="feature-icon green">💬</div>
-            <h3 data-i18n="features.chat.title">Chat-Based Notes</h3>
-            <p data-i18n="features.chat.desc">Take notes like you're texting. Text, flashcards, images, audio, video, files, and checklists, all in one timeline. Pin, reply, edit, reorder by drag, multi-select, and filter by type.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon peach">🧠</div>
-            <h3 data-i18n="features.srs.title">Spaced Repetition (SRS)</h3>
-            <p data-i18n="features.srs.desc">SM-2 algorithm with configurable parameters. Flip cards, typing mode, daily reminders, streak tracking. Never forget what you learned.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon pink">📝</div>
-            <h3 data-i18n="features.markdown.title">Markdown + LaTeX</h3>
-            <p data-i18n="features.markdown.desc">Rich text with full Markdown support, LaTeX math formulas, syntax highlighting for code, wiki-links [[like this]], and #tags.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon lavender">📚</div>
-            <h3 data-i18n="features.org.title">Deep Organization</h3>
-            <p data-i18n="features.org.desc">Subjects → Topics with unlimited nesting depth. Folders on the home screen. Sidebar topic tree on desktop. Command palette (Ctrl+K) for instant navigation.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon sky">🔒</div>
-            <h3 data-i18n="features.security.title">Private & Encrypted</h3>
-            <p data-i18n="features.security.desc">100% offline by default. Your data never leaves your device. Optional cloud backup uses AES-256-GCM encryption with zero-knowledge design.</p>
-          </div>
-
-          <div class="feature-card reveal">
-            <div class="feature-icon sky">📎</div>
-            <h3 data-i18n="features.files.title">File Upload & Drag-Drop</h3>
-            <p data-i18n="features.files.desc">Attach any file from your device, drag & drop from your OS file manager, or paste images from clipboard. Auto compression and content-addressable storage for zero duplicates.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon pink">✏️</div>
-            <h3 data-i18n="features.scribble.title">Scribble & Image Editor</h3>
-            <p data-i18n="features.scribble.desc">Built-in freehand drawing pad with color picker and adjustable stroke width. Draw sketches, diagrams, or handwritten notes. Annotate on top of any image. Originals always preserved.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon lavender">🖥️</div>
-            <h3 data-i18n="features.desktop.title">Desktop Power Mode</h3>
-            <p data-i18n="features.desktop.desc">Resizable split-view with draggable dividers. Discord-style sidebar topic tree. Keyboard shortcuts: Ctrl+K (command palette), Ctrl+F (search), Ctrl+Shift+E (sidebar). Panels remember their size.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon peach">⚡</div>
-            <h3 data-i18n="features.input.title">Smart Input Bar</h3>
-            <p data-i18n="features.input.desc">Type / for slash commands to create flashcards, checklists, and more. Full markdown toolbar with bold, italic, code, links, LaTeX. Wiki-links [[autocomplete]] and #tag suggestions as you type.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon green">📊</div>
-            <h3 data-i18n="features.stats.title">Stats & Streaks</h3>
-            <p data-i18n="features.stats.desc">Study streak with fire counter. Weekly activity chart, total notes created, reviews completed, next review countdown. Daily notification reminders and streak protection alerts.</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-icon cream">🎯</div>
-            <h3 data-i18n="features.themes.title">Themes & Customization</h3>
-            <p data-i18n="features.themes.desc">Light, Dark, or System theme. Custom colors for primary, secondary, background, and surface. Custom wallpapers per screen. Each subject gets its own accent color, emoji, and banner.</p>
-          </div>
+        <div class="contrast-grid">
+          <article class="contrast-card reveal">
+            <span class="contrast-badge" data-i18n="contrast.p1.badge">Note Apps</span>
+            <h3 data-i18n="contrast.p1.title">Endless blank pages &amp; zero retention</h3>
+            <p data-i18n="contrast.p1.desc">Writing long documents feels slow, gets disorganized quickly, and offers no spaced repetition to make knowledge stick.</p>
+          </article>
+          <article class="contrast-card reveal">
+            <span class="contrast-badge" data-i18n="contrast.p2.badge">Flashcard Apps</span>
+            <h3 data-i18n="contrast.p2.title">Rigid forms disconnected from context</h3>
+            <p data-i18n="contrast.p2.desc">Legacy SRS tools feel dated, take ages to configure, and separate your flashcards from your notes, PDFs, and sketches.</p>
+          </article>
+          <article class="contrast-card reveal">
+            <span class="contrast-badge" data-i18n="contrast.p3.badge">Chat Hacks</span>
+            <h3 data-i18n="contrast.p3.title">Lost messages &amp; zero study tools</h3>
+            <p data-i18n="contrast.p3.desc">Messaging yourself on WhatsApp or Discord feels fast, but lacks LaTeX, FSRS-5 reviews, hierarchy, and true offline privacy.</p>
+          </article>
         </div>
 
-        <div class="features-see-all reveal">
-          <a href="#capabilities" class="btn btn-secondary" data-i18n="features.seeAll">📋 See All 60+ Capabilities</a>
+        <div class="solution-banner reveal">
+          <div class="solution-banner-copy">
+            <h3 data-i18n="contrast.solution.title">Mayinab combines the speed of chat with FSRS-5, AI &amp; Scribble.</h3>
+            <p data-i18n="contrast.solution.desc">Every subject is a chat. Every note is a rich message — text, flashcard, Cloze, image, audio, video, checklist, or file — all living locally on your device.</p>
+          </div>
+          <a href="#download" class="btn btn-secondary" data-i18n="contrast.solution.cta">Download Free →</a>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ SCREENSHOTS ═══════════════ -->
-    <section class="screenshots section" id="screenshots">
+    <!-- ═══════════════ INTERACTIVE PRODUCT TOUR ═══════════════ -->
+    <section class="section section-dark" id="showcase">
       <div class="container">
-        <div class="text-center reveal">
-          <div class="section-label">📸 <span data-i18n="screenshots.label">Screenshots</span></div>
-          <h2 class="section-title" data-i18n="screenshots.title">See it in action</h2>
-          <p class="section-subtitle mx-auto" data-i18n="screenshots.subtitle">
-            Real screenshots from the app. Clean interface, powerful features, beautiful on every theme.
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="tour.eyebrow">Interactive Product Tour</div>
+          <h2 class="section-title" data-i18n="tour.title">See Mayinab in action — every screen, live</h2>
+          <p class="section-subtitle" data-i18n="tour.subtitle">
+            Explore real Desktop &amp; Mobile screenshots in Light and Dark mode. Click any screenshot to inspect full resolution.
           </p>
         </div>
 
-        <div class="screenshots-gallery">
-          <!-- Featured: Main desktop view -->
-          <div class="screenshot-item featured reveal">
-            <span class="screenshot-badge">Desktop</span>
-            <picture>
-              <source class="lang-source" type="image/webp" data-srcset-en="img/mayinab-pc-01-english.webp" data-srcset-pt="img/mayinab-pc-01-portuguese.webp" srcset="img/mayinab-pc-01-english.webp">
-              <img class="lang-img" data-img-en="img/mayinab-pc-01-english.png" data-img-pt="img/mayinab-pc-01-portuguese.png" src="img/mayinab-pc-01-english.png" alt="Mayinab desktop - chat notes with split-view sidebar" loading="lazy" decoding="async" width="1026" height="767">
-            </picture>
-            <div class="screenshot-caption">
-              <h4 data-i18n="screenshots.main.title">Chat-style notes in action</h4>
-              <p data-i18n="screenshots.main.desc">Subjects, topics, and notes organized as a natural conversation. Split-view with sidebar on desktop.</p>
-            </div>
+        <div class="showcase-toolbar reveal">
+          <div class="showcase-tabs" role="tablist" aria-label="Product feature screens">
+            <button type="button" class="showcase-tab active" role="tab" aria-selected="true" data-tour-tab="chat">💬 <span data-i18n="tour.tab.chat">Chat &amp; Notes</span></button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-tour-tab="study">🧠 <span data-i18n="tour.tab.study">FSRS-5 Study</span></button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-tour-tab="ai">✨ <span data-i18n="tour.tab.ai">AI Copilot</span></button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-tour-tab="scribble">✏️ <span data-i18n="tour.tab.scribble">Scribble</span></button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-tour-tab="search">⚡ <span data-i18n="tour.tab.search">Search &amp; Ctrl+K</span></button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-tour-tab="explore">🌍 <span data-i18n="tour.tab.explore">Explore Packs</span></button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-tour-tab="stats">📊 <span data-i18n="tour.tab.stats">Stats &amp; Streaks</span></button>
           </div>
 
-          <!-- Dark mode - full width for impact -->
-          <div class="screenshot-item featured reveal">
-            <span class="screenshot-badge">Dark Mode</span>
-            <picture>
-              <source class="lang-source" type="image/webp" data-srcset-en="img/mayinab-pc-dark-mode-01-english.webp" data-srcset-pt="img/mayinab-pc-02-portuguese.webp" srcset="img/mayinab-pc-dark-mode-01-english.webp">
-              <img class="lang-img" data-img-en="img/mayinab-pc-dark-mode-01-english.png" data-img-pt="img/mayinab-pc-02-portuguese.png" src="img/mayinab-pc-dark-mode-01-english.png" alt="Mayinab dark mode interface" loading="lazy" decoding="async" width="1220" height="844">
-            </picture>
-            <div class="screenshot-caption">
-              <h4 data-i18n="screenshots.dark.title">Beautiful dark mode</h4>
-              <p data-i18n="screenshots.dark.desc">Easy on the eyes for late-night study sessions. Every element adapts perfectly.</p>
+          <div class="showcase-switches">
+            <div class="dark-pill-switch" role="group" aria-label="Device preview">
+              <button type="button" class="dark-pill-btn active" data-tour-device="desktop" aria-pressed="true" data-i18n="tour.deviceDesktop">💻 Desktop</button>
+              <button type="button" class="dark-pill-btn" data-tour-device="mobile" aria-pressed="false" data-i18n="tour.deviceMobile">📱 Mobile</button>
+            </div>
+            <div class="dark-pill-switch" role="group" aria-label="Tour theme preview">
+              <button type="button" class="dark-pill-btn active" data-tour-theme="light" aria-pressed="true" data-i18n="hero.themeLight">☀️ Light</button>
+              <button type="button" class="dark-pill-btn" data-tour-theme="dark" aria-pressed="false" data-i18n="hero.themeDark">🌙 Dark</button>
             </div>
           </div>
+        </div>
 
-          <!-- Flashcard view 1 -->
-          <div class="screenshot-item reveal">
-            <span class="screenshot-badge">Flashcards</span>
-            <picture>
-              <source class="lang-source" type="image/webp" data-srcset-en="img/mayinab-pc-flashcard-01-english.webp" data-srcset-pt="img/mayinab-pc-flashcard-01-portuguese.webp" srcset="img/mayinab-pc-flashcard-01-english.webp">
-              <img class="lang-img" data-img-en="img/mayinab-pc-flashcard-01-english.png" data-img-pt="img/mayinab-pc-flashcard-01-portuguese.png" src="img/mayinab-pc-flashcard-01-english.png" alt="Mayinab SRS flashcard review" loading="lazy" decoding="async" width="1027" height="764">
-            </picture>
-            <div class="screenshot-caption">
-              <h4 data-i18n="screenshots.flashcard1.title">Spaced repetition review</h4>
-              <p data-i18n="screenshots.flashcard1.desc">Flip cards with SM-2 algorithm. Rate as Again, Hard, Good, or Easy.</p>
-            </div>
+        <div class="showcase-stage reveal">
+          <div class="showcase-info">
+            <span class="showcase-info-badge" id="tourBadge">Chat Timeline</span>
+            <h3 id="tourTitle">Capture notes as naturally as texting</h3>
+            <p id="tourDesc">Mix Markdown, LaTeX equations, flashcards, Cloze deletions, checklists, audio, video, and files in one clean timeline with Discord-style sidebar navigation.</p>
+            <ul class="showcase-bullets">
+              <li id="tourB1">7 note types + inline [[flashcard]] &amp; {{c1::Cloze}} syntax</li>
+              <li id="tourB2">Wiki-links [[Topic]] with automatic Backlinks panel</li>
+              <li id="tourB3">Pin, quote-reply, drag-reorder, bulk actions &amp; type filters</li>
+            </ul>
           </div>
 
-          <!-- Flashcard view 2 -->
-          <div class="screenshot-item reveal">
-            <span class="screenshot-badge" data-i18n="screenshots.badge.features">SRS</span>
-            <picture>
-              <source class="lang-source" type="image/webp" data-srcset-en="img/mayinab-pc-flashcard-02-english.webp" data-srcset-pt="img/mayinab-pc-03-portuguese.webp" srcset="img/mayinab-pc-flashcard-02-english.webp">
-              <img class="lang-img" data-img-en="img/mayinab-pc-flashcard-02-english.png" data-img-pt="img/mayinab-pc-03-portuguese.png" src="img/mayinab-pc-flashcard-02-english.png" alt="Mayinab flashcard answer with rich content" loading="lazy" decoding="async" width="1026" height="767">
-            </picture>
-            <div class="screenshot-caption">
-              <h4 data-i18n="screenshots.features.title">Rich flashcard answers</h4>
-              <p data-i18n="screenshots.features.desc">Reveal answers with images, formatted text, LaTeX, and multimedia. Study with style.</p>
+          <div class="showcase-frame-wrap" id="tourFrameWrap">
+            <div class="showcase-desktop-frame" id="tourFrame" role="button" tabindex="0" aria-label="Inspect full resolution screenshot">
+              <picture>
+                <source id="tourWebp" type="image/webp" srcset="screenshots/en/light/desktop/02_chat.webp">
+                <img id="tourImg" src="screenshots/en/light/desktop/02_chat.png" data-full="screenshots/en/light/desktop/02_chat.png" alt="Mayinab — Chat notes timeline" width="1600" height="1000" loading="lazy" decoding="async">
+              </picture>
+              <span class="showcase-zoom-hint" data-i18n="tour.zoomHint">Click to zoom</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ ALL CAPABILITIES ═══════════════ -->
-    <section class="section bg-secondary" id="capabilities">
+    <!-- ═══════════════ BENTO FEATURES ═══════════════ -->
+    <section class="section" id="features">
       <div class="container">
-        <div class="text-center reveal">
-          <div class="section-label">📋 <span data-i18n="capabilities.label">All Capabilities</span></div>
-          <h2 class="section-title" data-i18n="capabilities.title">Everything you can do with Mayinab</h2>
-          <p class="section-subtitle mx-auto" data-i18n="capabilities.subtitle">A complete toolkit for studying. No feature hidden behind paywalls.</p>
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="features.eyebrow">Core Capabilities</div>
+          <h2 class="section-title" data-i18n="features.title">Everything a serious learner needs — zero paywalls</h2>
+          <p class="section-subtitle" data-i18n="features.subtitle">
+            Engineered offline-first on Flutter &amp; SQLite for speed, longevity, and total ownership of your knowledge.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- FSRS-5 -->
+          <article class="bento-card span-6 reveal">
+            <div class="bento-icon amber">🧠</div>
+            <span class="bento-tag" data-i18n="bento.fsrs.tag">Memory Science</span>
+            <h3 data-i18n="bento.fsrs.title">FSRS-5 Spaced Repetition</h3>
+            <p data-i18n="bento.fsrs.desc">Modern FSRS-5 scheduling adapts to your forgetting curve with configurable retention (70%–97%) and max intervals. Works with dedicated cards, inline flashcards, and Anki-style {{c1::Cloze::hint}} deletions.</p>
+            <div class="chip-row">
+              <span class="micro-chip">FSRS-5</span>
+              <span class="micro-chip">SM-2 Auto-Migration</span>
+              <span class="micro-chip">{{c1::Cloze}}</span>
+              <span class="micro-chip">Anki CSV/TSV</span>
+            </div>
+          </article>
+
+          <!-- BYOK AI -->
+          <article class="bento-card span-6 reveal">
+            <div class="bento-icon cobalt">✨</div>
+            <span class="bento-tag" data-i18n="bento.ai.tag">BYOK · 22 Tools</span>
+            <h3 data-i18n="bento.ai.title">Private AI Study Copilot</h3>
+            <p data-i18n="bento.ai.desc">Connect OpenAI, Google Gemini, Anthropic Claude, OpenRouter, Groq, DeepSeek, or local Ollama (zero API cost). Reads your notes via FTS5, runs FSRS-5 diagnostics, creates batch flashcards, and requests approval before sensitive edits. API keys stay outside backups.</p>
+            <div class="chip-row">
+              <span class="micro-chip">OpenAI</span>
+              <span class="micro-chip">Gemini</span>
+              <span class="micro-chip">Claude</span>
+              <span class="micro-chip">Ollama (Local)</span>
+              <span class="micro-chip">DeepSeek / Groq</span>
+            </div>
+          </article>
+
+          <!-- Free Sync Showcase (Full Span) -->
+          <article class="bento-card span-12 reveal">
+            <div>
+              <div class="bento-icon green">🔄</div>
+              <span class="bento-tag" data-i18n="bento.sync.tag">100% Free · Zero Cloud Lock-In</span>
+              <h3 data-i18n="bento.sync.title">Sync across every device — on your own terms</h3>
+              <p data-i18n="bento.sync.desc">No paid cloud subscription required. Keep your phone and computer in sync for free with Smart Merge (Last-Write-Wins + Tombstones so deleted notes never come back from the dead).</p>
+            </div>
+            <div class="sync-methods-grid">
+              <div class="sync-method-box">
+                <strong data-i18n="bento.sync.m1.title">📡 LAN Sync P2P (Wi-Fi / Tailscale)</strong>
+                <span data-i18n="bento.sync.m1.desc">Bidirectional one-trip HTTP sync with 4-digit PIN &amp; QR Code pairing — works on local Wi-Fi or across networks via Tailscale.</span>
+              </div>
+              <div class="sync-method-box">
+                <strong data-i18n="bento.sync.m2.title">📁 Monitored Folder Auto-Sync</strong>
+                <span data-i18n="bento.sync.m2.desc">Auto-sync via mayinab_sync.zip inside Syncthing, Google Drive Desktop, OneDrive, iCloud, or Dropbox.</span>
+              </div>
+              <div class="sync-method-box">
+                <strong data-i18n="bento.sync.m3.title">☁️ Google Drive Auto-Sync</strong>
+                <span data-i18n="bento.sync.m3.desc">Automatic sync straight to your own Google account appDataFolder — private and free.</span>
+              </div>
+              <div class="sync-method-box">
+                <strong data-i18n="bento.sync.m4.title">📦 Local ZIP &amp; .mayinab Export</strong>
+                <span data-i18n="bento.sync.m4.desc">Full database + media backups and portable subject exports anytime. Your data is never trapped.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Notes & Backlinks -->
+          <article class="bento-card reveal">
+            <div class="bento-icon peach">💬</div>
+            <span class="bento-tag" data-i18n="bento.notes.tag">7 Note Types</span>
+            <h3 data-i18n="bento.notes.title">Chat Notes, Markdown, LaTeX &amp; Backlinks</h3>
+            <p data-i18n="bento.notes.desc">Text (Markdown + LaTeX + code highlighting), Flashcards, Images, Videos (YouTube embeds), Audio recording, Files, and Checklists. Link ideas with [[wiki-links]] and view automatic Backlinks.</p>
+          </article>
+
+          <!-- Scribble & OCR -->
+          <article class="bento-card reveal">
+            <div class="bento-icon pink">✏️</div>
+            <span class="bento-tag" data-i18n="bento.scribble.tag">12 Drawing Tools</span>
+            <h3 data-i18n="bento.scribble.title">Scribble Engine + Mobile OCR &amp; Scanner</h3>
+            <p data-i18n="bento.scribble.desc">Smooth pressure-sensitive drawing with 5 paper patterns &amp; 3 themes. On mobile, extract text via Google ML Kit OCR or scan multi-page documents straight to PDF.</p>
+          </article>
+
+          <!-- Organization & Recycle Bin -->
+          <article class="bento-card reveal">
+            <div class="bento-icon lavender">🗂️</div>
+            <span class="bento-tag" data-i18n="bento.org.tag">Unlimited Depth</span>
+            <h3 data-i18n="bento.org.title">Nested Folders, Topic Tree &amp; Recycle Bin</h3>
+            <p data-i18n="bento.org.desc">Group subjects in recursive nested folders, nest topics infinitely, capture quickly in Inbox (or share from other apps), and recover accidental deletions from the 30-day Recycle Bin.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PERSONAS / BUILT FOR ═══════════════ -->
+    <section class="section section-warm" id="personas">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="personas.eyebrow">Built For Your Goal</div>
+          <h2 class="section-title" data-i18n="personas.title">One study workspace, adapted to how you learn</h2>
+        </div>
+
+        <div class="personas-grid">
+          <article class="persona-card reveal">
+            <div class="persona-emoji" aria-hidden="true">⚖️</div>
+            <h3 data-i18n="personas.p1.title">Competitive &amp; Bar Exams</h3>
+            <p data-i18n="personas.p1.desc">Organize laws, summaries, and thousands of FSRS-5 flashcards across subjects. Import curated packs or Anki CSV/TSV decks in seconds.</p>
+          </article>
+          <article class="persona-card reveal">
+            <div class="persona-emoji" aria-hidden="true">🧬</div>
+            <h3 data-i18n="personas.p2.title">University &amp; STEM</h3>
+            <p data-i18n="personas.p2.desc">Write crisp LaTeX formulas, syntax-highlighted code snippets, and freehand Scribble diagrams for calculus, algorithms, and medicine.</p>
+          </article>
+          <article class="persona-card reveal">
+            <div class="persona-emoji" aria-hidden="true">🎯</div>
+            <h3 data-i18n="personas.p3.title">Entrance Exams (ENEM / SAT)</h3>
+            <p data-i18n="personas.p3.desc">Keep every subject structured with checklists, audio reviews, Pomodoro sessions, and daily streak reminders until exam day.</p>
+          </article>
+          <article class="persona-card reveal">
+            <div class="persona-emoji" aria-hidden="true">🌏</div>
+            <h3 data-i18n="personas.p4.title">Languages &amp; IT Certs</h3>
+            <p data-i18n="personas.p4.desc">Combine audio recordings, YouTube clips, Cloze sentences, and AI-assisted practice for Japanese (JLPT), English, AWS, and beyond.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ALL 70+ CAPABILITIES ═══════════════ -->
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="capabilities.eyebrow">Complete Toolkit</div>
+          <h2 class="section-title" data-i18n="capabilities.title">70+ capabilities — every single one free</h2>
+          <p class="section-subtitle" data-i18n="capabilities.subtitle">No locked features, no artificial card limits, no paywalls.</p>
         </div>
 
         <div class="capabilities-grid">
-          <!-- Note Taking -->
           <div class="capability-group reveal">
             <div class="capability-group-header">
-              <div class="capability-group-icon green">💬</div>
-              <div class="capability-group-title" data-i18n="capabilities.notes.title">Note Taking</div>
+              <div class="capability-group-icon" aria-hidden="true">💬</div>
+              <h3 class="capability-group-title" data-i18n="cap.g1.title">Chat Notes &amp; Rich Editing</h3>
             </div>
             <ul class="capability-list">
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.1">7 note types: text, flashcard, image, video, audio, file, checklist</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.2">Pin important notes to the top strip</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.3">Reply and quote other notes</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.4">Edit any note permanently, saved instantly</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.5">Soft delete with 3-second undo</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.6">Multi-select notes for bulk forward/delete</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.7">Drag-and-drop to reorder notes</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.8">Filter by note type with count badges</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.9">In-chat search with match counter and prev/next</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.notes.10">Date separators between note groups</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g1.1">7 note types: text, flashcard, image, video, audio, file, checklist</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g1.2">Markdown + LaTeX math + syntax highlighting for code blocks</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g1.3">Inline flashcards [[flashcard: {...}]] &amp; Cloze {{c1::answer::hint}}</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g1.4">Slash commands (/flashcard, /checklist…) &amp; Markdown toolbar</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g1.5">Wiki-links [[Topic]] autocomplete + automatic Backlinks panel</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g1.6">Pin notes, quote-reply, drag-reorder, forward &amp; multi-select batch actions</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g1.7">Mobile swipe gestures with accidental-delete protection &amp; selectable text</span></li>
             </ul>
           </div>
 
-          <!-- Input & Creation -->
           <div class="capability-group reveal">
             <div class="capability-group-header">
-              <div class="capability-group-icon peach">✍️</div>
-              <div class="capability-group-title" data-i18n="capabilities.input.title">Input & Creation</div>
+              <div class="capability-group-icon" aria-hidden="true">🧠</div>
+              <h3 class="capability-group-title" data-i18n="cap.g2.title">FSRS-5 &amp; Active Recall</h3>
             </div>
             <ul class="capability-list">
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.1">Slash commands (/flashcard, /checklist...)</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.2">Markdown toolbar: bold, italic, code, link, math, headings, lists</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.3">Paste images directly from clipboard</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.4">Drag & drop files from your file manager</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.5">File picker for any document type</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.6">Camera capture on mobile</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.7">Built-in audio recorder</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.8">Scribble drawing pad with color picker</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.9">Flashcard dialog with Q/A + multimedia</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.input.10">Video flashcards with YouTube timestamps</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g2.1">FSRS-5 algorithm with configurable target retention (70%–97%)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g2.2">Automatic lazy migration from legacy SM-2 cards</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g2.3">Progressive flashcard unlock as you visit topics</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g2.4">Flip card review session with embedded video player, undo &amp; summary</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g2.5">Rich multimedia flashcards (image, audio, video on Q &amp; A)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g2.6">Anki-compatible CSV/TSV bulk import (including YouTube links)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g2.7">Daily local reminders (timezone-aware) + 9 PM streak alert</span></li>
             </ul>
           </div>
 
-          <!-- Navigation & Organization -->
           <div class="capability-group reveal">
             <div class="capability-group-header">
-              <div class="capability-group-icon lavender">🗂️</div>
-              <div class="capability-group-title" data-i18n="capabilities.nav.title">Navigation & Organization</div>
+              <div class="capability-group-icon" aria-hidden="true">✨</div>
+              <h3 class="capability-group-title" data-i18n="cap.g3.title">AI Assistant (BYOK)</h3>
             </div>
             <ul class="capability-list">
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.1">Discord-style sidebar topic tree (desktop)</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.2">Unlimited-depth topic nesting</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.3">Subject folders on home screen</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.4">Command palette (Ctrl+K): search anything</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.5">Wiki-links [[Topic]] with autocomplete</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.6">Breadcrumb navigation on mobile</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.7">Full-text search powered by SQLite FTS5</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.8">#tag autocomplete and Tags Explorer</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.9">Drag-and-drop reorderable subjects</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.nav.10">Topic siblings sheet for quick switching</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g3.1">OpenAI, Gemini, Claude, OpenRouter, Groq, DeepSeek &amp; Ollama (local)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g3.2">Any custom OpenAI-Compatible endpoint supported</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g3.3">22 integrated tools across read, write &amp; sensitive risk levels</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g3.4">FSRS-5 diagnostics: hard cards, retention rate &amp; backlog analysis</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g3.5">Batch flashcard creation &amp; live conversational theme editor</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g3.6">Explicit approval gating for deletions &amp; theme changes + undo</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g3.7">Attach text files, OCR images, or scanned docs; keys stay off backups</span></li>
             </ul>
           </div>
 
-          <!-- Study & Review -->
           <div class="capability-group reveal">
             <div class="capability-group-header">
-              <div class="capability-group-icon pink">🧠</div>
-              <div class="capability-group-title" data-i18n="capabilities.study.title">Study & Review</div>
+              <div class="capability-group-icon" aria-hidden="true">🔄</div>
+              <h3 class="capability-group-title" data-i18n="cap.g4.title">Free Sync, Backup &amp; Packs</h3>
             </div>
             <ul class="capability-list">
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.1">SM-2 spaced repetition algorithm</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.2">Flip card mode with animated reveal</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.3">Typing mode: type and compare answers</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.4">4 ratings: Again, Hard, Good, Easy</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.5">Undo last review during session</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.6">Session summary with rating chart</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.7">Keyboard shortcuts: Space to flip, 1-4 to rate</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.8">Configurable SRS parameters</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.9">Multimedia flashcards (image/video/audio per side)</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.study.10">Pomodoro focus timer with auto phase switch</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g4.1">LAN Sync P2P over Wi-Fi or Tailscale (4-digit PIN + QR Code)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g4.2">Monitored folder Auto-Sync (Syncthing, OneDrive, Dropbox, iCloud, Drive)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g4.3">Google Drive Auto-Sync using your own private appDataFolder</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g4.4">Smart Merge (LWW by UUID + updatedAt + Tombstones)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g4.5">Full local ZIP backup (SQLite DB + deduplicated media)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g4.6">Explore catalog of curated .mayinab Content Packs with SRS reset</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g4.7">Subject export/import (.mayinab) &amp; localized starter templates</span></li>
             </ul>
           </div>
 
-          <!-- Media & Attachments -->
           <div class="capability-group reveal">
             <div class="capability-group-header">
-              <div class="capability-group-icon sky">🎨</div>
-              <div class="capability-group-title" data-i18n="capabilities.media.title">Media & Attachments</div>
+              <div class="capability-group-icon" aria-hidden="true">🎨</div>
+              <h3 class="capability-group-title" data-i18n="cap.g5.title">Scribble, Media &amp; OCR</h3>
             </div>
             <ul class="capability-list">
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.1">Upload any file type from device</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.2">Automatic image compression</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.3">Video player with full controls</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.4">YouTube embed with Shorts and timestamps</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.5">Audio recorder and full-featured player</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.6">Scribble pad for freehand drawings</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.7">Image editor: draw annotations on photos</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.8">Rich link previews with LRU cache</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.9">Syntax highlighting for code blocks</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.media.10">Anki CSV/TSV bulk import with auto-detect</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g5.1">Scribble Engine (perfect_freehand) with stylus pressure support</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g5.2">12 drawing tools: pen, highlighter, erasers, lasso, shapes, arrows, text</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g5.3">5 paper patterns (blank, grid, dot, lined, isometric) &amp; 3 paper themes</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g5.4">Built-in audio recorder, fullscreen image/video viewers &amp; YouTube embed</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g5.5">Auto image compression + SHA-256 content-addressable deduplication</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g5.6">OCR text recognition &amp; PDF Document Scanner via Google ML Kit (mobile)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g5.7">Rich link previews &amp; quick copy/save image actions</span></li>
             </ul>
           </div>
 
-          <!-- Desktop & Mobile -->
           <div class="capability-group reveal">
             <div class="capability-group-header">
-              <div class="capability-group-icon cream">🔧</div>
-              <div class="capability-group-title" data-i18n="capabilities.platform.title">Desktop & Mobile</div>
+              <div class="capability-group-icon" aria-hidden="true">⚙️</div>
+              <h3 class="capability-group-title" data-i18n="cap.g6.title">Organization &amp; Customization</h3>
             </div>
             <ul class="capability-list">
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.1">Resizable split-view with draggable dividers</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.2">Resizable sidebar, topic strip, home panel</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.3">10+ keyboard shortcuts</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.4">Share/receive content from other apps</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.5">Light, Dark, and System themes</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.6">Custom color picker for UI elements</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.7">Custom wallpapers per screen type</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.8">Subject colors, emojis, and banners</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.9">Storage management with per-category cleanup</span></li>
-              <li><span class="cap-check">✓</span> <span data-i18n="capabilities.platform.10">Daily notification reminders and streak protection</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g6.1">Recursive nested folders + Subjects → Topics with unlimited depth</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g6.2">Discord-style desktop sidebar (filter, keyboard nav, drag &amp; drop)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g6.3">Command Palette (Ctrl+K / ⌘K) + SQLite FTS5 global search</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g6.4">Inbox for rapid capture &amp; Android/iOS share-sheet receiving</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g6.5">30-day Recycle Bin (soft delete, restore &amp; auto orphan cleanup)</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g6.6">Material 3 Light/Dark + custom themes &amp; per-screen wallpapers</span></li>
+              <li><span class="cap-check" aria-hidden="true">✓</span><span data-i18n="cap.g6.7">Resizable desktop split-view + Pomodoro timer + EN/PT interface</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
-    <section class="section" id="how-it-works">
+    <!-- ═══════════════ COMPARISON TABLE ═══════════════ -->
+    <section class="section section-subtle" id="comparison">
       <div class="container">
-        <div class="text-center reveal">
-          <div class="section-label">🌱 <span data-i18n="how.label">How It Works</span></div>
-          <h2 class="section-title" data-i18n="how.title">Start studying in seconds</h2>
-          <p class="section-subtitle mx-auto" data-i18n="how.subtitle">No account required. No complicated setup. Open the app, create a subject, and start taking notes.</p>
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="comp.eyebrow">Honest Comparison</div>
+          <h2 class="section-title" data-i18n="comp.title">How Mayinab compares to what you use today</h2>
+          <p class="section-subtitle" data-i18n="comp.subtitle">
+            Purpose-built for studying — combining chat simplicity with scientific memory scheduling and zero subscription fees.
+          </p>
         </div>
 
-        <div class="how-steps">
-          <div class="how-step reveal">
-            <div class="how-step-number">1</div>
-            <div class="how-step-illustration green-bg">📖</div>
-            <h3 data-i18n="how.step1.title">Create a Subject</h3>
-            <p data-i18n="how.step1.desc">Name your subject or pick a ready-made template (Math, English, Programming, Japanese…). Add topics to organize.</p>
-          </div>
-          <div class="how-step reveal">
-            <div class="how-step-number">2</div>
-            <div class="how-step-illustration peach-bg">💬</div>
-            <h3 data-i18n="how.step2.title">Chat Your Notes</h3>
-            <p data-i18n="how.step2.desc">Type notes like messages. Use /flashcard to create cards, attach images, record audio, paste links. It's as easy as texting.</p>
-          </div>
-          <div class="how-step reveal">
-            <div class="how-step-number">3</div>
-            <div class="how-step-illustration pink-bg">🧠</div>
-            <h3 data-i18n="how.step3.title">Review & Remember</h3>
-            <p data-i18n="how.step3.desc">The SRS engine schedules your flashcard reviews automatically. Flip, rate, repeat. Build long-term memory effortlessly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ COMPARISON ═══════════════ -->
-    <section class="comparison section" id="comparison">
-      <div class="container">
-        <div class="comparison-intro reveal">
-          <div class="section-label">⚡ <span data-i18n="comp.label">Why Mayinab?</span></div>
-          <h2 class="section-title" data-i18n="comp.title">Study tools shouldn't be complicated</h2>
-          <p data-i18n="comp.subtitle">Students hack together notes in chat apps or struggle with complex tools. Mayinab gives you the simplicity of chat with the power of a study app.</p>
-        </div>
-
-        <!-- Feature Comparison Table -->
-        <div class="comparison-table-wrapper reveal">
-          <table class="comparison-table" role="table">
+        <div class="comparison-wrapper reveal">
+          <table class="comparison-table">
             <thead>
               <tr>
-                <th scope="col" data-i18n="comp.table.feature">Feature</th>
-                <th scope="col" class="highlight-col">Mayinab <img src="app_icon.png" alt="" class="table-icon"></th>
-                <th scope="col">Discord</th>
-                <th scope="col">WhatsApp</th>
-                <th scope="col">Notion</th>
+                <th scope="col" data-i18n="comp.col.feature">Capability</th>
+                <th scope="col" class="highlight-col">
+                  <span class="table-brand-head">
+                    <img src="app_icon.png" alt="" width="22" height="22">
+                    <span>Mayinab</span>
+                  </span>
+                </th>
                 <th scope="col">Anki</th>
+                <th scope="col">Notion</th>
+                <th scope="col">Obsidian</th>
+                <th scope="col">WhatsApp / Discord</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td data-i18n="comp.table.chatNotes">Chat-style notes</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
+                <td data-i18n="comp.r1">Chat-style notes &amp; 7 note types</td>
+                <td class="highlight-col"><span class="c-yes">✓</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.partial">Partial</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.srs">Spaced Repetition</td>
-                <td class="highlight-col"><span class="check">✓ SM-2</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="check">✓ SM-2</span></td>
+                <td data-i18n="comp.r2">Spaced Repetition (FSRS-5)</td>
+                <td class="highlight-col"><span class="c-yes" data-i18n="comp.v.fsrs">✓ FSRS-5</span></td>
+                <td><span class="c-yes">✓</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.plugin">Plugin</span></td>
+                <td><span class="c-no">✗</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.markdown">Markdown + LaTeX</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="partial">~</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="partial">~</span></td>
+                <td data-i18n="comp.r3">AI Copilot (BYOK + Local Ollama)</td>
+                <td class="highlight-col"><span class="c-yes" data-i18n="comp.v.byok">✓ 22 tools + Ollama</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.paidAi">Paid add-on</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.plugin">Plugin</span></td>
+                <td><span class="c-no">✗</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.offline">Works offline</td>
-                <td class="highlight-col"><span class="check">✓ 100%</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="partial">~</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="check">✓</span></td>
+                <td data-i18n="comp.r4">100% Offline (Local SQLite)</td>
+                <td class="highlight-col"><span class="c-yes">✓ 100%</span></td>
+                <td><span class="c-yes">✓</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-yes">✓</span></td>
+                <td><span class="c-no">✗</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.noAds">No ads</td>
-                <td class="highlight-col"><span class="check" data-i18n="comp.table.val.never">✓ Never</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.nitroAds">Nitro ads</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.statusAds">Status ads</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="check">✓</span></td>
+                <td data-i18n="comp.r5">Free Multi-Device Sync (LAN QR / Folder / Drive)</td>
+                <td class="highlight-col"><span class="c-yes" data-i18n="comp.v.sync">✓ LAN QR + Folder + Drive</span></td>
+                <td><span class="c-yes">✓</span></td>
+                <td><span class="c-yes">✓</span></td>
+                <td><span class="c-partial">$4+/mo</span></td>
+                <td><span class="c-yes">✓</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.encrypted">Encrypted backup</td>
-                <td class="highlight-col"><span class="check">✓ AES-256</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.e2e">E2E chat</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
+                <td data-i18n="comp.r6">Markdown + LaTeX + Cloze + Backlinks</td>
+                <td class="highlight-col"><span class="c-yes">✓</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.partial">Partial</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.partial">Partial</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.plugin">Plugin</span></td>
+                <td><span class="c-no">✗</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.multimedia">7 note types</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.textOnly">Text only</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.limited">Limited</span></td>
-                <td><span class="check" data-i18n="comp.table.val.blocks">✓ Blocks</span></td>
-                <td><span class="cross" data-i18n="comp.table.val.cardsOnly">Cards only</span></td>
+                <td data-i18n="comp.r7">Built-in Scribble Drawing Engine</td>
+                <td class="highlight-col"><span class="c-yes">✓ 12 tools</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.plugin">Plugin</span></td>
+                <td><span class="c-no">✗</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.hierarchy">Subject → Topic tree</td>
-                <td class="highlight-col"><span class="check" data-i18n="comp.table.val.infDepth">✓ ∞ depth</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.channels">Channels</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="check" data-i18n="comp.table.val.pages">✓ Pages</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.decks">Decks</span></td>
+                <td data-i18n="comp.r8">No Account &amp; Zero Ads</td>
+                <td class="highlight-col"><span class="c-yes">✓</span></td>
+                <td><span class="c-yes">✓</span></td>
+                <td><span class="c-no">✗</span></td>
+                <td><span class="c-yes">✓</span></td>
+                <td><span class="c-no">✗</span></td>
               </tr>
               <tr>
-                <td data-i18n="comp.table.setup">Setup time</td>
-                <td class="highlight-col"><span class="check">0 min</span></td>
-                <td><span class="partial">~5 min</span></td>
-                <td><span class="check">~1 min</span></td>
-                <td><span class="cross">~15 min</span></td>
-                <td><span class="cross">~30 min</span></td>
-              </tr>
-              <tr>
-                <td data-i18n="comp.table.fileUpload">File upload & drag-drop</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-              </tr>
-              <tr>
-                <td data-i18n="comp.table.drawing">Drawing / scribble pad</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-              </tr>
-              <tr>
-                <td data-i18n="comp.table.splitView">Resizable split-view</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="partial">~</span></td>
-                <td><span class="cross">✗</span></td>
-              </tr>
-              <tr>
-                <td data-i18n="comp.table.slashCmd">Slash commands</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-              </tr>
-              <tr>
-                <td data-i18n="comp.table.shortcuts">Keyboard shortcuts</td>
-                <td class="highlight-col"><span class="check">✓ 10+</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="check">✓</span></td>
-                <td><span class="partial">~</span></td>
-              </tr>
-              <tr>
-                <td data-i18n="comp.table.stats">Study statistics & streaks</td>
-                <td class="highlight-col"><span class="check">✓</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="cross">✗</span></td>
-                <td><span class="check">✓</span></td>
-              </tr>
-              <tr>
-                <td data-i18n="comp.table.price">Price</td>
-                <td class="highlight-col"><span class="check" data-i18n="comp.table.val.free">Free</span></td>
-                <td><span class="check" data-i18n="comp.table.val.free">Free</span></td>
-                <td><span class="check" data-i18n="comp.table.val.free">Free</span></td>
-                <td><span class="partial" data-i18n="comp.table.val.notionPrice">$10/mo</span></td>
-                <td><span class="partial">$24.99 iOS</span></td>
+                <td data-i18n="comp.r9">Price</td>
+                <td class="highlight-col"><span class="c-yes" data-i18n="comp.v.freeForever">100% Free (Non-Profit)</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.ankiPaid">Free ($25 iOS)</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.notionPaid">Freemium ($10+/mo AI)</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.obsidianPaid">Free ($4+/mo Sync)</span></td>
+                <td><span class="c-partial" data-i18n="comp.v.chatFree">Free (Ads/Nitro)</span></td>
               </tr>
             </tbody>
           </table>
         </div>
-
-
       </div>
     </section>
 
-    <!-- ═══════════════ PLATFORMS ═══════════════ -->
-    <section class="platforms section" id="download">
+    <!-- ═══════════════ DOWNLOAD HUB ═══════════════ -->
+    <section class="section" id="download">
       <div class="container">
-        <div class="text-center reveal">
-          <div class="section-label">📱 <span data-i18n="platforms.label">Platforms</span></div>
-          <h2 class="section-title" data-i18n="platforms.title">Study anywhere, on any device</h2>
-          <p class="section-subtitle mx-auto" data-i18n="platforms.subtitle">
-            No account required. No ads. No data collection.
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="dl.eyebrow">Start Studying in 30 Seconds</div>
+          <h2 class="section-title" data-i18n="dl.title">Download Mayinab — 100% Free</h2>
+          <p class="section-subtitle" data-i18n="dl.subtitle">
+            No account creation. No credit card. No ads. Install and start taking notes immediately.
           </p>
         </div>
 
-        <!-- All platforms in a single unified grid -->
-        <div class="platforms-unified reveal">
-          <div class="platforms-row">
-            <div class="platforms-col">
-              <div class="platform-group-label">💻 <span data-i18n="platforms.desktop">Desktop</span></div>
-              <div class="platforms-grid">
-                <a href="https://download.mayinab.com/Mayinab-x86_64.AppImage" class="platform-card store-badge-card" aria-label="Download Mayinab for Linux (AppImage)" download>
-                  <img class="lang-img store-badge-img" src="img/linux-appimage-badge.svg" data-img-en="img/linux-appimage-badge.svg" data-img-pt="img/linux-appimage-badge-pt.svg" alt="Download for Linux - AppImage" loading="lazy">
-                </a>
-                <a href="https://get.microsoft.com/installer/download/9p24b4wksr2z?referrer=appbadge" class="platform-card store-badge-card" aria-label="Get it from Microsoft Store" target="_blank" rel="noopener noreferrer">
-                  <img class="lang-img store-badge-img" src="img/microsoft-store-badge-en-dark.svg" data-img-en="img/microsoft-store-badge-en-dark.svg" data-img-pt="img/microsoft-store-badge-pt.svg" alt="Get it from Microsoft Store" loading="lazy">
-                </a>
+        <div class="download-grid">
+          <!-- Android -->
+          <div class="download-card reveal" data-os="android">
+            <span class="os-rec-badge" data-i18n="dl.recommended">Recommended for your device</span>
+            <div class="download-platform-icon" aria-hidden="true">📱</div>
+            <h3>Android</h3>
+            <p data-i18n="dl.android.desc">Full offline app with ML Kit OCR, PDF Document Scanner, QR LAN Sync, swipe gestures &amp; notifications.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.hamasaki.mayinab" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Get Mayinab on Google Play">
+              <img class="lang-img store-badge-img" src="img/GetItOnGooglePlay_Badge_Web_color_English.png" data-img-en="img/GetItOnGooglePlay_Badge_Web_color_English.png" data-img-pt="img/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.png" alt="Get it on Google Play" width="180" height="52" loading="lazy">
+            </a>
+          </div>
 
-              </div>
-            </div>
+          <!-- Windows -->
+          <div class="download-card reveal" data-os="windows">
+            <span class="os-rec-badge" data-i18n="dl.recommended">Recommended for your device</span>
+            <div class="download-platform-icon" aria-hidden="true">🪟</div>
+            <h3>Windows</h3>
+            <p data-i18n="dl.windows.desc">Official Microsoft Store MSIX package with split-view, Ctrl+K palette, drag &amp; drop, and local Ollama support.</p>
+            <a href="https://get.microsoft.com/installer/download/9p24b4wksr2z?referrer=appbadge" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Get Mayinab from Microsoft Store">
+              <img class="lang-img store-badge-img" src="img/microsoft-store-badge-en-dark.svg" data-img-en="img/microsoft-store-badge-en-dark.svg" data-img-pt="img/microsoft-store-badge-pt-dark.svg" alt="Get it from Microsoft Store" width="160" height="52" loading="lazy">
+            </a>
+          </div>
 
-            <div class="platforms-divider"></div>
-
-            <div class="platforms-col">
-              <div class="platform-group-label">📱 <span data-i18n="platforms.mobile">Mobile</span></div>
-              <div class="platforms-grid">
-                <a href="https://play.google.com/store/apps/details?id=com.hamasaki.mayinab" class="platform-card store-badge-card" aria-label="Get it on Google Play" target="_blank" rel="noopener noreferrer">
-                  <img class="lang-img store-badge-img" src="img/GetItOnGooglePlay_Badge_Web_color_English.png" data-img-en="img/GetItOnGooglePlay_Badge_Web_color_English.png" data-img-pt="img/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.png" alt="Get it on Google Play" loading="lazy">
-                </a>
-
-              </div>
-            </div>
+          <!-- Linux -->
+          <div class="download-card reveal" data-os="linux">
+            <span class="os-rec-badge" data-i18n="dl.recommended">Recommended for your device</span>
+            <div class="download-platform-icon" aria-hidden="true">🐧</div>
+            <h3>Linux</h3>
+            <p data-i18n="dl.linux.desc">Portable x86_64 AppImage ready to run on Ubuntu, Fedora, Arch &amp; more. Full desktop power mode.</p>
+            <a href="https://download.mayinab.com/Mayinab-x86_64.AppImage" class="store-badge-link" download aria-label="Download Mayinab Linux AppImage">
+              <img class="lang-img store-badge-img" src="img/linux-appimage-badge.svg" data-img-en="img/linux-appimage-badge.svg" data-img-pt="img/linux-appimage-badge-pt.svg" alt="Download for Linux - AppImage" width="175" height="52" loading="lazy">
+            </a>
           </div>
         </div>
 
+        <div class="download-secondary-grid">
+          <!-- iOS & macOS Waitlist -->
+          <div class="waitlist-card reveal">
+            <h3 data-i18n="dl.waitlist.title">🔔 iOS &amp; macOS Waitlist</h3>
+            <p data-i18n="dl.waitlist.desc">Want Mayinab on iPhone, iPad, or Mac? Leave your email and we will notify you the moment Apple builds launch.</p>
 
-
-        <!-- iOS Notify — centered, standalone -->
-        <div class="notify-form-wrapper reveal">
-          <div class="notify-form-card">
-            <div class="notify-form-header">
-              <span class="notify-bell">🔔</span>
-              <h3 data-i18n="notify.title">iOS coming soon!</h3>
-              <p data-i18n="notify.subtitle">Be the first to know when Mayinab arrives on iPhone & iPad.</p>
-            </div>
             <form id="notifyForm" action="https://formspree.io/f/mjgeyrqp" method="POST" class="notify-form">
               <div class="notify-input-row">
-                <input type="email" name="email" required placeholder="you@email.com" class="notify-input" aria-label="Email">
-                <button type="submit" class="btn btn-primary notify-btn" data-i18n="notify.btn">🔔 Notify Me</button>
+                <label for="waitlistEmail" class="sr-only">Email</label>
+                <input id="waitlistEmail" type="email" name="email" required placeholder="you@email.com" class="notify-input" autocomplete="email">
+                <button type="submit" class="btn btn-primary notify-btn" data-i18n="dl.waitlist.btn">Notify Me</button>
               </div>
-              <input type="hidden" name="platform" value="iOS">
+              <input type="hidden" name="platform" value="iOS & macOS">
               <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
             </form>
-            <div id="notifySuccess" class="notify-success" hidden>
-              <span class="notify-success-icon">✅</span>
-              <p data-i18n="notify.success">You're on the list! We'll email you when it's ready.</p>
+
+            <div id="notifySuccess" class="notify-success" hidden role="status">
+              <span aria-hidden="true">✅</span>
+              <span data-i18n="dl.waitlist.success">You are on the list! We will email you as soon as iOS &amp; macOS launch.</span>
             </div>
-            <p class="notify-privacy" data-i18n="notify.privacy">We'll only use your email to notify you about the iOS launch. No spam, ever.</p>
+            <p class="notify-privacy" data-i18n="dl.waitlist.privacy">Used solely for the Apple release announcement. Zero spam, ever.</p>
+          </div>
+
+          <!-- Native Languages -->
+          <div class="langs-card reveal">
+            <h3 data-i18n="dl.langs.title">🌍 Native Languages</h3>
+            <p data-i18n="dl.langs.desc">Interface, starter templates, onboarding, and AI Assistant responses automatically match your chosen language.</p>
+            <div class="langs-pills">
+              <span class="lang-chip available">🇺🇸 English <span class="lang-chip-tag" data-i18n="dl.langs.avail">Full</span></span>
+              <span class="lang-chip available">🇧🇷 Português <span class="lang-chip-tag" data-i18n="dl.langs.avail">Full</span></span>
+              <span class="lang-chip">🇪🇸 Español</span>
+              <span class="lang-chip">🇯🇵 日本語</span>
+              <span class="lang-chip">🇩🇪 Deutsch</span>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Languages — its own visual block -->
-        <div class="languages-block reveal">
-          <div class="languages-header">
-            <div class="section-label">🌍 <span data-i18n="langs.label">Languages</span></div>
-            <h2 class="section-title" data-i18n="langs.title">Study in your language</h2>
-            <p class="section-subtitle mx-auto" data-i18n="langs.subtitle">
-              Mayinab's interface is fully translated. More languages coming soon.
+    <!-- ═══════════════ CREATORS & NON-PROFIT MANIFESTO ═══════════════ -->
+    <section class="section section-warm" id="about">
+      <div class="container">
+        <div class="manifesto-card reveal">
+          <div class="manifesto-copy">
+            <div class="eyebrow" data-i18n="about.eyebrow">Non-Profit &amp; Independent</div>
+            <h2 data-i18n="about.title">100% free, non-profit, and built for students — not investors.</h2>
+            <p data-i18n="about.p1">
+              Mayinab was created out of genuine frustration with bloated, paywalled study software. Right now, every single feature — FSRS-5, BYOK AI, Scribble Engine, Explore packs, and multi-device sync — is completely free with no subscriptions, no Supabase or external tracking servers, and no plans to monetize.
+            </p>
+            <p data-i18n="about.p2">
+              Your study material belongs exclusively to you in an open local SQLite database with portable .mayinab exports whenever you want.
             </p>
           </div>
-          <div class="languages-grid">
-            <div class="lang-chip available">
-              <span class="lang-flag">🇬🇧</span>
-              <span class="lang-name">English</span>
-              <span class="lang-status" data-i18n="langs.available">Available</span>
+
+          <aside class="authors-card" aria-label="About the authors">
+            <div class="authors-label" data-i18n="about.authorsLabel">Created &amp; Maintained By</div>
+            <div class="authors-list">
+              <div class="author-row">
+                <div class="author-avatar" aria-hidden="true">MH</div>
+                <div>
+                  <div class="author-name">Miuna Hamasaki</div>
+                  <div class="author-role" data-i18n="about.role1">Co-creator &amp; Developer</div>
+                </div>
+              </div>
+              <div class="author-row">
+                <div class="author-avatar" aria-hidden="true">CH</div>
+                <div>
+                  <div class="author-name">Celso Takeshi Hamasaki</div>
+                  <div class="author-role" data-i18n="about.role2">Co-creator &amp; Developer</div>
+                </div>
+              </div>
             </div>
-            <div class="lang-chip available">
-              <span class="lang-flag">🇧🇷</span>
-              <span class="lang-name">Português</span>
-              <span class="lang-status" data-i18n="langs.available">Available</span>
-            </div>
-            <div class="lang-chip">
-              <span class="lang-flag">🇪🇸</span>
-              <span class="lang-name">Español</span>
-            </div>
-            <div class="lang-chip">
-              <span class="lang-flag">🇯🇵</span>
-              <span class="lang-name">日本語</span>
-            </div>
-            <div class="lang-chip">
-              <span class="lang-flag">🇮🇹</span>
-              <span class="lang-name">Italiano</span>
-            </div>
-            <div class="lang-chip">
-              <span class="lang-flag">🇩🇪</span>
-              <span class="lang-name">Deutsch</span>
-            </div>
-          </div>
+
+            <ul class="promises-list">
+              <li data-i18n="about.promise1">Zero paywalls, zero subscriptions, zero ads</li>
+              <li data-i18n="about.promise2">No third-party cloud tracking or mandatory accounts</li>
+              <li data-i18n="about.promise3">Open .mayinab &amp; ZIP exports — your data is always yours</li>
+            </ul>
+
+            <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary author-site-btn" data-i18n="about.visitAuthors">
+              Visit the authors at cth.jp →
+            </a>
+          </aside>
         </div>
       </div>
     </section>
@@ -795,92 +859,106 @@
     <!-- ═══════════════ FAQ ═══════════════ -->
     <section class="section" id="faq">
       <div class="container">
-        <div class="text-center reveal">
-          <div class="section-label">❓ <span data-i18n="faq.label">FAQ</span></div>
-          <h2 class="section-title" data-i18n="faq.title">Frequently asked questions</h2>
+        <div class="section-header reveal">
+          <div class="eyebrow" data-i18n="faq.eyebrow">Questions &amp; Answers</div>
+          <h2 class="section-title" data-i18n="faq.title">Everything you might want to know</h2>
         </div>
 
         <div class="faq-list">
           <div class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false">
-              <span data-i18n="faq.q1">Is my data really private?</span>
-              <span class="faq-chevron">▾</span>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q1">Is Mayinab really 100% free? What is the catch?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner" data-i18n="faq.a1">
-                Yes! Mayinab is offline-first: your notes are stored locally on your device. Nothing is sent anywhere unless you opt in to Vault cloud backup, which uses AES-256-GCM encryption with PBKDF2 key derivation. We can't read your data even if we wanted to (zero-knowledge design).
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.a1">
+                  There is no catch. Mayinab is currently 100% free and non-profit, with no plans to change that. There are no ads, no subscriptions, no locked features, and no paid cloud backend (we do not use Supabase or any commercial tracking servers).
+                </div>
               </div>
             </div>
           </div>
 
           <div class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false">
-              <span data-i18n="faq.q2">Can I use it without internet?</span>
-              <span class="faq-chevron">▾</span>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q2">How do I sync between my phone and computer for free?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner" data-i18n="faq.a2">
-                Absolutely. 100% of the app works offline. Create notes, study flashcards, record audio, take photos, search your notes, all without internet. The only feature that needs connectivity is cloud backup (optional).
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.a2">
+                  You have three free, account-free or self-owned options: (1) LAN Sync P2P over Wi-Fi or Tailscale using a 4-digit PIN &amp; QR Code; (2) Monitored Folder Auto-Sync via Syncthing, OneDrive, Dropbox, iCloud, or Google Drive Desktop; (3) Google Drive Auto-Sync in your own private appDataFolder. All use Smart Merge with Tombstones so changes merge cleanly.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false">
-              <span data-i18n="faq.q3">How do I move data between devices?</span>
-              <span class="faq-chevron">▾</span>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q3">Is my data private? What happens to my AI API key?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner" data-i18n="faq.a3">
-                Free users can export/import subjects as .mayinab files, or create full local backups as .zip. You can also use Google Drive for manual backup. Vault subscribers get one-click cloud sync across all devices.
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.a3">
+                  Yes. Everything runs locally on your device in SQLite with zero telemetry. When using the BYOK AI Assistant, requests go directly from your device to your chosen provider (or 100% locally via Ollama). Your API key is stored outside SQLite and is never included in backups or sync snapshots.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false">
-              <span data-i18n="faq.q4">Can I import my Anki decks?</span>
-              <span class="faq-chevron">▾</span>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q4">What is FSRS-5 and can I import my Anki decks?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner" data-i18n="faq.a4">
-                Yes! Mayinab supports CSV/TSV import compatible with Anki exports. You can import thousands of flashcards at once, including YouTube video URLs. The SRS algorithm is SM-2, same as Anki.
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.a4">
+                  FSRS-5 (Free Spaced Repetition Scheduler v5) is the state-of-the-art memory scheduling algorithm that adapts to your exact retention target (70%–97%) with fewer unnecessary reviews than SM-2. You can bulk-import Anki-compatible CSV/TSV decks (including YouTube URLs), and any legacy SM-2 cards migrate automatically to FSRS-5.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false">
-              <span data-i18n="faq.q5">Will there ever be ads?</span>
-              <span class="faq-chevron">▾</span>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q5">Do I need to pay for the AI Study Assistant?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner" data-i18n="faq.a5">
-                Never. That's a core promise. Study apps should help you focus, not distract you. Mayinab is funded by optional Vault subscriptions. If you use the free version forever, that's totally fine: you get the full app, no compromises.
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.a5">
+                  Mayinab charges nothing for the AI Assistant. It uses BYOK (Bring Your Own Key) so you can plug in OpenAI, Gemini, Claude, Groq, DeepSeek, or OpenRouter — or run completely free and offline on desktop using Ollama. It includes 22 tools with explicit approval gating for sensitive actions.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false">
-              <span data-i18n="faq.q6">What makes this different from just using Notion?</span>
-              <span class="faq-chevron">▾</span>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q6">Will my notes ever get locked inside Mayinab?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner" data-i18n="faq.a6">
-                Notion is a powerful general-purpose tool, but it's complex and requires internet. Mayinab is purpose-built for studying: the chat interface makes note-taking instant, SRS is built-in (Notion has none), it works fully offline, and there's zero onboarding friction. Open → type → done.
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.a6">
+                  Never. You can export individual subjects as portable .mayinab files (standard ZIP with JSON + media) or create complete local ZIP backups anytime. Since the app is 100% offline-first, it keeps working on your devices indefinitely.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false">
-              <span data-i18n="faq.q7">Is it really made by one person?</span>
-              <span class="faq-chevron">▾</span>
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q7">Who created Mayinab?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
             <div class="faq-answer">
-              <div class="faq-answer-inner" data-i18n="faq.a7">
-                Yes! Mayinab is an indie project built with love by <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Hamasaki</a>. That means fast updates, direct feedback, and a product shaped by real student needs, not corporate roadmaps. Your support through Vault keeps this project alive. 💚
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.a7">
+                  Mayinab is created and maintained by <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki &amp; Celso Takeshi Hamasaki (cth.jp)</a> as an independent, non-profit project built with care for learners worldwide.
+                </div>
               </div>
             </div>
           </div>
@@ -888,15 +966,15 @@
       </div>
     </section>
 
-    <!-- ═══════════════ FINAL CTA ═══════════════ -->
+    <!-- ═══════════════ FINAL CONVERSION CTA ═══════════════ -->
     <section class="cta-section" id="cta">
       <div class="container">
         <div class="cta-card reveal">
-          <h2 data-i18n="cta.title">Ready to study smarter? 🍵</h2>
-          <p data-i18n="cta.desc">Join students who already discovered a better way to take notes and remember what they learn.</p>
+          <h2 data-i18n="cta.title">Ready to remember everything you study?</h2>
+          <p data-i18n="cta.desc">Download Mayinab free today. Zero accounts, zero ads, 100% offline — start your first study chat in under 30 seconds.</p>
           <div class="cta-buttons">
-            <a href="#download" class="btn btn-primary" data-i18n="cta.btn1">⬇ Download for Free</a>
-            <a href="#features" class="btn btn-secondary" data-i18n="cta.btn2">Learn More</a>
+            <a href="#download" class="btn btn-primary btn-lg" data-i18n="cta.btn1">Download Free Now</a>
+            <a href="changelog.html" class="btn btn-ghost-dark btn-lg" data-i18n="cta.btn2">Read Changelog (v1.0.26)</a>
           </div>
         </div>
       </div>
@@ -908,26 +986,36 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3><img src="app_icon.png" alt="Mayinab" class="footer-app-icon">Mayinab</h3>
-          <p data-i18n="footer.desc">Study notes reimagined as chat. Free forever, no ads ever.</p>
+          <a href="https://mayinab.com/" class="footer-brand-head">
+            <img src="app_icon.png" alt="Mayinab" width="30" height="30">
+            <span>Mayinab</span>
+          </a>
+          <p data-i18n="footer.desc">
+            Chat-style study notes with FSRS-5 spaced repetition, BYOK AI copilot, and free multi-device sync. Offline-first, 100% free &amp; non-profit.
+          </p>
         </div>
+
         <div class="footer-col">
           <h4 data-i18n="footer.product">Product</h4>
           <ul>
+            <li><a href="#showcase" data-i18n="nav.tour">Tour</a></li>
             <li><a href="#features" data-i18n="nav.features">Features</a></li>
-            <li><a href="#comparison" data-i18n="nav.comparison">Comparison</a></li>
+            <li><a href="#comparison" data-i18n="nav.compare">Compare</a></li>
             <li><a href="#download" data-i18n="footer.download">Download</a></li>
             <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4 data-i18n="footer.resources">Resources</h4>
           <ul>
             <li><a href="blog/" data-i18n="footer.blog">Blog</a></li>
             <li><a href="changelog.html" data-i18n="footer.changelog">Changelog</a></li>
             <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+            <li><a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">cth.jp</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4 data-i18n="footer.legal">Legal</h4>
           <ul>
@@ -936,23 +1024,44 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>© 2026 Mayinab. <span data-i18n="footer.rights">All rights reserved.</span></span>
-        <span class="footer-hearts">
-          <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer" class="footer-author">Hamasaki</a>
+        <span>© 2026 <a href="https://mayinab.com/">Mayinab</a>. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <span class="footer-authors">
+          <span data-i18n="footer.by">Created by</span>
+          <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki &amp; Celso Takeshi Hamasaki</a>
+          · <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">cth.jp</a>
         </span>
       </div>
     </div>
   </footer>
 
+  <!-- Mobile Sticky Download Pill -->
+  <div class="mobile-sticky-cta" id="mobileStickyCta" role="region" aria-label="Quick download">
+    <div class="mobile-sticky-label">
+      <img src="app_icon.png" alt="" width="26" height="26">
+      <span data-i18n="mobileSticky.text">Mayinab · 100% Free &amp; Offline</span>
+    </div>
+    <a href="#download" class="btn btn-primary mobile-sticky-btn" data-i18n="mobileSticky.btn">Download</a>
+  </div>
+
   <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
   </button>
 
-  <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Screenshot preview">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close preview">×</button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="screenshots/en/light/desktop/01_home.png" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
   <script src="js/translations.js" defer></script>
   <script src="js/main.js" defer></script>
-
 </body>
 </html>

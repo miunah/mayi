@@ -1,57 +1,87 @@
 /* ═══════════════════════════════════════════════════════════════
-   CSS VARIABLES — Shared across all pages
-   Matcha Green & Cream Palette
+   CSS VARIABLES — Shared across all Mayinab pages
+   Botanical Matcha, Warm Alabaster & Studio Slate Palette
 ═══════════════════════════════════════════════════════════════ */
 :root {
-  --matcha-50: #f0f7f0;
-  --matcha-100: #dceedd;
-  --matcha-200: #b5d4b6;
-  --matcha-300: #8DB48E;
-  --matcha-400: #7aa87b;
-  --matcha-500: #6B9A6C;
-  --matcha-600: #5a8a5b;
-  --matcha-700: #4a7a4b;
-  --matcha-800: #3d6a3e;
-  --matcha-900: #2d5a2e;
+  /* Legacy-compatible Matcha ramp (refined contrast for WCAG AA/AAA) */
+  --matcha-50: #eef6f0;
+  --matcha-100: #d6eadc;
+  --matcha-200: #a9d2b5;
+  --matcha-300: #6ea87e;
+  --matcha-400: #4c8f62;
+  --matcha-500: #2e6f4e;
+  --matcha-600: #245b3f;
+  --matcha-700: #1c4731;
+  --matcha-800: #153625;
+  --matcha-900: #0f261a;
 
-  --cream-50: #FFFDF7;
-  --cream-100: #FFF8E7;
-  --cream-200: #F5E6C8;
-  --cream-300: #E8D4A8;
-  --cream-400: #D4BC88;
+  /* App Cobalt accent (harmonizes with Mayinab's real Flutter UI) */
+  --cobalt-50: #eef4ff;
+  --cobalt-100: #dce7fd;
+  --cobalt-500: #254e8c;
+  --cobalt-600: #1b3b6f;
 
-  --peach-100: #FFF0E0;
-  --peach-200: #FFE0C0;
-  --peach-300: #F5C4A0;
+  /* Warm Alabaster & Cream surfaces */
+  --cream-50: #fbfbf8;
+  --cream-100: #f5f2e8;
+  --cream-200: #eadfc7;
+  --cream-300: #dcc9a2;
+  --cream-400: #c5ae7d;
 
-  --pink-100: #FFE8EE;
-  --pink-200: #FFD0DD;
-  --pink-300: #F5A0B8;
+  /* Soft semantic tints */
+  --peach-100: #fff2e4;
+  --peach-200: #ffe0c2;
+  --peach-300: #e5a770;
 
-  --lavender-100: #F0E8FF;
-  --lavender-200: #E0D0FF;
+  --pink-100: #fdeef2;
+  --pink-200: #f9d4df;
+  --pink-300: #e28fa8;
 
-  --sky-100: #E0F4FF;
-  --sky-200: #C0E8FF;
+  --lavender-100: #f1edff;
+  --lavender-200: #dfd6ff;
 
-  --text-primary: #3d5a3e;
-  --text-secondary: #6B8A6C;
-  --text-light: #658165;
+  --sky-100: #e6f3ff;
+  --sky-200: #c6e3ff;
+
+  --amber-100: #fef3c7;
+  --amber-700: #b45309;
+
+  /* Typography & Ink */
+  --text-primary: #14211a;
+  --text-secondary: #485b50;
+  --text-light: #64786c;
   --text-on-matcha: #ffffff;
 
-  --bg-primary: #FEFCF6;
-  --bg-secondary: #FFF8E7;
+  /* Surfaces */
+  --bg-primary: #fbfbf8;
+  --bg-secondary: #f3f6f2;
+  --bg-warm: #f7f4eb;
   --bg-card: #ffffff;
+  --bg-dark: #0f1714;
+  --bg-dark-elevated: #16221d;
+  --bg-dark-card: #1b2a24;
 
-  --shadow-soft: 0 2px 16px rgba(109, 154, 108, 0.08);
-  --shadow-medium: 0 4px 24px rgba(109, 154, 108, 0.12);
-  --shadow-glow: 0 0 40px rgba(141, 180, 142, 0.15);
+  /* Hairlines */
+  --border-subtle: rgba(20, 33, 26, 0.08);
+  --border-strong: rgba(20, 33, 26, 0.14);
+  --border-dark: rgba(255, 255, 255, 0.1);
 
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(15, 28, 21, 0.05);
+  --shadow-soft: 0 4px 20px rgba(15, 28, 21, 0.06);
+  --shadow-medium: 0 10px 32px rgba(15, 28, 21, 0.09);
+  --shadow-lg: 0 24px 60px rgba(15, 28, 21, 0.14);
+  --shadow-glow: 0 0 50px rgba(46, 111, 78, 0.16);
+
+  /* Geometry */
+  --radius-xs: 8px;
   --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
   --radius-full: 9999px;
 
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Motion */
+  --transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
