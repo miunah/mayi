@@ -3,6 +3,7 @@
    Variables: see css/variables.css
 ═══════════════════════════════════════════════════════════════ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
 
 body {
   min-height: 100vh;
@@ -222,13 +223,28 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+  .thanks-logo {
+    margin-bottom: 20px;
+  }
   .thanks-card {
-    padding: 36px 20px 32px;
+    padding: 32px 18px 28px;
   }
   .thanks-title {
     font-size: 1.4rem;
   }
   .warning-box {
     padding: 20px 16px 18px;
+  }
+  .safe-badge {
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .safe-badge svg {
+    margin-top: 2px;
   }
 }

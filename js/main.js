@@ -10,7 +10,7 @@
   let currentLang = 'en';
   let heroTheme = 'light';
   let tourTab = 'chat';
-  let tourDevice = 'desktop';
+  let tourDevice = (window.matchMedia && window.matchMedia('(max-width: 820px)').matches) ? 'mobile' : 'desktop';
   let tourTheme = 'light';
 
   const tourScreens = {
@@ -366,16 +366,32 @@
   const navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
+    function closeMobileNav() {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = navLinks.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMobileNav);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && nav && !nav.contains(e.target)) {
+        closeMobileNav();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        closeMobileNav();
+        navToggle.focus();
+      }
     });
   }
 
