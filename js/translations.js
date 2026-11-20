@@ -15,20 +15,26 @@ const translations = {
     'nav.compare': 'Compare',
     'nav.faq': 'FAQ',
     'nav.blog': 'Blog',
+    'nav.webApp': 'Open Web App',
+    'nav.webAppShort': 'Web App',
     'nav.download': 'Download Free',
 
     // Hero
-    'hero.releaseTag': 'v1.0.26',
-    'hero.releaseText': 'New: LAN Sync via QR Code, FSRS-5 & BYOK AI (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
+    'hero.releaseTag': 'NEW · WEB',
+    'hero.releaseText': 'Mayinab Web is live at app.mayinab.com — use right in your browser! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
     'hero.title1': 'Study notes,',
     'hero.title2': 'reimagined as chat.',
     'hero.subtitle': 'Take notes as naturally as texting a friend, memorize faster with FSRS-5 spaced repetition, and study alongside your own AI buddy (BYOK or local Ollama). 100% offline, 100% free & non-profit, zero ads (^_~)✧',
     'hero.ctaPrimary': 'Download Free',
     'hero.ctaSecondary': 'Interactive Tour',
+    'hero.ctaWeb': 'Open Web App',
+    'hero.ctaAllPlatforms': 'All Platforms & Waitlist',
     'hero.ctaAndroid': 'Get on Google Play',
     'hero.ctaWindows': 'Get on Microsoft Store',
     'hero.ctaLinux': 'Download Linux AppImage',
-    'hero.subPlatforms': 'Available free for Android, Windows & Linux · iOS & macOS waitlist open',
+    'hero.subPlatforms': 'Free on Web, Android, Windows & Linux · Native iOS & macOS waitlist',
+    'hero.subTour': 'Interactive Tour ↓',
+    'hero.tryLive': 'Try live ↗',
     'hero.trust1': '100% Free & Non-Profit',
     'hero.trust2': 'No Account Needed',
     'hero.trust3': 'Offline SQLite',
@@ -53,6 +59,7 @@ const translations = {
     'contrast.p3.desc': 'Messaging yourself on WhatsApp or Discord feels quick, but misses LaTeX, FSRS-5 reviews, topic trees, and true offline privacy.',
     'contrast.solution.title': 'Mayinab blends the ease of chat with FSRS-5, AI & Scribble (≧◡≦)',
     'contrast.solution.desc': 'Every subject is a chat. Every note is a rich message (text, flashcard, Cloze, image, audio, video, checklist, or file), all tucked safely offline on your device.',
+    'contrast.solution.ctaWeb': 'Open Web App ↗',
     'contrast.solution.cta': 'Download Free →',
 
     // Interactive Tour
@@ -256,14 +263,24 @@ const translations = {
 
     // Download Hub
     'dl.eyebrow': 'Start in 30 Seconds (ﾉ´ヮ`)ﾉ*:･ﾟ✧',
-    'dl.title': 'Download Mayinab (100% Free!)',
-    'dl.subtitle': 'No account needed. No credit card. No ads. Install and start your cozy study chat right away!',
+    'dl.title': 'Use on Web or Download Mayinab (100% Free!)',
+    'dl.subtitle': 'Launch instantly in your browser or install the native offline app. No account, no credit card, no ads!',
     'dl.recommended': 'Recommended for your device',
+    'dl.web.badge': 'Web Version · Zero Install',
+    'dl.web.title': 'Launch Mayinab right in your browser',
+    'dl.web.desc': 'Start studying in 1 click on any device—including iPhone, iPad, Mac, Chromebook, or study PCs. Local browser storage, FSRS-5 flashcards, BYOK AI, and portable .mayinab backups.',
+    'dl.web.chip1': 'Instant Access',
+    'dl.web.chip2': 'Works on iOS & macOS',
+    'dl.web.chip3': 'Zero Install',
+    'dl.web.chip4': 'No Account',
+    'dl.web.cta': 'Open Web App',
+    'dl.web.note': '100% Free · Opens in a new tab',
+    'dl.nativeDivider': 'Or install the native offline app',
     'dl.android.desc': 'Full offline app with ML Kit OCR, PDF Document Scanner, QR LAN Sync, swipe gestures & notifications.',
     'dl.windows.desc': 'Official Microsoft Store MSIX package with split-view, Ctrl+K palette, drag & drop, and local Ollama support.',
     'dl.linux.desc': 'Portable x86_64 AppImage ready to run on Ubuntu, Fedora, Arch & more. Full desktop power mode.',
-    'dl.waitlist.title': 'iOS & macOS Waitlist',
-    'dl.waitlist.desc': 'Want Mayinab on iPhone, iPad, or Mac? Leave your email and we will ping you the moment Apple builds arrive (^_~)✧',
+    'dl.waitlist.title': 'Native iOS & macOS Waitlist',
+    'dl.waitlist.desc': 'Already works today on Safari via <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a>! Leave your email if you also want a ping when native App Store builds arrive (^_~)✧',
     'dl.waitlist.btn': 'Notify Me',
     'dl.waitlist.success': 'Yay, you are on the list! ヽ(◕‿◕)ノ We will email you as soon as iOS & macOS launch.',
     'dl.waitlist.privacy': 'Used solely for the Apple release announcement. Zero spam, ever.',
@@ -289,6 +306,8 @@ const translations = {
     'faq.title': 'Everything you might want to know',
     'faq.q1': 'Is Mayinab really 100% free? What is the catch?',
     'faq.a1': 'No catch at all! (^_~)✧ Mayinab is currently 100% free and non-profit, with no plans to change that. There are no ads, no subscriptions, no locked features, and no paid cloud backend (we do not use Supabase or any commercial tracking servers).',
+    'faq.qWeb': 'Can I use Mayinab on the Web (or on iPhone/Mac) without installing?',
+    'faq.aWeb': 'Yes! Open <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a> directly in any modern browser—including Safari on iPhone, iPad, and Mac, or on Chromebooks and shared PCs—with zero installation and no account required. You can export and import .mayinab or ZIP backups anytime to move seamlessly between Web and native apps.',
     'faq.q2': 'How do I sync between my phone and computer for free?',
     'faq.a2': 'You have three free options under your own control: (1) LAN Sync P2P over Wi-Fi or Tailscale using a 4-digit PIN & QR Code; (2) Monitored Folder Auto-Sync via Syncthing, OneDrive, Dropbox, iCloud, or Google Drive Desktop; (3) Google Drive Auto-Sync in your own private appDataFolder. All use Smart Merge with Tombstones so changes blend cleanly.',
     'faq.q3': 'Is my data private? What happens to my AI API key?',
@@ -304,8 +323,9 @@ const translations = {
 
     // Final CTA
     'cta.title': 'Ready to remember everything you study? o(≧▽≦)o',
-    'cta.desc': 'Download Mayinab free today! Zero accounts, zero ads, 100% offline. Start your first study chat in under 30 seconds.',
-    'cta.btn1': 'Download Free Now',
+    'cta.desc': 'Try Mayinab right in your browser or download the offline app free today! Zero accounts, zero ads. Start your first study chat in under 30 seconds.',
+    'cta.btnWeb': 'Open Web App ↗',
+    'cta.btn1': 'Download Native App',
     'cta.btn2': 'Read Changelog (v1.0.26)',
 
     // Footer
@@ -313,6 +333,7 @@ const translations = {
     'footer.product': 'Product',
     'footer.resources': 'Resources',
     'footer.legal': 'Legal',
+    'footer.webApp': 'Web App ↗',
     'footer.download': 'Download',
     'footer.blog': 'Blog',
     'footer.changelog': 'Changelog',
@@ -322,7 +343,8 @@ const translations = {
     'footer.rights': 'All rights reserved.',
     'footer.by': 'Made with ♡ by',
     'mobileSticky.text': 'Mayinab · 100% Free & Offline',
-    'mobileSticky.btn': 'Download'
+    'mobileSticky.btn': 'Download',
+    'mobileSticky.btnWeb': 'Open Web'
   },
 
   pt: {
@@ -336,20 +358,26 @@ const translations = {
     'nav.compare': 'Comparativo',
     'nav.faq': 'FAQ',
     'nav.blog': 'Blog',
+    'nav.webApp': 'Abrir Versão Web',
+    'nav.webAppShort': 'Versão Web',
     'nav.download': 'Baixar Grátis',
 
     // Hero
-    'hero.releaseTag': 'v1.0.26',
-    'hero.releaseText': 'Novidade: LAN Sync por QR Code, FSRS-5 e IA BYOK (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
+    'hero.releaseTag': 'NOVO · WEB',
+    'hero.releaseText': 'Mayinab Web chegou em app.mayinab.com — use direto no navegador! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
     'hero.title1': 'Suas anotações,',
     'hero.title2': 'reinventadas como chat.',
     'hero.subtitle': 'Anote com a leveza de uma conversa gostosa, memorize tudinho com repetição espaçada FSRS-5 e estude com seu parceiro de IA (BYOK ou Ollama local). 100% offline, 100% grátis, sem fins lucrativos e zero anúncios (^_~)✧',
     'hero.ctaPrimary': 'Baixar Grátis',
     'hero.ctaSecondary': 'Ver Tour Interativo',
+    'hero.ctaWeb': 'Abrir Versão Web',
+    'hero.ctaAllPlatforms': 'Outras Plataformas',
     'hero.ctaAndroid': 'Baixar no Google Play',
     'hero.ctaWindows': 'Baixar na Microsoft Store',
     'hero.ctaLinux': 'Baixar AppImage (Linux)',
-    'hero.subPlatforms': 'Disponível grátis para Android, Windows e Linux · Lista de espera aberta para iOS e macOS',
+    'hero.subPlatforms': 'Grátis na Web, Android, Windows e Linux · Lista de espera para iOS e macOS',
+    'hero.subTour': 'Tour Interativo ↓',
+    'hero.tryLive': 'Testar online ↗',
     'hero.trust1': '100% Grátis e Sem Fins Lucrativos',
     'hero.trust2': 'Sem Criar Conta',
     'hero.trust3': 'Offline em SQLite',
@@ -374,6 +402,7 @@ const translations = {
     'contrast.p3.desc': 'Mandar mensagens para si mesmo no WhatsApp ou Discord é prático, mas falta LaTeX, FSRS-5, árvore de tópicos e privacidade offline.',
     'contrast.solution.title': 'O Mayinab une a leveza do chat com FSRS-5, IA e Scribble (≧◡≦)',
     'contrast.solution.desc': 'Cada matéria é um chat. Cada nota é uma mensagem completa (texto, flashcard, Cloze, imagem, áudio, vídeo, checklist ou arquivo), tudo guardadinho offline no seu aparelho.',
+    'contrast.solution.ctaWeb': 'Abrir Versão Web ↗',
     'contrast.solution.cta': 'Baixar Grátis →',
 
     // Interactive Tour
@@ -577,14 +606,24 @@ const translations = {
 
     // Download Hub
     'dl.eyebrow': 'Comece em 30 Segundos (ﾉ´ヮ`)ﾉ*:･ﾟ✧',
-    'dl.title': 'Baixe o Mayinab (100% Grátis!)',
-    'dl.subtitle': 'Sem criar conta. Sem cartão. Sem anúncios. É só instalar e começar seu cantinho de estudos agora mesmo!',
+    'dl.title': 'Use na Web ou Baixe o Mayinab (100% Grátis!)',
+    'dl.subtitle': 'Abra direto no navegador ou instale o app nativo offline. Sem conta, sem cartão e sem anúncios!',
     'dl.recommended': 'Recomendado para seu dispositivo',
+    'dl.web.badge': 'Versão Web · Sem Instalar',
+    'dl.web.title': 'Use o Mayinab direto no navegador',
+    'dl.web.desc': 'Comece a estudar em 1 clique em qualquer aparelho — inclusive iPhone, iPad, Mac, Chromebook ou PC de estudos. Armazenamento local no navegador, flashcards FSRS-5, IA BYOK e backups .mayinab.',
+    'dl.web.chip1': 'Acesso Imediato',
+    'dl.web.chip2': 'Funciona no iOS e macOS',
+    'dl.web.chip3': 'Sem Instalar',
+    'dl.web.chip4': 'Sem Conta',
+    'dl.web.cta': 'Abrir Versão Web',
+    'dl.web.note': '100% Grátis · Abre em nova aba',
+    'dl.nativeDivider': 'Ou instale o app nativo offline',
     'dl.android.desc': 'App completo offline com OCR e Scanner PDF (ML Kit), LAN Sync por QR Code, gestos de swipe e notificações.',
     'dl.windows.desc': 'Pacote MSIX oficial na Microsoft Store com split-view, Ctrl+K, drag & drop e suporte a Ollama local.',
     'dl.linux.desc': 'AppImage x86_64 portátil pronto para Ubuntu, Fedora, Arch e mais. Experiência desktop completa.',
-    'dl.waitlist.title': 'Lista de espera iOS e macOS',
-    'dl.waitlist.desc': 'Quer o Mayinab no iPhone, iPad ou Mac? Deixe seu e-mail que avisamos correndo assim que a versão Apple sair (^_~)✧',
+    'dl.waitlist.title': 'Lista de espera: App Nativo iOS e macOS',
+    'dl.waitlist.desc': 'Já funciona hoje no Safari pelo <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a>! Deixe seu e-mail se também quiser ser avisado quando o app nativo da Apple sair (^_~)✧',
     'dl.waitlist.btn': 'Me Avise',
     'dl.waitlist.success': 'Eba, você entrou na lista! ヽ(◕‿◕)ノ Vamos te avisar por e-mail assim que iOS e macOS saírem.',
     'dl.waitlist.privacy': 'Usado apenas para o aviso de lançamento Apple. Zero spam, nunca.',
@@ -610,6 +649,8 @@ const translations = {
     'faq.title': 'Tudo o que você pode querer saber',
     'faq.q1': 'O Mayinab é mesmo 100% gratuito? Qual é a pegadinha?',
     'faq.a1': 'Não existe pegadinha nenhuma! (^_~)✧ No momento o Mayinab é totalmente gratuito e sem fins lucrativos, e não planejamos mudar isso. Não há anúncios, planos pagos, recursos trancados nem backend comercial (não usamos Supabase ou servidores de rastreamento).',
+    'faq.qWeb': 'Posso usar o Mayinab na Web (ou no iPhone/Mac) sem instalar?',
+    'faq.aWeb': 'Sim! Abra o <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a> direto em qualquer navegador moderno — incluindo Safari no iPhone, iPad e Mac, além de Chromebooks ou PCs de estudo — sem instalar nada e sem criar conta. Você pode exportar e importar backups .mayinab ou ZIP a qualquer momento para transitar entre a Web e os apps nativos.',
     'faq.q2': 'Como sincronizo entre celular e computador de graça e sem conta?',
     'faq.a2': 'Você tem 3 opções gratuitas e sob seu controle: (1) LAN Sync P2P por Wi-Fi ou Tailscale com PIN de 4 dígitos e QR Code; (2) Auto-Sync em pasta monitorada usando Syncthing, OneDrive, Dropbox, iCloud ou Google Drive Desktop; (3) Auto-Sync com Google Drive no seu próprio appDataFolder. Tudo com Smart Merge e Tombstones.',
     'faq.q3': 'Meus dados são privados? O que acontece com minha chave de IA?',
@@ -625,8 +666,9 @@ const translations = {
 
     // Final CTA
     'cta.title': 'Pronto para lembrar de tudinho o que estuda? o(≧▽≦)o',
-    'cta.desc': 'Baixe o Mayinab grátis hoje mesmo! Sem conta, sem anúncios e 100% offline. Comece seu primeiro chat de estudos em menos de 30 segundos.',
-    'cta.btn1': 'Baixar Grátis Agora',
+    'cta.desc': 'Use o Mayinab direto no navegador ou baixe o app offline grátis hoje mesmo! Sem conta, sem anúncios. Comece seu primeiro chat de estudos em menos de 30 segundos.',
+    'cta.btnWeb': 'Abrir Versão Web ↗',
+    'cta.btn1': 'Baixar App Nativo',
     'cta.btn2': 'Ver Changelog (v1.0.26)',
 
     // Footer
@@ -634,6 +676,7 @@ const translations = {
     'footer.product': 'Produto',
     'footer.resources': 'Recursos',
     'footer.legal': 'Legal',
+    'footer.webApp': 'Versão Web ↗',
     'footer.download': 'Download',
     'footer.blog': 'Blog',
     'footer.changelog': 'Changelog',
@@ -643,6 +686,7 @@ const translations = {
     'footer.rights': 'Todos os direitos reservados.',
     'footer.by': 'Feito com ♡ por',
     'mobileSticky.text': 'Mayinab · 100% Grátis e Offline',
-    'mobileSticky.btn': 'Baixar'
+    'mobileSticky.btn': 'Baixar',
+    'mobileSticky.btnWeb': 'Abrir Web'
   }
 };

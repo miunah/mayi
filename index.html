@@ -41,7 +41,7 @@
 
   <link rel="stylesheet" href="css/nunito.css?v=2">
   <link rel="stylesheet" href="css/variables.css?v=2">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 
   <!-- Structured Data (@graph: WebSite + SoftwareApplication + FAQPage) -->
   <script type="application/ld+json">
@@ -63,10 +63,10 @@
         "url": "https://mayinab.com/",
         "applicationCategory": "EducationalApplication",
         "applicationSubCategory": "Study & Spaced Repetition",
-        "operatingSystem": "Android, Windows, Linux, iOS, macOS",
+        "operatingSystem": "Web, Android, Windows, Linux, iOS, macOS",
         "softwareVersion": "1.0.26",
         "isAccessibleForFree": true,
-        "description": "Offline-first chat-style study app with FSRS-5 spaced repetition, BYOK AI copilot (OpenAI, Gemini, Claude, DeepSeek, Groq, OpenRouter, Ollama), Scribble drawing engine, SQLite FTS5 search, curated Content Packs, and free multi-device sync via LAN P2P QR Code, monitored folder, or Google Drive.",
+        "description": "Offline-first chat-style study app with FSRS-5 spaced repetition, BYOK AI copilot (OpenAI, Gemini, Claude, DeepSeek, Groq, OpenRouter, Ollama), Scribble drawing engine, SQLite FTS5 search, curated Content Packs, Web App at app.mayinab.com, and free multi-device sync via LAN P2P QR Code, monitored folder, or Google Drive.",
         "screenshot": [
           "https://mayinab.com/screenshots/en/light/desktop/01_home.png",
           "https://mayinab.com/screenshots/en/light/desktop/02_chat.png",
@@ -76,6 +76,7 @@
           "https://mayinab.com/screenshots/en/light/desktop/07_explore.png"
         ],
         "featureList": [
+          "Instant Web App at app.mayinab.com (zero install, works on iOS, macOS & Chromebook)",
           "7 chat-style note types (Markdown + LaTeX, Flashcard, Image, Video, Audio, File, Checklist)",
           "FSRS-5 spaced repetition with automatic SM-2 migration and Cloze deletions",
           "BYOK AI Study Assistant with 22 tools and local Ollama support",
@@ -109,6 +110,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "There is no catch. Mayinab is 100% free and non-profit, with no plans to change that. There are no ads, no subscriptions, no locked features, and no paid cloud backend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use Mayinab in my browser without installing (or on iPhone/Mac)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Mayinab has a free Web version at https://app.mayinab.com/ that runs directly in any modern browser—including Safari on iPhone, iPad, and Mac, as well as Chromebooks and shared PCs—with zero installation and no account required."
             }
           },
           {
@@ -167,7 +176,13 @@
           <li><a href="#comparison" data-i18n="nav.compare">Compare</a></li>
           <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
           <li><a href="blog/" data-i18n="nav.blog">Blog</a></li>
-          <li class="nav-cta-mobile-item"><a href="#download" class="nav-cta nav-cta-mobile" data-i18n="nav.download">Download Free</a></li>
+          <li class="nav-cta-mobile-item">
+            <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="nav-web-cta nav-cta-mobile">
+              <svg class="lucide lucide-globe" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              <span data-i18n="nav.webApp">Open Web App</span>
+            </a>
+            <a href="#download" class="nav-cta nav-cta-mobile" data-i18n="nav.download">Download Free</a>
+          </li>
         </ul>
 
         <div class="nav-actions">
@@ -175,6 +190,10 @@
             <button type="button" class="lang-btn active" aria-pressed="true" aria-label="English">EN</button>
             <button type="button" class="lang-btn" aria-pressed="false" aria-label="Português">PT</button>
           </div>
+          <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="nav-web-cta nav-cta-desktop">
+            <svg class="lucide lucide-globe" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            <span data-i18n="nav.webAppShort">Web App</span>
+          </a>
           <a href="#download" class="nav-cta nav-cta-desktop" data-i18n="nav.download">Download Free</a>
           <button type="button" class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
@@ -193,9 +212,9 @@
     <section class="hero" id="hero">
       <div class="container">
         <div class="hero-top">
-          <a href="changelog.html" class="release-pill">
-            <span class="release-pill-tag" data-i18n="hero.releaseTag">v1.0.26</span>
-            <span data-i18n="hero.releaseText">New: LAN Sync via QR Code, FSRS-5 &amp; BYOK AI (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</span>
+          <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="release-pill">
+            <span class="release-pill-tag" data-i18n="hero.releaseTag">NEW · WEB</span>
+            <span data-i18n="hero.releaseText">Mayinab Web is live at app.mayinab.com — use right in your browser! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</span>
           </a>
 
           <h1 class="hero-title">
@@ -209,20 +228,41 @@
 
           <div class="hero-cta-group">
             <a href="#download" class="btn btn-primary btn-lg" id="heroPrimaryCta">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="cta-icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7 10 12 15 17 10"/>
                 <line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
+              <svg class="cta-icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
               <span id="heroPrimaryCtaLabel" data-i18n="hero.ctaPrimary">Download Free</span>
             </a>
-            <a href="#showcase" class="btn btn-secondary btn-lg">
-              <span data-i18n="hero.ctaSecondary">Interactive Tour</span>
+            <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="btn btn-web btn-lg is-web-cta" id="heroSecondaryCta">
+              <svg class="cta-icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+              <svg class="cta-icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span id="heroSecondaryCtaLabel" data-i18n="hero.ctaWeb">Open Web App</span>
+              <svg class="cta-icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 7h10v10"/>
+                <path d="M7 17 17 7"/>
+              </svg>
             </a>
           </div>
 
           <p class="hero-sub-platforms">
-            <a href="#download" data-i18n="hero.subPlatforms">Available free for Android, Windows &amp; Linux · iOS &amp; macOS waitlist open</a>
+            <a href="#download" data-i18n="hero.subPlatforms">Free on Web, Android, Windows &amp; Linux · Native iOS &amp; macOS waitlist</a>
+            <span class="hero-sub-sep" aria-hidden="true">·</span>
+            <a href="#showcase" data-i18n="hero.subTour">Interactive Tour ↓</a>
           </p>
 
           <div class="trust-strip" role="list">
@@ -250,8 +290,11 @@
             <div class="desktop-window" id="heroDesktopWindow">
               <div class="window-chrome">
                 <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <span class="window-title">Mayinab · Desktop Workspace</span>
-                <button type="button" class="window-zoom-btn" id="heroZoomBtn" data-i18n="hero.zoom">⤢ Zoom</button>
+                <span class="window-title">Mayinab · Desktop &amp; Web Workspace</span>
+                <div class="window-chrome-actions">
+                  <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="window-try-btn" data-i18n="hero.tryLive">Try live ↗</a>
+                  <button type="button" class="window-zoom-btn" id="heroZoomBtn" data-i18n="hero.zoom">⤢ Zoom</button>
+                </div>
               </div>
               <div class="desktop-screen" id="heroDesktopScreen" role="button" tabindex="0" aria-label="Zoom desktop screenshot">
                 <picture>
@@ -308,7 +351,10 @@
             <h3 data-i18n="contrast.solution.title">Mayinab blends the ease of chat with FSRS-5, AI &amp; Scribble (≧◡≦)</h3>
             <p data-i18n="contrast.solution.desc">Every subject is a chat. Every note is a rich message (text, flashcard, Cloze, image, audio, video, checklist, or file), all tucked safely offline on your device.</p>
           </div>
-          <a href="#download" class="btn btn-secondary" data-i18n="contrast.solution.cta">Download Free →</a>
+          <div class="solution-banner-actions">
+            <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-dark" data-i18n="contrast.solution.ctaWeb">Open Web App ↗</a>
+            <a href="#download" class="btn btn-secondary" data-i18n="contrast.solution.cta">Download Free →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -723,10 +769,51 @@
       <div class="container">
         <div class="section-header reveal">
           <div class="eyebrow" data-i18n="dl.eyebrow">Start in 30 Seconds (ﾉ´ヮ`)ﾉ*:･ﾟ✧</div>
-          <h2 class="section-title" data-i18n="dl.title">Download Mayinab (100% Free!)</h2>
+          <h2 class="section-title" data-i18n="dl.title">Use on Web or Download Mayinab (100% Free!)</h2>
           <p class="section-subtitle" data-i18n="dl.subtitle">
-            No account needed. No credit card. No ads. Install and start your cozy study chat right away!
+            Launch instantly in your browser or install the native offline app. No account, no credit card, no ads!
           </p>
+        </div>
+
+        <!-- Flagship Instant Web App Spotlight -->
+        <article class="web-app-card reveal" data-os="web" id="webAppCard">
+          <span class="os-rec-badge" data-i18n="dl.recommended">Recommended for your device</span>
+          <div class="web-app-copy">
+            <div class="web-app-pill">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span data-i18n="dl.web.badge">Web Version · Zero Install</span>
+            </div>
+            <h3 data-i18n="dl.web.title">Launch Mayinab right in your browser</h3>
+            <p data-i18n="dl.web.desc">Start studying in 1 click on any device—including iPhone, iPad, Mac, Chromebook, or study PCs. Local browser storage, FSRS-5 flashcards, BYOK AI, and portable .mayinab backups.</p>
+            <div class="chip-row">
+              <span class="micro-chip" data-i18n="dl.web.chip1">Instant Access</span>
+              <span class="micro-chip" data-i18n="dl.web.chip2">Works on iOS &amp; macOS</span>
+              <span class="micro-chip" data-i18n="dl.web.chip3">Zero Install</span>
+              <span class="micro-chip" data-i18n="dl.web.chip4">No Account</span>
+            </div>
+          </div>
+
+          <div class="web-launch-box">
+            <div class="web-launch-chrome" aria-hidden="true">
+              <div class="window-dots"><span></span><span></span><span></span></div>
+              <div class="web-launch-url">
+                <svg class="lucide lucide-lock" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>app.mayinab.com</span>
+              </div>
+            </div>
+            <div class="web-launch-body">
+              <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg web-launch-btn">
+                <svg class="lucide lucide-globe" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <span data-i18n="dl.web.cta">Open Web App</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+              <span class="web-launch-note" data-i18n="dl.web.note">100% Free · Opens in a new tab</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="native-platforms-divider reveal" role="separator">
+          <span data-i18n="dl.nativeDivider">Or install the native offline app</span>
         </div>
 
         <div class="download-grid">
@@ -767,8 +854,8 @@
         <div class="download-secondary-grid">
           <!-- iOS & macOS Waitlist -->
           <div class="waitlist-card reveal">
-            <h3><svg class="lucide lucide-bell" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg> <span data-i18n="dl.waitlist.title">iOS &amp; macOS Waitlist</span></h3>
-            <p data-i18n="dl.waitlist.desc">Want Mayinab on iPhone, iPad, or Mac? Leave your email and we will ping you the moment Apple builds arrive (^_~)✧</p>
+            <h3><svg class="lucide lucide-bell" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg> <span data-i18n="dl.waitlist.title">Native iOS &amp; macOS Waitlist</span></h3>
+            <p data-i18n="dl.waitlist.desc">Already works today on Safari via <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a>! Leave your email if you also want a ping when native App Store builds arrive (^_~)✧</p>
 
             <form id="notifyForm" action="https://formspree.io/f/mjgeyrqp" method="POST" class="notify-form">
               <div class="notify-input-row">
@@ -869,6 +956,20 @@
 
           <div class="faq-item reveal">
             <button type="button" class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.qWeb">Can I use Mayinab on the Web (or on iPhone/Mac) without installing?</span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-body" data-i18n="faq.aWeb">
+                  Yes! Open <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a> directly in any modern browser—including Safari on iPhone, iPad, and Mac, or on Chromebooks and shared PCs—with zero installation and no account required. You can export and import .mayinab or ZIP backups anytime to move seamlessly between Web and native apps.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question" aria-expanded="false">
               <span data-i18n="faq.q2">How do I sync between my phone and computer for free?</span>
               <span class="faq-chevron" aria-hidden="true">▾</span>
             </button>
@@ -959,10 +1060,13 @@
       <div class="container">
         <div class="cta-card reveal">
           <h2 data-i18n="cta.title">Ready to remember everything you study? o(≧▽≦)o</h2>
-          <p data-i18n="cta.desc">Download Mayinab free today! Zero accounts, zero ads, 100% offline. Start your first study chat in under 30 seconds.</p>
+          <p data-i18n="cta.desc">Try Mayinab right in your browser or download the offline app free today! Zero accounts, zero ads. Start your first study chat in under 30 seconds.</p>
           <div class="cta-buttons">
-            <a href="#download" class="btn btn-primary btn-lg" data-i18n="cta.btn1">Download Free Now</a>
-            <a href="changelog.html" class="btn btn-ghost-dark btn-lg" data-i18n="cta.btn2">Read Changelog (v1.0.26)</a>
+            <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+              <svg class="lucide lucide-globe" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              <span data-i18n="cta.btnWeb">Open Web App ↗</span>
+            </a>
+            <a href="#download" class="btn btn-ghost-dark btn-lg" data-i18n="cta.btn1">Download Native App</a>
           </div>
         </div>
       </div>
@@ -986,6 +1090,7 @@
         <div class="footer-col">
           <h4 data-i18n="footer.product">Product</h4>
           <ul>
+            <li><a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer" data-i18n="footer.webApp">Web App ↗</a></li>
             <li><a href="#showcase" data-i18n="nav.tour">Tour</a></li>
             <li><a href="#features" data-i18n="nav.features">Features</a></li>
             <li><a href="#comparison" data-i18n="nav.compare">Compare</a></li>
@@ -1030,7 +1135,7 @@
       <img src="app_icon.png" alt="" width="26" height="26">
       <span data-i18n="mobileSticky.text">Mayinab · 100% Free &amp; Offline</span>
     </div>
-    <a href="#download" class="btn btn-primary mobile-sticky-btn" data-i18n="mobileSticky.btn">Download</a>
+    <a href="#download" class="btn btn-primary mobile-sticky-btn" id="mobileStickyBtn" data-i18n="mobileSticky.btn">Download</a>
   </div>
 
   <!-- Back to top -->
@@ -1049,7 +1154,7 @@
     </div>
   </div>
 
-  <script src="js/translations.js?v=2" defer></script>
-  <script src="js/main.js?v=2" defer></script>
+  <script src="js/translations.js?v=3" defer></script>
+  <script src="js/main.js?v=3" defer></script>
 </body>
 </html>

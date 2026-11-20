@@ -71,14 +71,39 @@
 
   const detectedOS = detectOS();
 
+  const WEB_APP_URL = 'https://app.mayinab.com/';
+
   function applyOSPersonalization() {
     const heroPrimary = document.getElementById('heroPrimaryCta');
     const heroPrimaryLabel = document.getElementById('heroPrimaryCtaLabel');
+    const heroSecondary = document.getElementById('heroSecondaryCta');
+    const heroSecondaryLabel = document.getElementById('heroSecondaryCtaLabel');
+    const webAppCard = document.getElementById('webAppCard');
+    const mobileStickyBtn = document.getElementById('mobileStickyBtn');
+    const isAppleOS = detectedOS === 'ios' || detectedOS === 'macos';
 
-    // Highlight matching download card
+    // Highlight matching download card (or Web App spotlight on iOS/macOS)
     document.querySelectorAll('.download-card[data-os]').forEach(card => {
       card.classList.toggle('recommended', card.getAttribute('data-os') === detectedOS);
     });
+    if (webAppCard) {
+      webAppCard.classList.toggle('recommended', isAppleOS);
+    }
+
+    // Mobile sticky bar: point directly to Web App on iOS
+    if (mobileStickyBtn) {
+      if (detectedOS === 'ios') {
+        mobileStickyBtn.href = WEB_APP_URL;
+        mobileStickyBtn.target = '_blank';
+        mobileStickyBtn.rel = 'noopener noreferrer';
+        mobileStickyBtn.textContent = t('mobileSticky.btnWeb');
+      } else {
+        mobileStickyBtn.href = '#download';
+        mobileStickyBtn.removeAttribute('target');
+        mobileStickyBtn.removeAttribute('rel');
+        mobileStickyBtn.textContent = t('mobileSticky.btn');
+      }
+    }
 
     if (!heroPrimary || !heroPrimaryLabel) return;
 
@@ -87,25 +112,52 @@
       heroPrimary.target = '_blank';
       heroPrimary.rel = 'noopener noreferrer';
       heroPrimary.removeAttribute('download');
+      heroPrimary.classList.remove('is-web-cta');
       heroPrimaryLabel.textContent = t('hero.ctaAndroid');
     } else if (detectedOS === 'windows') {
       heroPrimary.href = 'https://get.microsoft.com/installer/download/9p24b4wksr2z?referrer=appbadge';
       heroPrimary.target = '_blank';
       heroPrimary.rel = 'noopener noreferrer';
       heroPrimary.removeAttribute('download');
+      heroPrimary.classList.remove('is-web-cta');
       heroPrimaryLabel.textContent = t('hero.ctaWindows');
     } else if (detectedOS === 'linux') {
       heroPrimary.href = 'https://download.mayinab.com/Mayinab-x86_64.AppImage';
       heroPrimary.removeAttribute('target');
       heroPrimary.removeAttribute('rel');
       heroPrimary.setAttribute('download', '');
+      heroPrimary.classList.remove('is-web-cta');
       heroPrimaryLabel.textContent = t('hero.ctaLinux');
+    } else if (isAppleOS) {
+      heroPrimary.href = WEB_APP_URL;
+      heroPrimary.target = '_blank';
+      heroPrimary.rel = 'noopener noreferrer';
+      heroPrimary.removeAttribute('download');
+      heroPrimary.classList.add('is-web-cta');
+      heroPrimaryLabel.textContent = t('hero.ctaWeb');
     } else {
       heroPrimary.href = '#download';
       heroPrimary.removeAttribute('target');
       heroPrimary.removeAttribute('rel');
       heroPrimary.removeAttribute('download');
+      heroPrimary.classList.remove('is-web-cta');
       heroPrimaryLabel.textContent = t('hero.ctaPrimary');
+    }
+
+    if (heroSecondary && heroSecondaryLabel) {
+      if (isAppleOS) {
+        heroSecondary.href = '#download';
+        heroSecondary.removeAttribute('target');
+        heroSecondary.removeAttribute('rel');
+        heroSecondary.classList.remove('is-web-cta');
+        heroSecondaryLabel.textContent = t('hero.ctaAllPlatforms');
+      } else {
+        heroSecondary.href = WEB_APP_URL;
+        heroSecondary.target = '_blank';
+        heroSecondary.rel = 'noopener noreferrer';
+        heroSecondary.classList.add('is-web-cta');
+        heroSecondaryLabel.textContent = t('hero.ctaWeb');
+      }
     }
   }
 
