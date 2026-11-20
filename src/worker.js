@@ -4,6 +4,10 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.hostname === "www.mayinab.com") {
+      url.hostname = "mayinab.com";
+      return Response.redirect(url.toString(), 301);
+    }
     const path = url.pathname;
     const asset = (p) => env.ASSETS.fetch(new Request(new URL(p, url), request));
 

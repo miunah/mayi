@@ -12,7 +12,8 @@
     "html_handling": "none"
   },
   "routes": [
-    { "pattern": "mayinab.com", "custom_domain": true }
+    { "pattern": "mayinab.com", "custom_domain": true },
+    { "pattern": "www.mayinab.com", "custom_domain": true }
   ],
   "workers_dev": true,
   "preview_urls": true,
