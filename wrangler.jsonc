@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mayi",
+  "compatibility_date": "2026-11-18",
+  // Only runs when no static file matches the URL exactly (/, /blog/, 404s...)
+  "main": "src/worker.js",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    // Serve files exactly as-is (keeps /page.html URLs, same as GitHub Pages).
+    // Index pages and 404 are handled in src/worker.js.
+    "html_handling": "none"
+  },
+  "routes": [
+    { "pattern": "mayinab.com", "custom_domain": true }
+  ],
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  }
+}
