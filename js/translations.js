@@ -21,7 +21,7 @@ const translations = {
 
     // Hero
     'hero.releaseTag': 'NEW · WEB',
-    'hero.releaseText': 'Mayinab Web is live at app.mayinab.com: use right in your browser! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
+    'hero.releaseText': 'Mayinab Web is live at app.mayinab.com, ready to use in your browser! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
     'hero.title1': 'Study notes,',
     'hero.title2': 'reimagined as chat.',
     'hero.subtitle': 'Take notes as naturally as texting a friend, memorize faster with FSRS-5 spaced repetition, and study alongside your own AI buddy (BYOK or local Ollama). 100% offline, 100% free & non-profit, zero ads (^_~)✧',
@@ -364,7 +364,7 @@ const translations = {
 
     // Hero
     'hero.releaseTag': 'NOVO · WEB',
-    'hero.releaseText': 'Mayinab Web chegou em app.mayinab.com: use direto no navegador! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
+    'hero.releaseText': 'Mayinab Web chegou em app.mayinab.com, use direto no navegador! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
     'hero.title1': 'Suas anotações,',
     'hero.title2': 'reinventadas como chat.',
     'hero.subtitle': 'Anote com a leveza de uma conversa gostosa, memorize tudinho com repetição espaçada FSRS-5 e estude com seu parceiro de IA (BYOK ou Ollama local). 100% offline, 100% grátis, sem fins lucrativos e zero anúncios (^_~)✧',
@@ -622,7 +622,7 @@ const translations = {
     'dl.android.desc': 'App completo offline com OCR e Scanner PDF (ML Kit), LAN Sync por QR Code, gestos de swipe e notificações.',
     'dl.windows.desc': 'Pacote MSIX oficial na Microsoft Store com split-view, Ctrl+K, drag & drop e suporte a Ollama local.',
     'dl.linux.desc': 'AppImage x86_64 portátil pronto para Ubuntu, Fedora, Arch e mais. Experiência desktop completa.',
-    'dl.waitlist.title': 'Lista de espera: App Nativo iOS e macOS',
+    'dl.waitlist.title': 'Lista de espera do App Nativo iOS e macOS',
     'dl.waitlist.desc': 'Já funciona hoje no Safari pelo <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a>! Deixe seu e-mail se também quiser ser avisado quando o app nativo da Apple sair (^_~)✧',
     'dl.waitlist.btn': 'Me Avise',
     'dl.waitlist.success': 'Eba, você entrou na lista! ヽ(◕‿◕)ノ Vamos te avisar por e-mail assim que iOS e macOS saírem.',
