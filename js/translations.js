@@ -277,12 +277,11 @@ const translations = {
     'about.p1': 'Mayinab was born from our wish for a study app we actually loved opening every day: fast, clean, and free of barriers. Right now, every single feature (FSRS-5, BYOK AI, Scribble Engine, Explore packs, and multi-device sync) is completely free, with no subscriptions, no Supabase or external tracking servers, and no plans to monetize.',
     'about.p2': 'Your study material belongs exclusively to you in an open local SQLite database with portable .mayinab exports whenever you want.',
     'about.authorsLabel': 'Created & Maintained By',
-    'about.role1': 'Co-creator & Developer',
-    'about.role2': 'Co-creator & Developer',
+    'about.role1': 'Creator & Developer',
     'about.promise1': 'Zero paywalls, zero subscriptions, zero ads',
     'about.promise2': 'No third-party cloud tracking or mandatory accounts',
     'about.promise3': 'Open .mayinab & ZIP exports: your data is always yours',
-    'about.visitAuthors': 'Visit the authors at cth.jp →',
+    'about.visitAuthors': 'Visit the author at cth.jp →',
 
     // FAQ
     'faq.eyebrow': 'Questions & Answers (・ω・)',
@@ -300,7 +299,7 @@ const translations = {
     'faq.q6': 'Will my notes ever get locked inside Mayinab?',
     'faq.a6': 'Never! You can export individual subjects as portable .mayinab files (standard ZIP with JSON + media) or create complete local ZIP backups anytime. Since the app is 100% offline-first, it keeps working on your devices indefinitely.',
     'faq.q7': 'Who created Mayinab?',
-    'faq.a7': 'Mayinab is created and maintained by <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki &amp; Celso Takeshi Hamasaki (cth.jp)</a> as an independent, non-profit project made with lots of care for learners everywhere (´∀｀)♡',
+    'faq.a7': 'Mayinab is created and maintained by <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki (cth.jp)</a> as an independent, non-profit project made with lots of care for learners everywhere (´∀｀)♡',
 
     // Final CTA
     'cta.title': 'Ready to remember everything you study? o(≧▽≦)o',
@@ -598,12 +597,11 @@ const translations = {
     'about.p1': 'O Mayinab nasceu da vontade de criar o app de estudos que a gente adoraria abrir todo dia: rapidinho, limpo e sem barreiras. Hoje tudo no app (FSRS-5, IA BYOK, Scribble Engine, pacotes Explorar e sincronização) é totalmente gratuito, sem assinaturas, sem Supabase ou servidores de rastreamento, e não planejamos mudar isso.',
     'about.p2': 'Todo o seu conhecimento fica sob seu controle absoluto em SQLite local, com exportação aberta em .mayinab quando você quiser.',
     'about.authorsLabel': 'Criado e Mantido Por',
-    'about.role1': 'Cocriadora e Desenvolvedora',
-    'about.role2': 'Cocriador e Desenvolvedor',
+    'about.role1': 'Criadora e Desenvolvedora',
     'about.promise1': 'Zero paywalls, zero assinaturas, zero anúncios',
     'about.promise2': 'Sem servidores de rastreamento ou conta obrigatória',
     'about.promise3': 'Exportação aberta (.mayinab e ZIP): seus dados são sempre seus',
-    'about.visitAuthors': 'Conheça os autores em cth.jp →',
+    'about.visitAuthors': 'Conheça a autora em cth.jp →',
 
     // FAQ
     'faq.eyebrow': 'Dúvidas Frequentes (・ω・)',
@@ -621,7 +619,7 @@ const translations = {
     'faq.q6': 'Meus dados ficam presos no aplicativo?',
     'faq.a6': 'Jamais! Você pode exportar matérias como arquivos .mayinab (ZIP padrão com JSON e mídias) ou criar backups completos locais em ZIP quando quiser. Como o app é 100% offline-first, ele continua funcionando nos seus aparelhos indefinidamente.',
     'faq.q7': 'Quem desenvolve o Mayinab?',
-    'faq.a7': 'O Mayinab é criado e mantido por <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki e Celso Takeshi Hamasaki (cth.jp)</a> como um projeto independente e sem fins lucrativos feito com muito carinho para estudantes (´∀｀)♡',
+    'faq.a7': 'O Mayinab é criado e mantido por <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer">Miuna Hamasaki (cth.jp)</a> como um projeto independente e sem fins lucrativos feito com muito carinho para estudantes (´∀｀)♡',
 
     // Final CTA
     'cta.title': 'Pronto para lembrar de tudinho o que estuda? o(≧▽≦)o',
