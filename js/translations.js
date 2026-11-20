@@ -21,7 +21,7 @@ const translations = {
 
     // Hero
     'hero.releaseTag': 'NEW · WEB',
-    'hero.releaseText': 'Mayinab Web is live at app.mayinab.com — use right in your browser! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
+    'hero.releaseText': 'Mayinab Web is live at app.mayinab.com: use right in your browser! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
     'hero.title1': 'Study notes,',
     'hero.title2': 'reimagined as chat.',
     'hero.subtitle': 'Take notes as naturally as texting a friend, memorize faster with FSRS-5 spaced repetition, and study alongside your own AI buddy (BYOK or local Ollama). 100% offline, 100% free & non-profit, zero ads (^_~)✧',
@@ -268,7 +268,7 @@ const translations = {
     'dl.recommended': 'Recommended for your device',
     'dl.web.badge': 'Web Version · Zero Install',
     'dl.web.title': 'Launch Mayinab right in your browser',
-    'dl.web.desc': 'Start studying in 1 click on any device—including iPhone, iPad, Mac, Chromebook, or study PCs. Local browser storage, FSRS-5 flashcards, BYOK AI, and portable .mayinab backups.',
+    'dl.web.desc': 'Start studying in 1 click on any device, including iPhone, iPad, Mac, Chromebook, or study PCs. Local browser storage, FSRS-5 flashcards, BYOK AI, and portable .mayinab backups.',
     'dl.web.chip1': 'Instant Access',
     'dl.web.chip2': 'Works on iOS & macOS',
     'dl.web.chip3': 'Zero Install',
@@ -307,7 +307,7 @@ const translations = {
     'faq.q1': 'Is Mayinab really 100% free? What is the catch?',
     'faq.a1': 'No catch at all! (^_~)✧ Mayinab is currently 100% free and non-profit, with no plans to change that. There are no ads, no subscriptions, no locked features, and no paid cloud backend (we do not use Supabase or any commercial tracking servers).',
     'faq.qWeb': 'Can I use Mayinab on the Web (or on iPhone/Mac) without installing?',
-    'faq.aWeb': 'Yes! Open <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a> directly in any modern browser—including Safari on iPhone, iPad, and Mac, or on Chromebooks and shared PCs—with zero installation and no account required. You can export and import .mayinab or ZIP backups anytime to move seamlessly between Web and native apps.',
+    'faq.aWeb': 'Yes! Open <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a> directly in any modern browser (including Safari on iPhone, iPad, and Mac, or on Chromebooks and shared PCs) with zero installation and no account required. You can export and import .mayinab or ZIP backups anytime to move seamlessly between Web and native apps.',
     'faq.q2': 'How do I sync between my phone and computer for free?',
     'faq.a2': 'You have three free options under your own control: (1) LAN Sync P2P over Wi-Fi or Tailscale using a 4-digit PIN & QR Code; (2) Monitored Folder Auto-Sync via Syncthing, OneDrive, Dropbox, iCloud, or Google Drive Desktop; (3) Google Drive Auto-Sync in your own private appDataFolder. All use Smart Merge with Tombstones so changes blend cleanly.',
     'faq.q3': 'Is my data private? What happens to my AI API key?',
@@ -364,7 +364,7 @@ const translations = {
 
     // Hero
     'hero.releaseTag': 'NOVO · WEB',
-    'hero.releaseText': 'Mayinab Web chegou em app.mayinab.com — use direto no navegador! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
+    'hero.releaseText': 'Mayinab Web chegou em app.mayinab.com: use direto no navegador! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',
     'hero.title1': 'Suas anotações,',
     'hero.title2': 'reinventadas como chat.',
     'hero.subtitle': 'Anote com a leveza de uma conversa gostosa, memorize tudinho com repetição espaçada FSRS-5 e estude com seu parceiro de IA (BYOK ou Ollama local). 100% offline, 100% grátis, sem fins lucrativos e zero anúncios (^_~)✧',
@@ -611,7 +611,7 @@ const translations = {
     'dl.recommended': 'Recomendado para seu dispositivo',
     'dl.web.badge': 'Versão Web · Sem Instalar',
     'dl.web.title': 'Use o Mayinab direto no navegador',
-    'dl.web.desc': 'Comece a estudar em 1 clique em qualquer aparelho — inclusive iPhone, iPad, Mac, Chromebook ou PC de estudos. Armazenamento local no navegador, flashcards FSRS-5, IA BYOK e backups .mayinab.',
+    'dl.web.desc': 'Comece a estudar em 1 clique em qualquer aparelho, inclusive iPhone, iPad, Mac, Chromebook ou PC de estudos. Armazenamento local no navegador, flashcards FSRS-5, IA BYOK e backups .mayinab.',
     'dl.web.chip1': 'Acesso Imediato',
     'dl.web.chip2': 'Funciona no iOS e macOS',
     'dl.web.chip3': 'Sem Instalar',
@@ -650,7 +650,7 @@ const translations = {
     'faq.q1': 'O Mayinab é mesmo 100% gratuito? Qual é a pegadinha?',
     'faq.a1': 'Não existe pegadinha nenhuma! (^_~)✧ No momento o Mayinab é totalmente gratuito e sem fins lucrativos, e não planejamos mudar isso. Não há anúncios, planos pagos, recursos trancados nem backend comercial (não usamos Supabase ou servidores de rastreamento).',
     'faq.qWeb': 'Posso usar o Mayinab na Web (ou no iPhone/Mac) sem instalar?',
-    'faq.aWeb': 'Sim! Abra o <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a> direto em qualquer navegador moderno — incluindo Safari no iPhone, iPad e Mac, além de Chromebooks ou PCs de estudo — sem instalar nada e sem criar conta. Você pode exportar e importar backups .mayinab ou ZIP a qualquer momento para transitar entre a Web e os apps nativos.',
+    'faq.aWeb': 'Sim! Abra o <a href="https://app.mayinab.com/" target="_blank" rel="noopener noreferrer">app.mayinab.com</a> direto em qualquer navegador moderno (incluindo Safari no iPhone, iPad e Mac, além de Chromebooks ou PCs de estudo), sem instalar nada e sem criar conta. Você pode exportar e importar backups .mayinab ou ZIP a qualquer momento para transitar entre a Web e os apps nativos.',
     'faq.q2': 'Como sincronizo entre celular e computador de graça e sem conta?',
     'faq.a2': 'Você tem 3 opções gratuitas e sob seu controle: (1) LAN Sync P2P por Wi-Fi ou Tailscale com PIN de 4 dígitos e QR Code; (2) Auto-Sync em pasta monitorada usando Syncthing, OneDrive, Dropbox, iCloud ou Google Drive Desktop; (3) Auto-Sync com Google Drive no seu próprio appDataFolder. Tudo com Smart Merge e Tombstones.',
     'faq.q3': 'Meus dados são privados? O que acontece com minha chave de IA?',
